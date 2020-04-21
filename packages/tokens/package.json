@@ -1,11 +1,11 @@
 {
-  "name": "@flockds/tokens",
+  "name": "tokens",
   "version": "1.0.0",
   "description": "tokens",
-  "main": "./flock.css",
+  "main": "./etoast.css",
   "license": "MIT",
   "files": [
-    "flock.css",
+    "etoast.css",
     "sass"
   ],
   "dependencies": {
@@ -13,9 +13,14 @@
     "sass": "^1.26.3"
   },
   "scripts": {
-    "watch": "sass --watch ./sass/etoast.scss ./css/etoast.css",
-    "build": "sass ./sass/etoast.scss etoast.css --style=compressed --no-source-map",
-    "clean": "rm -rf ./css ./etoast.css",
-    "prepublish": "yarn clean && yarn build"
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "prepublish": "yarn clean && yarn build",
+    "tasks": "gulp --tasks",
+    "template": "node ./scripts/runTemplate ./theme.config ./sass ./temp",
+    "watch": "gulp watch"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }

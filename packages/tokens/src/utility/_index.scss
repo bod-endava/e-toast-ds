@@ -1,0 +1,7 @@
+@function is-map($var){
+    @return type-of($var) == 'map';
+}
+
+@function ns($name){
+    @return eds-#{$name}
+}

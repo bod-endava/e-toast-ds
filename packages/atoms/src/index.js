@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "@flockds/tokens";
 import App from './App';
+import "tokens";
 
 ReactDOM.render(
   <React.StrictMode>
