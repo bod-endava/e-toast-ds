@@ -1,0 +1,19 @@
+@use "utility" as utils;
+@use "colors" as colors;
+@use "atoms/buttons" as atoms;
+
+:root {
+    @each $color, $color-variant in colors.$etoast-colors {
+        @if utils.is-map($color-variant) {
+            @each $type, $value in $color-variant {
+                @if $type == "base" {
+                    --#{$color}: #{$value};
+                } @else {
+                    --#{$color}-#{$type}: #{$value};
+                }
+            }
+        } @else {
+            --#{$color}: #{$color-variant};
+        }
+    }
+}

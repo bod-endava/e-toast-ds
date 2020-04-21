@@ -1,0 +1,32 @@
+@use '../colors/index' as colors;
+@use '../utility/index' as utils;
+
+$base: colors.etoast-color("orange");
+$white: colors.etoast-color("white");
+$radius: 24px;
+
+.eds-button {
+    border-radius: $radius;
+    border: 1px solid $base;
+    color: $base;
+    background-color: $white;
+    height: 40px;
+    min-width: 120px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &:hover {
+        color: $white;
+        background-color: $base;
+    }
+
+    &:focus {
+        outline: none;
+        color: $white;
+        background-color: $base;
+        border-color: $base;
+        border-style: double;
+        border-width: 4px;
+        background-clip: padding-box;
+    }
+}

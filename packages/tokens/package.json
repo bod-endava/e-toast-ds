@@ -1,0 +1,21 @@
+{
+  "name": "@flockds/tokens",
+  "version": "1.0.0",
+  "description": "tokens",
+  "main": "./flock.css",
+  "license": "MIT",
+  "files": [
+    "flock.css",
+    "sass"
+  ],
+  "dependencies": {
+    "node-sass": "^4.13.1",
+    "sass": "^1.26.3"
+  },
+  "scripts": {
+    "watch": "sass --watch ./sass/etoast.scss ./css/etoast.css",
+    "build": "sass ./sass/etoast.scss etoast.css --style=compressed --no-source-map",
+    "clean": "rm -rf ./css ./etoast.css",
+    "prepublish": "yarn clean && yarn build"
+  }
+}
