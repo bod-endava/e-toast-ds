@@ -1,7 +1,7 @@
 {
-  "name": "tokens",
+  "name": "@e-toast/css",
   "version": "1.0.0",
-  "description": "tokens",
+  "description": "e-toast css layer",
   "main": "./etoast.css",
   "license": "MIT",
   "files": [
