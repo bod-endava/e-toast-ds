@@ -1,20 +1,27 @@
-@use '../../../colors/index' as colors;
+@use "../base/colors.scss" as colors;
+@use "../../../base/fonts.scss" as fonts;
 
-$idle-text: colors.etoast-color("orange");
-$idle-border: colors.etoast-color("orange");
-$idle-background: colors.etoast-color("white");
-$idle-border-width: 1px;
+// Color tokens
 
-$hover-text: colors.etoast-color("white");
-$hover-border: colors.etoast-color("orange");
-$hover-background: colors.etoast-color("orange");
+$font-color: colors.$white;
+$border-color: colors.$base;
+$background-color: colors.$base;
 
-$focus-text: colors.etoast-color("white");
-$focus-border: colors.etoast-color("orange");
-$focus-background: colors.etoast-color("orange");
-$focus-border-width: 4px;
+// Shape tokens
 
-$radius: 24px;
-$height: 40px;
-$min-width: 120px;
-$text-style: uppercase;
+$border-radius: 30px;
+$border-width: 1px;
+$height: 37px;
+$padding-top: 11px;
+$padding-right: 28px;
+$padding-bottom: 11px;
+$padding-left: 28px;
+
+// Font tokens
+
+$sizing: "px"; // or "em"
+$font-name: fonts.$font-name;
+$font-weight: fonts.$regular;
+$font-size: fonts.get-size("button", $sizing);
+$line-height: fonts.get-size("button", "line-height");
+// There is something called spacing, que ej eso

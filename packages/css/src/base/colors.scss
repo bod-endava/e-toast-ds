@@ -32,7 +32,7 @@ $etoast-colors: (
     "darkred": createColor(#690505),
 );
 
-@function etoast-color($color, $variant: "base"){
+@function get-color($color, $variant: "base"){
     $_color: map-get($etoast-colors, $color);
     @if utils.is-map($_color) {
         @return map-get($_color, $variant);

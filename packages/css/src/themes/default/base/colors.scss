@@ -1,0 +1,26 @@
+@use "../../../base/colors" as colors;
+
+// Colors
+$base-color: "orange";
+$cta-color: "blue";
+$danger-color: "red";
+$warning-color: "yellow";
+$success-color: "green";
+$disable-color: "disable";
+$white-color: "white";
+$black-color: "black";
+
+$base: colors.get-color($base-color);
+$cta: colors.get-color($cta-color);
+
+$content: colors.get-color($base-color,"darkest");
+$contrast: colors.get-color($base-color,"lightest");
+$mid-contrast: colors.get-color($base-color,"mid");
+$dark-contrast: colors.get-color($base-color,"dark");
+
+$danger: colors.get-color($danger-color);
+$warning: colors.get-color($warning-color);
+$success: colors.get-color($success-color);
+$disable: colors.get-color($disable-color);
+$white: colors.get-color($white-color);
+$black: colors.get-color($black-color);

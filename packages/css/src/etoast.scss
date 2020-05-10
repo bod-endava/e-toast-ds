@@ -1,6 +1,6 @@
 @use "utility" as utils;
-@use "colors" as colors;
-@use "./atoms/button";
+@use "./base/colors" as colors;
+@use "./atoms/buttons/index";
 
 :root {
     @each $color, $color-variant in colors.$etoast-colors {

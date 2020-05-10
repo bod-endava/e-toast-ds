@@ -1,0 +1,49 @@
+@use '../../themes/%button%/button/primary' as primary;
+
+$idle-text: primary.$font-color;
+$idle-border: primary.$border-color;
+$idle-background: primary.$background-color;
+$idle-border-width: primary.$border-width;
+
+$focus-border-width: 4px;
+
+$radius: primary.$border-radius;
+$height: primary.$height;
+$text-style: uppercase;
+
+.eds-button--primary {
+    border-radius: $radius;
+    border: $idle-border-width solid $idle-border;
+    height: $height;
+    box-sizing: border-box;
+    text-transform: $text-style;
+    padding: 
+        primary.$padding-top
+        primary.$padding-right
+        primary.$padding-bottom
+        primary.$padding-left
+    ;
+    font-family: primary.$font-name;
+    font-weight: primary.$font-weight;
+    font-size: primary.$font-size;
+    line-height: primary.$line-height;
+
+    cursor: pointer;
+
+    color: $idle-text;
+    background-color: $idle-background;
+
+    &:focus {
+        outline: none;
+        border-style: double;
+        border-width: $focus-border-width;
+        background-clip: padding-box;
+        line-height: primary.$line-height;
+        padding: 
+            primary.$padding-top - 3
+            primary.$padding-right - 3
+            primary.$padding-bottom - 3 
+            primary.$padding-left - 3
+        ;
+    }
+}

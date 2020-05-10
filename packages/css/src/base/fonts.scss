@@ -1,0 +1,103 @@
+@function create-size($px,$em,$lh) {
+    @return (
+        "px": $px, "em": $em, "line-height": $lh
+    )
+}
+
+$font-name: Roboto;
+
+// Weights
+
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+// Sizes
+
+$px-label: 12px;
+$px-button: 16px;
+$px-placeholder: 16px;
+$px-paragraph: 16px;
+$px-subtitle: 16px;
+$px-h4: 20px;
+$px-h3: 24px;
+$px-h2: 26px;
+$px-h1: 29px;
+
+$relative-label: 0.75em;
+$relative-button: 1em;
+$relative-placeholder: 1em;
+$relative-paragraph: 1em;
+$relative-subtitle: 1em;
+$relative-h4: 1.25em;
+$relative-h3: 1.5em;
+$relative-h2: 1.625em;
+$relative-h1: 1.813em;
+
+$lh-label: 13px;
+$lh-button: 15px;
+$lh-placeholder: 16px;
+$lh-paragraph: 18px;
+$lh-subtitle: 19px;
+$lh-h4: 25px;
+$lh-h3: 30px;
+$lh-h2: 29px;
+$lh-h1: 32px;
+
+// Semantic sizes
+
+$sizes: (
+    "label": create-size(
+        $px-label, 
+        $relative-label,
+        $lh-label
+    ),
+    "button": create-size(
+        $px-button, 
+        $relative-button,
+        $lh-button
+    ),
+    "placeholder": create-size(
+        $px-placeholder, 
+        $relative-placeholder,
+        $lh-placeholder
+    ),
+    "paragraph": create-size(
+        $px-paragraph, 
+        $relative-paragraph,
+        $lh-paragraph
+    ),
+    "subtitle": create-size(
+        $px-subtitle, 
+        $relative-subtitle,
+        $lh-subtitle
+    ),
+    "h4": create-size(
+        $px-h4, 
+        $relative-h4,
+        $lh-h4
+    ),
+    "h3": create-size(
+        $px-h3, 
+        $relative-h3,
+        $lh-h3
+    ),
+    "h2": create-size(
+        $px-h2, 
+        $relative-h2,
+        $lh-h2
+    ),
+    "h1": create-size(
+        $px-h1, 
+        $relative-h1,
+        $lh-h1
+    )
+);
+
+// Utility
+
+@function get-size($name,$variant: "px"){
+    $size: map-get($sizes, $name);
+    @return map-get($size, $variant);
+}

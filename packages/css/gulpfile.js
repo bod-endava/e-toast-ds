@@ -12,7 +12,7 @@ const CSS_OUT = "./etoast.css";
 
 async function clean(cb){
     try{
-        await rmdir("./temp",{ recursive: true })
+        await rmdir("./sass",{ recursive: true })
         await unlink("./etoast.css");
     } catch {
         console.log("Nothing to delete")
