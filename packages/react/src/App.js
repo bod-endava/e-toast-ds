@@ -8,8 +8,8 @@ const ButtonDemo = ({ name }) => {
   const cl = `eds-button--${name.toLowerCase()}`
   return <section>
     <h2>{name} Button</h2>
-    <Padded><button className={cl} >{name}</button></Padded>
-    <Padded><button className={cl} disabled>{name} Disabled</button></Padded>
+    <Padded><button className={cl} >Button</button></Padded>
+    <Padded><button className={cl} disabled>Button</button></Padded>
   </section>
 }
 
@@ -19,6 +19,7 @@ function App() {
       <h1>Buttons!</h1>
       <ButtonDemo name="Primary" />
       <ButtonDemo name="Outline" />
+      <ButtonDemo name="Cta" />
     </div>
   );
 }

@@ -18,6 +18,11 @@ $contrast: colors.get-color($base-color,"lightest");
 $mid-contrast: colors.get-color($base-color,"mid");
 $dark-contrast: colors.get-color($base-color,"dark");
 
+$content-cta: colors.get-color($cta-color,"darkest");
+$contrast-cta: colors.get-color($cta-color,"lightest");
+$mid-contrast-cta: colors.get-color($cta-color,"mid");
+$dark-contrast-cta: colors.get-color($cta-color,"dark");
+
 $danger: colors.get-color($danger-color);
 $warning: colors.get-color($warning-color);
 $success: colors.get-color($success-color);

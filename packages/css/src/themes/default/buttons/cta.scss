@@ -1,0 +1,35 @@
+@use "../base/colors.scss" as colors;
+@use "../../../base/fonts.scss" as fonts;
+@use "../../../base/shape.scss" as shape;
+
+// Color tokens
+
+$idle-font-color: colors.$white;
+$idle-background-color: colors.$cta;
+
+$hover-font-color: colors.$white;
+$hover-background-color: colors.$dark-contrast-cta;
+
+$focus-font-color: colors.$white;
+$focus-background-color: colors.$cta;
+
+$disable-font-color: colors.$white;
+$disable-background-color: colors.$disable;
+
+// Shape tokens
+
+$border-radius: shape.$pill-radius;
+$border-width: 1px;
+$height: 37px;
+$padding-top: 11px;
+$padding-right: 28px;
+$padding-bottom: 11px;
+$padding-left: 28px;
+
+// Font tokens
+
+$sizing: "px"; // or "em"
+$font-name: fonts.$font-name;
+$font-weight: fonts.$regular;
+$font-size: fonts.get-size("button", $sizing);
+$line-height: fonts.get-size("button", "line-height");

@@ -1,4 +1,4 @@
-@use '../../themes/%button%/buttons/primary' as tokens;
+@use '../../themes/%button%/buttons/cta' as tokens;
 @use './utils' as utils;
 
 $idle-group: utils.create-group(
@@ -26,7 +26,7 @@ $disable-group: utils.create-group(
 );
 
 @include utils.button-mixin(
-    "primary",
+    "cta",
     $idle-group,
     $hover-group,
     $focus-group,

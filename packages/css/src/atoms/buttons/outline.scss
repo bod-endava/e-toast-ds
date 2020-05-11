@@ -1,4 +1,4 @@
-@use '../../themes/%button%/button/outline' as tokens;
+@use '../../themes/%button%/buttons/outline' as tokens;
 @use './utils' as utils;
 
 $idle-group: utils.create-group(
