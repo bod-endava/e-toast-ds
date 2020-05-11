@@ -1,7 +1,7 @@
-@use '../../themes/%button%/button/primary' as tokens;
+@use '../../themes/%button%/button/outline' as tokens;
 
 $idle-text: tokens.$idle-font-color;
-$idle-border: tokens.$idle-background-color;
+$idle-border: tokens.$idle-font-color;
 $idle-background: tokens.$idle-background-color;
 $idle-border-width: tokens.$border-width;
 
@@ -21,7 +21,7 @@ $radius: tokens.$border-radius;
 $height: tokens.$height;
 $text-style: uppercase;
 
-.eds-button--primary {
+.eds-button--outline {
     border-radius: $radius;
     border-style: solid;
     height: $height;

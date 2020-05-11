@@ -19,6 +19,7 @@
     "prepublish": "yarn clean && yarn build",
     "tasks": "gulp --tasks",
     "template": "node ./scripts/runTemplate ./theme.config ./sass ./temp",
+    "start": "gulp watch",
     "watch": "gulp watch"
   },
   "devDependencies": {

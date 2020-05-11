@@ -4,19 +4,21 @@ const Padded = ({ children }) => <div style={{margin: "16px"}}>
   {children}
 </div>
 
+const ButtonDemo = ({ name }) => {
+  const cl = `eds-button--${name.toLowerCase()}`
+  return <section>
+    <h2>{name} Button</h2>
+    <Padded><button className={cl} >{name}</button></Padded>
+    <Padded><button className={cl} disabled>{name} Disabled</button></Padded>
+  </section>
+}
+
 function App() {
   return (
     <div>
       <h1>Buttons!</h1>
-      <section>
-        <h2>Base Buttons</h2>
-        <Padded><button className="eds-button--primary">Primary</button></Padded>
-      </section>
-
-      <section>
-        <h2>Text Buttons</h2>
-        
-      </section>
+      <ButtonDemo name="Primary" />
+      <ButtonDemo name="Outline" />
     </div>
   );
 }
