@@ -1,6 +1,6 @@
-@use "../base/colors.scss" as colors;
-@use "../../../base/fonts.scss" as fonts;
-@use "../../../base/shape.scss" as shape;
+@use "../globals/colors.scss" as colors;
+@use "../../../globals/fonts.scss" as fonts;
+@use "../../../globals/shape.scss" as shape;
 
 // Color tokens
 
@@ -33,3 +33,4 @@ $font-name: fonts.$font-name;
 $font-weight: fonts.$regular;
 $font-size: fonts.get-size("button", $sizing);
 $line-height: fonts.get-size("button", "line-height");
+$spacing: 0.16px;

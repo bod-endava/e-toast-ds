@@ -1,32 +1,29 @@
-@use '../../themes/%button%/buttons/primary' as tokens;
+@use '../../themes/%button%/buttons/text' as tokens;
 @use './utils' as utils;
 
 $idle-group: utils.create-group(
     $text: tokens.$idle-font-color, 
-    $background: tokens.$idle-background-color, 
-    $border: tokens.$idle-background-color
+    $background: tokens.$idle-background-color,
 );
 
 $hover-group: utils.create-group(
     $text: tokens.$hover-font-color, 
     $background: tokens.$hover-background-color, 
-    $border: tokens.$hover-background-color
+    $border: tokens.$hover-font-color
 );
 
 $focus-group: utils.create-group(
     $text: tokens.$focus-font-color, 
-    $background: tokens.$focus-background-color, 
-    $border: tokens.$focus-background-color
+    $background: tokens.$focus-background-color
 );
 
 $disable-group: utils.create-group(
     $text: tokens.$disable-font-color, 
-    $background: tokens.$disable-background-color, 
-    $border: tokens.$disable-background-color
+    $background: tokens.$disable-background-color
 );
 
 @include utils.button-mixin(
-    "primary",
+    "text",
     $idle-group,
     $hover-group,
     $focus-group,
@@ -34,12 +31,11 @@ $disable-group: utils.create-group(
 ) using ($type){
     
     @if $type == "idle" {
-        border-style: solid;
+        border: none;
         box-sizing: border-box;
         text-transform: uppercase;
         height: tokens.$height;
-        border-width: tokens.$border-width;
-        border-radius: tokens.$border-radius;
+        letter-spacing: tokens.$spacing;
         padding: 
             tokens.$padding-top
             tokens.$padding-right
@@ -50,18 +46,17 @@ $disable-group: utils.create-group(
         font-weight: tokens.$font-weight;
         font-size: tokens.$font-size;
         line-height: tokens.$line-height;
-        letter-spacing: tokens.$spacing;
+    }
+
+    @if $type == "hover" {
+        border-bottom: tokens.$border-width solid tokens.$hover-font-color;
     }
 
     @if $type == "focus" {
-        $focus-displacement: tokens.$border-width* 3;
-        border-width: tokens.$border-width * 4;
-        padding: 
-            tokens.$padding-top - $focus-displacement
-            tokens.$padding-right - $focus-displacement
-            tokens.$padding-bottom - $focus-displacement
-            tokens.$padding-left - $focus-displacement
-        ;
+        border: none;
     }
     
+    @if $type == "disable" {
+        border: none;
+    }
 }

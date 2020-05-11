@@ -9,26 +9,26 @@ $idle-font-color: colors.$base;
 $idle-background-color: colors.$white;
 
 // hover
-$hover-font-color: colors.$white;
-$hover-background-color: colors.$dark-contrast;
+$hover-font-color: colors.$dark-contrast;
+$hover-background-color: colors.$white;
 
 // focus
-$focus-font-color: colors.$white;
-$focus-background-color: colors.$base;
+$focus-font-color: colors.$base;
+$focus-background-color: colors.$white;
 
 // disable
-$disable-font-color: colors.$white;
-$disable-background-color: colors.$disable;
+$disable-font-color: colors.$disable;
+$disable-background-color: colors.$white;
 
 // Shape tokens
 
 $border-radius: shape.$pill-radius;
 $border-width: 1px;
-$height: 37px;
-$padding-top: 11px;
-$padding-right: 28px;
-$padding-bottom: 11px;
-$padding-left: 28px;
+$height: auto;
+$padding-top: 0px;
+$padding-right: 0px;
+$padding-bottom: 0px;
+$padding-left: 0px;
 
 // Font tokens
 

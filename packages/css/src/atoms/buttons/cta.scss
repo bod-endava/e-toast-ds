@@ -50,6 +50,7 @@ $disable-group: utils.create-group(
         font-weight: tokens.$font-weight;
         font-size: tokens.$font-size;
         line-height: tokens.$line-height;
+        letter-spacing: tokens.$spacing;
     }
 
     @if $type == "focus" {

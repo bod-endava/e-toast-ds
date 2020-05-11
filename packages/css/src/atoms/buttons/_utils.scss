@@ -1,4 +1,4 @@
-@function create-group($text,$background,$border){
+@function create-group($text,$background: "none",$border: "none"){
     @return (
         "text": $text,
         "background": $background,
@@ -26,7 +26,7 @@
     $focus,
     $disable
 ) {
-    .eds-button--#{$name} {
+    .eds-#{$name}-button {
         cursor: pointer;
         @content("idle");
         @include status($idle);

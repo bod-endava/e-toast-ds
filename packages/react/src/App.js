@@ -5,7 +5,7 @@ const Padded = ({ children }) => <div style={{margin: "16px"}}>
 </div>
 
 const ButtonDemo = ({ name }) => {
-  const cl = `eds-button--${name.toLowerCase()}`
+  const cl = `eds-${name.toLowerCase()}-button`
   return <section>
     <h2>{name} Button</h2>
     <Padded><button className={cl} >Button</button></Padded>
@@ -20,6 +20,7 @@ function App() {
       <ButtonDemo name="Primary" />
       <ButtonDemo name="Outline" />
       <ButtonDemo name="Cta" />
+      <ButtonDemo name="Text" />
     </div>
   );
 }

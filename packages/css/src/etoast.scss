@@ -2,18 +2,22 @@
 @use "./base/colors" as colors;
 @use "./atoms/buttons/index";
 
+$colors-as-css-variables: false;
+
 :root {
-    @each $color, $color-variant in colors.$etoast-colors {
-        @if utils.is-map($color-variant) {
-            @each $type, $value in $color-variant {
-                @if $type == "base" {
-                    --#{$color}: #{$value};
-                } @else {
-                    --#{$color}-#{$type}: #{$value};
+    @if $colors-as-css-variables {
+        @each $color, $color-variant in colors.$etoast-colors {
+            @if utils.is-map($color-variant) {
+                @each $type, $value in $color-variant {
+                    @if $type == "base" {
+                        --#{$color}: #{$value};
+                    } @else {
+                        --#{$color}-#{$type}: #{$value};
+                    }
                 }
+            } @else {
+                --#{$color}: #{$color-variant};
             }
-        } @else {
-            --#{$color}: #{$color-variant};
         }
     }
 }
