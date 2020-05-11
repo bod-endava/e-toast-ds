@@ -1,75 +1,66 @@
 @use '../../themes/%button%/button/primary' as tokens;
+@use './utils' as utils;
 
-$idle-text: tokens.$idle-font-color;
-$idle-border: tokens.$idle-background-color;
-$idle-background: tokens.$idle-background-color;
-$idle-border-width: tokens.$border-width;
+$idle-group: utils.create-group(
+    $text: tokens.$idle-font-color, 
+    $background: tokens.$idle-background-color, 
+    $border: tokens.$idle-background-color
+);
 
-$hover-text: tokens.$hover-font-color;
-$hover-border: tokens.$hover-background-color;
-$hover-background: tokens.$hover-background-color;
+$hover-group: utils.create-group(
+    $text: tokens.$hover-font-color, 
+    $background: tokens.$hover-background-color, 
+    $border: tokens.$hover-background-color
+);
 
-$focus-text: tokens.$focus-font-color;
-$focus-border: tokens.$focus-background-color;
-$focus-background: tokens.$focus-background-color;
-$focus-border-width: 4 * tokens.$border-width;
+$focus-group: utils.create-group(
+    $text: tokens.$focus-font-color, 
+    $background: tokens.$focus-background-color, 
+    $border: tokens.$focus-background-color
+);
 
-$disable-text: tokens.$disable-font-color;
-$disable-background: tokens.$disable-background-color;
+$disable-group: utils.create-group(
+    $text: tokens.$disable-font-color, 
+    $background: tokens.$disable-background-color, 
+    $border: tokens.$disable-background-color
+);
 
-$radius: tokens.$border-radius;
-$height: tokens.$height;
-$text-style: uppercase;
-
-.eds-button--primary {
-    border-radius: $radius;
-    border-style: solid;
-    height: $height;
-    box-sizing: border-box;
-    text-transform: $text-style;
-    padding: 
-        tokens.$padding-top
-        tokens.$padding-right
-        tokens.$padding-bottom
-        tokens.$padding-left
-    ;
-    font-family: tokens.$font-name;
-    font-weight: tokens.$font-weight;
-    font-size: tokens.$font-size;
-    line-height: tokens.$line-height;
-    cursor: pointer;
-
-    color: $idle-text;
-    border-color: $idle-border;
-    background-color: $idle-background;
-    border-width: $idle-border-width;
+@include utils.button-mixin(
+    "primary",
+    $idle-group,
+    $hover-group,
+    $focus-group,
+    $disable-group
+) using ($type){
     
-    &:hover {
-        color: $hover-text;
-        border-color: $hover-border;
-        background-color: $hover-background;
+    @if $type == "idle" {
+        border-style: solid;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        height: tokens.$height;
+        border-width: tokens.$border-width;
+        border-radius: tokens.$border-radius;
+        padding: 
+            tokens.$padding-top
+            tokens.$padding-right
+            tokens.$padding-bottom
+            tokens.$padding-left
+        ;
+        font-family: tokens.$font-name;
+        font-weight: tokens.$font-weight;
+        font-size: tokens.$font-size;
+        line-height: tokens.$line-height;
     }
 
-    &:focus {
-        outline: none;
-        border-style: double;
-        background-clip: padding-box;
-        color: $focus-text;
-        border-color: $focus-border;
-        background-color: $focus-background;
-        border-width: $focus-border-width;
+    @if $type == "focus" {
+        $focus-displacement: tokens.$border-width* 3;
+        border-width: tokens.$border-width * 4;
         padding: 
-            tokens.$padding-top - $focus-border-width * 3/4
-            tokens.$padding-right - $focus-border-width * 3/4
-            tokens.$padding-bottom - $focus-border-width * 3/4
-            tokens.$padding-left - $focus-border-width * 3/4
+            tokens.$padding-top - $focus-displacement
+            tokens.$padding-right - $focus-displacement
+            tokens.$padding-bottom - $focus-displacement
+            tokens.$padding-left - $focus-displacement
         ;
     }
-
-    &:disabled {
-        color: $disable-text;
-        border-color: $disable-background;
-        background-color: $disable-background;
-        cursor: default;
-    }
+    
 }

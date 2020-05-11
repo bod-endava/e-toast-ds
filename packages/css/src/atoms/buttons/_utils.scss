@@ -1,0 +1,53 @@
+@function create-group($text,$background,$border){
+    @return (
+        "text": $text,
+        "background": $background,
+        "border": $border
+    )
+};
+
+@mixin status-mixin($text,$background,$border) {
+    color: $text;
+    background-color: $background;
+    border-color: $border
+}
+
+@mixin status($group) {
+    @include status-mixin(
+        map-get($group,"text"), 
+        map-get($group,"background"), 
+        map-get($group,"border")
+    )
+}
+
+@mixin button-mixin($name,
+    $idle,
+    $hover,
+    $focus,
+    $disable
+) {
+    .eds-button--#{$name} {
+        cursor: pointer;
+        @content("idle");
+        @include status($idle);
+
+        &:hover {
+            @content("hover");
+            @include status($hover);
+        }
+
+        &:focus {
+            outline: none;
+            border-style: double;
+            background-clip: padding-box;
+            @content("focus");
+            @include status($focus);
+        }
+
+        &:disabled {
+            @content("disable");
+            @include status($disable);
+            cursor: default;
+        }
+    }
+}
