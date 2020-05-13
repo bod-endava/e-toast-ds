@@ -20,6 +20,21 @@
     )
 }
 
+// Creates an outline border. Works when a class has a set padding and border width
+// and passes it to the mixin. 
+@mixin synthetic-outline-border ($width,$top,$right,$bottom,$left) {
+    $focus-displacement: $width * 3;
+    border-width: $width * 4;
+    border-style: double;
+    background-clip: padding-box;
+    padding:
+        $top - $focus-displacement
+        $right - $focus-displacement
+        $bottom - $focus-displacement
+        $left - $focus-displacement
+    ;
+}
+
 @mixin button-mixin($name,
     $idle,
     $hover,
@@ -38,8 +53,6 @@
 
         &:focus {
             outline: none;
-            border-style: double;
-            background-clip: padding-box;
             @content("focus");
             @include status($focus);
         }

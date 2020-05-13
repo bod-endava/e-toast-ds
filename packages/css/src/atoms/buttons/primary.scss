@@ -54,14 +54,13 @@ $disable-group: utils.create-group(
     }
 
     @if $type == "focus" {
-        $focus-displacement: tokens.$border-width* 3;
-        border-width: tokens.$border-width * 4;
-        padding: 
-            tokens.$padding-top - $focus-displacement
-            tokens.$padding-right - $focus-displacement
-            tokens.$padding-bottom - $focus-displacement
-            tokens.$padding-left - $focus-displacement
-        ;
+        @include utils.synthetic-outline-border(
+            tokens.$border-width,
+            tokens.$padding-top,
+            tokens.$padding-right,
+            tokens.$padding-bottom,
+            tokens.$padding-left
+        )
     }
     
 }
