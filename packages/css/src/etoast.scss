@@ -1,5 +1,5 @@
 @use "utility" as utils;
-@use "./base/colors" as colors;
+@use "./globals/colors" as colors;
 @use "./atoms/buttons/index";
 
 $colors-as-css-variables: false;

@@ -1,0 +1,13 @@
+@use "../../../globals/fonts" as fonts;
+
+// Shared tokens
+
+$sizing: "px"; // or em
+
+// Buttons
+
+$button-font: fonts.$font-name;
+$button-weight: fonts.$regular;
+$button-size: fonts.get-size("button", $sizing);
+$button-line-height: fonts.get-size("button", "line-height");
+$button-spacing: 0.16;
