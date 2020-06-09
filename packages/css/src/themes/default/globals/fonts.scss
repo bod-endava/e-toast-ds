@@ -10,4 +10,12 @@ $button-font: fonts.$font-name;
 $button-weight: fonts.$regular;
 $button-size: fonts.get-size("button", $sizing);
 $button-line-height: fonts.get-size("button", "line-height");
-$button-spacing: 0.16;
+$button-spacing: 0.16px;
+
+// Checkbox
+
+$checkbox-font: fonts.$font-name;
+$checkbox-weight: fonts.$regular;
+$checkbox-size: fonts.get-size("button", $sizing);
+$checkbox-line-height: 22px;
+$checkbox-spacing: 0.16px;
