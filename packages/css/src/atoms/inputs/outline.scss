@@ -1,0 +1,96 @@
+@use '../../themes/%input%/inputs/outline' as tokens;
+@use './utils' as utils;
+
+$idle-group: utils.create-group(
+    $text: tokens.$idle-font-color, 
+    $background: tokens.$idle-background-color, 
+    $border: tokens.$idle-border-color
+);
+
+$active-group: utils.create-group(
+    $text: tokens.$active-font-color, 
+    $background: tokens.$active-background-color, 
+    $border: tokens.$active-border-color
+);
+
+$focus-group: utils.create-group(
+    $text: tokens.$focus-font-color, 
+    $background: tokens.$focus-background-color, 
+    $border: tokens.$focus-border-color
+);
+
+$disable-group: utils.create-group(
+    $text: tokens.$disable-border-color, 
+    $background: tokens.$disable-background-color, 
+    $border: tokens.$disable-border-color
+);
+
+$placeholder-group: utils.create-group(
+    $text: tokens.$placeholder-font-color
+);
+
+$error-group: utils.create-group(
+    $text: tokens.$idle-font-color,
+    $border: tokens.$error-border-color
+);
+
+$success-group: utils.create-group(
+    $text: tokens.$idle-font-color,
+    $border: tokens.$success-border-color
+);
+
+$label-group: utils.create-group(
+    $text: tokens.$label-font-color
+);
+
+$labelError-group: utils.create-group(
+    $text: tokens.$label-error-font-color
+);
+
+@include utils.input-mixin(
+    "outline",
+    $idle-group,
+    $active-group,
+    $focus-group,
+    $disable-group,
+    $placeholder-group,
+    $error-group,
+    $success-group,
+    $label-group,
+    $labelError-group
+) using ($type){
+    
+    @if $type == "idle" {
+        border-style: solid;
+        box-sizing: border-box;
+        height: tokens.$height;
+        border-width: tokens.$border-width;
+        border-radius: tokens.$border-radius;
+        padding: 
+            tokens.$padding-top
+            tokens.$padding-right
+            tokens.$padding-bottom
+            tokens.$padding-left
+        ;
+        font-family: tokens.$font-name;
+        font-weight: tokens.$font-weight;
+        font-size: tokens.$font-size;
+        letter-spacing: tokens.$spacing;
+    }
+
+    @if $type == "label" {
+        font-family: tokens.$label-font-name;
+        font-weight: tokens.$font-weight;
+        font-size: tokens.$label-font-size;
+        margin-bottom: 8px;
+    }
+
+    @if $type == "labelError" {
+        font-family: tokens.$label-font-name;
+        font-weight: tokens.$font-weight;
+        font-size: tokens.$label-font-size;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-left: 4px;
+    }
+}

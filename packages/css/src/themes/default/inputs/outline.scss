@@ -1,0 +1,58 @@
+@use "../globals/colors.scss" as colors;
+@use "../globals/fonts.scss" as fonts;
+@use "../globals/shape.scss" as shape;
+
+// Color tokens
+
+// idle
+$idle-font-color: colors.$darkgray;
+$idle-background-color: colors.$white;
+$idle-border-color: colors.$lightgray;
+
+// hover
+$active-font-color: colors.$darkgray;
+$active-background-color: colors.$white;
+$active-border-color: colors.$base;
+
+// focus
+$focus-font-color: colors.$darkgray;
+$focus-background-color: colors.$white;
+$focus-border-color: colors.$base;
+
+// disable
+$disable-font-color: colors.$darkgray;
+$disable-background-color: colors.$white;
+$disable-border-color: colors.$lightgray-light;
+
+// placeholder
+$placeholder-font-color: colors.$darkgray-mid;
+
+// Shape tokens
+$border-radius: shape.$input-radius;
+$border-width: 1px;
+$height: 30px;
+$padding-top: 6px;
+$padding-right: 10px;
+$padding-bottom: 6px;
+$padding-left: 10px;
+
+// Font tokens
+$font-name: fonts.$button-font;
+$font-weight: fonts.$button-weight;
+$font-size: fonts.$input-size;
+$line-height: fonts.$button-line-height;
+$spacing: fonts.$button-spacing;
+
+/* Input- Error */
+$error-border-color: colors.$danger;
+
+/* Input-Success */
+$success-border-color: colors.$success;
+
+/* Label */
+$label-font-size: fonts.$label-size;
+$label-font-color: colors.$darkgray;
+$label-font-name: fonts.$button-font;
+
+/* Label Error */
+$label-error-font-color: colors.$danger;
