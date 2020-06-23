@@ -15,14 +15,33 @@ const ButtonDemo = ({ name, label }) => {
 
 const Checkbox = ({ label, ...extra }) => {
   if( label ){
+    const id = label.replace(" ","_");
     const labelClass = `eds-checkbox__label ${extra.disabled ? "eds-checkbox__label--disabled" : ""}`
-    return <div className="eds-checkbox__label__container">
-      <input id={label} type="checkbox" className="eds-checkbox" {...extra} />
-      <label htmlFor={label} className={labelClass} >{label}</label>
+    return <div className="eds-checkbox__container">
+      <input id={id} type="checkbox" className="eds-checkbox" {...extra} />
+      <label htmlFor={id} className={labelClass} >{label}</label>
     </div>
   }
   return <input type="checkbox" className="eds-checkbox" {...extra} />
-} 
+}
+
+const RadioButton = ({ label, ...extra }) => {
+  if( label ) {
+    const id = label.replace(" ","_");
+    const labelClass = `eds-radio__label ${extra.disabled ? "eds-radio__label--disabled" : ""}`
+    return <div className="eds-radio__container">
+      <input id={id} type="radio" className="eds-radio" {...extra} />
+      <label htmlFor={id} className={labelClass} >{label}</label>
+    </div>
+  }
+  return <input type="radio" className="eds-radio" {...extra} />
+}
+
+const List = ({ of, children, ...extra }) => {
+  return <div className={`eds-${of}__list`} {...extra}>
+    {children}
+  </div>
+}
 
 function App() {
   return (
@@ -37,9 +56,21 @@ function App() {
       <Checkbox />
       <Checkbox checked/>
       <Checkbox disabled/>
-      <Checkbox label="Label" />
-      <Checkbox label="Checked" checked/>
-      <Checkbox label="Disabled" disabled/>
+      <List of="checkbox">
+        <Checkbox label="Labeled checkbox" />
+        <Checkbox label="Checked checkbox" checked/>
+        <Checkbox label="Disabled checkbox" disabled/>
+      </List>
+
+      <h1>Radio!</h1>
+      <RadioButton />
+      <RadioButton checked/>
+      <RadioButton disabled/>
+      <List of="radio">
+        <RadioButton name="list" label="Labeled radio" />
+        <RadioButton name="list" label="Checked radio" checked/>
+        <RadioButton name="list" label="Disabled radio" disabled/>
+      </List>
     </div>
   );
 }

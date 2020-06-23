@@ -1,0 +1,17 @@
+@use '../globals/colors.scss' as colors;
+@use '../globals/fonts.scss' as fonts;
+@use '../globals/shape.scss' as shape;
+
+$background: colors.$base;
+$border: colors.$dark-contrast;
+$radius: 50%;
+$disabled: colors.$disable;
+$size: 22px;
+$box-margin: 4px;
+
+$font-color: colors.$dark-contrast;
+$font-name: fonts.$radio-font;
+$font-weight: fonts.$radio-weight;
+$font-size: fonts.$radio-size;
+$line-height: fonts.$radio-line-height;
+$spacing: fonts.$radio-spacing;
