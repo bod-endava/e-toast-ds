@@ -1,4 +1,5 @@
 @use "../../themes/%checkbox%/checkbox/" as tokens;
+@use "../../utility/index" as utils;
 
 .eds-checkbox {
     visibility: hidden;
@@ -57,17 +58,8 @@
         }
 
     }
-    &__container {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
+    @include utils.add-flex-list-subclass();
+    @include utils.add-flex-container-subclass() {
         margin-bottom: 8px;
-    }
-    &__list {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
+    };
 }

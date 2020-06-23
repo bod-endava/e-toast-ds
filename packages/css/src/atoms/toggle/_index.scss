@@ -1,4 +1,5 @@
 @use "../../themes/%toggle%/toggle/" as tokens;
+@use "../../utility/index" as utils;
 
 .eds-toggle {
     visibility: hidden;
@@ -10,10 +11,10 @@
     &::after, &::before {
         visibility: visible;
         cursor: pointer;
+        content: "";
     }
     
     &:after {
-        content: "";
         display: block;
         position: absolute;
         margin: auto;
@@ -36,7 +37,6 @@
     }
 
     &:before {
-        content: "";
         position: absolute;
         left: 0;
         width: tokens.$width;
@@ -71,17 +71,9 @@
         }
 
     }
-    &__container {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
+    @include utils.add-flex-list-subclass();
+    @include utils.add-flex-container-subclass() {
         margin-bottom: 8px;
-    }
-    &__list {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
+    };
+
 }
