@@ -1,0 +1,64 @@
+@use "../../themes/%checkbox%/checkbox/" as tokens;
+
+.eds-checkbox {
+    visibility: hidden;
+    position: relative;
+    width: tokens.$size;
+    height: tokens.$size;
+    
+    &:after {
+        display: inline-block;
+        border: 1px solid tokens.$background;
+        border-radius: tokens.$radius;
+        font-family: tokens.$font-name;
+        font-size: tokens.$size;
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        content: "";
+    }
+
+    &:disabled:after {
+        border-color: tokens.$disabled;
+        background-color: none;
+        cursor: not-allowed;
+    }
+      
+    &:checked:after {
+        content: "\2713";
+        background-color: tokens.$background;
+        color: tokens.$font-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__label {
+        color: tokens.$background;
+        font-family: tokens.$font-name;
+        height: tokens.$line-height;
+        font-size: tokens.$font-size;
+        font-weight: tokens.$font-weight;
+        letter-spacing: tokens.$spacing;
+        margin-left: tokens.$box-margin;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        
+        &--disabled {
+            color: tokens.$disabled;
+            cursor: not-allowed;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 @use "utility" as utils;
 @use "./globals/colors" as colors;
-@use "./atoms/buttons/index";
+@use "./atoms/buttons/index" as button;
+@use "./atoms/checkbox/index" as checkbox;
 
 $colors-as-css-variables: false;
 

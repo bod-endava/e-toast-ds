@@ -1,0 +1,16 @@
+@use '../globals/colors.scss' as colors;
+@use '../globals/fonts.scss' as fonts;
+@use '../globals/shape.scss' as shape;
+
+$background: colors.$dark-contrast;
+$radius: shape.$checkbox-radius;
+$disabled: colors.$disable;
+$size: 22px;
+$box-margin: 4px;
+
+$font-color: colors.$white;
+$font-name: fonts.$checkbox-font;
+$font-weight: fonts.$checkbox-weight;
+$font-size: fonts.$checkbox-size;
+$line-height: fonts.$checkbox-line-height;
+$spacing: fonts.$checkbox-spacing;

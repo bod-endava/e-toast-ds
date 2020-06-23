@@ -13,6 +13,17 @@ const ButtonDemo = ({ name, label }) => {
   </section>
 }
 
+const Checkbox = ({ label, ...extra }) => {
+  if( label ){
+    const labelClass = `eds-checkbox__label ${extra.disabled ? "eds-checkbox__label--disabled" : ""}`
+    return <div className="eds-checkbox__label__container">
+      <input id={label} type="checkbox" className="eds-checkbox" {...extra} />
+      <label htmlFor={label} className={labelClass} >{label}</label>
+    </div>
+  }
+  return <input type="checkbox" className="eds-checkbox" {...extra} />
+} 
+
 function App() {
   return (
     <div>
@@ -21,6 +32,14 @@ function App() {
       <ButtonDemo name="Outline" label="Outline Primary"/>
       <ButtonDemo name="Cta" />
       <ButtonDemo name="Text" />
+
+      <h1>Checkbox!</h1>
+      <Checkbox />
+      <Checkbox checked/>
+      <Checkbox disabled/>
+      <Checkbox label="Label" />
+      <Checkbox label="Checked" checked/>
+      <Checkbox label="Disabled" disabled/>
     </div>
   );
 }
