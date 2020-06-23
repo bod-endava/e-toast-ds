@@ -1,0 +1,27 @@
+@use '../globals/colors.scss' as colors;
+@use '../globals/fonts.scss' as fonts;
+@use '../globals/shape.scss' as shape;
+
+// For later
+$icon-size: 14px;
+$icon-color: colors.$white;
+
+$circle-color: colors.$white;
+$circle-size: 18px;
+$off-color: colors.$dark-contrast;
+$on-color: colors.$base;
+$width: 51px;
+$height: 22px;
+$box-margin: 6px;
+$radius: $height/2;
+
+$disabled: colors.$disable;
+$disabled-color: colors.$disable;
+$disabled-circle-color: colors.$dark-contrast; //dark-disable?
+
+$font-color: colors.$dark-contrast;
+$font-name: fonts.$toggle-font;
+$font-weight: fonts.$toggle-weight;
+$font-size: fonts.$toggle-size;
+$line-height: fonts.$toggle-line-height;
+$spacing: fonts.$toggle-spacing;

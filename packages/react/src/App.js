@@ -37,6 +37,18 @@ const RadioButton = ({ label, ...extra }) => {
   return <input type="radio" className="eds-radio" {...extra} />
 }
 
+const Toggle = ({ label, ...extra }) => {
+  if( label ) {
+    const id = label.replace(" ","_");
+    const labelClass = `eds-toggle__label ${extra.disabled ? "eds-toggle__label--disabled" : ""}`
+    return <div className="eds-toggle__container">
+      <input id={id} type="checkbox" className="eds-toggle" {...extra} />
+      <label htmlFor={id} className={labelClass} >{label}</label>
+    </div>
+  }
+  return <input type="checkbox" className="eds-toggle" {...extra} />
+}
+
 const List = ({ of, children, ...extra }) => {
   return <div className={`eds-${of}__list`} {...extra}>
     {children}
@@ -58,7 +70,7 @@ function App() {
       <Checkbox disabled/>
       <List of="checkbox">
         <Checkbox label="Labeled checkbox" />
-        <Checkbox label="Checked checkbox" checked/>
+        <Checkbox label="Controlled checkbox" checked/>
         <Checkbox label="Disabled checkbox" disabled/>
       </List>
 
@@ -68,8 +80,18 @@ function App() {
       <RadioButton disabled/>
       <List of="radio">
         <RadioButton name="list" label="Labeled radio" />
-        <RadioButton name="list" label="Checked radio" checked/>
+        <RadioButton name="list" label="Controlled radio" checked/>
         <RadioButton name="list" label="Disabled radio" disabled/>
+      </List>
+
+      <h1>Toggle!</h1>
+      <Toggle />
+      <Toggle checked/>
+      <Toggle disabled/>
+      <List of="toggle">
+        <Toggle label="Labeled toggle" />
+        <Toggle label="Controlled toggle" checked/>
+        <Toggle label="Disabled toggle" disabled/>
       </List>
     </div>
   );
