@@ -1,26 +1,30 @@
-@use "../../themes/%checkbox%/checkbox/" as tokens;
+@use "../../themes/%radio%/radio/" as tokens;
 @use "../../utility/index" as utils;
 
-.eds-checkbox {
+.eds-radio {
+    $border-compensation: 2px;
     visibility: hidden;
     position: relative;
-    width: tokens.$size;
-    height: tokens.$size;
+    width: tokens.$size + $border-compensation;
+    height: tokens.$size + $border-compensation;
     margin: 0;
     
     &:after {
-        display: inline-block;
-        border: 1px solid tokens.$background;
-        border-radius: tokens.$radius;
+        margin: 0px;
+        padding: 5px;
+        background-clip: content-box;
         box-sizing: border-box;
+        display: inline-block;
+        border: 1px solid tokens.$border;
+        border-radius: tokens.$radius;
         font-family: tokens.$font-name;
         font-size: tokens.$size;
         visibility: visible;
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: tokens.$size + $border-compensation;
+        height: tokens.$size + $border-compensation;
         cursor: pointer;
         content: "";
     }
@@ -32,15 +36,16 @@
     }
       
     &:checked:after {
-        content: "\2713";
+        content: "";
         background-color: tokens.$background;
-        color: tokens.$check-color;
+        border-color: tokens.$background;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     &__label {
+        height: tokens.$size;
         color: tokens.$font-color;
         font-family: tokens.$font-name;
         height: tokens.$line-height;

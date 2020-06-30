@@ -19,3 +19,19 @@ $checkbox-weight: fonts.$regular;
 $checkbox-size: fonts.get-size("button", $sizing);
 $checkbox-line-height: 22px;
 $checkbox-spacing: 0.16px;
+
+// Radio
+
+$radio-font: fonts.$font-name;
+$radio-weight: fonts.$regular;
+$radio-size: fonts.get-size("button", $sizing);
+$radio-line-height: 22px;
+$radio-spacing: 0.16px;
+
+// toggle
+
+$toggle-font: fonts.$font-name;
+$toggle-weight: fonts.$regular;
+$toggle-size: fonts.get-size("button", $sizing);
+$toggle-line-height: 22px;
+$toggle-spacing: 0.16px;

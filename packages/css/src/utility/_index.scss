@@ -1,7 +1,30 @@
 @function is-map($var){
     @return type-of($var) == 'map';
-}
+};
 
 @function ns($name){
     @return eds-#{$name}
+};
+
+@mixin make-flex($dir:row, $justify:flex-start, $align:flex-start) {
+    @if & {
+        display: flex;
+        flex-direction: $dir;
+        justify-content: $justify;
+        align-items: $align;
+    }
+}
+
+@mixin add-flex-list-subclass($dir:column, $justify:flex-start, $align:flex-start) {
+    &__list {
+        @include make-flex($dir, $justify, $align);
+        @content;
+    }
+}
+
+@mixin add-flex-container-subclass($dir:row, $justify:flex-start, $align:center) {
+    &__container {
+        @include make-flex($dir, $justify, $align);
+        @content;
+    }
 }
