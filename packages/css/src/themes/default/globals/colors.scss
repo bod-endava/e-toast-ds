@@ -10,6 +10,8 @@ $success-color: "green";
 $disable-color: "disable";
 $white-color: "white";
 $black-color: "black";
+$lightgray-color: "lightgray";
+$darkgray-color: "darkgray";
 
 $base: colors.get-color($base-color);
 $cta: colors.get-color($cta-color);
@@ -30,3 +32,8 @@ $success: colors.get-color($success-color);
 $disable: colors.get-color($disable-color);
 $white: colors.get-color($white-color);
 $black: colors.get-color($black-color);
+
+$lightgray : colors.get-color($lightgray-color,"base");
+$darkgray : colors.get-color($darkgray-color,"base");
+$darkgray-mid : colors.get-color($darkgray-color,"mid");
+$lightgray-light : colors.get-color($lightgray-color,"light");

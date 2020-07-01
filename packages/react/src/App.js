@@ -55,6 +55,33 @@ const List = ({ of, children, ...extra }) => {
   </div>
 }
 
+const InputDemo = ({ name, variant, label, placeholder, type, disabled, error, success, value }) => {
+  const cl = `eds-${variant.toLowerCase()}-input`;
+  const clLabel = `eds-label-${variant.toLowerCase()}-input`;
+  return <section>
+    <Padded>
+      <div className={`${cl}-root`}>
+        <div className="label-container">
+          {label && <label htmlFor={name} className={`${clLabel} ${disabled ? `${clLabel}--disabled` : ''}`}>{label}</label>}
+          {(label && error) && (<div className={`${clLabel}-block`}><i className="fas fa-exclamation-circle"></i> <p className={`${clLabel}--error`}>This field is required</p></div>)}
+        </div>
+        <div className={`${cl}-root-input`}>
+        <input
+          className={`${cl} ${error ? `${cl}--error`: ''} ${success ? `${cl}--success`: ''}`}
+          type={type ? type : "text"}
+          id={name}
+          name={name}
+          placeholder={placeholder}
+          disabled={disabled}
+          value={value}
+          />
+        {success && <i className={`fas fa-check-circle ${cl}--success-icon`}></i>}
+      </div>
+      </div>
+    </Padded>
+  </section>
+}
+
 function App() {
   return (
     <div>
@@ -93,6 +120,19 @@ function App() {
         <Toggle label="Controlled toggle" checked/>
         <Toggle label="Disabled toggle" disabled/>
       </List>
+      <h1>Inputs!</h1>
+      <h2 style={{fontFamily: 'Roboto'}}>Outline Normal Input</h2>
+      <InputDemo name="First" variant="Outline" label="Label" placeholder="Placeholder" />
+      <InputDemo name="Second" variant="Outline" placeholder="Placeholder" />
+      <h2 style={{fontFamily: 'Roboto'}}>Outline Error Input</h2>
+      <InputDemo name="Thrid" variant="Outline" label="Label" placeholder="Placeholder" error/>
+      <InputDemo name="Fourth" variant="Outline" placeholder="Placeholder" error/>
+      <h2 style={{fontFamily: 'Roboto'}}>Outline Success Input</h2>
+      <InputDemo name="Fifth" variant="Outline" label="Label" placeholder="Placeholder" value="Success" success/>
+      <InputDemo name="Sixth" variant="Outline" placeholder="Placeholder" value="Success" success/>
+      <h2 style={{fontFamily: 'Roboto'}}>Outline Disabled Input</h2>
+      <InputDemo name="Seventh" variant="Outline" label="Label" placeholder="Placeholder" disabled/>
+      <InputDemo name="Eighth" variant="Outline" placeholder="Placeholder" disabled/>
     </div>
   );
 }

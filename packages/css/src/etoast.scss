@@ -4,6 +4,7 @@
 @use "./atoms/checkbox/index" as checkbox;
 @use "./atoms/radio/index" as radio;
 @use "./atoms/toggle/index" as toggle;
+@use "./atoms/inputs/index" as inp-styles;
 
 $colors-as-css-variables: false;
 
