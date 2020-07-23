@@ -1,5 +1,6 @@
 @use '../../themes/%input%/inputs/outline' as tokens;
-@use './utils' as utils;
+@use '../../utility/index' as utils;
+@use './utils' as input-utils;
 
 $idle-group: utils.create-group(
     $text: tokens.$idle-font-color, 
@@ -47,7 +48,7 @@ $labelError-group: utils.create-group(
     $text: tokens.$label-error-font-color
 );
 
-@include utils.input-mixin(
+@include input-utils.input-mixin(
     "outline",
     $idle-group,
     $active-group,

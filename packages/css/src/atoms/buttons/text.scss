@@ -1,5 +1,6 @@
 @use '../../themes/%button%/buttons/text' as tokens;
-@use './utils' as utils;
+@use '../../utility/index' as utils;
+@use './utils' as button-utils;
 
 $idle-group: utils.create-group(
     $text: tokens.$idle-font-color, 
@@ -22,7 +23,7 @@ $disable-group: utils.create-group(
     $background: tokens.$disable-background-color
 );
 
-@include utils.button-mixin(
+@include button-utils.button-mixin(
     "text",
     $idle-group,
     $hover-group,

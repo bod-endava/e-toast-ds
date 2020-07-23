@@ -20,7 +20,9 @@
     "tasks": "gulp --tasks",
     "template": "node ./scripts/runTemplate ./theme.config ./sass ./temp",
     "start": "gulp watch",
-    "watch": "gulp watch"
+    "start:debug": "gulp debug",
+    "watch": "gulp watch",
+    "watch:debug": "gulp watch_debug"
   },
   "devDependencies": {
     "gulp": "^4.0.2"

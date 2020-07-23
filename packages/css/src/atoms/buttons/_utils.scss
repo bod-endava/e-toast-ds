@@ -1,39 +1,4 @@
-@function create-group($text,$background: "none",$border: "none"){
-    @return (
-        "text": $text,
-        "background": $background,
-        "border": $border
-    )
-};
-
-@mixin status-mixin($text,$background,$border) {
-    color: $text;
-    background-color: $background;
-    border-color: $border
-}
-
-@mixin status($group) {
-    @include status-mixin(
-        map-get($group,"text"), 
-        map-get($group,"background"), 
-        map-get($group,"border")
-    )
-}
-
-// Creates an outline border. Works when a class has a set padding and border width
-// and passes it to the mixin. 
-@mixin synthetic-outline-border ($width,$top,$right,$bottom,$left) {
-    $focus-displacement: $width * 3;
-    border-width: $width * 4;
-    border-style: double;
-    background-clip: padding-box;
-    padding:
-        $top - $focus-displacement
-        $right - $focus-displacement
-        $bottom - $focus-displacement
-        $left - $focus-displacement
-    ;
-}
+@use "../../utility/index" as utils;
 
 @mixin button-mixin($name,
     $idle,
@@ -44,22 +9,22 @@
     .eds-#{$name}-button {
         cursor: pointer;
         @content("idle");
-        @include status($idle);
+        @include utils.status($idle);
 
         &:hover {
             @content("hover");
-            @include status($hover);
+            @include utils.status($hover);
         }
 
         &:focus {
             outline: none;
             @content("focus");
-            @include status($focus);
+            @include utils.status($focus);
         }
 
         &:disabled {
             @content("disable");
-            @include status($disable);
+            @include utils.status($disable);
             cursor: default;
         }
     }

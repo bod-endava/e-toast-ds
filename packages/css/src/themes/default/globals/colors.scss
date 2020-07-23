@@ -1,39 +1,62 @@
 @use "../../../globals/colors" as colors;
 
 // Colors
+$white: colors.get-color("white");
+$black: colors.get-color("black");
 
-$base-color: "orange";
-$cta-color: "blue";
-$danger-color: "red";
-$warning-color: "yellow";
-$success-color: "green";
-$disable-color: "disable";
-$white-color: "white";
-$black-color: "black";
+$base         : colors.get-color("orange");
+$base-light   : colors.get-color("orange","light");
+$base-mid     : colors.get-color("orange","mid");
+$base-dark    : colors.get-color("orange","dark");
+$base-darkest : colors.get-color("orange","darkest");
+
+$contrast      : $base-light;
+$mid-contrast  : $base-mid;
+$dark-contrast : $base-dark;
+$content       : $base-darkest;
+
+$cta         : colors.get-color("blue");
+$cta-light   : colors.get-color("blue","light");
+$cta-mid     : colors.get-color("blue","mid");
+$cta-dark    : colors.get-color("blue","dark");
+$cta-darkest : colors.get-color("blue","darkest");
+
+$contrast-cta      : $cta-light;
+$mid-contrast-cta  : $cta-mid;
+$dark-contrast-cta : $cta-dark;
+$content-cta       : $cta-darkest;
+
+$danger         : colors.get-color("red");
+$danger-light   : colors.get-color("red","light");
+$danger-mid     : colors.get-color("red","mid");
+$danger-dark    : colors.get-color("red","dark");
+$danger-darkest : colors.get-color("red","darkest");
+
+$warning         : colors.get-color("yellow");
+$warning-light   : colors.get-color("yellow","light");
+$warning-mid     : colors.get-color("yellow","mid");
+$warning-dark    : colors.get-color("yellow","dark");
+$warning-darkest : colors.get-color("yellow","darkest");
+
+$success         : colors.get-color("green");
+$success-light   : colors.get-color("green","light");
+$success-mid     : colors.get-color("green","mid");
+$success-dark    : colors.get-color("green","dark");
+$success-darkest : colors.get-color("green","darkest");
+
+$disable         : colors.get-color("disable");
+$disable-light   : colors.get-color("disable","light");
+$disable-mid     : colors.get-color("disable","mid");
+$disable-dark    : colors.get-color("disable","dark");
+$disable-darkest : colors.get-color("disable","darkest");
+
+// Gray might not be part of the scheme. Leaving to avoid breaking inputs
+// On the input ticket we need to get this settled
+
 $lightgray-color: "lightgray";
-$darkgray-color: "darkgray";
+$darkgray-color : "darkgray";
 
-$base: colors.get-color($base-color);
-$cta: colors.get-color($cta-color);
-
-$content: colors.get-color($base-color,"darkest");
-$contrast: colors.get-color($base-color,"lightest");
-$mid-contrast: colors.get-color($base-color,"mid");
-$dark-contrast: colors.get-color($base-color,"dark");
-
-$content-cta: colors.get-color($cta-color,"darkest");
-$contrast-cta: colors.get-color($cta-color,"lightest");
-$mid-contrast-cta: colors.get-color($cta-color,"mid");
-$dark-contrast-cta: colors.get-color($cta-color,"dark");
-
-$danger: colors.get-color($danger-color);
-$warning: colors.get-color($warning-color);
-$success: colors.get-color($success-color);
-$disable: colors.get-color($disable-color);
-$white: colors.get-color($white-color);
-$black: colors.get-color($black-color);
-
-$lightgray : colors.get-color($lightgray-color,"base");
-$darkgray : colors.get-color($darkgray-color,"base");
-$darkgray-mid : colors.get-color($darkgray-color,"mid");
-$lightgray-light : colors.get-color($lightgray-color,"light");
+$lightgray       : colors.get-color($lightgray-color);
+$darkgray        : colors.get-color($darkgray-color);
+$darkgray-mid    : colors.get-color($darkgray-color ,"mid");
+$lightgray-light : colors.get-color($lightgray-color,"light" );

@@ -17,10 +17,10 @@
 $etoast-colors: (
     "black": #000,
     "white": #fff,
-    "green": #1D781D,
-    "red": #F22613,
-    "yellow": #FFA600,
-    "disable": #D9D9D9,
+    "green": createColor(#1D781D),
+    "red": createColor(#F22613),
+    "yellow": createColor(#FFA600),
+    "disable": createColor(#D9D9D9),
     "orange": createColor(#DE411B),
     "darkgray": createColor(#48545B),
     "lightgray": createColor(#9BB4BE),
@@ -40,3 +40,69 @@ $etoast-colors: (
         @return $_color;
     }
 }
+
+$green: #1D781D;
+$green-darkest: #041004;
+$green-dark: #0e3a0e;
+$green-mid: #98e698;
+$green-light: #d6f5d6;
+$red: #F22613;
+$red-darkest: #130301;
+$red-dark: #440904;
+$red-mid: #f89086;
+$red-light: #fcd3cf;
+$yellow: #FFA600;
+$yellow-darkest: #140d00;
+$yellow-dark: #472e00;
+$yellow-mid: #ffd380;
+$yellow-light: #ffedcc;
+$disable: #D9D9D9;
+$disable-darkest: #0a0a0a;
+$disable-dark: #242424;
+$disable-mid: #bfbfbf;
+$disable-light: #e6e6e6;
+$orange: #DE411B;
+$orange-darkest: #120502;
+$orange-dark: #401308;
+$orange-mid: #f1a18d;
+$orange-light: #f9d9d2;
+$darkgray: #48545B;
+$darkgray-darkest: #090b0b;
+$darkgray-dark: #202528;
+$darkgray-mid: #b8c1c7;
+$darkgray-light: #e3e6e8;
+$lightgray: #9BB4BE;
+$lightgray-darkest: #080b0c;
+$lightgray-dark: #1c272b;
+$lightgray-mid: #b2c5cd;
+$lightgray-light: #e0e8eb;
+$lightblue: #0AC3E6;
+$lightblue-darkest: #011114;
+$lightblue-dark: #033a44;
+$lightblue-mid: #85e7fa;
+$lightblue-light: #cef5fd;
+$blue: #379BD7;
+$blue-darkest: #030c11;
+$blue-dark: #0c2a3c;
+$blue-mid: #95caea;
+$blue-light: #d5eaf7;
+$darkblue: #285078;
+$darkblue-darkest: #050a0f;
+$darkblue-dark: #122436;
+$darkblue-mid: #9fbfdf;
+$darkblue-light: #d9e6f2;
+$lightred: #C31900;
+$lightred-darkest: #140300;
+$lightred-dark: #470900;
+$lightred-mid: #ff9080;
+$lightred-light: #ffd3cc;
+$cinnabar: #EC6861;
+$cinnabar-darkest: #120302;
+$cinnabar-dark: #400a08;
+$cinnabar-mid: #f1928d;
+$cinnabar-light: #fad3d1;
+$darkred: #690505;
+$darkred-darkest: #130101;
+$darkred-dark: #440303;
+$darkred-mid: #f98585;
+$darkred-light: #fdcece;

@@ -1,41 +1,5 @@
 @use "../../themes/default/globals/colors.scss" as colors;
-
-@function create-group($text,$background: "none",$border: "none"){
-  @return (
-      "text": $text,
-      "background": $background,
-      "border": $border
-  )
-};
-
-@mixin status-mixin($text,$background,$border) {
-  color: $text;
-  background-color: $background;
-  border-color: $border
-}
-
-@mixin status($group) {
-  @include status-mixin(
-      map-get($group,"text"), 
-      map-get($group,"background"), 
-      map-get($group,"border")
-  )
-}
-
-// Creates an outline border. Works when a class has a set padding and border width
-// and passes it to the mixin. 
-@mixin synthetic-outline-border ($width,$top,$right,$bottom,$left) {
-  $focus-displacement: $width * 3;
-  border-width: $width * 4;
-  border-style: double;
-  background-clip: padding-box;
-  padding:
-      $top - $focus-displacement
-      $right - $focus-displacement
-      $bottom - $focus-displacement
-      $left - $focus-displacement
-  ;
-}
+@use "../../utility/index" as utils;
 
 @mixin input-mixin($name,
   $idle,
@@ -50,22 +14,22 @@
 ) {
   .eds-#{$name}-input {
     @content("idle");
-    @include status($idle);
+    @include utils.status($idle);
 
     &:active {
         @content("active");
-        @include status($active);
+        @include utils.status($active);
     }
 
     &:focus {
         outline: none;
         @content("focus");
-        @include status($focus);
+        @include utils.status($focus);
     }
     
     &:disabled {
         @content("disable");
-        @include status($disable);
+        @include utils.status($disable);
         cursor: not-allowed;
         &::placeholder {
           color: #E0E8EB;
@@ -74,7 +38,7 @@
 
     &::placeholder {
       @content("placeholder");
-      @include status($placeholder);
+      @include utils.status($placeholder);
     }
 
     &-root {
@@ -87,12 +51,12 @@
     
     &--error {
       @content("error");
-      @include status($error);
+      @include utils.status($error);
     }
 
     &--success {
       @content("success");
-      @include status($success);
+      @include utils.status($success);
       &-icon {
         position: absolute;
         right: 13px;
@@ -105,19 +69,19 @@
 
   .eds-label-#{$name}-input {
     @content("label");
-    @include status($label);
+    @include utils.status($label);
     &--error {
       @content("labelError");
-      @include status($labelError);
+      @include utils.status($labelError);
     }
     &--disabled {
       @content("disable");
-      @include status($disable);
+      @include utils.status($disable);
     }
   }
   .eds-label-#{$name}-input-block {
     @content("labelError");
-    @include status($labelError);
+    @include utils.status($labelError);
     display: inline-flex;
     align-items: center;
     margin-bottom: 8px;

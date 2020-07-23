@@ -1,6 +1,8 @@
-const { resolve, basename, dirname, access } = require('path');
+const { resolve, dirname, access } = require('path');
 const { readdir, readFile, mkdir, writeFile } = require('fs').promises;
 const { readFileSync } = require("fs")
+
+const last = arr => arr[arr.length - 1];
 
 async function* getFiles(dir) {
   const dirents = await readdir(dir, { withFileTypes: true });
@@ -14,8 +16,14 @@ async function* getFiles(dir) {
   }
 }
 
-const replaceTemplate = (symbolTable) => (code) => {
-    return code.replace(/%[a-zA-Z0-9_]*%/gm,(symbol) => symbolTable[symbol.replace(/%/g,"")])
+const replaceTemplate = (symbolTable,debug=false) => (code) => {
+  return code.replace(/%[a-zA-Z0-9_]*%/gm,(symbol) => {
+    if(debug){
+      const s = symbolTable[symbol.replace(/%/g,"")] || symbol
+      console.log(`Replacing ${symbol} => ${s}`)
+    }
+    return symbolTable[symbol.replace(/%/g,"")] || symbol
+  })
 }
 
 const isNotLineComment = x => !x.startsWith("#");
@@ -27,10 +35,10 @@ const loadSymbols = (symbolPath) => {
     .split("\n")
     .filter(isNotLineComment)
     .map(x => x.split(":").map(x => x.trim() ))
-    .reduce((acc,[key,value]) => ({ ...acc , [key] : value })  ,{})
+    .reduce((acc,[key,value]) => ({ ...acc , [key] : value }),{})
 }
 
-const ensureDir = async d => {
+const guaranteeDir = async d => {
   try {
     await access(d)
   } catch {
@@ -46,20 +54,25 @@ const template = ({
 }) => {
     const srcPath = resolve(input)
     const outPath = resolve(output)
-    const interpolate = replaceTemplate(loadSymbols(symbols))
+    const interpolate = replaceTemplate(loadSymbols(symbols),debug)
     const replaceDestination = file => file.replace(srcPath,outPath)
     return {
         run: async (onEnd = () => {}) => {
             const files = getFiles(input);
             for await (const file of files){
               if( debug ){
-                console.log("Interpolating: ", basename(file))
+                const folder = last(srcPath.split("/"));
+                const relativeFile = folder + last(file.split(folder))
+                console.log("Porcessing: ", relativeFile)
               }
               const rawData = await readFile(file)
               const data = interpolate(rawData.toString())
               const target = replaceDestination(file);
-              await ensureDir(dirname(target));
+              await guaranteeDir(dirname(target));
               await writeFile(target,data);
+            }
+            if(debug){
+              console.log("Finished interpolation process")
             }
             onEnd()
         }

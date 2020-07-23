@@ -20,13 +20,15 @@ async function clean(cb){
     cb()
 }
 
-function templateTask(cb){
-    template({
-        symbols: SYMBOL_FILE,
-        input: IN_DIR,
-        output: OUT_DIR,
-        debug: false
-    }).run(cb)
+function templateTask(debug=false){
+    return function templateTask(cb){
+        template({
+            symbols: SYMBOL_FILE,
+            input: IN_DIR,
+            output: OUT_DIR,
+            debug,
+        }).run(cb)
+    }
 }
 
 async function sassProd(cb){
@@ -52,6 +54,8 @@ async function sassDev(cb){
 }
 
 exports.clean = clean
-exports.watch = () => watch("src/",{ ignoreInitial: false },series(templateTask, sassDev))
-exports.dev = series(clean,templateTask, sassDev)
-exports.build = series(clean,templateTask,sassProd)
+exports.watch = () => watch("src/",{ ignoreInitial: false },series(templateTask(), sassDev))
+exports.dev = series(clean,templateTask(), sassDev)
+exports.build = series(clean,templateTask(),sassProd)
+exports.debug = series(clean,templateTask(true), sassDev)
+exports.watch_debug = () => watch("src/",{ ignoreInitial: false },series(templateTask(true), sassDev))
