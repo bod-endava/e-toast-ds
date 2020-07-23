@@ -10,8 +10,8 @@
     
     &:after {
         display: inline-block;
-        border: 1px solid tokens.$background;
-        border-radius: tokens.$radius;
+        border: 1px solid tokens.$main-color;
+        border-radius: tokens.$border-radius;
         box-sizing: border-box;
         font-family: tokens.$font-name;
         font-size: tokens.$size;
@@ -26,15 +26,15 @@
     }
 
     &:disabled:after {
-        border-color: tokens.$disabled;
+        border-color: tokens.$disabled-color;
         background-color: none;
         cursor: not-allowed;
     }
       
     &:checked:after {
         content: "\2713";
-        background-color: tokens.$background;
-        color: tokens.$check-color;
+        background-color: tokens.$main-color;
+        color: tokens.$checkmark-color;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -53,7 +53,7 @@
         align-items: center;
         
         &--disabled {
-            color: tokens.$disabled;
+            color: tokens.$disabled-color;
             cursor: not-allowed;
         }
 

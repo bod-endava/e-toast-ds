@@ -2,12 +2,12 @@
 @use '../globals/fonts.scss' as fonts;
 @use '../globals/shape.scss' as shape;
 
-$background: colors.$dark-contrast;
-$radius: shape.$checkbox-radius;
-$disabled: colors.$disable;
+$main-color: colors.$dark-contrast;
+$border-radius: shape.$checkbox-radius;
+$disabled-color: colors.$disable;
 $size: 22px;
 $box-margin: 4px;
-$check-color: colors.$white;
+$checkmark-color: colors.$white;
 
 $font-color: colors.$dark-contrast;
 $font-name: fonts.$checkbox-font;
