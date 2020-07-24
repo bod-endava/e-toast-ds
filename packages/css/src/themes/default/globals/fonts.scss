@@ -31,10 +31,10 @@ $radio-spacing: 0.16px;
 // toggle
 
 $toggle-font: fonts.$font-name;
-$toggle-weight: fonts.$regular;
-$toggle-size: fonts.get-size("button", $sizing);
+$toggle-font-weight: fonts.$regular;
+$toggle-font-size: fonts.get-size("button", $sizing);
 $toggle-line-height: 22px;
-$toggle-spacing: 0.16px;
+$toggle-letter-spacing: 0.16px;
 
 // input
 $input-size: 16px;

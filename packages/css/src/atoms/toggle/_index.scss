@@ -1,17 +1,19 @@
-@use "../../themes/%toggle%/toggle/" as tokens;
+@use "../../themes/%toggle%/toggle/" as theme_tokens;
 @use "../../utility/index" as utils;
 
 .eds-toggle {
     visibility: hidden;
     position: relative;
-    width: tokens.$width;
-    height: tokens.$height;
+    width: theme_tokens.$width;
+    height: theme_tokens.$height;
     margin: 0;
 
-    &::after, &::before {
+    &:after,
+    &:before {
         visibility: visible;
         cursor: pointer;
         content: "";
+        transition: .4s;
     }
     
     &:after {
@@ -21,52 +23,62 @@
         left: 2px;
         top: 0;
         bottom: 0;
-        width: tokens.$circle-size;
-        height: tokens.$circle-size;
-        border-radius: 50%;
-        background-color: tokens.$circle-color;
+        width: theme_tokens.$circle-size;
+        height: theme_tokens.$circle-size;
+        border-radius: theme_tokens.$radius;
+        background-color: theme_tokens.$circle-color;
     }
 
     &:disabled:after {
-        background-color: tokens.$disabled-circle-color;
+        background-color: theme_tokens.$disabled-circle-color;
+        opacity: 0.14;
     }
       
     &:checked:after {
-        right: 2px;
-        left: unset;
+        left: calc(100% - #{theme_tokens.$circle-size} - 2px);
     }
 
     &:before {
+        content: '×';
+        padding: theme_tokens.$toggle-padding;
+        box-sizing: border-box;
+        line-height: 1;
+        color: theme_tokens.$check-color;
+        font-size: theme_tokens.$check-size;
+        text-align: right;
         position: absolute;
         left: 0;
-        width: tokens.$width;
-        height: tokens.$height;
-        background-color: tokens.$off-color;
-        border-radius: tokens.$radius;
+        width: theme_tokens.$width;
+        height: theme_tokens.$height;
+        background-color: theme_tokens.$off-color;
+        border-radius: theme_tokens.$radius;
     }
 
     &:disabled:before {
-        background-color: tokens.$disabled-color;
+        background-color: theme_tokens.$disabled-color;
+        content: '';
     }
       
     &:checked:before {
-        background-color: tokens.$on-color;
+        background-color: theme_tokens.$on-color;
+        content: '✓';
+        text-align: left;
     }
 
     &__label {
-        color: tokens.$font-color;
-        font-family: tokens.$font-name;
-        height: tokens.$line-height;
-        font-size: tokens.$font-size;
-        font-weight: tokens.$font-weight;
-        letter-spacing: tokens.$spacing;
-        margin-left: tokens.$box-margin;
+        color: theme_tokens.$font-color;
+        font-family: theme_tokens.$font-name;
+        font-size: theme_tokens.$font-size;
+        font-weight: theme_tokens.$font-weight;
+        height: theme_tokens.$line-height;
+        letter-spacing: theme_tokens.$letter-spacing;
+        margin-left: theme_tokens.$box-margin;
         cursor: pointer;
         display: flex;
         align-items: center;
         
         &--disabled {
-            color: tokens.$disabled;
+            color: theme_tokens.$disabled-color;
             cursor: not-allowed;
         }
 

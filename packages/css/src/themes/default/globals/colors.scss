@@ -52,9 +52,8 @@ $disable-darkest : colors.get-color("disable","darkest");
 
 // Gray might not be part of the scheme. Leaving to avoid breaking inputs
 // On the input ticket we need to get this settled
-
 $lightgray-color: "lightgray";
-$darkgray-color : "darkgray";
+$darkgray-color: "darkgray";
 
 $lightgray       : colors.get-color($lightgray-color);
 $darkgray        : colors.get-color($darkgray-color);

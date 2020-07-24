@@ -1,27 +1,32 @@
-@use '../globals/colors.scss' as colors;
-@use '../globals/fonts.scss' as fonts;
-@use '../globals/shape.scss' as shape;
+@use '../globals/colors.scss' as global_colors;
+@use '../globals/fonts.scss' as global_fonts;
 
-// For later
-$icon-size: 14px;
-$icon-color: colors.$white;
+// Sizes
 
-$circle-color: colors.$white;
 $circle-size: 18px;
-$off-color: colors.$dark-contrast;
-$on-color: colors.$base;
+$check-size: 14px;
 $width: 51px;
 $height: 22px;
 $box-margin: 6px;
+$toggle-padding: 4px 8px;
 $radius: $height/2;
 
-$disabled: colors.$disable;
-$disabled-color: colors.$disable;
-$disabled-circle-color: colors.$dark-disable;
+// Colors
+$disabled-color: global_colors.$disable;
+$disabled-circle-color: global_colors.$disable-dark;
 
-$font-color: colors.$dark-contrast;
-$font-name: fonts.$toggle-font;
-$font-weight: fonts.$toggle-weight;
-$font-size: fonts.$toggle-size;
-$line-height: fonts.$toggle-line-height;
-$spacing: fonts.$toggle-spacing;
+$on-color: global_colors.$base;
+$off-color: global_colors.$dark-contrast;
+$circle-color: global_colors.$white;
+$check-color: global_colors.$white;
+$disabled-color: global_colors.$disable;
+$disabled-circle-color: global_colors.$disable-dark;
+$font-color: global_colors.$dark-contrast;
+
+// Fonts
+
+$font-name: global_fonts.$toggle-font;
+$font-weight: global_fonts.$toggle-font-weight;
+$font-size: global_fonts.$toggle-font-size;
+$line-height: global_fonts.$toggle-line-height;
+$letter-spacing: global_fonts.$toggle-letter-spacing;
