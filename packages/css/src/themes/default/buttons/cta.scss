@@ -4,17 +4,21 @@
 
 // Color tokens
 
+// idle
 $idle-font-color: colors.$white;
-$idle-background-color: colors.$cta;
+$idle-fill-color: colors.$cta;
 
+// hover
 $hover-font-color: colors.$white;
-$hover-background-color: colors.$dark-contrast-cta;
+$hover-fill-color: colors.$dark-contrast-cta;
 
+// focus
 $focus-font-color: colors.$white;
-$focus-background-color: colors.$cta;
+$focus-fill-color: colors.$cta;
 
+// disable
 $disable-font-color: colors.$white;
-$disable-background-color: colors.$disable;
+$disable-fill-color: colors.$disable;
 
 // Shape tokens
 

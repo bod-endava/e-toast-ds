@@ -4,26 +4,26 @@
 
 $idle-group: utils.create-group(
     $text: tokens.$idle-font-color, 
-    $background: tokens.$idle-background-color, 
+    $background: tokens.$idle-fill-color, 
     $border: tokens.$idle-font-color
 );
 
 $hover-group: utils.create-group(
     $text: tokens.$hover-font-color, 
-    $background: tokens.$hover-background-color, 
-    $border: tokens.$hover-background-color
+    $background: tokens.$hover-fill-color, 
+    $border: tokens.$hover-fill-color
 );
 
 $focus-group: utils.create-group(
     $text: tokens.$focus-font-color, 
-    $background: tokens.$focus-background-color, 
-    $border: tokens.$focus-background-color
+    $background: tokens.$focus-fill-color, 
+    $border: tokens.$focus-fill-color
 );
 
 $disable-group: utils.create-group(
     $text: tokens.$disable-font-color, 
-    $background: tokens.$disable-background-color, 
-    $border: tokens.$disable-background-color
+    $background: tokens.$disable-fill-color, 
+    $border: tokens.$disable-fill-color
 );
 
 @include button-utils.button-mixin(

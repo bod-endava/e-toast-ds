@@ -8,10 +8,11 @@ The checkbox is shown as a square box that is ticked (checked) when activated. C
 ```
 
 ## Example
-![Checkbox Example](../images/checkbox.png "Toggle Example")
+![Checkbox Example](../images/checkbox.png "Checkbox Example")
 
 
 ## Variants
+
 Disabled checkbox
 
 `<input type="checkbox" id="vehicle1" class="eds-checkbox" name="vehicle1" value="Bike" disabled>`
@@ -25,7 +26,7 @@ Checked checkbox
 | token            | default value                     | description                                        |
 | ---------------- | --------------------------------- | -------------------------------------------------- |
 | $main-color      | theme.colors.$base                | color of the checkbox once active                  |
-| $border-radius   | theme.shape.$checkbox-radius      | font size of the label                             |
+| $border-radius   | theme.shape.$checkbox-radius      | Smooth corners radius                              |
 | $disabled-color  | theme.colors.$disable             | color of the checkbox while disabled               |
 | $size            | 22px                              | dimensions of the checkbox                         |
 | $box-margin      | 4px                               | separation between the checkbox and other elements |

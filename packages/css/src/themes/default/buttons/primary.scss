@@ -6,19 +6,19 @@
 
 // idle
 $idle-font-color: colors.$white;
-$idle-background-color: colors.$base;
+$idle-fill-color: colors.$base;
 
 // hover
 $hover-font-color: colors.$white;
-$hover-background-color: colors.$dark-contrast;
+$hover-fill-color: colors.$dark-contrast;
 
 // focus
 $focus-font-color: colors.$white;
-$focus-background-color: colors.$base;
+$focus-fill-color: colors.$base;
 
 // disable
 $disable-font-color: colors.$white;
-$disable-background-color: colors.$disable;
+$disable-fill-color: colors.$disable;
 
 // Shape tokens
 
