@@ -37,8 +37,8 @@
       
     &:checked:after {
         content: "";
-        background-color: tokens.$background;
-        border-color: tokens.$background;
+        background-color: tokens.$on-color;
+        border-color: tokens.$on-color;
         display: flex;
         justify-content: center;
         align-items: center;

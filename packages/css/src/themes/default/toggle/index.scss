@@ -1,32 +1,33 @@
-@use '../globals/colors.scss' as global_colors;
-@use '../globals/fonts.scss' as global_fonts;
+@use '../constants/colors.scss' as theme_colors;
+@use '../constants/fonts.scss' as theme_fonts;
 
 // Sizes
 
-$circle-size: 18px;
-$check-size: 14px;
-$width: 51px;
-$height: 22px;
-$box-margin: 6px;
-$toggle-padding: 4px 8px;
-$radius: $height/2;
+$circle-size    : 18px;
+$check-size     : 14px;
+$width          : 51px;
+$height         : 22px;
+$box-margin     : 6px;
+$toggle-padding : 4px 8px;
+$radius         : $height/2;
 
 // Colors
-$disabled-color: global_colors.$disable;
-$disabled-circle-color: global_colors.$disable-dark;
 
-$on-color: global_colors.$base;
-$off-color: global_colors.$dark-contrast;
-$circle-color: global_colors.$white;
-$check-color: global_colors.$white;
-$disabled-color: global_colors.$disable;
-$disabled-circle-color: global_colors.$disable-dark;
-$font-color: global_colors.$dark-contrast;
+// TODO: Using background in place of white. 
+// Need to check with design if this is correct
+
+$on-color              : theme_colors.$primary;
+$off-color             : theme_colors.$secundary-dark;
+$circle-color          : theme_colors.$background;
+$check-color           : theme_colors.$background;
+$disabled-color        : theme_colors.$disabled;
+$disabled-circle-color : theme_colors.$disabled-dark;
+$font-color            : theme_colors.$content;
 
 // Fonts
 
-$font-name: global_fonts.$toggle-font;
-$font-weight: global_fonts.$toggle-font-weight;
-$font-size: global_fonts.$toggle-font-size;
-$line-height: global_fonts.$toggle-line-height;
-$letter-spacing: global_fonts.$toggle-letter-spacing;
+$font-name      : theme_fonts.$toggle-font;
+$font-weight    : theme_fonts.$toggle-font-weight;
+$font-size      : theme_fonts.$toggle-font-size;
+$line-height    : theme_fonts.$toggle-line-height;
+$letter-spacing : theme_fonts.$toggle-letter-spacing;

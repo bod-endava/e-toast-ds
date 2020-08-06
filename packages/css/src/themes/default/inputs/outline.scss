@@ -1,34 +1,39 @@
-@use "../globals/colors.scss" as colors;
-@use "../globals/fonts.scss" as fonts;
-@use "../globals/shape.scss" as shape;
+@use "../constants/colors.scss" as theme_colors;
+@use "../constants/fonts.scss" as theme_fonts;
+@use "../constants/shape.scss" as theme_shape;
 
 // Color tokens
 
 // idle
-$idle-font-color: colors.$darkgray;
-$idle-background-color: colors.$white;
-$idle-border-color: colors.$lightgray;
+$idle-font-color       : theme_colors.$content;
+$idle-background-color : theme_colors.$background;
+$idle-border-color     : theme_colors.$secundary-mid;
 
 // hover
-$active-font-color: colors.$darkgray;
-$active-background-color: colors.$white;
-$active-border-color: colors.$base;
+$active-font-color       : theme_colors.$content;
+$active-background-color : theme_colors.$background;
+$active-border-color     : theme_colors.$primary;
 
 // focus
-$focus-font-color: colors.$darkgray;
-$focus-background-color: colors.$white;
-$focus-border-color: colors.$base;
+$focus-font-color       : theme_colors.$content;
+$focus-background-color : theme_colors.$background;
+$focus-border-color     : theme_colors.$primary;
 
 // disable
-$disable-font-color: colors.$darkgray;
-$disable-background-color: colors.$white;
-$disable-border-color: colors.$lightgray-light;
+$disabled-font-color       : theme_colors.$disabled;
+$disabled-background-color : theme_colors.$background;
+$disabled-border-color     : theme_colors.$disabled;
 
-// placeholder
-$placeholder-font-color: colors.$darkgray-mid;
+//Extra colors
+$label-font-color       : theme_colors.$content;
+$label-error-font-color : theme_colors.$danger;
+$placeholder-font-color : theme_colors.$secundary-mid;
+$error-border-color     : theme_colors.$danger;
+$success-border-color   : theme_colors.$success;
 
 // Shape tokens
-$border-radius: shape.$input-radius;
+
+$border-radius: theme_shape.$input-radius;
 $border-width: 1px;
 $height: 30px;
 $padding-top: 6px;
@@ -37,22 +42,13 @@ $padding-bottom: 6px;
 $padding-left: 10px;
 
 // Font tokens
-$font-name: fonts.$button-font;
-$font-weight: fonts.$button-weight;
-$font-size: fonts.$input-size;
-$line-height: fonts.$button-line-height;
-$spacing: fonts.$button-spacing;
 
-/* Input- Error */
-$error-border-color: colors.$danger;
-
-/* Input-Success */
-$success-border-color: colors.$success;
+$font-name   : theme_fonts.$button-font;
+$font-weight : theme_fonts.$button-weight;
+$font-size   : theme_fonts.$input-size;
+$line-height : theme_fonts.$button-line-height;
+$spacing     : theme_fonts.$button-spacing;
 
 /* Label */
-$label-font-size: fonts.$label-size;
-$label-font-color: colors.$darkgray;
-$label-font-name: fonts.$button-font;
-
-/* Label Error */
-$label-error-font-color: colors.$danger;
+$label-font-size : theme_fonts.$label-size;
+$label-font-name : theme_fonts.$button-font;

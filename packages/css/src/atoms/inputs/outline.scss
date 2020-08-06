@@ -20,10 +20,10 @@ $focus-group: utils.create-group(
     $border: tokens.$focus-border-color
 );
 
-$disable-group: utils.create-group(
-    $text: tokens.$disable-border-color, 
-    $background: tokens.$disable-background-color, 
-    $border: tokens.$disable-border-color
+$disabled-group: utils.create-group(
+    $text: tokens.$disabled-border-color, 
+    $background: tokens.$disabled-background-color, 
+    $border: tokens.$disabled-border-color
 );
 
 $placeholder-group: utils.create-group(
@@ -53,7 +53,7 @@ $labelError-group: utils.create-group(
     $idle-group,
     $active-group,
     $focus-group,
-    $disable-group,
+    $disabled-group,
     $placeholder-group,
     $error-group,
     $success-group,
@@ -83,15 +83,11 @@ $labelError-group: utils.create-group(
         font-family: tokens.$label-font-name;
         font-weight: tokens.$font-weight;
         font-size: tokens.$label-font-size;
-        margin-bottom: 8px;
     }
 
     @if $type == "labelError" {
         font-family: tokens.$label-font-name;
         font-weight: tokens.$font-weight;
         font-size: tokens.$label-font-size;
-        margin-bottom: 0px;
-        margin-top: 0px;
-        margin-left: 4px;
     }
 }

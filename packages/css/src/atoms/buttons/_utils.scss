@@ -4,7 +4,7 @@
     $idle,
     $hover,
     $focus,
-    $disable
+    $disabled
 ) {
     .eds-#{$name}-button {
         cursor: pointer;
@@ -23,8 +23,8 @@
         }
 
         &:disabled {
-            @content("disable");
-            @include utils.status($disable);
+            @content("disabled");
+            @include utils.status($disabled);
             cursor: default;
         }
     }

@@ -1,0 +1,5 @@
+@use '../../../globals/shape.scss' as global_shape;
+
+$button-radius: global_shape.$pill-radius;
+$checkbox-radius: global_shape.$round-radius;
+$input-radius: global_shape.$pill-radius;

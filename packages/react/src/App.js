@@ -1,4 +1,5 @@
 import React from 'react';
+import getClassName from './getClassName'
 
 const Padded = ({ children }) => <div style={{margin: "16px"}}>
   {children}
@@ -40,9 +41,13 @@ const RadioButton = ({ label, ...extra }) => {
 const Toggle = ({ label, ...extra }) => {
   if( label ) {
     const id = label.replace(" ","_");
-    const labelClass = `eds-toggle__label ${extra.disabled ? "eds-toggle__label--disabled" : ""}`
-    return <div className="eds-toggle__container">
-      <input id={id} type="checkbox" className="eds-toggle" {...extra} />
+    const toggle = getClassName({ base: "eds-toggle" })
+    const container = toggle.extend("&__container");
+    const labelClass = toggle.extend("&__label").get({
+      "&--disabled": extra.disabled
+    })
+    return <div className={container}>
+      <input id={id} type="checkbox" className={toggle} {...extra} />
       <label htmlFor={id} className={labelClass} >{label}</label>
     </div>
   }
@@ -55,28 +60,34 @@ const List = ({ of, children, ...extra }) => {
   </div>
 }
 
-const InputDemo = ({ name, variant, label, placeholder, type, disabled, error, success, value }) => {
-  const cl = `eds-${variant.toLowerCase()}-input`;
-  const clLabel = `eds-label-${variant.toLowerCase()}-input`;
+const InputDemo = ({ name, label, success, error='', ...extra }) => {
+  const root = getClassName({
+    base: "eds-outline-input",
+    "&--error": Boolean(error),
+    "&--success": success,
+  });
+
+  const labelRoot = root.extend("&__label").get({
+    "&--error": Boolean(error),
+  })
+  const labelText = labelRoot.extend("&__text").get({
+    "&--error": Boolean(error),
+    "&--disabled": extra.disabled
+  })
+  const labelRight = labelRoot.extend("&__error-alert");
+
   return <section>
     <Padded>
-      <div className={`${cl}-root`}>
-        <div className="label-container">
-          {label && <label htmlFor={name} className={`${clLabel} ${disabled ? `${clLabel}--disabled` : ''}`}>{label}</label>}
-          {(label && error) && (<div className={`${clLabel}-block`}><i className="fas fa-exclamation-circle"></i> <p className={`${clLabel}--error`}>This field is required</p></div>)}
+      <div className={`${root}__container`}>
+        <div className={labelRoot}>
+          <label className={labelText}>
+            {label}
+          </label>
+          {error && <div className={labelRight}>
+            {error}
+          </div>}
         </div>
-        <div className={`${cl}-root-input`}>
-        <input
-          className={`${cl} ${error ? `${cl}--error`: ''} ${success ? `${cl}--success`: ''}`}
-          type={type ? type : "text"}
-          id={name}
-          name={name}
-          placeholder={placeholder}
-          disabled={disabled}
-          value={value}
-          />
-        {success && <i className={`fas fa-check-circle ${cl}--success-icon`}></i>}
-      </div>
+        <input className={root} {...extra} />
       </div>
     </Padded>
   </section>
@@ -93,31 +104,31 @@ function App() {
 
       <h1>Checkbox!</h1>
       <Checkbox />
-      <Checkbox checked/>
+      <Checkbox checked readOnly/>
       <Checkbox disabled/>
       <List of="checkbox">
         <Checkbox label="Labeled checkbox" />
-        <Checkbox label="Controlled checkbox" checked/>
+        <Checkbox label="Controlled checkbox" checked readOnly/>
         <Checkbox label="Disabled checkbox" disabled/>
       </List>
 
       <h1>Radio!</h1>
       <RadioButton />
-      <RadioButton checked/>
+      <RadioButton checked readOnly/>
       <RadioButton disabled/>
       <List of="radio">
         <RadioButton name="list" label="Labeled radio" />
-        <RadioButton name="list" label="Controlled radio" checked/>
+        <RadioButton name="list" label="Controlled radio" checked readOnly/>
         <RadioButton name="list" label="Disabled radio" disabled/>
       </List>
 
       <h1>Toggle!</h1>
       <Toggle />
-      <Toggle checked/>
+      <Toggle checked readOnly/>
       <Toggle disabled/>
       <List of="toggle">
         <Toggle label="Labeled toggle" />
-        <Toggle label="Controlled toggle" checked/>
+        <Toggle label="Controlled toggle" checked readOnly/>
         <Toggle label="Disabled toggle" disabled/>
       </List>
       <h1>Inputs!</h1>
@@ -125,11 +136,11 @@ function App() {
       <InputDemo name="First" variant="Outline" label="Label" placeholder="Placeholder" />
       <InputDemo name="Second" variant="Outline" placeholder="Placeholder" />
       <h2 style={{fontFamily: 'Roboto'}}>Outline Error Input</h2>
-      <InputDemo name="Thrid" variant="Outline" label="Label" placeholder="Placeholder" error/>
-      <InputDemo name="Fourth" variant="Outline" placeholder="Placeholder" error/>
+      <InputDemo name="Thrid" variant="Outline" label="Label" placeholder="Placeholder" error="This field is required"/>
+      <InputDemo name="Fourth" variant="Outline" placeholder="Placeholder" error="This field is required"/>
       <h2 style={{fontFamily: 'Roboto'}}>Outline Success Input</h2>
-      <InputDemo name="Fifth" variant="Outline" label="Label" placeholder="Placeholder" value="Success" success/>
-      <InputDemo name="Sixth" variant="Outline" placeholder="Placeholder" value="Success" success/>
+      <InputDemo name="Fifth" variant="Outline" label="Label" placeholder="Placeholder" success/>
+      <InputDemo name="Sixth" variant="Outline" placeholder="Placeholder" success/>
       <h2 style={{fontFamily: 'Roboto'}}>Outline Disabled Input</h2>
       <InputDemo name="Seventh" variant="Outline" label="Label" placeholder="Placeholder" disabled/>
       <InputDemo name="Eighth" variant="Outline" placeholder="Placeholder" disabled/>

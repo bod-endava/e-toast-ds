@@ -5,7 +5,7 @@
   $idle,
   $active,
   $focus,
-  $disable,
+  $disabled,
   $placeholder,
   $error,
   $success,
@@ -28,8 +28,8 @@
     }
     
     &:disabled {
-        @content("disable");
-        @include utils.status($disable);
+        @content("disabled");
+        @include utils.status($disabled);
         cursor: not-allowed;
         &::placeholder {
           color: #E0E8EB;
@@ -40,14 +40,6 @@
       @content("placeholder");
       @include utils.status($placeholder);
     }
-
-    &-root {
-      display: inline-flex;
-      flex-direction: column;
-      &-input {
-        position: relative;
-      }
-    }
     
     &--error {
       @content("error");
@@ -57,39 +49,54 @@
     &--success {
       @content("success");
       @include utils.status($success);
-      &-icon {
-        position: absolute;
-        right: 13px;
-        bottom: 50%;
-        transform: translateY(50%);
-        color: colors.$success;
+    }
+
+    @include utils.add-flex-container-subclass(
+      $dir: column,
+      $align: default
+    ) {
+      width: fit-content;
+      position: relative;
+    }
+
+    &__label {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+
+      &--error {
+        .eds-#{$name}-input__label__error-alert {
+          display: block;
+        }
+      }
+
+      &__text {
+        @include utils.status($label);
+        @content("label");
+        margin-bottom: 8px;
+
+        &--disabled {
+          cursor: not-allowed;
+          @include utils.status($disabled);
+        }
+
+        &--error {
+          @include utils.status($labelError);
+          @content("labelError");
+        }
+      }
+
+      &__error-alert {
+        @include utils.status($labelError);
+        @content("labelError");
+        margin-bottom: 6px;
+        display: none;
+        &::before{
+          content: "⚠";
+          margin-right: 4px;
+        }
       }
     }
-  }
-
-  .eds-label-#{$name}-input {
-    @content("label");
-    @include utils.status($label);
-    &--error {
-      @content("labelError");
-      @include utils.status($labelError);
-    }
-    &--disabled {
-      @content("disable");
-      @include utils.status($disable);
-    }
-  }
-  .eds-label-#{$name}-input-block {
-    @content("labelError");
-    @include utils.status($labelError);
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-
-  .label-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
   }
 }

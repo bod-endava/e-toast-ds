@@ -18,9 +18,9 @@ $focus-group: utils.create-group(
     $background: tokens.$focus-fill-color
 );
 
-$disable-group: utils.create-group(
-    $text: tokens.$disable-font-color, 
-    $background: tokens.$disable-fill-color
+$disabled-group: utils.create-group(
+    $text: tokens.$disabled-font-color, 
+    $background: tokens.$disabled-fill-color
 );
 
 @include button-utils.button-mixin(
@@ -28,7 +28,7 @@ $disable-group: utils.create-group(
     $idle-group,
     $hover-group,
     $focus-group,
-    $disable-group
+    $disabled-group
 ) using ($type){
     
     @if $type == "idle" {
@@ -57,7 +57,7 @@ $disable-group: utils.create-group(
         border: none;
     }
     
-    @if $type == "disable" {
+    @if $type == "disabled" {
         border: none;
     }
 }

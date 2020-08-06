@@ -1,28 +1,28 @@
-@use "../globals/colors.scss" as colors;
-@use "../globals/fonts.scss" as fonts;
-@use "../globals/shape.scss" as shape;
+@use "../constants/colors.scss" as theme_colors;
+@use "../constants/fonts.scss" as theme_fonts;
+@use "../constants/shape.scss" as theme_shape;
 
 // Color tokens
 
 // idle
-$idle-font-color: colors.$base;
-$idle-fill-color: colors.$white;
+$idle-font-color: theme_colors.$primary;
+$idle-fill-color: theme_colors.$background;
 
 // hover
-$hover-font-color: colors.$white;
-$hover-fill-color: colors.$dark-contrast;
+$hover-font-color: theme_colors.$background;
+$hover-fill-color: theme_colors.$primary-dark;
 
 // focus
-$focus-font-color: colors.$white;
-$focus-fill-color: colors.$base;
+$focus-font-color: theme_colors.$background;
+$focus-fill-color: theme_colors.$primary;
 
-// disable
-$disable-font-color: colors.$white;
-$disable-fill-color: colors.$disable;
+// disabled
+$disabled-font-color: theme_colors.$background;
+$disabled-fill-color: theme_colors.$disabled;
 
 // Shape tokens
 
-$border-radius: shape.$button-radius;
+$border-radius: theme_shape.$button-radius;
 $border-width: 1px;
 $height: 37px;
 $padding-top: 11px;
@@ -32,8 +32,8 @@ $padding-left: 28px;
 
 // Font tokens
 
-$font-name: fonts.$button-font;
-$font-weight: fonts.$button-weight;
-$font-size: fonts.$button-size;
-$line-height: fonts.$button-line-height;
-$spacing: fonts.$button-spacing;
+$font-name: theme_fonts.$button-font;
+$font-weight: theme_fonts.$button-weight;
+$font-size: theme_fonts.$button-size;
+$line-height: theme_fonts.$button-line-height;
+$spacing: theme_fonts.$button-spacing;

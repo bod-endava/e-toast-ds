@@ -1,0 +1,41 @@
+@use "../../../globals/fonts" as global_fonts;
+
+// Shared tokens
+
+$sizing: "px"; // or em
+
+// Buttons
+
+$button-font: global_fonts.$font-name;
+$button-weight: global_fonts.$regular;
+$button-size: global_fonts.get-size("button", $sizing);
+$button-line-height: global_fonts.get-size("button", "line-height");
+$button-spacing: 0.16px;
+
+// Checkbox
+
+$checkbox-font: global_fonts.$font-name;
+$checkbox-weight: global_fonts.$regular;
+$checkbox-size: global_fonts.get-size("button", $sizing);
+$checkbox-line-height: 22px;
+$checkbox-spacing: 0.16px;
+
+// Radio
+
+$radio-font: global_fonts.$font-name;
+$radio-weight: global_fonts.$regular;
+$radio-size: global_fonts.get-size("button", $sizing);
+$radio-line-height: 22px;
+$radio-spacing: 0.16px;
+
+// toggle
+
+$toggle-font: global_fonts.$font-name;
+$toggle-font-weight: global_fonts.$regular;
+$toggle-font-size: global_fonts.get-size("button", $sizing);
+$toggle-line-height: 22px;
+$toggle-letter-spacing: 0.16px;
+
+// input
+$input-size: 16px;
+$label-size: 12px;

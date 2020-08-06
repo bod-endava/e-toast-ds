@@ -25,7 +25,7 @@
     }
 }
 
-@function create-group($text,$background: "none",$border: "none"){
+@function create-group($text,$background: none,$border: none){
     @return (
         "text": $text,
         "background": $background,

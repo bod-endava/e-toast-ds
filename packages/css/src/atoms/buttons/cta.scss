@@ -20,10 +20,10 @@ $focus-group: utils.create-group(
     $border: tokens.$focus-fill-color
 );
 
-$disable-group: utils.create-group(
-    $text: tokens.$disable-font-color, 
-    $background: tokens.$disable-fill-color, 
-    $border: tokens.$disable-fill-color
+$disabled-group: utils.create-group(
+    $text: tokens.$disabled-font-color, 
+    $background: tokens.$disabled-fill-color, 
+    $border: tokens.$disabled-fill-color
 );
 
 @include button-utils.button-mixin(
@@ -31,7 +31,7 @@ $disable-group: utils.create-group(
     $idle-group,
     $hover-group,
     $focus-group,
-    $disable-group
+    $disabled-group
 ) using ($type){
     
     @if $type == "idle" {
