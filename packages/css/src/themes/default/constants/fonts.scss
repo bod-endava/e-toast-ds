@@ -37,5 +37,9 @@ $toggle-line-height: 22px;
 $toggle-letter-spacing: 0.16px;
 
 // input
+$input-font: global_fonts.$font-name;
+$input-weight: global_fonts.$regular;
 $input-size: 16px;
+$input-line-height: global_fonts.get-size("button", "line-height");
+$input-spacing: 0.16px;
 $label-size: 12px;

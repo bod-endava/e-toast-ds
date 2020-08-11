@@ -33,22 +33,22 @@ $success-border-color   : theme_colors.$success;
 
 // Shape tokens
 
-$border-radius: theme_shape.$input-radius;
-$border-width: 1px;
-$height: 30px;
-$padding-top: 6px;
-$padding-right: 10px;
-$padding-bottom: 6px;
-$padding-left: 10px;
+$border-radius  : theme_shape.$input-radius;
+$border-width   : 1px;
+$height         : 30px;
+$padding-top    : 6px;
+$padding-right  : 10px;
+$padding-bottom : 6px;
+$padding-left   : 10px;
 
 // Font tokens
 
-$font-name   : theme_fonts.$button-font;
-$font-weight : theme_fonts.$button-weight;
+$font-name   : theme_fonts.$input-font;
+$font-weight : theme_fonts.$input-weight;
 $font-size   : theme_fonts.$input-size;
-$line-height : theme_fonts.$button-line-height;
-$spacing     : theme_fonts.$button-spacing;
+$line-height : theme_fonts.$input-line-height;
+$spacing     : theme_fonts.$input-spacing;
 
 /* Label */
 $label-font-size : theme_fonts.$label-size;
-$label-font-name : theme_fonts.$button-font;
+$label-font-name : theme_fonts.$input-font;
