@@ -33,6 +33,24 @@ yarn start
 yarn start:react
 ```
 
+## If you want to Toast your application
+
+If you want to work using E-toast as your design system, you'll need to follow these steps:
+
+1. Clone this repository on a subfolder of your application.
+2. Install Toast dependencies running `yarn install` inside the subfolder.
+3. Compile the CSS running `yarn build:css`.
+4. Add Toast to the dependencies with `yarn add file:/path/to/toast`.
+5. Import the compiled CSS on your application: 
+```javascript
+  import "@e-toast/css";
+
+  or
+
+  <link href="/toast-path/etoast.css" rel="stylesheet">
+```
+6. You're ready to go!
+
 ## Things to keep in mind
 
 - React package is not ready. It is currently only used for development of the css package. 

@@ -7,6 +7,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap --ignore-prepublish --force-local",
     "start": "lerna run start --stream --no-bail",
+    "build:css": "lerna run build --stream --scope @e-toast/css --no-bail",
     "start:css": "lerna run start --stream --scope @e-toast/css --no-bail",
     "start:react": "lerna run start --stream --scope @e-toast/react --no-bail"
   }
