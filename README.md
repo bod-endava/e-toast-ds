@@ -109,8 +109,7 @@ Run command `yarn start` every time you want to launch proyect on your default b
 
 ### Architecture/Philosophy
 
-Etoast architecture is based around a 3 layer architecture with the purpose to provide different abstraction levels for customization. The first layer is global which provides raw values for the theme layer. The theme layer adds a semantic value to the global values, and provides the tokens for the component layer. Finally, the component layer uses those token to create the components.
-
+Etoast architecture is based around a 3 layer architecture with the purpose to provide different abstraction levels for customization. The first layer is global which provides raw values for the theme layer. The theme layer adds a semantic value to the global values, and provides the tokens for the component layer. Finally, the component layer uses those token to create the components. For a more in-depth look at the architecture go to the css package README.md
 
 ### Browser coverage
 
