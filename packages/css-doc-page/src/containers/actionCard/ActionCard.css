@@ -1,0 +1,52 @@
+.Card {
+    max-width: 344px;
+    width: 30%;
+    height: 506px;
+    background-color: var(--white);
+    position: relative;
+}
+
+.Card_circle{
+    width: 208px;
+    height: 208px;
+    border-radius: 104px;
+    background-color: var(--landing-lightgray);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 86px;
+    position: relative;
+}
+
+.Card_heading {
+    color: var(--landing-primary);
+    font-size: 24px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.Card_phrase {
+    padding-right: 22px;
+    padding-left: 22px;
+    margin-top: 0px;
+}
+
+.Card_button {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.BottomOffset {
+    position: absolute;
+    Bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.CenterOffset {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

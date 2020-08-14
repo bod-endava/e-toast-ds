@@ -6,7 +6,7 @@
 @use "./atoms/toggle/index" as toggle;
 @use "./atoms/inputs/index" as inp-styles;
 
-$colors-as-css-variables: false;
+$colors-as-css-variables: true;
 
 :root {
     @if $colors-as-css-variables {

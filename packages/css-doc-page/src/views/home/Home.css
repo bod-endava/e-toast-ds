@@ -1,0 +1,57 @@
+section {
+    text-align: center;
+}
+
+.TopSection {
+    padding-top: 235px;
+    background-image: url("../../assets/img/pattern.png");
+    background-repeat: repeat-x;
+}
+
+.TopSection_greet-text {
+    font-size: 200px;
+    color: var(--landing-primary);
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.Description-text {
+    width: 521px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.Wider {
+    width: 654px;
+}
+
+.Description-text span {
+    color: var(--orange);
+}
+
+.Description-text button {
+    margin-top: 40px;
+}
+
+.Bottom-section {
+    margin-top: 230px;
+    background-color: var(--landing-lightgray);
+}
+
+.Bottom-section h2 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 29px;
+    color: var(--orange);
+    padding-top: 85px;
+}
+
+.Bottom-section_cards {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 80px;
+    margin-top: 40px;
+}

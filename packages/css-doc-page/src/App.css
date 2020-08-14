@@ -1,0 +1,14 @@
+.App {
+  min-height: 100vh;
+  background-color: var(--white);
+  display: flex;
+}
+
+.Content {
+  flex: 1 0 auto;
+}
+
+:root {
+  --landing-primary: #477385;
+  --landing-lightgray: #E2E7E9;
+}
