@@ -23,6 +23,7 @@
         height: 100%;
         cursor: pointer;
         content: "";
+        transition: 0.4s;
     }
 
     &:disabled:after {

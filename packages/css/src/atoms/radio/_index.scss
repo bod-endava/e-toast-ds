@@ -27,6 +27,7 @@
         height: tokens.$size + $border-compensation;
         cursor: pointer;
         content: "";
+        transition: 0.4s;
     }
 
     &:disabled:after {

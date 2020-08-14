@@ -13,6 +13,7 @@
   $labelError
 ) {
   .eds-#{$name}-input {
+    transition: 0.4s;
     @content("idle");
     @include utils.status($idle);
 

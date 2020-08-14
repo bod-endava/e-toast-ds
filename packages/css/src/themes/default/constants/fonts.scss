@@ -17,7 +17,7 @@ $button-spacing: 0.16px;
 $checkbox-font: global_fonts.$font-name;
 $checkbox-weight: global_fonts.$regular;
 $checkbox-size: global_fonts.get-size("button", $sizing);
-$checkbox-line-height: 22px;
+$checkbox-line-height: 18px;
 $checkbox-spacing: 0.16px;
 
 // Radio
@@ -25,7 +25,7 @@ $checkbox-spacing: 0.16px;
 $radio-font: global_fonts.$font-name;
 $radio-weight: global_fonts.$regular;
 $radio-size: global_fonts.get-size("button", $sizing);
-$radio-line-height: 22px;
+$radio-line-height: 18px;
 $radio-spacing: 0.16px;
 
 // toggle

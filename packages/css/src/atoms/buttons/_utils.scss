@@ -8,6 +8,7 @@
 ) {
     .eds-#{$name}-button {
         cursor: pointer;
+        transition: 0.4s;
         @content("idle");
         @include utils.status($idle);
 
