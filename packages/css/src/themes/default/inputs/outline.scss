@@ -5,17 +5,17 @@
 // Color tokens
 
 // idle
-$idle-font-color       : theme_colors.$content;
+$idle-font-color       : theme_colors.$secondary-dark;
 $idle-background-color : theme_colors.$background;
-$idle-border-color     : theme_colors.$secundary-mid;
+$idle-border-color     : theme_colors.$secondary-dark;
 
 // hover
-$active-font-color       : theme_colors.$content;
+$active-font-color       : theme_colors.$secondary-dark;
 $active-background-color : theme_colors.$background;
 $active-border-color     : theme_colors.$primary;
 
 // focus
-$focus-font-color       : theme_colors.$content;
+$focus-font-color       : theme_colors.$secondary-dark;
 $focus-background-color : theme_colors.$background;
 $focus-border-color     : theme_colors.$primary;
 
@@ -27,7 +27,7 @@ $disabled-border-color     : theme_colors.$disabled;
 //Extra colors
 $label-font-color       : theme_colors.$content;
 $label-error-font-color : theme_colors.$danger;
-$placeholder-font-color : theme_colors.$secundary-mid;
+$placeholder-font-color : theme_colors.$secondary-dark;
 $error-border-color     : theme_colors.$danger;
 $success-border-color   : theme_colors.$success;
 

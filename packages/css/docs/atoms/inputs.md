@@ -69,21 +69,21 @@ Labeled Input Error
  
 | token | default value | description |
 | -------------------------- | --------------------- | ------------ |
-| $idle-font-color           | theme.colors.$content | font color for the content when idle |
+| $idle-font-color           | theme.colors.$secondary-dark | font color for the content when idle |
 | $idle-background-color     | theme.colors.$background | background of the input when idle |
-| $idle-border-color         | theme.colors.$secundary-mid | border of the input when idle |
-| $active-font-color         | theme.colors.$content | font color for the content when active |
+| $idle-border-color         | theme.colors.$secondary-mid | border of the input when idle |
+| $active-font-color         | theme.colors.$secondary-dark | font color for the content when active |
 | $active-background-color   | theme.colors.$background | background of the input when active |
 | $active-border-color       | theme.colors.$primary | border of the input when active |
-| $focus-font-color          | theme.colors.$content | font color for the content when focused |
+| $focus-font-color          | theme.colors.$secondary-dark | font color for the content when focused |
 | $focus-background-color    | theme.colors.$background | background color of the input when focused|
 | $focus-border-color        | theme.colors.$primary | border color of the input when focused |
 | $disabled-font-color       | theme.colors.$disabled | font color for the content when disabled |
 | $disabled-background-color | theme.colors.$background | background color of the input when disabled  |
 | $disabled-border-color     | theme.colors.$disabled | border color of the input when disabled |
-| $label-font-color          | theme.colors.$content | font color for the label when idle |
+| $label-font-color          | theme.colors.$secondary-dark | font color for the label when idle |
 | $label-error-font-color    | theme.colors.$danger | font color for the label when in error state |
-| $placeholder-font-color    | theme.colors.$secundary-mid | font color for the placeholder |
+| $placeholder-font-color    | theme.colors.$secondary-mid | font color for the placeholder |
 | $error-border-color        | theme.colors.$danger | border color of the input when in error state |
 | $success-border-color      | theme.colors.$success | border color of the input when in success state |
 | $border-radius             | theme.shape.$input-radius | border radius for the input |
@@ -107,8 +107,8 @@ Labeled Input Error
 | ------------------------------- | ----------------------------- | ------------ |
 | theme.colors.$primary           | global.colors.$orange         | color used for primary content |
 | theme.colors.$background        | global.colors.$white          | color used mostly for backgrounds |
-| theme.colors.$secundary         | global.colors.$lightgray      | color used for secundary content |
-| theme.colors.$content           | global.colors.$orange-darkest | darkest shade of the primary color |
+| theme.colors.$secondary         | global.colors.$lightgray      | color used for secondary content |
+| theme.colors.$secondary-dark    | global.colors.$ligthgray-dark | dark shade of the secondary color |
 | theme.colors.$disabled          | global.colors.$disable        | color used for disabled content |
 | theme.colors.$danger            | global.colors.$red            | color used to signal adversity |
 | theme.colors.$success           | global.colors.$green          | color used to signal success |
@@ -125,7 +125,7 @@ Labeled Input Error
 | token | default value | description | 
 | ----------------------------- | ------- | ------------ |
 | global.colors.$orange         | #DE411B | Orange base color |
-| global.colors.$orange-darkest | #120502 | Orange darkest shade |
+| global.colors.$lightgray-dark | #1C272B | Lightgray dark shade |
 | global.colors.$white          | #fff    | White color |
 | global.colors.$lightgray      | #9BB4BE | Lightgray base color |
 | global.colors.$disable        | #D9D9D9 | Disabled base color |

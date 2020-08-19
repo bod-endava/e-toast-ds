@@ -2,7 +2,7 @@
 @use '../constants/fonts.scss' as theme_fonts;
 @use '../constants/shape.scss' as theme_shape;
 
-$main-color: theme_colors.$secundary-dark;
+$main-color: theme_colors.$secondary-dark;
 $border-radius: theme_shape.$checkbox-radius;
 $disabled-color: theme_colors.$disabled;
 $checkmark-color: theme_colors.$background;

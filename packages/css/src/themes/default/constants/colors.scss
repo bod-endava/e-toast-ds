@@ -15,13 +15,13 @@ $cta-mid     : colors.get-color("blue","mid");
 $cta-dark    : colors.get-color("blue","dark");
 $cta-darkest : colors.get-color("blue","darkest");
 
-$secundary         : colors.get-color("lightgray");
-$secundary-light   : colors.get-color("lightgray","light");
-$secundary-mid     : colors.get-color("lightgray","mid");
-$secundary-dark    : colors.get-color("lightgray","dark");
-$secundary-darkest : colors.get-color("lightgray","darkest");
+$secondary         : colors.get-color("lightgray");
+$secondary-light   : colors.get-color("lightgray","light");
+$secondary-mid     : colors.get-color("lightgray","mid");
+$secondary-dark    : colors.get-color("lightgray","dark");
+$secondary-darkest : colors.get-color("lightgray","darkest");
 
-$secundary-background : $secundary-light;
+$secondary-background : $secondary-light;
 $content : $primary-darkest; 
 
 $danger         : colors.get-color("red");
