@@ -1,34 +1,44 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import ActionCard from '../../containers/actionCard/ActionCard'
-import './Home.css';
-import rocket from '../../assets/img/rocket.png'
-import pencil from '../../assets/img/pencil.png'
-import atom from '../../assets/img/atom.png'
+import styles from './Home.module.css';
+import rocket from '../../assets/img/rocket.svg'
+import pencil from '../../assets/img/pencil.svg'
+import atom from '../../assets/img/atom.svg'
 
 function Home() {
+
+    const myRef = useRef(null)
+    const srollToBottomSection = () => window.scrollTo({
+        left: 0, 
+        top: myRef.current.offsetTop,
+        behavior: 'smooth'
+    })
+
     return (
         <>
-            <section className="TopSection">
-                <h1 className="TopSection_greet-text">Hello!</h1>
+            <section className={styles.TopSection}>
+                <h1 className={styles.TopSection_greetText}>Hello!</h1>
             </section>
             <section>
-                <p className="Description-text">
+                <p className={styles.DescriptionText}>
                     I am <span>ETOAST</span>, a design and development tool that provides
                     customizable and reusable components. I am valuable for anyone who requires a
                     standardized solution for building faster and more effective UI projects
                 </p>
-                <button className="eds-primary-button">LETS GET STARTED</button>
+                <button className="eds-primary-button" onClick={srollToBottomSection}>
+                    LETS GET STARTED
+                </button>
             </section>
-            <section className="Bottom-section">
+            <section className={styles.BottomSection} ref={myRef}>
                 <h2>
                     Design, Build, Deliver
                 </h2>
-                <p className="Description-text Wider">
+                <p className={`${styles.DescriptionText} ${styles.Wider}`}>
                     I am <span>ETOAST</span>, a design and development tool that provides
                     customizable and reusable components. I am valuable for anyone who requires a
                     standardized solution for building faster and more effective UI projects
                 </p>
-                <div className="Bottom-section_cards">
+                <div className={styles.BottomSection_cards}>
                     <ActionCard
                         actionImage={rocket}
                         actionHeading="GETTING STARTED"
@@ -41,6 +51,7 @@ function Home() {
                         actionHeading="DESIGN GUIDELINE"
                         actionPhrase="A set of recomendation towars design good practice."
                         actionButtonText="DESIGN GUIDELINES"
+                        buttonRedirectUrl="/DesignGuidelines"
                     />
                     <ActionCard
                         actionImage={atom}

@@ -1,5 +1,6 @@
 import React from 'react';
-import './ActionCard.css'
+import styles from './ActionCard.module.css'
+import { useHistory } from "react-router-dom";
 
 function ActionCard(props) {
     const 
@@ -8,20 +9,28 @@ function ActionCard(props) {
         imageOffset,
         actionHeading,
         actionPhrase,
-        actionButtonText
+        actionButtonText,
+        buttonRedirectUrl,
+        tall = true
     } = props;
+    const history = useHistory();
+
+    function redirect() {
+        history.push(buttonRedirectUrl);
+    }
+
     return (
-        <div className="Card">
-            <div className="Card_circle">
-                <img className={imageOffset} src={actionImage} alt="actionImage"/>
+        <div className={`${styles.Card} ${tall ? styles.Tall : styles.Short}`}>
+            <div className={`${styles.Card_circle} ${tall ? styles.BigCircle : styles.SmallCircle}`}>
+                <img className={styles[imageOffset]} src={actionImage} alt="actionImage"/>
             </div>
-            <h1 className="Card_heading">
+            <h1 className={styles.Card_heading}>
                 {actionHeading}
             </h1>
-            <p className="Card_phrase">
+            <p className={styles.Card_phrase}>
                 {actionPhrase}
             </p>
-            <button className="eds-primary-button Card_button">{actionButtonText}</button>
+            <button className={`eds-primary-button " ${styles.Card_button}`} onClick={redirect}>{actionButtonText}</button>
         </div>
     );
 }

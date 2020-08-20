@@ -8,7 +8,7 @@ section {
     background-repeat: repeat-x;
 }
 
-.TopSection_greet-text {
+.TopSection_greetText {
     font-size: 200px;
     color: var(--landing-primary);
     margin-bottom: 0;
@@ -16,7 +16,7 @@ section {
     font-weight: normal;
 }
 
-.Description-text {
+.DescriptionText {
     width: 521px;
     margin-left: auto;
     margin-right: auto;
@@ -27,20 +27,20 @@ section {
     width: 654px;
 }
 
-.Description-text span {
+.DescriptionText span {
     color: var(--orange);
 }
 
-.Description-text button {
+.DescriptionText button {
     margin-top: 40px;
 }
 
-.Bottom-section {
+.BottomSection {
     margin-top: 230px;
     background-color: var(--landing-lightgray);
 }
 
-.Bottom-section h2 {
+.BottomSection h2 {
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -49,7 +49,7 @@ section {
     padding-top: 85px;
 }
 
-.Bottom-section_cards {
+.BottomSection_cards {
     display: flex;
     justify-content: space-around;
     padding-bottom: 80px;

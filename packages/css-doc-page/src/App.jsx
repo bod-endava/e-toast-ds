@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import Home from './views/home/Home';
 import Sidebar from './containers/sidebar/Sidebar'
 import Footer from './components/footer/Footer';
+import Home from './views/home/Home';
+import DesignGuidelines from './views/designGuidelines/DesignGuidelines'
 import {
   BrowserRouter as Router,
   Route,
@@ -15,6 +16,10 @@ const routes = [
       path: '/',
       component: Home
   },
+  {
+      path: '/DesignGuidelines',
+      component: DesignGuidelines
+  }
 ];
 
 function App() {

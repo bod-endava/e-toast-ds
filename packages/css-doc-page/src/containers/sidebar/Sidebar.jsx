@@ -1,6 +1,6 @@
 import React from 'react';
 import './Sidebar.css';
-import logo from '../../assets/img/logosymbol.png';
+import logo from '../../assets/img/logosymbol.svg';
 import chevron from '../../assets/img/chevron.svg';
 
 function Sidebar() {
