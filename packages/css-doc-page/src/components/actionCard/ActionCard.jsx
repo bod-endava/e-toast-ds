@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ActionCard.module.css'
+import styles from './ActionCard.module.scss'
 import { useHistory } from "react-router-dom";
 
 function ActionCard(props) {

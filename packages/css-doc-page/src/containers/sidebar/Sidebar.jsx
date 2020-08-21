@@ -1,15 +1,15 @@
 import React from 'react';
-import './Sidebar.css';
+import styles from './Sidebar.module.scss';
 import logo from '../../assets/img/logosymbol.svg';
 import chevron from '../../assets/img/chevron.svg';
 
 function Sidebar() {
     return (
-        <div className="Sidebar">
-            <div className="Sidebar_image">
+        <div className={styles.Sidebar}>
+            <div className={styles.Sidebar_image}>
                 <img src={logo} alt="Logo"/>
             </div>
-            <nav className="NavigationItems">
+            <nav>
                 <div>
                     <p>GETTING STARTED</p>
                 </div>

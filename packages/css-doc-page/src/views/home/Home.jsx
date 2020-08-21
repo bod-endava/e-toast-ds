@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import ActionCard from '../../containers/actionCard/ActionCard'
-import styles from './Home.module.css';
+import ActionCard from '../../components/actionCard/ActionCard'
+import styles from './Home.module.scss';
 import rocket from '../../assets/img/rocket.svg'
 import pencil from '../../assets/img/pencil.svg'
 import atom from '../../assets/img/atom.svg'
@@ -9,7 +9,7 @@ function Home() {
 
     const myRef = useRef(null)
     const srollToBottomSection = () => window.scrollTo({
-        left: 0, 
+        left: 0,
         top: myRef.current.offsetTop,
         behavior: 'smooth'
     })

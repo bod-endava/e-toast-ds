@@ -1,0 +1,26 @@
+.Sidebar {
+    background-color: var(--white);
+    width: 250px;
+    border-right: 1px solid #E2E7E9;
+
+    .Sidebar_image {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 65px;
+        padding-left: 27px;
+
+        div {
+            margin-bottom: 53px;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                right: 24px;
+            }
+        }
+    }
+}
