@@ -4,6 +4,7 @@ import Sidebar from './containers/sidebar/Sidebar'
 import Footer from './components/footer/Footer';
 import Home from './views/home/Home';
 import DesignGuidelines from './views/designGuidelines/DesignGuidelines'
+import ShapeGuidelines from './views/shapeGuidelines/ShapeGuidelines'
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +20,10 @@ const routes = [
   {
       path: '/DesignGuidelines',
       component: DesignGuidelines
+  },
+  {
+      path: '/ShapeGuidelines',
+      component: ShapeGuidelines
   }
 ];
 
