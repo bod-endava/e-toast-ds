@@ -1,16 +1,17 @@
 import React from 'react';
-import './App.scss';
 import Sidebar from './containers/sidebar/Sidebar'
 import Footer from './components/footer/Footer';
 import Home from './views/home/Home';
 import DesignGuidelines from './views/designGuidelines/DesignGuidelines'
 import ShapeGuidelines from './views/shapeGuidelines/ShapeGuidelines'
+import TokenPrinciples from './views/tokenPrinciples/TokenPrinciples'
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
   Switch
 } from 'react-router-dom';
+import './App.scss';
 
 const routes = [
   {
@@ -24,6 +25,10 @@ const routes = [
   {
       path: '/ShapeGuidelines',
       component: ShapeGuidelines
+  },
+  {
+      path: '/TokenPrinciples',
+      component: TokenPrinciples
   }
 ];
 
@@ -34,9 +39,9 @@ function App() {
       <div className="Content">
         <Router>
           <Switch>
-              {routes.map(route => (
+              {routes.map((route,key) => (
                   <Route
-                      key={'001'}
+                      key={key}
                       path={route.path}
                       exact={true}
                       component={route.component}
@@ -45,6 +50,7 @@ function App() {
               <Redirect to='/' />
           </Switch>
         </Router>
+        {/* All views have a footer even if designs don't show it*/}
         <Footer />
       </div>
     </div>

@@ -1,0 +1,56 @@
+.TokenPrinciples {
+    background-color: var(--landing-lightgray);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .Content {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        width: 470px;
+        text-align: left;
+
+        .Title {
+            font-size: 100px;
+            line-height: 85px;
+            margin: 24px 0;
+            color: var(--landing-primary);
+        }
+
+        .Description {
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+
+    .Image {
+        border-radius: 50%;
+        $diameter: 20vw;
+        width: $diameter;
+        height: $diameter;
+        background-color: var(--white);
+        padding: 5%;
+        visibility: hidden;
+    
+        @media screen and (min-width: 768px) {
+            visibility: visible;
+        }
+        
+        @media screen and (min-width: 1265px) {
+            $diameter: 474px;
+            width: $diameter;
+            height: $diameter;
+            padding: 65px;
+            box-sizing: border-box;
+        }
+
+        .TokensIcon {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

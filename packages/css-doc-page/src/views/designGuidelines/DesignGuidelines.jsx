@@ -35,6 +35,7 @@ function DesignGuidelines() {
                             actionHeading="TOKENS"
                             actionPhrase="Design tokens are central and tiny pieces of UI information."
                             actionButtonText="READ MORE"
+                            buttonRedirectUrl="/TokenPrinciples"
                     />
                     <ActionCard
                             actionImage={typography}
@@ -51,6 +52,7 @@ function DesignGuidelines() {
                             actionHeading="SHAPES"
                             actionPhrase="Shapes direct attention, identify components, communicate state, and express brand."
                             actionButtonText="READ MORE"
+                            buttonRedirectUrl="/ShapeGuidelines"
                     />
                     <ActionCard
                             actionImage={icons}
