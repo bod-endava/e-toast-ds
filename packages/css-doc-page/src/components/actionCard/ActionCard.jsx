@@ -6,12 +6,13 @@ function ActionCard(props) {
     const 
     {
         actionImage,
-        imageOffset,
+        imageOffset = "",
         actionHeading,
         actionPhrase,
         actionButtonText,
         buttonRedirectUrl,
-        tall = true
+        bigCircle = false,
+        height
     } = props;
     const history = useHistory();
 
@@ -20,8 +21,8 @@ function ActionCard(props) {
     }
 
     return (
-        <div className={`${styles.Card} ${tall ? styles.Tall : styles.Short}`}>
-            <div className={`${styles.Card_circle} ${tall ? styles.BigCircle : styles.SmallCircle}`}>
+        <div className={styles.Card} style={{height}}>
+            <div className={`${styles.Card_circle} ${bigCircle ? styles.BigCircle : styles.SmallCircle}`}>
                 <img className={styles[imageOffset]} src={actionImage} alt="actionImage"/>
             </div>
             <h1 className={styles.Card_heading}>
@@ -30,7 +31,10 @@ function ActionCard(props) {
             <p className={styles.Card_phrase}>
                 {actionPhrase}
             </p>
-            <button className={`eds-primary-button " ${styles.Card_button}`} onClick={redirect}>{actionButtonText}</button>
+            {actionButtonText && (
+                <button className={`eds-primary-button " ${styles.Card_button}`} onClick={redirect}>{actionButtonText}</button>
+            )}
+            
         </div>
     );
 }

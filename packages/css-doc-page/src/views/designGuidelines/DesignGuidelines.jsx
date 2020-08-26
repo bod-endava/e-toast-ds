@@ -29,54 +29,54 @@ function DesignGuidelines() {
                 <div className={styles.BottomSection_cards}>
                     {/* This div has flex-direction: column; */}
                     <ActionCard
-                            actionImage={tokens}
-                            tall = {false}
-                            imageOffset="CenterOffset"
-                            actionHeading="TOKENS"
-                            actionPhrase="Design tokens are central and tiny pieces of UI information."
-                            actionButtonText="READ MORE"
-                            buttonRedirectUrl="/TokenPrinciples"
+                        height='377px'
+                        actionImage={tokens}
+                        imageOffset="CenterOffset"
+                        actionHeading="TOKENS"
+                        actionPhrase="Design tokens are central and tiny pieces of UI information."
+                        actionButtonText="READ MORE"
+                        buttonRedirectUrl="/TokenPrinciples"
                     />
                     <ActionCard
-                            actionImage={typography}
-                            tall = {false}
-                            imageOffset="CenterOffset"
-                            actionHeading="TYPOGRAPHY"
-                            actionPhrase="Design tokens are central and tiny pieces of UI information."
-                            actionButtonText="READ MORE"
+                        height='377px'
+                        actionImage={typography}
+                        imageOffset="CenterOffset"
+                        actionHeading="TYPOGRAPHY"
+                        actionPhrase="Design tokens are central and tiny pieces of UI information."
+                        actionButtonText="READ MORE"
                     />
                     <ActionCard
-                            actionImage={shapes}
-                            tall = {false}
-                            imageOffset="CenterOffset"
-                            actionHeading="SHAPES"
-                            actionPhrase="Shapes direct attention, identify components, communicate state, and express brand."
-                            actionButtonText="READ MORE"
-                            buttonRedirectUrl="/ShapeGuidelines"
+                        height='377px'
+                        actionImage={shapes}
+                        imageOffset="CenterOffset"
+                        actionHeading="SHAPES"
+                        actionPhrase="Shapes direct attention, identify components, communicate state, and express brand."
+                        actionButtonText="READ MORE"
+                        buttonRedirectUrl="/ShapeGuidelines"
                     />
                     <ActionCard
-                            actionImage={icons}
-                            tall = {false}
-                            imageOffset="CenterOffset"
-                            actionHeading="ICONS"
-                            actionPhrase="Design tokens are central and tiny pieces of UI information."
-                            actionButtonText="READ MORE"
+                        height='377px'
+                        actionImage={icons}
+                        imageOffset="CenterOffset"
+                        actionHeading="ICONS"
+                        actionPhrase="Design tokens are central and tiny pieces of UI information."
+                        actionButtonText="READ MORE"
                     />
                     <ActionCard
-                            actionImage={color}
-                            tall = {false}
-                            imageOffset="CenterOffset"
-                            actionHeading="COLOR"
-                            actionPhrase="Design tokens are central and tiny pieces of UI information."
-                            actionButtonText="READ MORE"
+                        height='377px'
+                        actionImage={color}
+                        imageOffset="CenterOffset"
+                        actionHeading="COLOR"
+                        actionPhrase="Design tokens are central and tiny pieces of UI information."
+                        actionButtonText="READ MORE"
                     />
                     <ActionCard
-                            actionImage={accessibility}
-                            tall = {false}
-                            imageOffset="CenterOffset"
-                            actionHeading="ACCESSIBILITY"
-                            actionPhrase="Design tokens are central and tiny pieces of UI information."
-                            actionButtonText="READ MORE"
+                        height='377px'
+                        actionImage={accessibility}
+                        imageOffset="CenterOffset"
+                        actionHeading="ACCESSIBILITY"
+                        actionPhrase="Design tokens are central and tiny pieces of UI information."
+                        actionButtonText="READ MORE"
                     />
                 </div>
             </section>

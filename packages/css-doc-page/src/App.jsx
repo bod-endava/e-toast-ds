@@ -1,10 +1,11 @@
 import React from 'react';
-import Sidebar from './containers/sidebar/Sidebar'
+import Sidebar from './components/sidebar/Sidebar'
 import Footer from './components/footer/Footer';
 import Home from './views/home/Home';
-import DesignGuidelines from './views/designGuidelines/DesignGuidelines'
-import ShapeGuidelines from './views/shapeGuidelines/ShapeGuidelines'
-import TokenPrinciples from './views/tokenPrinciples/TokenPrinciples'
+import DesignGuidelines from './views/designGuidelines/DesignGuidelines';
+import ShapeGuidelines from './views/shapeGuidelines/ShapeGuidelines';
+import TokenPrinciples from './views/tokenPrinciples/TokenPrinciples';
+import ComponentOverview from './views/componentOverview/componentOverview';
 import {
   BrowserRouter as Router,
   Route,
@@ -29,6 +30,10 @@ const routes = [
   {
       path: '/TokenPrinciples',
       component: TokenPrinciples
+  },
+  {
+    path: '/ComponentOverview',
+    component: ComponentOverview
   }
 ];
 

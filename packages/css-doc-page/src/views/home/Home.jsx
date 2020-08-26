@@ -40,12 +40,16 @@ function Home() {
                 </p>
                 <div className={styles.BottomSection_cards}>
                     <ActionCard
+                        height='506px'
+                        bigCircle
                         actionImage={rocket}
                         actionHeading="GETTING STARTED"
                         actionPhrase="Start Using ETOAST with our onboarding guide."
                         actionButtonText="GET STARTED"
                     />
                     <ActionCard
+                        height='506px'
+                        bigCircle
                         actionImage={pencil}
                         imageOffset="BottomOffset"
                         actionHeading="DESIGN GUIDELINE"
@@ -54,11 +58,14 @@ function Home() {
                         buttonRedirectUrl="/DesignGuidelines"
                     />
                     <ActionCard
+                        height='506px'
+                        bigCircle
                         actionImage={atom}
                         imageOffset="CenterOffset"
                         actionHeading="COMPONENTS"
                         actionPhrase="Navigate through our different components and discover their ussability and guidelines."
-                        actionButtonText="DESIGN GUIDELINES"
+                        actionButtonText="COMPONENTS OVERVIEW"
+                        buttonRedirectUrl="/ComponentOverview"
                     />
                 </div>
             </section>
