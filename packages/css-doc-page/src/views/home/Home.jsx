@@ -43,7 +43,8 @@ function Home() {
                         height='506px'
                         bigCircle
                         actionImage={rocket}
-                        actionHeading="GETTING STARTED"
+                        imageOffset="TopOffset"
+                        actionHeading="GET STARTED"
                         actionPhrase="Start Using ETOAST with our onboarding guide."
                         actionButtonText="GET STARTED"
                     />
@@ -54,7 +55,7 @@ function Home() {
                         imageOffset="BottomOffset"
                         actionHeading="DESIGN GUIDELINE"
                         actionPhrase="A set of recomendation towars design good practice."
-                        actionButtonText="DESIGN GUIDELINES"
+                        actionButtonText="OVERVIEW"
                         buttonRedirectUrl="/DesignGuidelines"
                     />
                     <ActionCard
@@ -64,7 +65,7 @@ function Home() {
                         imageOffset="CenterOffset"
                         actionHeading="COMPONENTS"
                         actionPhrase="Navigate through our different components and discover their ussability and guidelines."
-                        actionButtonText="COMPONENTS OVERVIEW"
+                        actionButtonText="OVERVIEW"
                         buttonRedirectUrl="/ComponentOverview"
                     />
                 </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './ActionCard.module.scss'
 import { useHistory } from "react-router-dom";
 
@@ -6,7 +7,7 @@ function ActionCard(props) {
     const 
     {
         actionImage,
-        imageOffset = "",
+        imageOffset,
         actionHeading,
         actionPhrase,
         actionButtonText,
@@ -38,5 +39,16 @@ function ActionCard(props) {
         </div>
     );
 }
+
+ActionCard.propTypes = {
+    actionImage : PropTypes.string,
+    imageOffset : PropTypes.oneOf(['BottomOffset', 'CenterOffset', 'TopOffset']),
+    actionHeading : PropTypes.string,
+    actionPhrase : PropTypes.string,
+    actionButtonText : PropTypes.string,
+    buttonRedirectUrl : PropTypes.string,
+    bigCircle : PropTypes.bool,
+    height : PropTypes.string.isRequired,
+};
 
 export default ActionCard;
