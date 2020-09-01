@@ -1,0 +1,15 @@
+.Sidebar {
+    background-color: var(--white);
+    width: 250px;
+    border-right: 1px solid #E2E7E9;
+
+    > div {
+        margin-top: 40px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    nav {
+        margin-top: 65px;
+    }
+}

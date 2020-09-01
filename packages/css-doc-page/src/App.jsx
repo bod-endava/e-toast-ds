@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from './components/sidebar/Sidebar'
+import Sidebar from './containers/sidebar/Sidebar'
 import Footer from './components/footer/Footer';
 import Home from './views/home/Home';
 import DesignGuidelines from './views/designGuidelines/DesignGuidelines';
@@ -16,20 +16,20 @@ import './App.scss';
 
 const routes = [
   {
-      path: '/',
-      component: Home
+    path: '/',
+    component: Home
   },
   {
-      path: '/DesignGuidelines',
-      component: DesignGuidelines
+    path: '/DesignGuidelines',
+    component: DesignGuidelines
   },
   {
-      path: '/ShapeGuidelines',
-      component: ShapeGuidelines
+    path: '/ShapeGuidelines',
+    component: ShapeGuidelines
   },
   {
-      path: '/TokenPrinciples',
-      component: TokenPrinciples
+    path: '/TokenPrinciples',
+    component: TokenPrinciples
   },
   {
     path: '/ComponentOverview',
@@ -40,24 +40,25 @@ const routes = [
 function App() {
   return (
     <div className="App">
-      <Sidebar />
-      <div className="Content">
-        <Router>
+      <Router>
+        {/* All views have a sidebar*/}
+        <Sidebar />
+        <div className="Content">
           <Switch>
-              {routes.map((route,key) => (
-                  <Route
-                      key={key}
-                      path={route.path}
-                      exact={true}
-                      component={route.component}
-                  />
-              ))}
-              <Redirect to='/' />
+            {routes.map((route, key) => (
+              <Route
+                key={key}
+                path={route.path}
+                exact={true}
+                component={route.component}
+              />
+            ))}
+            <Redirect to='/' />
           </Switch>
-        </Router>
-        {/* All views have a footer even if designs don't show it*/}
-        <Footer />
-      </div>
+          {/* All views have a footer even if designs don't show it*/}
+          <Footer />
+        </div>
+      </Router>
     </div>
   );
 }
