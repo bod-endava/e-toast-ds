@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useHistory, useLocation } from "react-router-dom";
 import styles from './SidebarItem.module.scss';
-import Chevron from '../svgComponents/chevron';
+import { ReactComponent as ChevronComponent } from '../../assets/img/chevron.svg';
 
 function SidebarItem(props) {
     const {
@@ -30,7 +30,7 @@ function SidebarItem(props) {
 
     return (
         <div className={styles.SidebarItem}>
-            <p>{itemName}</p> {childrenList.length > 0 && <Chevron />}
+            <p>{itemName}</p> {childrenList.length > 0 && <ChevronComponent />}
             {expanded && (
                 <ul className={styles.Subtabs}>
                     {listItems}

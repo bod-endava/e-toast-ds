@@ -1,7 +1,15 @@
 .Sidebar {
     background-color: var(--white);
     width: 250px;
-    border-right: 1px solid #E2E7E9;
+    border-right: 1px solid var(--landing-lightgray);
+    position: sticky;
+    top: 0; /* required */
+    height: 100vh;
+    overflow-y: auto;
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     > div {
         margin-top: 40px;
