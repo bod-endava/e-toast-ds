@@ -1,0 +1,119 @@
+@use "../../themes/%selects%/selects/index" as tokens;
+
+.eds-select {
+    font-family: tokens.$font-name;
+    font-size: tokens.$font-size;
+    font-weight: tokens.$font-weight;
+    color: tokens.$font-color;
+    letter-spacing: tokens.$spacing;
+    line-height: tokens.$line-height;
+    min-width: tokens.$width;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+
+    & select {
+        display: none;
+    }
+
+    &__selected {
+        width: 100%;
+        height: tokens.$height;
+        box-sizing: border-box;
+        border: {
+            width: 1px;
+            style: solid;
+            radius: tokens.$select-radius;
+            color: tokens.$border-color;
+        }
+        padding: tokens.$select-padding;
+        background-color: tokens.$background;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        &__content {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        &__arrow {
+            display: inline-flex;
+            margin-left: auto;
+            &__icon {
+                transition: transform 0.2s ease-out 0s;
+                margin-left: 16px;
+                &::before {
+                    content: "˅";
+                }
+                &--open {
+                    transform: rotate(180deg);
+                }
+            }
+
+        }
+    }
+    
+    & > select:disabled ~ &__selected,
+    &[disabled] > &__selected {
+        cursor: not-allowed;
+        border: {
+            color: tokens.$disabled-border-color;
+        }
+    }
+
+    & > select:disabled ~ &__selected,
+    &[disabled] > &__selected,
+    & > select:disabled ~ &__selected > &__selected__arrow,
+    &[disabled] > &__selected > &__selected__arrow {
+        color: tokens.$disabled-text-color
+    }
+
+    &__list {
+        display: none;
+        min-width: tokens.$width;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        top: calc(100% + #{tokens.$list-margin-top});
+        left: 0px;
+        border: {
+            width: 1px;
+            style: solid;
+            radius: tokens.$list-radius;
+            color: tokens.$border-color;
+        }
+        
+        &--open {
+            display: block;
+        }
+    }
+
+    &__list > &__option {
+        &--first {
+            border-radius: tokens.$list-radius tokens.$list-radius 0 0;
+        }
+        &--last {
+            border-radius: 0 0 tokens.$list-radius tokens.$list-radius;
+        }
+    }
+    
+    &__option {
+        display: block;
+        padding: tokens.$item-padding;
+        background-color: tokens.$background;
+
+        &--hidden {
+            display: none;
+        }
+
+        &:hover {
+            color: tokens.$item-hover-text-color;
+            background-color: tokens.$item-hover-background;
+        }
+    }
+}

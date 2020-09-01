@@ -8,5 +8,4 @@ import '@e-toast/css'
 
 export const store = configureStore();
 
-
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));

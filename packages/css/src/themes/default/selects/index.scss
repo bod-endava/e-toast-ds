@@ -1,0 +1,25 @@
+@use "../constants/colors.scss" as theme_colors;
+@use "../constants/fonts.scss" as theme_fonts;
+@use "../constants/shape.scss" as theme_shape;
+
+$border-color : theme_colors.$secondary-dark;
+$background   : theme_colors.$background;
+
+$height : 30px;
+$width  : 185px;
+$select-radius   : 30px;
+$select-padding  : 6px 10px;
+$list-radius     : 8px;
+$list-margin-top : 6px;
+$item-padding    : 8px 10px;
+$item-hover-text-color : theme_colors.$background;
+$item-hover-background : theme_colors.$primary;
+$disabled-border-color : theme_colors.$disabled;
+$disabled-text-color   : theme_colors.$disabled;
+
+$font-color  : theme_colors.$secondary-dark;
+$font-name   : theme_fonts.$select-font;
+$font-weight : theme_fonts.$select-weight;
+$font-size   : theme_fonts.$select-size;
+$line-height : theme_fonts.$select-line-height;
+$spacing     : theme_fonts.$select-spacing;

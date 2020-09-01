@@ -28,7 +28,7 @@ $radio-size: global_fonts.get-size("button", $sizing);
 $radio-line-height: 18px;
 $radio-spacing: 0.16px;
 
-// toggle
+// Toggle
 
 $toggle-font: global_fonts.$font-name;
 $toggle-font-weight: global_fonts.$regular;
@@ -36,10 +36,19 @@ $toggle-font-size: global_fonts.get-size("button", $sizing);
 $toggle-line-height: 22px;
 $toggle-letter-spacing: 0.16px;
 
-// input
+// Input
+
 $input-font: global_fonts.$font-name;
 $input-weight: global_fonts.$regular;
 $input-size: 16px;
 $input-line-height: global_fonts.get-size("button", "line-height");
 $input-spacing: 0.16px;
 $label-size: 12px;
+
+// Select
+
+$select-font : global_fonts.$font-name;
+$select-weight : global_fonts.$regular;
+$select-size : global_fonts.get-size("button", $sizing);
+$select-line-height : 18px;
+$select-spacing : 0.16px;

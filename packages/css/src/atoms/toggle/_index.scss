@@ -32,6 +32,7 @@
     &:disabled:after {
         background-color: theme_tokens.$disabled-circle-color;
         opacity: 0.14;
+        cursor: not-allowed;
     }
       
     &:checked:after {

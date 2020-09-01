@@ -93,9 +93,27 @@ const InputDemo = ({ name, label, success, error='', ...extra }) => {
   </section>
 }
 
+const SelectDemo = ({ disabled, innerDisabled, placeholder="Choose one" }) => {
+  const root = getClassName({
+    base: "eds-select",
+  })
+
+  // const list = root.extend("&__list");
+  // const item = root.extend("&__option");
+
+  return <div className={root} disabled={disabled} >
+    <select disabled={innerDisabled}>
+      <option hidden>{placeholder}</option>
+      <option value={1}>One</option>
+      <option hidden>you dont see me</option>
+      <option value={128}>Some really long option that will break all styles</option>
+    </select>
+  </div>
+}
+
 function App() {
   return (
-    <div>
+    <div  style={{fontFamily: 'Roboto'}}>
       <h1>Buttons!</h1>
       <ButtonDemo name="Primary" />
       <ButtonDemo name="Outline" label="Outline Primary"/>
@@ -131,8 +149,9 @@ function App() {
         <Toggle label="Controlled toggle" checked readOnly/>
         <Toggle label="Disabled toggle" disabled/>
       </List>
+
       <h1>Inputs!</h1>
-      <h2 style={{fontFamily: 'Roboto'}}>Outline Normal Input</h2>
+      <h2>Outline Normal Input</h2>
       <InputDemo name="First" variant="Outline" label="Label" placeholder="Placeholder" />
       <InputDemo name="Second" variant="Outline" placeholder="Placeholder" />
       <h2 style={{fontFamily: 'Roboto'}}>Outline Error Input</h2>
@@ -144,6 +163,24 @@ function App() {
       <h2 style={{fontFamily: 'Roboto'}}>Outline Disabled Input</h2>
       <InputDemo name="Seventh" variant="Outline" label="Label" placeholder="Placeholder" disabled/>
       <InputDemo name="Eighth" variant="Outline" placeholder="Placeholder" disabled/>
+
+      <div style={{ width: "435px" }}>
+        <h1>Select!</h1>
+        <Padded>  
+          <div style={{ width: "200px" , display: "inline-block"}}>
+            <SelectDemo />
+          </div>
+          <div style={{ width: "200px" , display: "inline-block"}}>
+            <SelectDemo />
+          </div>
+        </Padded>
+        <Padded>
+          <SelectDemo innerDisabled placeholder="Disabled from select"/>
+        </Padded>
+        <Padded>
+          <SelectDemo disabled placeholder="Disabled from container"/>
+        </Padded>
+      </div>
     </div>
   );
 }
