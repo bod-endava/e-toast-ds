@@ -32,7 +32,7 @@
         @include utils.status($disabled);
         cursor: not-allowed;
         &::placeholder {
-          color: #E0E8EB;
+          color: map-get($disabled,"text");
         }
     }
 
