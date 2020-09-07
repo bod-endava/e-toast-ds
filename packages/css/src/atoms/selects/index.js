@@ -7,23 +7,13 @@ const arrowClass = `${selectedClass}__arrow`
 const arrowIconClass = `${arrowClass}__icon`
 const arrowOpenClass = `${arrowIconClass}--open`
 const optionClass = "eds-select__option"
-const firstClass = `${optionClass}--first`
-const lastClass = `${optionClass}--last`
 const optionHiddenClass = `${optionClass}--hidden`
 
 const findByClass = (cl,node=document) => Array.from(node.getElementsByClassName(cl))
 const findByTag = (tag,node=document) => Array.from(node.getElementsByTagName(tag))
 const hasClass = (cl) => node => node.classList.contains(cl);
 const isSelect = hasClass(selectClass)
-const findFirstVisible = opts => opts.find(x => !hasClass(optionHiddenClass)(x))
 const findDefaultValue = ($opts) => $opts.find(o => o.selected) || $opts[0]
-
-const addFirstAndLastClasses = (opts) => {
-    findFirstVisible(opts)?.classList.add(firstClass)
-    opts.reverse();
-    findFirstVisible(opts)?.classList.add(lastClass)
-    opts.reverse();
-}
 
 const create = (element,attrs) => {
     const el = document.createElement(element);
@@ -107,7 +97,6 @@ const attachSelectBehavior = ($node) => {
     const defaultOpt = findDefaultValue($opts);
     selectedItem.innerHTML = defaultOpt?.innerHTML || "";
 
-    addFirstAndLastClasses(opts)
     list.append(...opts);
     
     selected.addEventListener("click", () => {

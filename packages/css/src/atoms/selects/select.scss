@@ -78,6 +78,7 @@
         min-width: tokens.$width;
         width: 100%;
         position: absolute;
+        overflow: hidden;
         z-index: 2;
         top: calc(100% + #{tokens.$list-margin-top});
         left: 0px;
@@ -90,15 +91,6 @@
         
         &--open {
             display: block;
-        }
-    }
-
-    &__list > &__option {
-        &--first {
-            border-radius: tokens.$list-radius tokens.$list-radius 0 0;
-        }
-        &--last {
-            border-radius: 0 0 tokens.$list-radius tokens.$list-radius;
         }
     }
     
