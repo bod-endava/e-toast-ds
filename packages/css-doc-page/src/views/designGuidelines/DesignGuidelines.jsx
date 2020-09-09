@@ -20,7 +20,7 @@ function DesignGuidelines() {
                 </p>
             </section>
             <div className={styles.Circle}>
-                <img src={pencil} alt="pencil"/>
+                <img src={pencil} alt="pencil" />
             </div>
             <section className={styles.BottomSection}>
                 <h2>
@@ -69,6 +69,7 @@ function DesignGuidelines() {
                         actionHeading="COLOR"
                         actionPhrase="Design tokens are central and tiny pieces of UI information."
                         actionButtonText="READ MORE"
+                        buttonRedirectUrl="/ColorGuidelines"
                     />
                     <ActionCard
                         height='377px'

@@ -6,6 +6,7 @@ import DesignGuidelines from './views/designGuidelines/DesignGuidelines';
 import ShapeGuidelines from './views/shapeGuidelines/ShapeGuidelines';
 import TokenPrinciples from './views/tokenPrinciples/TokenPrinciples';
 import ComponentOverview from './views/componentOverview/componentOverview';
+import ColorGuidelines from './views/colorGuidelines/ColorGuidelines';
 import {
   BrowserRouter as Router,
   Route,
@@ -34,6 +35,10 @@ const routes = [
   {
     path: '/ComponentOverview',
     component: ComponentOverview
+  },
+  {
+    path: '/ColorGuidelines',
+    component: ColorGuidelines
   }
 ];
 

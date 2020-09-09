@@ -6,12 +6,26 @@
 
 .Content {
   flex: 1 0 auto;
-  max-width: 80%;
+  max-width: calc(100vw - 250px);
+
+  a {
+    color: var(--orange);
+  }
 }
 
 :root {
+  --black: #120502;
   --landing-primary: #477385;
   --landing-lightgray: #E2E7E9;
   --primary-text: #020E12;
-  --white: #FFFFFF;
+  --study-blue: #1773CF;
+  --study-blue-light: #D1E5FA;
+  --study-blue-mid: #8CBFF2;
+  --study-blue-dark: #072440;
+  --study-blue-darkest: #020A12;
+  --secondary: #177082;
+  --secondary-light: #D1F3FA;
+  --secondary-mid: #8CE1F2;
+  --secondary-dark: #073741;
+  --secondary-darkest: #021012;
 }

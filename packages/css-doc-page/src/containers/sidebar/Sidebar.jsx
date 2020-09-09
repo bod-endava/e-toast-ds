@@ -48,7 +48,7 @@ function Sidebar() {
                             { label: 'Overview', url: '/DesignGuidelines' },
                             { label: 'Tokens', url: '/TokenPrinciples' },
                             { label: 'Shape', url: '/ShapeGuidelines' },
-                            { label: 'Color', url: '' },
+                            { label: 'Color', url: '/ColorGuidelines' },
                             { label: 'Typography', url: '' },
                             { label: 'Icons', url: '' },
                             { label: 'Accessibility', url: '' }

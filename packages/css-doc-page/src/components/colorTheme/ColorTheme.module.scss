@@ -1,0 +1,76 @@
+.ColorTheme {
+    width: 369px;
+    height: 104px;
+    padding: 10px;
+    position: relative;
+
+    h1 {
+        font-size: 16px;
+        line-height: 18px;
+        margin-top: 0;
+        margin-bottom: 8px
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .Number {
+        position: absolute;;
+        right: 10px;
+        top: 10px;
+        font-size: 24px;
+    }
+
+    .AccessibilitySection {
+        position: absolute;
+        right: 10px;
+        bottom: 0px;
+
+        p {
+            margin-bottom: 8px;
+            margin-top: 6px;
+        }
+
+        .AccessibilityPasses {
+            display: flex;
+            justify-content: flex-end;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                margin-right: 5px;
+                margin-left: 5px;
+
+                p {
+                    margin: 0;
+                    background-color: var(--black);
+                    color: var(--white);
+                    width: 30px;
+                    height: 13px;
+                    border-radius: 10px;
+                    font-size: 9px;
+                    line-height: 15px;
+                }
+            }
+
+            :nth-child(1) .AChar {
+                font-size: 16px;
+            }
+            :nth-child(2) .AChar {
+                font-size: 12px;
+                line-height: 18px;
+            }
+            :nth-child(3) .AChar {
+                font-size: 16px;
+                color: var(--white);
+            }
+            :nth-child(4) .AChar {
+                font-size: 12px;
+                line-height: 18px;
+                color: var(--white);
+            }
+        }
+    }
+}

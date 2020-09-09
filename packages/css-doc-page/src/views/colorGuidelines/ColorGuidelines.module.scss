@@ -1,0 +1,332 @@
+.TopSection {
+
+    background-color: var(--landing-lightgray);
+    text-align: left;
+    padding-left: 115px;
+    padding-right: 85px;
+    position: relative;
+    z-index: 1;
+    height: 832px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    
+    h1 {
+        font-weight: 500;
+        font-size: 100px;
+        line-height: 85px;
+        letter-spacing: -4.5px;
+        color: var(--landing-primary);
+        margin-top: 0px;
+        max-width: 470px;
+        text-transform: uppercase;
+    }
+  
+    p {
+        color: var(--primary-text);
+        max-width: 470px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+    }
+  
+    .Title {
+        flex-grow: 1;
+    }
+  
+    .Circle {
+        width: 464px;
+        height: 464px;
+        border-radius: 50%;
+        background-color: var(--white);
+        position: absolute;
+        right: 91px;
+        z-index: -1;
+    
+        img {
+            width: 250px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.DarkSection {
+    text-align: left;
+    background-color: var(--landing-lightgray);
+    padding-left: 115px;
+    padding-right: 122px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+    h2 {
+        font-size: 26px;
+        line-height: 39px;
+        color: var(--landing-primary);
+        margin-top: 35px;
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.LightSection {
+    text-align: left;
+    background-color: var(--white);
+    padding-left: 115px;
+    padding-right: 122px;
+    padding-bottom: 40px;
+
+    h2 {
+        font-size: 26px;
+        line-height: 39px;
+        color: var(--landing-primary);
+        margin-top: 35px;
+        margin-bottom: 16px;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.24px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .Gradient {
+        position: relative;
+
+        .Arrows {
+            position: absolute;
+            top: 40px;
+            left: 235px;
+
+            p {
+                position: absolute;
+                top: 20px;
+                left: 77px;
+                width: max-content;
+            }
+        }
+    }
+
+    .BigColorStrip {
+        height: 60px;
+        line-height: 60px;
+        padding-left: 20px;
+    }
+
+    .SmallColorStrip {
+        height: 30px;
+    }
+
+    figure {
+        margin: 0;
+        height: 220px;
+    }
+
+    .OrangeHighLight {
+        background-color: rgba(212, 57, 0, .5);;
+    }
+
+    .GrayHighLight {
+        background-color: rgba(255, 255, 255, .5);
+    }
+
+    .Orange {
+        background-color: var(--orange);
+        color: var(--white);
+    }
+
+    .OrangeLight {
+        background-color: var(--orange-light);
+    }
+
+    .OrangeMid {
+        background-color: var(--orange-mid);
+    }
+
+    .OrangeDark {
+        background-color: var(--orange-dark);
+        color: var(--white);
+    }
+
+    .OrangeDarkest {
+        background-color: var(--orange-darkest);
+        color: var(--white);
+    }
+
+    .StudyBlue {
+        background-color: var(--study-blue);
+        color: var(--white);
+    }
+
+    .StudyBlueLight {
+        background-color: var(--study-blue-light);
+    }
+
+    .StudyBlueMid {
+        background-color: var(--study-blue-mid);
+    }
+
+    .StudyBlueDark {
+        background-color: var(--study-blue-dark);
+        color: var(--white);
+    }
+
+    .StudyBlueDarkest {
+        background-color: var(--study-blue-darkest);
+        color: var(--white);
+    }
+
+    .Secondary {
+        background-color: var(--secondary);
+    }
+
+    .SecondaryLight {
+        background-color: var(--secondary-light);
+    }
+
+    .SecondaryMid {
+        background-color: var(--secondary-mid);
+    }
+
+    .SecondaryDark {
+        background-color: var(--secondary-dark);
+    }
+
+    .SecondaryDarkest {
+        background-color: var(--secondary-darkest);
+    }
+
+    .LightGray {
+        background-color: var(--landing-lightgray);
+    }
+
+    .LightRed {
+        background-color: var(--lightred);
+    }
+
+    .LightRedLight {
+        background-color: var(--lightred-light);
+    }
+
+    .LightRedMid {
+        background-color: var(--lightred-mid);
+    }
+
+    .LightRedDark {
+        background-color: var(--lightred-dark);
+    }
+
+    .LightRedDarkest {
+        background-color: var(--lightred-darkest);
+    }
+
+    .Green {
+        background-color: var(--green);
+    }
+
+    .GreenLight {
+        background-color: var(--green-light);
+    }
+
+    .GreenMid {
+        background-color: var(--green-mid);
+    }
+
+    .GreenDark {
+        background-color: var(--green-dark);
+    }
+
+    .GreenDarkest {
+        background-color: var(--green-darkest);
+    }
+
+    .Yellow {
+        background-color: var(--yellow);
+    }
+
+    .YellowLight {
+        background-color: var(--yellow-light);
+    }
+
+    .YellowMid {
+        background-color: var(--yellow-mid);
+    }
+
+    .YellowDark {
+        background-color: var(--yellow-dark);
+    }
+
+    .YellowDarkest {
+        background-color: var(--yellow-darkest);
+    }
+
+    .Black {
+        background-color: var(--black);
+    }
+
+    .Disabled {
+        background-color: var(--disable);
+    }
+
+    .DisabledLight {
+        background-color: var(--disable-light);
+    }
+
+    .DisabledMid {
+        background-color: var(--disable-mid);
+    }
+
+    .DisabledDark {
+        background-color: var(--disable-dark);
+    }
+
+    .DisabledDarkest {
+        background-color: var(--disable-darkest);
+    }
+
+    .Outline {
+        border: 1px solid var(--black);
+    }
+
+    .Schemes {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+
+        .SchemeColumnWide {
+            display: flex;
+            flex-direction: column;
+            width: 290px;
+        }
+
+        .SchemeColumnNarrow {
+            display: flex;
+            flex-direction: column;
+            width: 208px;
+        }
+    }
+
+    .Themes {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .ThemeColumn {
+            display: flex;
+            flex-direction: column;
+            flex: 0 32%;
+            margin-bottom: 32px;
+        }
+    }
+}
