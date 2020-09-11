@@ -44,6 +44,7 @@ function DesignGuidelines() {
                         actionHeading="TYPOGRAPHY"
                         actionPhrase="Design tokens are central and tiny pieces of UI information."
                         actionButtonText="READ MORE"
+                        buttonRedirectUrl="/TypographyGuidelines"
                     />
                     <ActionCard
                         height='377px'

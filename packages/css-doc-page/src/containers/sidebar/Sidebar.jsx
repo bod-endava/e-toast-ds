@@ -49,7 +49,7 @@ function Sidebar() {
                             { label: 'Tokens', url: '/TokenPrinciples' },
                             { label: 'Shape', url: '/ShapeGuidelines' },
                             { label: 'Color', url: '/ColorGuidelines' },
-                            { label: 'Typography', url: '' },
+                            { label: 'Typography', url: '/TypographyGuidelines' },
                             { label: 'Icons', url: '' },
                             { label: 'Accessibility', url: '' }
                         ]}

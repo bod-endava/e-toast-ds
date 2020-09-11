@@ -7,6 +7,7 @@ import ShapeGuidelines from './views/shapeGuidelines/ShapeGuidelines';
 import TokenPrinciples from './views/tokenPrinciples/TokenPrinciples';
 import ComponentOverview from './views/componentOverview/componentOverview';
 import ColorGuidelines from './views/colorGuidelines/ColorGuidelines';
+import TypographyGuidelines from './views/typhographyGuidelines/TypographyGuidelines';
 import {
   BrowserRouter as Router,
   Route,
@@ -39,6 +40,10 @@ const routes = [
   {
     path: '/ColorGuidelines',
     component: ColorGuidelines
+  },
+  {
+    path: '/TypographyGuidelines',
+    component: TypographyGuidelines
   }
 ];
 

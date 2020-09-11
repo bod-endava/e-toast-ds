@@ -1,0 +1,176 @@
+.TopSection {
+
+    background-color: var(--landing-lightgray);
+    text-align: left;
+    padding-left: 115px;
+    padding-right: 85px;
+    position: relative;
+    z-index: 1;
+    height: 832px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    .Title {
+        flex-grow: 1;
+    }
+
+    h1 {
+        font-weight: 500;
+        font-size: 70px;
+        line-height: 85px;
+        letter-spacing: -4.5px;
+        color: var(--landing-primary);
+        margin-top: 0px;
+        max-width: 470px;
+        text-transform: uppercase;
+
+        @media screen and (min-width: 1440px) {
+            font-size: 100px;
+        }
+    }
+  
+    p {
+        color: var(--primary-text);
+        max-width: 357px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 25px;
+
+        @media screen and (min-width: 1440px) {
+            max-width: 585px;
+        }
+    }
+
+    .Circle {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: var(--white);
+        position: absolute;
+        right: 91px;
+        z-index: -1;
+
+        @media screen and (min-width: 1440px) {
+            width: 356px;
+            height: 356px;
+        }
+    
+        img {
+            width: 168px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            @media screen and (min-width: 1440px) {
+                width: 200px;
+            }
+        }
+    }
+}
+
+.TypeSection {
+    text-align: left;
+    background-color: var(--white);
+    padding-top: 40px;
+    padding-left: 66px;
+    padding-right: 66px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--landing-lightgray);
+
+    @media screen and (min-width: 1440px) {
+        padding-left: 102px;
+        padding-right: 102px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 22px;
+        border-collapse: collapse;
+        
+        th {
+            background-color: var(--landing-lightgray);
+            text-align: end;
+            margin-bottom: 32px;;
+            padding-top: 11px;
+            padding-bottom: 8px;
+            padding-right: 20px;
+        }
+
+        tr {
+            text-align: end;
+
+            :first-child {
+                text-align: start;
+            }
+
+            td {
+                padding-right: 20px;
+                padding-top: 11px;
+                padding-bottom: 11px;
+            }
+        }
+
+        .SpaceOver {
+                
+            td {
+                padding-top: 32px;
+            }
+        }
+
+        .H1 {
+            font-weight: 500;
+            font-size: 29px;
+            line-height: 48px;
+        }
+
+        .H2 {
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 39px;
+        }
+
+        .H3 {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 36px;
+        }
+
+        .H4 {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    .TypeWeightsRow {
+        display: flex;
+
+        .TypeWeight {
+            display: flex;
+            flex-direction: column;
+            margin-right: 80px;
+
+            @media screen and (min-width: 1440px) {
+                margin-right: 120px;
+            }
+
+            .Weight400 {
+                font-weight: 400;
+            }
+
+            .Weight500 {
+                font-weight: 500;
+            }
+
+            .Weight700 {
+                font-weight: 700;
+            }
+        }
+    }
+}
