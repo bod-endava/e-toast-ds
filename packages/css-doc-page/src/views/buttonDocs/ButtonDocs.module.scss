@@ -1,0 +1,35 @@
+.Splash {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--landing-lightgray);
+
+    &TitleContainer {
+        text-align: left;
+        margin-left: auto;
+    }
+
+    &Title {
+        font-size: 100px;
+        color: var(--landing-primary);
+        margin: 24px 0px;
+    }
+
+    &Content {
+        font-size: 20px;
+        color: var(--primary-text);
+    }
+
+    &Icon {
+        margin-right: auto;
+        margin-left: 84px;
+    }
+}
+
+.Main {}
+.Title {}
+.Subtitle {}
+.SelectContainer {}
+.Label {}

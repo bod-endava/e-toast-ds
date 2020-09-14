@@ -53,6 +53,9 @@ function Sidebar() {
                             { label: 'Shape', url: '/ShapeGuidelines' },
                             { label: 'Color', url: '/ColorGuidelines' },
                             { label: 'Typography', url: '/TypographyGuidelines' },
+                            { label: 'Shape', url: '/ShapeGuidelines' },
+                            { label: 'Color', url: '/ColorGuidelines' },
+                            { label: 'Typography', url: '/TypographyGuidelines' },
                             { label: 'Icons', url: '' },
                             { label: 'Accessibility', url: '' }
                         ]}
@@ -64,7 +67,7 @@ function Sidebar() {
                         expanded={expandedTabs.includes("components")}
                         childrenList={[
                             { label: 'Overview', url: '/ComponentOverview' },
-                            { label: 'Buttons', url: '' },
+                            { label: 'Buttons', url: '/Buttons' },
                             { label: 'Checkbox', url: '' },
                             { label: 'Text Field', url: '' },
                             { label: 'Toggle', url: '' }

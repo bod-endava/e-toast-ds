@@ -9,6 +9,7 @@ import TokenPrinciples from './views/tokenPrinciples/TokenPrinciples';
 import ComponentOverview from './views/componentOverview/componentOverview';
 import ColorGuidelines from './views/colorGuidelines/ColorGuidelines';
 import TypographyGuidelines from './views/typhographyGuidelines/TypographyGuidelines';
+import ButtonDocs from './views/buttonDocs/ButtonDocs';
 import {
   BrowserRouter as Router,
   Route,
@@ -48,7 +49,23 @@ const routes = [
   },
   {
     path: '/TypographyGuidelines',
-    component: TypographyGuidelines
+    component: TypographyGuidelines,
+  },
+  {
+    path: '/Buttons',
+    component: ButtonDocs
+  },
+  {
+    path: '/ShapeGuidelines',
+    component: ShapeGuidelines
+  },
+  {
+    path: '/TokenPrinciples',
+    component: TokenPrinciples
+  },
+  {
+    path: '/ComponentOverview',
+    component: ComponentOverview
   }
 ];
 
