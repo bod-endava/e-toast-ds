@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from './containers/sidebar/Sidebar'
 import Footer from './components/footer/Footer';
 import Home from './views/home/Home';
+import GettingStarted from './views/gettingStarted/GettingStarted';
 import DesignGuidelines from './views/designGuidelines/DesignGuidelines';
 import ShapeGuidelines from './views/shapeGuidelines/ShapeGuidelines';
 import TokenPrinciples from './views/tokenPrinciples/TokenPrinciples';
@@ -20,6 +21,10 @@ const routes = [
   {
     path: '/',
     component: Home
+  },
+  {
+    path: '/GettingStarted',
+    component: GettingStarted
   },
   {
     path: '/DesignGuidelines',

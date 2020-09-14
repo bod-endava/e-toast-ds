@@ -8,10 +8,11 @@ function SidebarItem(props) {
     const {
         itemName,
         expanded,
+        className,
         childrenList = []
     } = props;
     const history = useHistory();
-    const location = useLocation()
+    const location = useLocation();
 
     function redirect(event, url) {
         event.stopPropagation();
@@ -29,7 +30,7 @@ function SidebarItem(props) {
     );
 
     return (
-        <div className={styles.SidebarItem}>
+        <div className={`${styles.SidebarItem} ${className}`}>
             <p>{itemName}</p> {childrenList.length > 0 && <ChevronComponent />}
             {expanded && (
                 <ul className={styles.Subtabs}>
@@ -43,6 +44,7 @@ function SidebarItem(props) {
 SidebarItem.propTypes = {
     itemName: PropTypes.string.isRequired,
     expanded: PropTypes.bool,
+    className: PropTypes.string,
     childrenList: PropTypes.array,
 };
 

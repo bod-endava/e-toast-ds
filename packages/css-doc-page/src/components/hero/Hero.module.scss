@@ -1,0 +1,45 @@
+.Hero {
+  background: url("../../assets/img/HeroBackground.svg") bottom center repeat-x transparent;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  height: 825px;
+  padding: 0 75px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  .Title {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    h1 {
+      font-weight: 500;
+      font-size: 100px;
+      line-height: 85px;
+      letter-spacing: -4.5px;
+      color: var(--landing-primary);
+      margin-top: 0px;
+      max-width: 470px;
+      text-transform: uppercase;
+    }
+  
+    p {
+      color: var(--primary-text);
+      max-width: 470px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  .Image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 0;
+  }
+}

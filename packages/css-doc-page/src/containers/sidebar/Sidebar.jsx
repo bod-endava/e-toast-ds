@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './Sidebar.module.scss';
 import logo from '../../assets/img/logosymbol.svg';
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import SidebarItem from '../../components/sidebarItem/SidebarItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSidebarState } from '../../store/actions';
 
 function Sidebar() {
     const history = useHistory();
+    const location = useLocation();
     const dispatch = useDispatch();
     const expandedTabs = useSelector(
         state => state.sideBarExpandedItems
@@ -25,19 +26,21 @@ function Sidebar() {
         dispatch(setSidebarState(newState));
     }
 
-    function redirectHome() {
-        history.push('/');
+    function redirect(event, url) {
+        event.stopPropagation();
+        history.push(url);
     }
 
     return (
         <div className={styles.Sidebar}>
-            <div onClick={redirectHome}>
+            <div onClick={(event) => redirect(event, '/')}>
                 <img src={logo} alt="Logo" />
             </div>
             <nav>
-                <div>
+                <div id="getting-started" onClick={(event) => redirect(event, '/GettingStarted')}>
                     <SidebarItem
                         itemName='GETTING STARTED'
+                        className={location.pathname === '/GettingStarted' ? styles.Highlight : null}
                     />
                 </div>
                 <div id="guidelines" onClick={ToggleExpand}>

@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer>
             <p>
-                MADE BY ENDAVA BOGOTÁ I V.ALPHA I LAST UPDATED JULY 2020I
+                MADE BY ENDAVA BOGOTÁ I V.ALPHA I LAST UPDATED SEPTEMBER 2020
             </p>
         </footer>
     )
