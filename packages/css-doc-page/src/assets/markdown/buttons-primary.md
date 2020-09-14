@@ -1,7 +1,6 @@
-## Overview
+## Basic Usage - Primary Fill Button
 
-The button is an interactive element that is usually to send events or messages to other components.
-A button can have text elements inside of it to describe its action or effect on the rest of the page
+Fill buttons is high emphasis, it is customizable in both shape and color. They contain actions that are essential for the user experience.
 
 ## Usage
 
@@ -11,7 +10,7 @@ A button can have text elements inside of it to describe its action or effect on
 
 ## Variants
 
-Disabled button
+### Disabled button
 
 ```interactive
 <button class="eds-primary-button" disabled>Button</button>

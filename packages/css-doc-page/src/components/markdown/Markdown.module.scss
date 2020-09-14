@@ -1,3 +1,29 @@
-.AceEditor {}
-
-.CodeExample {}
+.Markdown {
+    color: var(--primary-text);
+    text-transform: normal;
+    
+    & h2 {
+        text-transform: normal;
+        font-size: 29px;
+        line-height: 48px;
+        color: var(--landing-primary);
+    }
+    .CodeExample {
+        box-shadow: 
+            0px 10px 20px rgba(0, 0, 0, 0.04), 
+            0px 2px 6px rgba(0, 0, 0, 0.04), 
+            0px 0px 1px rgba(0, 0, 0, 0.04);
+        border: 1px solid #E2E7E9;
+        
+        & .Pre, & .Code {
+            margin: 0;
+        }
+    }
+    
+    .RenderedCode {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 55px 0px;
+    }
+}

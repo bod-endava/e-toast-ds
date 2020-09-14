@@ -1,36 +1,33 @@
 import React, { useState, useEffect } from 'react'
+import { Prism as Syntax } from 'react-syntax-highlighter';
 import ReactMarkdown from 'react-markdown'
-import AceEditor from "react-ace"
 import styles from './Markdown.module.scss'
 
-import "ace-builds/webpack-resolver"
-import "ace-builds/src-noconflict/mode-javascript";
-import "ace-builds/src-noconflict/mode-jsx"
-import "ace-builds/src-noconflict/mode-html";
-import "ace-builds/src-noconflict/theme-monokai";
+const CustomPre = (props) => {
+  return <pre className={styles.Pre}>{props.children}</pre>
+}
+
+const CustomCode = (props) => {
+  return <code className={styles.Code}>{props.children}</code>
+}
 
 const Editor = (props) => {
     const { name, code="" } = props;
 
     return <div className={styles.CodeExample}>
         <div
+          className={styles.RenderedCode}
           dangerouslySetInnerHTML={{
             __html: code
           }}
         />
-        <AceEditor 
-            name={name}
-            mode={"html"}
-            theme="monokai"
-            className={styles.AceEditor}
-            showGutter={false}
-            highlightActiveLine={false}
-            readOnly={true}
-            value={code}
-            onLoad={(editor) => {
-              editor.getSession().setUseWorker(false)
-            }}
-        />
+        <Syntax 
+          language="html"
+          PreTag={CustomPre}
+          CodeTag={CustomCode}
+        >
+          {code}
+        </Syntax>
     </div>
 }
 
@@ -62,7 +59,7 @@ const Markdown = (props) => {
     },[setDocs,src])
 
     return (
-        <div>
+        <div className={styles.Markdown}>
             <ReactMarkdown 
                 source={docs}
                 renderers={renderers}

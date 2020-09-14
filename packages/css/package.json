@@ -1,11 +1,13 @@
 {
   "name": "@e-toast/css",
+  "private": false,
   "version": "1.0.0",
   "description": "e-toast css layer",
   "main": "./etoast.css",
   "style": "./etoast.css",
   "license": "MIT",
   "files": [
+    "behaviors.js",
     "etoast.css",
     "sass"
   ],

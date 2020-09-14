@@ -37,7 +37,7 @@ const ButtonDocs = () => {
     }
 
     return (
-        <section>
+        <section className={styles.ButtonDocs}>
             <header className={styles.Splash}>
                 <div className={styles.SplashTitleContainer}>
                     <h1 className={styles.SplashTitle}>Buttons</h1>
@@ -46,11 +46,13 @@ const ButtonDocs = () => {
                 <img className={styles.SplashIcon} src={ButtonsIcon} alt="Buttons!"/>
             </header>
             <main className={styles.Main}>
-                <h1 className={styles.Title}>Button</h1>
-                <p>The button is an interactive element that is usually to send events or messages to other components. 
-                    A button can have text elements inside of it to describe its action or effect on the rest of the page</p>
-                <div>
-                    <label className={styles.Label}>Select a specific button</label>
+                <header className={styles.MainHeader}>
+                    <h1 className={styles.MainTitle}>Button</h1>
+                    <p className={styles.MainHeaderContent}>The button is an interactive element that is usually to send events or messages to other components. 
+                        A button can have text elements inside of it to describe its action or effect on the rest of the page</p>
+                </header>
+                <div className={styles.Select}>
+                    <label className={styles.SelectLabel}>Select a specific button</label>
                     <ButtonTypes onChange={handleChange}/>
                 </div>
                 <Markdown src={getSource(docs)} />
