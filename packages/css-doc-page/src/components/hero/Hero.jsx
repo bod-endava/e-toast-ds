@@ -6,11 +6,12 @@ function Hero(props) {
   const {
       title,
       text,
-      image
+      image,
+      secondary = false
   } = props;
 
   return (
-    <section className={styles.Hero}>
+    <section className={`${styles.Hero} ${secondary ? styles.Secondary : ""}`}>
       <div className={styles.Title}>
         <h1>{title}</h1>
         <p>
@@ -28,6 +29,7 @@ Hero.propTypes = {
     title: PropTypes.string.isRequired,
     text: PropTypes.string,
     image: PropTypes.string,
+    secondary: PropTypes.bool
 };
 
 export default Hero;

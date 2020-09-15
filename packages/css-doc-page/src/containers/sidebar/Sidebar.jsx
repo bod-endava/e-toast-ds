@@ -57,7 +57,7 @@ function Sidebar() {
                             { label: 'Color', url: '/ColorGuidelines' },
                             { label: 'Typography', url: '/TypographyGuidelines' },
                             { label: 'Icons', url: '' },
-                            { label: 'Accessibility', url: '' }
+                            { label: 'Accessibility', url: '/AccessibilitySpecifications' }
                         ]}
                     />
                 </div>
