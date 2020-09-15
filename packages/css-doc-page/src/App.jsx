@@ -6,10 +6,11 @@ import GettingStarted from './views/gettingStarted/GettingStarted';
 import DesignGuidelines from './views/designGuidelines/DesignGuidelines';
 import ShapeGuidelines from './views/shapeGuidelines/ShapeGuidelines';
 import TokenPrinciples from './views/tokenPrinciples/TokenPrinciples';
-import ComponentOverview from './views/componentOverview/componentOverview';
+import ComponentOverview from './views/componentOverview/ComponentOverview';
 import ColorGuidelines from './views/colorGuidelines/ColorGuidelines';
 import TypographyGuidelines from './views/typhographyGuidelines/TypographyGuidelines';
 import ButtonDocs from './views/buttonDocs/ButtonDocs';
+import AccessibilitySpecifications from './views/accessibilitySpecifications/AccessibilitySpecifications';
 import {
   BrowserRouter as Router,
   Route,
@@ -66,6 +67,10 @@ const routes = [
   {
     path: '/ComponentOverview',
     component: ComponentOverview
+  },
+  {
+    path: '/AccessibilitySpecifications',
+    component: AccessibilitySpecifications
   }
 ];
 

@@ -79,6 +79,7 @@ function DesignGuidelines() {
                         actionHeading="ACCESSIBILITY"
                         actionPhrase="Design tokens are central and tiny pieces of UI information."
                         actionButtonText="READ MORE"
+                        buttonRedirectUrl="/AccessibilitySpecifications"
                     />
                 </div>
             </section>
