@@ -1,8 +1,6 @@
-## Overview
+## Basic Usage - Outline Button
  
- Outline buttons are buttons without fill color but with border color
-
-## Usage
+Outline buttons are buttons without fill color but with border color
 
 ```interactive
 <button class="eds-outline-button">Button</button>
@@ -10,7 +8,7 @@
 
 ## Variants
 
-Disabled button
+### Disabled button
 
 ```interactive
 <button class="eds-outline-button" disabled>Button</button>

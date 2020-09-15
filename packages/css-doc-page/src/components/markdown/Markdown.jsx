@@ -12,7 +12,7 @@ const CustomCode = (props) => {
 }
 
 const Editor = (props) => {
-    const { name, code="" } = props;
+    const { code="" } = props;
 
     return <div className={styles.CodeExample}>
         <div
@@ -32,21 +32,29 @@ const Editor = (props) => {
 }
 
 const renderers = (() => {
-    let editors = 0;
-    return {
-      code(props){
-        const { language="", value } = props
-        if( language?.startsWith("interactive") ){
-          const id = `__editor_${editors++}__`
-          return <Editor 
-            name={id}
-            code={value}
-          />
-        }
-        return <pre><code language={language}>{value}</code></pre>
+  let tdCounter = 0;
+  return {
+    code(props){
+      const { language="", value } = props
+      if( language?.startsWith("interactive") ){
+        return <Editor code={value} />
       }
+      return <pre><code language={language}>{value}</code></pre>
+    },
+    tableCell(props){
+      const { isHeader, children } = props
+      if( isHeader ){
+        return <th>{children}</th>
+      }
+      if( tdCounter === 2){
+        tdCounter = 0;
+        return <td>{children}</td>
+      }
+      tdCounter++;
+      return <td><pre>{children}</pre></td>
     }
-  })()
+  }
+})()
 
 const Markdown = (props) => {
     const { src } = props

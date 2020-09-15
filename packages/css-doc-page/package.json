@@ -2,7 +2,7 @@
   "name": "@e-toast/css-doc-page",
   "version": "0.1.0",
   "dependencies": {
-    "@e-toast/css": "latest",
+    "@e-toast/css": "^1.0.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -38,7 +38,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "> TODO: description",
+  "description": "Etoast css doc page",
   "author": "faridBOD",
   "homepage": "",
   "license": "MIT",

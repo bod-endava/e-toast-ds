@@ -2,8 +2,6 @@
 
 Fill buttons is high emphasis, it is customizable in both shape and color. They contain actions that are essential for the user experience.
 
-## Usage
-
 ```interactive
 <button class="eds-primary-button">Button</button>
 ```

@@ -6,15 +6,13 @@ Add to cart buttons
 Free trial sign-up buttons
 Download buttons
 
-## Usage
-
 ```interactive
 <button class="eds-cta-button">Button</button>
 ```
 
 ## Variants
 
-Disabled button
+### Disabled button
 
 ```interactive
 <button class="eds-cta-button" disabled>Button</button>

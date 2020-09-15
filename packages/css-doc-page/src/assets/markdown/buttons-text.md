@@ -1,7 +1,6 @@
-## Overview
- Text button do not have fill or borders, only the text is displayed
+## Basic Usage - Text Button
 
-## Usage
+Text button do not have fill or borders, only the text is displayed
 
 ```interactive
 <button class="eds-text-button">Button</button>
@@ -9,7 +8,7 @@
 
 ## Variants
 
-Disabled button
+### Disabled button
 
 ```interactive
 <button class="eds-text-button" disabled>Button</button>
