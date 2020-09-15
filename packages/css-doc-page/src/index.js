@@ -5,6 +5,7 @@ import App from './App';
 import { Provider } from 'react-redux';
 import configureStore from "./store/configureStore";
 import '@e-toast/css'
+import '@e-toast/css/behaviors.js'
 
 export const store = configureStore();
 

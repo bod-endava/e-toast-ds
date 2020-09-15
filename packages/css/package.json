@@ -1,27 +1,21 @@
 {
   "name": "@e-toast/css",
-  "version": "1.0.0",
+  "private": false,
+  "version": "1.0.1",
   "description": "e-toast css layer",
   "main": "./etoast.css",
   "style": "./etoast.css",
   "license": "MIT",
   "files": [
+    "behaviors.js",
     "etoast.css",
     "sass"
   ],
-  "dependencies": {
-    "@babel/core": "^7.11.4",
-    "@babel/preset-env": "^7.11.0",
-    "babel-loader": "^8.1.0",
-    "node-sass": "^4.13.1",
-    "sass": "^1.26.3",
-    "webpack": "^4.44.1"
-  },
   "scripts": {
     "build": "gulp build",
     "build:dev": "gulp dev",
     "clean": "gulp clean",
-    "prepublish": "yarn clean && yarn build",
+    "prepublish": "yarn build",
     "tasks": "gulp --tasks",
     "template": "node ./scripts/runTemplate ./theme.config ./sass ./temp",
     "start": "gulp watch",
@@ -30,6 +24,12 @@
     "watch:debug": "gulp watch_debug"
   },
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "gulp": "^4.0.2",
+    "node-sass": "^4.13.1",
+    "sass": "^1.26.3",
+    "webpack": "^4.44.1"
   }
 }

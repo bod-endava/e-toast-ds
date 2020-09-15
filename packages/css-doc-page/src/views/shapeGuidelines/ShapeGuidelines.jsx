@@ -10,7 +10,7 @@ import fillSquare from '../../assets/img/fill-square.svg';
 
 function ShapeGuidelines() {
   return (
-    <>
+    <div className={styles.ShapeGuidelines}>
       <section className={styles.TopSection}>
         <div className={styles.Title}>
           <h1>Shapes</h1>
@@ -66,7 +66,7 @@ function ShapeGuidelines() {
           <img src={fillSquare} alt="Square Fill"/>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

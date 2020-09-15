@@ -34,6 +34,7 @@ function ComponentOverview() {
                         imageOffset="CenterOffset"
                         actionHeading="BUTTONS"
                         actionPhrase="Express what action will occur on a page when the user interacts with them."
+                        buttonRedirectUrl="/Buttons"
                     />
                     <ActionCard
                         height='330px'

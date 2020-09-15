@@ -131,7 +131,7 @@ const generateCleanSeries = (type=TaskType.Prod) => {
 
 exports.clean = clean
 exports.dev = generateCleanSeries(TaskType.Dev);
-exports.build = generateCleanSeries();
+exports.build = generateCleanSeries(TaskType.Prod);
 exports.debug = generateCleanSeries(TaskType.Debug);
 exports.watch = () => watch("src/",{ ignoreInitial: false }, generateSeries(TaskType.Dev))
 exports.watch_debug = () => watch("src/",{ ignoreInitial: false }, generateSeries(TaskType.Debug))
