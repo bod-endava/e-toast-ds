@@ -6,6 +6,7 @@
 @use "./atoms/toggle/index" as toggle;
 @use "./atoms/inputs/index" as input;
 @use "./atoms/selects/index" as select;
+@use "./atoms/typography/index" as typography;
 
 $colors-as-css-variables: true;
 

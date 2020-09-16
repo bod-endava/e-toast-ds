@@ -2,6 +2,7 @@
 @use "../../utility/index" as utils;
 
 .eds-checkbox {
+    -moz-appearance:initial;
     visibility: hidden;
     position: relative;
     width: tokens.$size;

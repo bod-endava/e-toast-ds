@@ -1,0 +1,23 @@
+@use "../constants/fonts.scss" as theme_fonts;
+
+// TODO: Finish the actual Theme
+
+$h1-font: theme_fonts.$h1-font;
+$h1-weight: theme_fonts.$h1-weight;
+$h1-size: theme_fonts.$h1-size;
+$h1-lh: theme_fonts.$h1-line-height;
+
+$h2-font: theme_fonts.$h2-font;
+$h2-weight: theme_fonts.$h2-weight;
+$h2-size: theme_fonts.$h2-size;
+$h2-lh: theme_fonts.$h2-line-height;
+
+$h3-font: theme_fonts.$h3-font;
+$h3-weight: theme_fonts.$h3-weight;
+$h3-size: theme_fonts.$h3-size;
+$h3-lh: theme_fonts.$h3-line-height;
+
+$h4-font: theme_fonts.$h4-font;
+$h4-weight: theme_fonts.$h4-weight;
+$h4-size: theme_fonts.$h4-size;
+$h4-lh: theme_fonts.$h4-line-height;
