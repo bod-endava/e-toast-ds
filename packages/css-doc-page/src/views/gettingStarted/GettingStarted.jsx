@@ -4,7 +4,7 @@ import styles from './GettingStarted.module.scss';
 import Rocket from '../../assets/img/getting-started.svg';
 import Figma from '../../assets/img/figma.svg';
 import Sketch from '../../assets/img/sketch.svg';
-import Hero from '../../components/hero/Hero';
+import Hero from '../../components/Hero';
 
 function GettingStarted() {
   return (
@@ -63,33 +63,18 @@ function GettingStarted() {
                 <li>
                   Install dependencies
                   <code>
-                    yarn install
+                    yarn add @e-toast/css
+                  </code>
+                  or
+                  <code>
+                    npm install --dev @e-toast/css
                   </code>
                 </li>
                 <li>
-                  Install all the dependencies on the packages and Symlink packages
+                  Import it in your project
                   <code>
-                    yarn bootstrap
-                  </code>
-                </li>
-                <li>
-                  Run all packages in dev mode
-                  <code>
-                    yarn start
-                  </code>
-                </li>
-                <li>
-                  Alternatively, move to each package and run
-                  <code>
-                    yarn start
-                  </code>
-                </li>
-                <li>
-                  Also, you have scripts for running individual packages
-                  <code>
-                    {`// yarn start:[package_name]`}
-                    <br />
-                    yarn start:react
+                    import "@e-toast/css"<br />
+                    import "@e-toast/css/behaviors.js"
                   </code>
                 </li>
               </ol>
