@@ -1,3 +1,5 @@
+export { default as AccessibilitySpecifications } from './AccessibilitySpecifications'
+export { default as ButtonDocs } from './ButtonDocs'
 export { default as ColorGuidelines } from './ColorGuidelines'
 export { default as ComponentOverview } from './ComponentOverview'
 export { default as DesignGuidelines } from './DesignGuidelines'
