@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../../components/hero/Hero';
+import Hero from '../../components/Hero';
 import Eye from '../../assets/img/eye.svg';
 import styles from './AccessibilitySpecifications.module.scss';
 import proximity from '../../assets/img/proximity-illustration.svg';

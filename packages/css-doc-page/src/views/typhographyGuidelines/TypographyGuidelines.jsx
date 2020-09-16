@@ -3,7 +3,6 @@ import styles from './TypographyGuidelines.module.scss';
 import typography from '../../assets/img/type-thin.svg';
 
 function TypographyGuidelines() {
-
     return (
         <>
             <section className={styles.TopSection}>

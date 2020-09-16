@@ -3,7 +3,7 @@ import styles from './ColorGuidelines.module.scss';
 import palette from '../../assets/img/palette-thin.svg';
 import singleArrow from '../../assets/img/arrow1.svg';
 import multipleArrows from '../../assets/img/arrows2.svg';
-import ColorTheme from '../../components/colorTheme/ColorTheme';
+import ColorTheme from '../../components/ColorTheme';
 import { Link } from 'react-router-dom';
 
 function ColorGuidelines() {
