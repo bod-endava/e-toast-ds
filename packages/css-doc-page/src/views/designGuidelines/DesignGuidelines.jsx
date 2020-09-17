@@ -10,81 +10,80 @@ import color from '../../assets/img/color.svg'
 import accessibility from '../../assets/img/accessibility.svg'
 
 function DesignGuidelines() {
-    return (
-        <>
-            <section className={styles.TopSection}>
-                <h1>Design Guidelines</h1>
-                <p>
-                    The Design Guidelines are here to lead users on how to
-                    apply design principles to ensure the best User Experience.
-                </p>
-            </section>
-            <div className={styles.Circle}>
-                <img src={pencil} alt="pencil" />
-            </div>
-            <section className={styles.BottomSection}>
-                <h2>
-                    Design Principles
-                </h2>
-                <div className={styles.BottomSection_cards}>
-                    {/* This div has flex-direction: column; */}
-                    <ActionCard
-                        height='377px'
-                        actionImage={tokens}
-                        imageOffset="CenterOffset"
-                        actionHeading="TOKENS"
-                        actionPhrase="Design tokens are central and tiny pieces of UI information."
-                        actionButtonText="READ MORE"
-                        buttonRedirectUrl="/TokenPrinciples"
-                    />
-                    <ActionCard
-                        height='377px'
-                        actionImage={typography}
-                        imageOffset="CenterOffset"
-                        actionHeading="TYPOGRAPHY"
-                        actionPhrase="Design tokens are central and tiny pieces of UI information."
-                        actionButtonText="READ MORE"
-                        buttonRedirectUrl="/TypographyGuidelines"
-                    />
-                    <ActionCard
-                        height='377px'
-                        actionImage={shapes}
-                        imageOffset="CenterOffset"
-                        actionHeading="SHAPES"
-                        actionPhrase="Shapes direct attention, identify components, communicate state, and express brand."
-                        actionButtonText="READ MORE"
-                        buttonRedirectUrl="/ShapeGuidelines"
-                    />
-                    <ActionCard
-                        height='377px'
-                        actionImage={icons}
-                        imageOffset="CenterOffset"
-                        actionHeading="ICONS"
-                        actionPhrase="Design tokens are central and tiny pieces of UI information."
-                        actionButtonText="READ MORE"
-                    />
-                    <ActionCard
-                        height='377px'
-                        actionImage={color}
-                        imageOffset="CenterOffset"
-                        actionHeading="COLOR"
-                        actionPhrase="Design tokens are central and tiny pieces of UI information."
-                        actionButtonText="READ MORE"
-                        buttonRedirectUrl="/ColorGuidelines"
-                    />
-                    <ActionCard
-                        height='377px'
-                        actionImage={accessibility}
-                        imageOffset="CenterOffset"
-                        actionHeading="ACCESSIBILITY"
-                        actionPhrase="Design tokens are central and tiny pieces of UI information."
-                        actionButtonText="READ MORE"
-                        buttonRedirectUrl="/AccessibilitySpecifications"
-                    />
-                </div>
-            </section>
-        </>
-    );
+  return (
+    <div className={styles.DesignGuidelines}>
+      <section className={styles.TopSection}>
+        <h1>Design Guidelines</h1>
+        <p>
+          The Design Guidelines are here to lead users on how to
+          apply design principles to ensure the best User Experience.
+        </p>
+      </section>
+      <div className={styles.Circle}>
+        <img src={pencil} alt="pencil" />
+      </div>
+      <section className={styles.BottomSection}>
+        <h2>
+          Design Principles
+        </h2>
+        <div className={styles.BottomSection_cards}>
+          <ActionCard
+            height='377px'
+            actionImage={tokens}
+            imageOffset="CenterOffset"
+            actionHeading="TOKENS"
+            actionPhrase="Design tokens are central and tiny pieces of UI information."
+            actionButtonText="READ MORE"
+            buttonRedirectUrl="/TokenPrinciples"
+          />
+          <ActionCard
+            height='377px'
+            actionImage={typography}
+            imageOffset="CenterOffset"
+            actionHeading="TYPOGRAPHY"
+            actionPhrase="Design tokens are central and tiny pieces of UI information."
+            actionButtonText="READ MORE"
+            buttonRedirectUrl="/TypographyGuidelines"
+          />
+          <ActionCard
+            height='377px'
+            actionImage={shapes}
+            imageOffset="CenterOffset"
+            actionHeading="SHAPES"
+            actionPhrase="Shapes direct attention, identify components, communicate state, and express brand."
+            actionButtonText="READ MORE"
+            buttonRedirectUrl="/ShapeGuidelines"
+          />
+          <ActionCard
+            height='377px'
+            actionImage={icons}
+            imageOffset="CenterOffset"
+            actionHeading="ICONS"
+            actionPhrase="Design tokens are central and tiny pieces of UI information."
+            actionButtonText="READ MORE"
+          />
+          <ActionCard
+            height='377px'
+            actionImage={color}
+            imageOffset="CenterOffset"
+            actionHeading="COLOR"
+            actionPhrase="Design tokens are central and tiny pieces of UI information."
+            actionButtonText="READ MORE"
+            buttonRedirectUrl="/ColorGuidelines"
+          />
+          <ActionCard
+            height='377px'
+            actionImage={accessibility}
+            imageOffset="CenterOffset"
+            actionHeading="ACCESSIBILITY"
+            actionPhrase="Design tokens are central and tiny pieces of UI information."
+            actionButtonText="READ MORE"
+            buttonRedirectUrl="/AccessibilitySpecifications"
+          />
+        </div>
+      </section>
+    </div>
+  );
 }
 
 export default DesignGuidelines;

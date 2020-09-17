@@ -1,92 +1,94 @@
-.Content {
-  padding: 50px 100px;
+.GettingStarted {
+  .Content {
+    padding: 50px 100px;
 
-  a {
-    text-decoration: none;
+    a {
+      text-decoration: none;
 
-    .IntroParagraph & {
-      text-transform: uppercase;
+      .IntroParagraph & {
+        text-transform: uppercase;
+      }
+      
+      &:hover {
+        text-decoration: underline;
+      }
     }
-    
-    &:hover {
-      text-decoration: underline;
+
+    h2 {
+      color: var(--landing-primary);
+      font-weight: 500;
+      font-size: 29px;
+      line-height: 32px;
+      text-transform: none;
+      margin-top: 80px;
     }
-  }
-
-  h2 {
-    color: var(--landing-primary);
-    font-weight: 500;
-    font-size: 29px;
-    line-height: 32px;
-    text-transform: none;
-    margin-top: 80px;
-  }
-
-  h3 {
-    color: var(--primary-text);
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 29px;
-    margin-top: 70px;
-  }
-
-  h4 {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 25px;
-    margin-top: 30px;
-  }
-
-  .DesignToolsTitle {
-    margin: auto;
-    padding-top: 40px;
-    text-align: center;
 
     h3 {
-      margin-top: 20px;
+      color: var(--primary-text);
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 29px;
+      margin-top: 70px;
     }
-  }
 
-  .TwoColumns {
-    display: flex;
-    align-items: stretch;
+    h4 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+      margin-top: 30px;
+    }
 
-    > div {
-      flex-grow: 1;
-      flex-basis: 345px;
-      padding: 0 70px 0;
+    .DesignToolsTitle {
+      margin: auto;
+      padding-top: 40px;
+      text-align: center;
 
-      &:first-child {
-        padding-left: 0;
-      }
-      &:last-child {
-        padding-right: 0;
+      h3 {
+        margin-top: 20px;
       }
     }
-  }
 
-  ul {
-    padding-left: 20px;
-  }
+    .TwoColumns {
+      display: flex;
+      align-items: stretch;
 
-  ol {
-    font-size: 16px;
-    line-height: 18px;
-    list-style: none; 
-    counter-reset: list;
-    position: relative;
-    padding-left: 0;
-    margin-left: 20px;
+      > div {
+        flex-grow: 1;
+        flex-basis: 345px;
+        padding: 0 70px 0;
 
-    li {
-      counter-increment: list;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
 
-      &::before {
-        content: counter(list) ". ";
-        color: var(--orange);
-        font-weight: bold;
-        position: absolute;
-        left: -1rem;
+    ul {
+      padding-left: 20px;
+    }
+
+    ol {
+      font-size: 16px;
+      line-height: 18px;
+      list-style: none; 
+      counter-reset: list;
+      position: relative;
+      padding-left: 0;
+      margin-left: 20px;
+
+      li {
+        counter-increment: list;
+
+        &::before {
+          content: counter(list) ". ";
+          color: var(--orange);
+          font-weight: bold;
+          position: absolute;
+          left: -1rem;
+        }
       }
     }
   }
