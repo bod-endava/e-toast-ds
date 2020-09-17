@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './DesignGuidelines.module.scss';
-import ActionCard from '../../components/ActionCard';
+import ActionCard from '../../components/actionCard';
 import pencil from '../../assets/img/pencilthin.svg'
 import tokens from '../../assets/img/tokens.svg'
 import typography from '../../assets/img/typography.svg'

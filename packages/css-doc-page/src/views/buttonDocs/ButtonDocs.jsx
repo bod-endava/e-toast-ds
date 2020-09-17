@@ -4,8 +4,8 @@ import fillMark from '../../assets/markdown/buttons-primary.md'
 import textMark from '../../assets/markdown/buttons-text.md'
 import outlineMark from '../../assets/markdown/buttons-outline.md'
 import ButtonsIcon from '../../assets/img/button-docs.svg'
-import Markdown from '../../components/Markdown'
-import Hero from '../../components/Hero'
+import Markdown from '../../components/markdown'
+import Hero from '../../components/hero'
 import styles from './ButtonDocs.module.scss';
 
 const Sources = {
