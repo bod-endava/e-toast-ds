@@ -17,7 +17,7 @@ $button-spacing: 0.16px;
 $checkbox-font: global_fonts.$font-name;
 $checkbox-weight: global_fonts.$regular;
 $checkbox-size: global_fonts.get-size("button", $sizing);
-$checkbox-line-height: 18px;
+$checkbox-line-height: global_fonts.get-size("button", "line-height");
 $checkbox-spacing: 0.16px;
 
 // Radio
@@ -25,7 +25,7 @@ $checkbox-spacing: 0.16px;
 $radio-font: global_fonts.$font-name;
 $radio-weight: global_fonts.$regular;
 $radio-size: global_fonts.get-size("button", $sizing);
-$radio-line-height: 18px;
+$radio-line-height: global_fonts.get-size("button", "line-height");
 $radio-spacing: 0.16px;
 
 // Toggle
@@ -33,14 +33,14 @@ $radio-spacing: 0.16px;
 $toggle-font: global_fonts.$font-name;
 $toggle-font-weight: global_fonts.$regular;
 $toggle-font-size: global_fonts.get-size("button", $sizing);
-$toggle-line-height: 22px;
+$toggle-line-height: global_fonts.get-size("button", "line-height");
 $toggle-letter-spacing: 0.16px;
 
 // Input
 
 $input-font: global_fonts.$font-name;
 $input-weight: global_fonts.$regular;
-$input-size: 16px;
+$input-size: global_fonts.get-size("button", $sizing);
 $input-line-height: global_fonts.get-size("button", "line-height");
 $input-spacing: 0.16px;
 $label-size: 12px;
@@ -50,5 +50,27 @@ $label-size: 12px;
 $select-font : global_fonts.$font-name;
 $select-weight : global_fonts.$regular;
 $select-size : global_fonts.get-size("button", $sizing);
-$select-line-height : 18px;
+$select-line-height : global_fonts.get-size("button", "line-height");
 $select-spacing : 0.16px;
+
+// Typography
+
+$h1-font : global_fonts.$font-condensed;
+$h1-weight : global_fonts.$medium;
+$h1-size : global_fonts.get-size("h1", $sizing);
+$h1-line-height : global_fonts.get-size("h1", "line-height");
+
+$h2-font : global_fonts.$font-condensed;
+$h2-weight : global_fonts.$medium;
+$h2-size : global_fonts.get-size("h2", $sizing);
+$h2-line-height : global_fonts.get-size("h2", "line-height");
+
+$h3-font : global_fonts.$font-condensed;
+$h3-weight : global_fonts.$medium;
+$h3-size : global_fonts.get-size("h3", $sizing);
+$h3-line-height : global_fonts.get-size("h3", "line-height");
+
+$h4-font : global_fonts.$font-condensed;
+$h4-weight : global_fonts.$medium;
+$h4-size : global_fonts.get-size("h4", $sizing);
+$h4-line-height : global_fonts.get-size("h4", "line-height");

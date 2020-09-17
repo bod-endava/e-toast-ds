@@ -1,0 +1,31 @@
+@use '../../themes/%input%/typography' as theme_tokens;
+
+.eds-typography {
+  &__h1 {
+    font-family: theme_tokens.$h1-font;
+    font-weight: theme_tokens.$h1-weight;
+    font-size: theme_tokens.$h1-size;
+    line-height: theme_tokens.$h1-lh;
+  }
+
+  &__h2 {
+    font-family: theme_tokens.$h2-font;
+    font-weight: theme_tokens.$h2-weight;
+    font-size: theme_tokens.$h2-size;
+    line-height: theme_tokens.$h2-lh;
+  }
+
+  &__h3 {
+    font-family: theme_tokens.$h3-font;
+    font-weight: theme_tokens.$h3-weight;
+    font-size: theme_tokens.$h3-size;
+    line-height: theme_tokens.$h3-lh;
+  }
+
+  &__h4 {
+    font-family: theme_tokens.$h4-font;
+    font-weight: theme_tokens.$h4-weight;
+    font-size: theme_tokens.$h4-size;
+    line-height: theme_tokens.$h4-lh;
+  }
+}

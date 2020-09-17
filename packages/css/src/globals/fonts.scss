@@ -4,7 +4,11 @@
     )
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
 $font-name: Roboto;
+$font-condensed: "Roboto Condensed";
 
 // Weights
 
@@ -40,10 +44,10 @@ $lh-button: 15px;
 $lh-placeholder: 16px;
 $lh-paragraph: 18px;
 $lh-subtitle: 19px;
-$lh-h4: 25px;
-$lh-h3: 30px;
-$lh-h2: 29px;
-$lh-h1: 32px;
+$lh-h4: 30px;
+$lh-h3: 36px;
+$lh-h2: 39px;
+$lh-h1: 48px;
 
 // Semantic sizes
 

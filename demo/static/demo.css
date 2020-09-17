@@ -1,0 +1,84 @@
+:root {
+  --primary: #de411b;
+  --secondary: #0092dd;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+body {
+  margin: 0;
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.color--black {
+  color: var(--black);
+}
+
+.color--white {
+  color: var(--white);
+}
+
+.demo {
+  font-family: Roboto;
+}
+
+#sidebar {
+  background-color: var(--primary);
+  padding: 14px 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 25%;
+}
+
+.endava { flex-grow: 1; align-self: flex-start;}
+
+.endava img {
+  max-width: 55px;
+}
+
+.title { flex-grow: 2; text-align: center; text-transform: uppercase;}
+
+.rocket { flex-grow: 2;}
+
+.rocket img {
+  max-width: 200px;
+}
+
+#main {
+  flex-grow: 2;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#main > form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+}
+
+#main > form > div {
+  padding-bottom: 15px;
+}
+
+.subtitle {
+  text-transform: uppercase;
+}
+
+.subtitle .info {
+  background: url(./information.svg) center center no-repeat transparent;
+  background-size: contain;
+  height: 23px;
+  width: 23px;
+  display: inline-block;
+}
+
+.remember label {
+  display: inline-block;
+}
