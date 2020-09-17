@@ -4,7 +4,7 @@ import styles from './GettingStarted.module.scss';
 import Rocket from '../../assets/img/getting-started.svg';
 import Figma from '../../assets/img/figma.svg';
 import Sketch from '../../assets/img/sketch.svg';
-import Hero from '../../components/Hero';
+import Hero from '../../components/hero';
 
 function GettingStarted() {
   return (

@@ -1,16 +1,16 @@
 import React from 'react';
-import ButtonDocs from './views/ButtonDocs';
-import AccessibilitySpecifications from './views/AccessibilitySpecifications';
-import Sidebar from './containers/Sidebar'
-import Footer from './components/Footer';
-import Home from './views/Home';
-import GettingStarted from './views/GettingStarted';
-import DesignGuidelines from './views/DesignGuidelines';
-import ShapeGuidelines from './views/ShapeGuidelines';
-import TokenPrinciples from './views/TokenPrinciples';
-import ComponentOverview from './views/ComponentOverview';
-import ColorGuidelines from './views/ColorGuidelines';
-import TypographyGuidelines from './views/TyphographyGuidelines'
+import ButtonDocs from './views/buttonDocs';
+import AccessibilitySpecifications from './views/accessibilitySpecifications';
+import Sidebar from './containers/sidebar'
+import Footer from './components/footer';
+import Home from './views/home';
+import GettingStarted from './views/gettingStarted';
+import DesignGuidelines from './views/designGuidelines';
+import ShapeGuidelines from './views/shapeGuidelines';
+import TokenPrinciples from './views/tokenPrinciples';
+import ComponentOverview from './views/componentOverview';
+import ColorGuidelines from './views/colorGuidelines';
+import TypographyGuidelines from './views/typhographyGuidelines'
 import {
   BrowserRouter as Router,
   Route,

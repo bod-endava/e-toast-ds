@@ -1,3 +1,3 @@
-import ComponentOverview from "./ComponentOverview";
+import ComponentOverview from "./componentOverview";
 
 export default ComponentOverview

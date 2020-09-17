@@ -5,7 +5,7 @@ import buttonIcon from '../../assets/img/button-icon.svg';
 import checkboxIcon from '../../assets/img/checkbox-icon.svg';
 import textFieldIcon from '../../assets/img/text-field-icon.svg';
 import toggleIcon from '../../assets/img/toggle-icon.svg';
-import ActionCard from '../../components/ActionCard';
+import ActionCard from '../../components/actionCard';
 
 function ComponentOverview() {
     return (
