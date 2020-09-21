@@ -53,9 +53,6 @@ function Sidebar() {
                             { label: 'Shape', url: '/ShapeGuidelines' },
                             { label: 'Color', url: '/ColorGuidelines' },
                             { label: 'Typography', url: '/TypographyGuidelines' },
-                            { label: 'Shape', url: '/ShapeGuidelines' },
-                            { label: 'Color', url: '/ColorGuidelines' },
-                            { label: 'Typography', url: '/TypographyGuidelines' },
                             { label: 'Icons', url: '' },
                             { label: 'Accessibility', url: '/AccessibilitySpecifications' }
                         ]}
