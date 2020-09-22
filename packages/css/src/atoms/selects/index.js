@@ -113,7 +113,7 @@ const attachSelectBehavior = ($node) => {
 
 const onInit = () => {
     window.addEventListener("click",(e) => {
-        if( !e.target.className.contains(selectClass) ){
+        if( !e.target.classList.contains(selectClass) ){
             findByClass(listClass).forEach(l => l.close())
         }
     })
