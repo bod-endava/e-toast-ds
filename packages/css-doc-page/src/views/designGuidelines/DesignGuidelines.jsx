@@ -1,27 +1,24 @@
 import React from 'react';
 import styles from './DesignGuidelines.module.scss';
 import ActionCard from '../../components/actionCard';
-import pencil from '../../assets/img/pencilthin.svg'
-import tokens from '../../assets/img/tokens.svg'
-import typography from '../../assets/img/typography.svg'
-import shapes from '../../assets/img/shapes.svg'
-import icons from '../../assets/img/icons.svg'
-import color from '../../assets/img/color.svg'
-import accessibility from '../../assets/img/accessibility.svg'
+import Hero from '../../components/hero';
+import pencil from '../../assets/img/pencil-thin.svg';
+import tokens from '../../assets/img/tokens.svg';
+import typography from '../../assets/img/typography.svg';
+import shapes from '../../assets/img/shapes.svg';
+import icons from '../../assets/img/icons.svg';
+import color from '../../assets/img/color.svg';
+import accessibility from '../../assets/img/accessibility.svg';
 
 function DesignGuidelines() {
   return (
     <div className={styles.DesignGuidelines}>
-      <section className={styles.TopSection}>
-        <h1>Design Guidelines</h1>
-        <p>
-          The Design Guidelines are here to lead users on how to
-          apply design principles to ensure the best User Experience.
-        </p>
-      </section>
-      <div className={styles.Circle}>
-        <img src={pencil} alt="pencil" />
-      </div>
+      <Hero
+        title="Design Guidelines"
+        text="The Design Guidelines are here to lead users on how to
+              apply design principles to ensure the best User Experience."
+        image={pencil}
+      />
       <section className={styles.BottomSection}>
         <h2>
           Design Principles

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ShapeGuidelines.module.scss';
+import Hero from '../../components/hero';
 import pen from '../../assets/img/pen-thin.svg';
 import outlinePill from '../../assets/img/outline-pill.svg';
 import outlineRounded from '../../assets/img/outline-rounded.svg';
@@ -11,18 +12,13 @@ import fillSquare from '../../assets/img/fill-square.svg';
 function ShapeGuidelines() {
   return (
     <div className={styles.ShapeGuidelines}>
-      <section className={styles.TopSection}>
-        <div className={styles.Title}>
-          <h1>Shapes</h1>
-          <p>
-            Shapes direct attention, identify components, communicate state, and express brand. 
-            Etoast let use shapeshift to fit the brand Style. 
-          </p>
-        </div>
-        <div className={styles.Circle}>
-          <img src={pen} alt="Shapes"/>
-        </div>
-      </section>
+      <Hero
+        title="Shapes"
+        text="Shapes direct attention, identify components, communicate state, and express brand. 
+              Etoast let use shapeshift to fit the brand Style. "
+        image={pen}
+        secondary
+      />
       <section className={styles.ShapesSection}>
         <div>
           <span className={styles.PillShape} />

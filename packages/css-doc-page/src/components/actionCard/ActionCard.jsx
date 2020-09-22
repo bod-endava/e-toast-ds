@@ -19,7 +19,7 @@ function ActionCard(props) {
     function redirect() {
         if (buttonRedirectUrl) {
             history.push(buttonRedirectUrl);
-            window.scrollTo(0, 0)
+            window.scrollTo(0, 0);
         }
     }
 
