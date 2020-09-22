@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ColorGuidelines.module.scss';
+import Hero from '../../components/hero';
 import palette from '../../assets/img/palette-thin.svg';
 import singleArrow from '../../assets/img/arrow1.svg';
 import multipleArrows from '../../assets/img/arrows2.svg';
@@ -9,21 +10,16 @@ import { Link } from 'react-router-dom';
 function ColorGuidelines() {
   return (
     <div className={styles.ColorGuidelines}>
-      <section className={styles.TopSection}>
-        <div className={styles.Title}>
-          <h1>Color</h1>
-          <p>
-            Toast color system is carefully selected to can help you create a color
-            theme that reflects your brand or style. It has been tested to meet WCAG
-            accessibility requirements for contrast and color. Using colors outside of
-            this palette may result in an inaccessible experience for some users, and
-            should be avoided when possible.
-          </p>
-        </div>
-        <div className={styles.Circle}>
-          <img src={palette} alt="Color" />
-        </div>
-      </section>
+      <Hero
+        title="Color"
+        text="Toast color system is carefully selected to can help you create a color
+              theme that reflects your brand or style. It has been tested to meet WCAG
+              accessibility requirements for contrast and color. Using colors outside of
+              this palette may result in an inaccessible experience for some users, and
+              should be avoided when possible."
+        image={palette}
+        secondary
+      />
       <section className={styles.LightSection}>
         <h2>
           HOW TO CREATE A COLOR PALETTE ON E TOAST?

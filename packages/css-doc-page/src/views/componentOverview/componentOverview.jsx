@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './ComponentOverview.module.scss';
-import atomthin from '../../assets/img/atomthin.svg';
+import Hero from '../../components/hero';
+import atom from '../../assets/img/atom-thin.svg';
 import buttonIcon from '../../assets/img/button-icon.svg';
 import checkboxIcon from '../../assets/img/checkbox-icon.svg';
 import textFieldIcon from '../../assets/img/text-field-icon.svg';
@@ -10,19 +11,15 @@ import ActionCard from '../../components/actionCard';
 function ComponentOverview() {
   return (
     <div className={styles.ComponentOverview}>
-      <section className={styles.TopSection}>
-        <h1>Component Overview</h1>
-        <p>
-          Components are one of the key building blocks of our design system that
-          meets a UI need. All of the components in E-Toast have been designed 100%
-          customizable where the designer or developer can play with the color, shape,
-          and typography related to the design guidelines to improve components experience
-          consistently.
-        </p>
-      </section>
-      <div className={styles.Circle}>
-        <img src={atomthin} alt="atom"/>
-      </div>
+      <Hero
+        title="Component Overview"
+        text="Components are one of the key building blocks of our design system that
+              meets a UI need. All of the components in E-Toast have been designed 100%
+              customizable where the designer or developer can play with the color, shape,
+              and typography related to the design guidelines to improve components experience
+              consistently."
+        image={atom}
+      />
       <section className={styles.BottomSection}>
         <h2>
           E-Toast Components

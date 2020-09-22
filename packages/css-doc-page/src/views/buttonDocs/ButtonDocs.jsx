@@ -39,6 +39,7 @@ const ButtonDocs = () => {
           title="Buttons"
           text="Express what action will occur on a page when the user interacts with them"
           image={ButtonsIcon}
+          secondary
         />
         <main className={styles.Main}>
           <header className={styles.MainHeader}>

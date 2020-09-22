@@ -1,21 +1,17 @@
 import React from 'react';
 import styles from './TypographyGuidelines.module.scss';
+import Hero from '../../components/hero';
 import typography from '../../assets/img/type-thin.svg';
 
 function TypographyGuidelines() {
   return (
     <div className={styles.TypographyGuidelines}>
-      <section className={styles.TopSection}>
-        <div className={styles.Title}>
-          <h1>Typography</h1>
-          <p>
-            Use typography to display your content as simply and efficiently as possible.
-          </p>
-        </div>
-        <div className={styles.Circle}>
-          <img src={typography} alt="typography" />
-        </div>
-      </section>
+      <Hero
+        title="Typography"
+        text="Use typography to display your content as simply and efficiently as possible."
+        image={typography}
+        secondary
+      />
       <section className={styles.TypeSection}>
         <h2>
           TYPEFACE
