@@ -7,7 +7,7 @@ import atom from '../../assets/img/atom.svg'
 
 function Home() {
   const myRef = useRef(null)
-  const srollToBottomSection = () => window.scrollTo({
+  const scrollToBottomSection = () => window.scrollTo({
     left: 0,
     top: myRef.current.offsetTop,
     behavior: 'smooth'
@@ -24,7 +24,7 @@ function Home() {
           customizable and reusable components. I am valuable for anyone who requires a
           standardized solution for building faster and more effective UI projects
         </p>
-        <button className="eds-primary-button" onClick={srollToBottomSection}>
+        <button className="eds-primary-button" onClick={scrollToBottomSection}>
           LETS GET STARTED
         </button>
       </section>
@@ -54,7 +54,7 @@ function Home() {
             actionImage={pencil}
             imageOffset="BottomOffset"
             actionHeading="DESIGN GUIDELINE"
-            actionPhrase="A set of recomendation towars design good practice."
+            actionPhrase="A set of recommendations towards design good practices."
             actionButtonText="OVERVIEW"
             buttonRedirectUrl="/DesignGuidelines"
           />
@@ -64,7 +64,7 @@ function Home() {
             actionImage={atom}
             imageOffset="CenterOffset"
             actionHeading="COMPONENTS"
-            actionPhrase="Navigate through our different components and discover their ussability and guidelines."
+            actionPhrase="Navigate through our different components and discover their usability and guidelines."
             actionButtonText="OVERVIEW"
             buttonRedirectUrl="/ComponentOverview"
           />
