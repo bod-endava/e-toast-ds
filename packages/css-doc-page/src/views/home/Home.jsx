@@ -46,6 +46,7 @@ function Home() {
             actionHeading="GET STARTED"
             actionPhrase="Start Using ETOAST with our onboarding guide."
             actionButtonText="GET STARTED"
+            buttonRedirectUrl="/GettingStarted"
           />
           <ActionCard
             height='506px'
