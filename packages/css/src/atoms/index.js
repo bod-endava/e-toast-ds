@@ -3,7 +3,7 @@ import { default as Icons } from './icon/';
 
 const onInit = () => {
     Selects.onInit()
-    // Icons.onInit()
+    Icons.onInit()
 }
 
 const onMutation = (mutation,observer) => {
