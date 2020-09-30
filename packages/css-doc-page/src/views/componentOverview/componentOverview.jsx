@@ -50,7 +50,7 @@ function ComponentOverview() {
             buttonRedirectUrl="/TokenPrinciples"
           />
         </div>
-        <div className={styles.BottomSection_cards}>
+        <div className={`${styles.BottomSection_cards} ${styles.Centered}`}>
           <ActionCard
             height='330px'
             actionImage={toggleIcon}

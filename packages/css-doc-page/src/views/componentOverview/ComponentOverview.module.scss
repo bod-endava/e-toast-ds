@@ -2,6 +2,7 @@
     .BottomSection {
         padding-top: 40px;
         padding-bottom: 142px;
+        text-align: center;
         background-color: var(--landing-lightgray);
 
         h2 {
@@ -16,11 +17,15 @@
         .BottomSection_cards {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
-            padding-left: 15px;
-            padding-right: 15px;
+            padding-left: 75px;
+            padding-right: 75px;
             margin-top: 40px
+        }
+
+        .Centered {
+            justify-content: center;
         }
     }
 }

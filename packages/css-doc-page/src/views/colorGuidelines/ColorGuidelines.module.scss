@@ -1,9 +1,14 @@
 .ColorGuidelines {
+    section {
+        padding: 0 66px;
+
+        @media screen and (min-width: 1440px) {
+            padding: 0 100px;
+        }
+    }
     .DarkSection {
         text-align: left;
         background-color: var(--landing-lightgray);
-        padding-left: 115px;
-        padding-right: 122px;
         padding-top: 1px;
         padding-bottom: 1px;
 
@@ -24,8 +29,6 @@
     .LightSection {
         text-align: left;
         background-color: var(--white);
-        padding-left: 115px;
-        padding-right: 122px;
         padding-bottom: 40px;
 
         h2 {

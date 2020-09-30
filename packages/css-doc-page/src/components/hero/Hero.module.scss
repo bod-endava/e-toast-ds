@@ -1,14 +1,20 @@
 .Hero {
-  background: url("../../assets/img/HeroBackground.svg") bottom center repeat-x transparent;
+  background: url("../../assets/img/HeroBackground.svg") repeat-x transparent;
+  background-position: 0% 115%;
   text-align: left;
   position: relative;
   z-index: 1;
-  height: 825px;
+  height: 100vh;
   padding: 0 75px;
   box-sizing: border-box;
   display: flex;
   align-items: stretch;
   justify-content: center;
+
+  @media screen and (min-width: 1440px) {
+    height: 825px;
+    background-position: bottom center;
+  }
 
   .Title {
     flex-grow: 1;
@@ -23,6 +29,7 @@
       letter-spacing: -4.5px;
       color: var(--landing-primary);
       margin-top: 0px;
+      margin-bottom: 25px;
       max-width: 470px;
       text-transform: uppercase;
 
@@ -33,14 +40,10 @@
   
     p {
       color: var(--primary-text);
-      max-width: 357px;
+      max-width: 477px;
       font-weight: 500;
       font-size: 20px;
       line-height: 25px;
-
-      @media screen and (min-width: 1440px) {
-        max-width: 470px;
-      }
     }
   }
 
@@ -61,6 +64,11 @@
   background: none;
   background-color: var(--landing-lightgray);
   height: 500px;
+  padding: 0 66px;
+
+  @media screen and (min-width: 1440px) {
+    padding: 0 100px;
+  }
 
   .Title {
     h1 {
