@@ -13,6 +13,7 @@ const findByClass = (cl,node=document) => Array.from(node.getElementsByClassName
 const findByTag = (tag,node=document) => Array.from(node.getElementsByTagName(tag))
 const hasClass = (cl) => node => node.classList.contains(cl);
 const isSelect = hasClass(selectClass)
+const isPartOfSelect = node => Array.from(node.classList).some(cl => cl.includes("eds-select"))
 const findDefaultValue = ($opts) => $opts.find(o => o.selected) || $opts[0]
 
 const create = (element,attrs) => {
@@ -113,7 +114,7 @@ const attachSelectBehavior = ($node) => {
 
 const onInit = () => {
     window.addEventListener("click",(e) => {
-        if( !e.target.classList.contains(selectClass) ){
+        if( !isPartOfSelect(e.target) ){
             findByClass(listClass).forEach(l => l.close())
         }
     })

@@ -48,7 +48,8 @@
                 transition: transform 0.2s ease-out 0s;
                 margin-left: 16px;
                 &::before {
-                    content: "˅";
+                    font-family: Toast;
+                    content: "chevron down";
                 }
                 &--open {
                     transform: rotate(180deg);
