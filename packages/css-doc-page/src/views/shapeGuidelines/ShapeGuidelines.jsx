@@ -23,12 +23,18 @@ function ShapeGuidelines() {
         <div>
           <span className={styles.PillShape} />
           <h3>Pill</h3>
-          <p>The shape as a pill is used in all elements, but the most common use is for basic buttons or fields.</p>
+          <p>
+            The shape as a pill is used in all elements, but the most common use is for basic 
+            buttons or fields.
+          </p>
         </div>
         <div>
           <span className={styles.RoundedShape} />
           <h3>Rounded</h3>
-          <p>The rounded shape is used by the majority of the components. But you can use any shape depending on your decision. The corner radius is 4px.</p>
+          <p>
+            The rounded shape is used by the majority of the components. But you can use any shape 
+            depending on your decision. The corner radius is 4px.
+          </p>
         </div>
         <div>
           <span className={styles.RectangleShape} />
@@ -38,7 +44,10 @@ function ShapeGuidelines() {
       </section>
       <section className={styles.OutlinesSection}>
         <h2>OUTLINE SHAPE</h2>
-        <p>The border is 1 px and is mainly used to outline the shape. This is used as a border in different components as form elements, buttons, tables.</p>
+        <p>
+          The border is 1 px and is mainly used to outline the shape. This is used as a border in 
+          different components as form elements, buttons, tables.
+        </p>
         <div>
           <img src={outlinePill} alt="Pill Outline"/>
         </div>
@@ -51,7 +60,10 @@ function ShapeGuidelines() {
       </section>
       <section className={styles.FillSection}>
         <h2>FILL SHAPE</h2>
-        <p>The fill shape is mainly used in buttons or form elements but with a Light background to contrast. Also, the fill shape is used as a state when the element is selected. </p>
+        <p>
+          The fill shape is mainly used in buttons or form elements but with a Light background to 
+          contrast. Also, the fill shape is used as a state when the element is selected. 
+        </p>
         <div>
           <img src={fillPill} alt="Pill Fill"/>
         </div>
