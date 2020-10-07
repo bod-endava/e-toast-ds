@@ -101,9 +101,9 @@ function ligaturesPolyfill(){
         'mail': '&#xe933;',
         'share': '&#xe932;',
         'trash': '&#xe931;',
-        'circle check': '&#xe930;',
+        'circle-check': '&#xe930;',
         'check': '&#xe92f;',
-        'circle x': '&#xe92e;',
+        'circle-x': '&#xe92e;',
         'money': '&#xe92d;',
       '0': 0
     };
