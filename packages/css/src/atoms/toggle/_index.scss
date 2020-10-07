@@ -40,12 +40,13 @@
     }
 
     &:before {
+        font-family: Toast;
         content: '×';
+        font-size: theme_tokens.$cross-size;
         padding: theme_tokens.$toggle-padding;
         box-sizing: border-box;
-        line-height: 1;
+        line-height: 0.3;
         color: theme_tokens.$check-color;
-        font-size: theme_tokens.$check-size;
         text-align: right;
         position: absolute;
         left: 0;
@@ -53,6 +54,7 @@
         height: theme_tokens.$height;
         background-color: theme_tokens.$off-color;
         border-radius: theme_tokens.$radius;
+        transition: none;
     }
 
     &:disabled:before {
@@ -63,8 +65,12 @@
       
     &:checked:before {
         background-color: theme_tokens.$on-color;
-        content: '✓';
+        font-family: Toast;
+        content: "check mark";
+        font-size: theme_tokens.$check-size;
         text-align: left;
+        line-height: 1;
+        transition: none;
     }
 
     &__label {

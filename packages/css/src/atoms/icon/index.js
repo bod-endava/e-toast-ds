@@ -97,6 +97,14 @@ function ligaturesPolyfill(){
         'plus': '&#xe92b;',
         'alert message': '&#xe92c;',
         'chat alert': '&#xe92c;',
+        'lock': '&#xe934;',
+        'mail': '&#xe933;',
+        'share': '&#xe932;',
+        'trash': '&#xe931;',
+        'circle-check': '&#xe930;',
+        'check': '&#xe92f;',
+        'circle-x': '&#xe92e;',
+        'money': '&#xe92d;',
       '0': 0
     };
     delete icons['0'];

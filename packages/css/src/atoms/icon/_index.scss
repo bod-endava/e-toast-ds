@@ -157,5 +157,29 @@
     &.alert-message:before {
         content: "\e92c";
     }
+    &.lock:before {
+        content:"\e92d";
+    }
+    &.mail:before {
+        content:"\e92e";
+    }
+    &.share:before {
+        content:"\e92f";
+    }
+    &.trash:before {
+        content:"\e930";
+    }
+    &.circle-check:before {
+        content:"\e931";
+    }
+    &.check:before {
+        content:"\e932";
+    }
+    &.circle-x:before {
+        content:"\e933";
+    }
+    &.money:before {
+        content:"\e934";
+    }
 }
 
