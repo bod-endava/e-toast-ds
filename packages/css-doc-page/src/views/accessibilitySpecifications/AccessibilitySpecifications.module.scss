@@ -41,6 +41,26 @@
                 display: block;
                 font-size: 16px;
                 line-height: 22px;
+                margin-top: 4px;
+                margin-bottom: 4px;
+            }
+
+            h3 {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 36px;
+            }
+
+            h4 {
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 18px;
+            }
+
+            p {
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 18px;
             }
         }
 
@@ -74,7 +94,7 @@
     
         p {
             font-size: 16x;
-            line-height: 30px;
+            line-height: 24px;
         }
 
         .DisabilitiesRow {

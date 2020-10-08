@@ -305,6 +305,27 @@ function AccessibilitySpecifications() {
           WCAG recommendation is to ensure that text can be zoomed to 200%. As well, we
           recommend using liquid layouts that can accommodate 200% text.
         </p>
+        <h3>
+          Optimize Typography
+        </h3>
+        <p>
+          Alignment: left, centered or right only (don’t justify)
+          <br/>
+          Line spacing: at least 1.5x the font size
+          <br/>
+          Paragraph spacing: at least 1.5x the line spacing
+          <br/>
+          Paragraph width: max. 80 characters; 40 for CJK characters
+          <br/>
+        </p>
+        <h3>
+          Text Hierarchy
+        </h3>
+        <p>
+          Ensure heading styles differentiate from paragraph text by a combination of mixed styles 
+          (size, weight, face, or color) This ensures they create contrast between them but are 
+          related to each other with some consistency, which helps with scanning.
+        </p>
       </section>
       <section>
         <h2 id="INTERACTIONS">
@@ -531,6 +552,87 @@ function AccessibilitySpecifications() {
         <p>
           COLOR
         </p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.w3.org/WAI/people-use-web/user-stories/#shopper"
+        >
+          How a user with “color blindness” experiences the Web
+        </a>
+        <p>
+          FORM ELEMENTS
+        </p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.w3.org/WAI/people-use-web/user-stories/#classroomstudent"
+        >
+          How making important content easily identifiable can help
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.w3.org/WAI/people-use-web/user-stories/#supermarketassistant"
+        >
+          How clear labelling can help someone with cognitive difficulties
+        </a>
+        <p>
+          RESPONSIVE
+        </p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://blog.prototypr.io/defining-a-modular-type-scale-for-web-ui-51acd5df31aa"
+        >
+          Describes how alternative views of zoomed pages can be helpful
+        </a>
+        <p>
+          HIERARCHY
+        </p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.w3.org/WAI/people-use-web/user-stories/#accountant"
+        >
+          Describes how headings can be helpful for navigation
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.w3.org/WAI/people-use-web/user-stories/#supermarketassistant"
+        >
+          How consistency and navigation can help someone with cognitive difficulties
+        </a>
+        <h4>
+          Articles &amp; Tools 
+        </h4>
+        <p>
+          TYPOGRAPHY
+        </p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://medium.com/sketch-app-sources/exploring-responsive-type-scales-cf1da541be54"
+        >
+          Exploring Responsive Type Scales
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://blog.prototypr.io/defining-a-modular-type-scale-for-web-ui-51acd5df31aa"
+        >
+          Defining a Modular Type Scale for Web UI
+        </a>
+        <p>
+          COLOR
+        </p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.invisionapp.com/inside-design/color-accessibility-product-design/"
+        >
+          a guide to color accessibility in product design
+        </a>
         <a
           target="_blank"
           rel="noopener noreferrer"
