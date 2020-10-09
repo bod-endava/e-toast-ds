@@ -6,6 +6,13 @@
     font-weight: theme_tokens.$h1-weight;
     font-size: theme_tokens.$h1-size;
     line-height: theme_tokens.$h1-lh;
+
+    p {
+      font-weight: theme_tokens.$subtitle-weight;
+      font-size: theme_tokens.$subtitle-size;
+      line-height: theme_tokens.$subtitle-lh;
+      margin: 0;
+    }
   }
 
   &__h2 {

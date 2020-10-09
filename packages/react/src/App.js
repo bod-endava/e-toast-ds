@@ -113,74 +113,99 @@ const SelectDemo = ({ disabled, innerDisabled, placeholder="Choose one" }) => {
 
 function App() {
   return (
-    <div  style={{fontFamily: 'Roboto'}}>
-      <h1>Buttons!</h1>
-      <ButtonDemo name="Primary" />
-      <ButtonDemo name="Outline" label="Outline Primary"/>
-      <ButtonDemo name="Cta" />
-      <ButtonDemo name="Text" />
-
-      <h1>Checkbox!</h1>
-      <Checkbox />
-      <Checkbox checked readOnly/>
-      <Checkbox disabled/>
-      <List of="checkbox">
-        <Checkbox label="Labeled checkbox" />
-        <Checkbox label="Controlled checkbox" checked readOnly/>
-        <Checkbox label="Disabled checkbox" disabled/>
-      </List>
-
-      <h1>Radio!</h1>
-      <RadioButton />
-      <RadioButton checked readOnly/>
-      <RadioButton disabled/>
-      <List of="radio">
-        <RadioButton name="list" label="Labeled radio" />
-        <RadioButton name="list" label="Controlled radio" checked readOnly/>
-        <RadioButton name="list" label="Disabled radio" disabled/>
-      </List>
-
-      <h1>Toggle!</h1>
-      <Toggle />
-      <Toggle checked readOnly/>
-      <Toggle disabled/>
-      <List of="toggle">
-        <Toggle label="Labeled toggle" />
-        <Toggle label="Controlled toggle" checked readOnly/>
-        <Toggle label="Disabled toggle" disabled/>
-      </List>
-
-      <h1>Inputs!</h1>
-      <h2>Outline Normal Input</h2>
-      <InputDemo name="First" variant="Outline" label="Label" placeholder="Placeholder" />
-      <InputDemo name="Second" variant="Outline" placeholder="Placeholder" />
-      <h2 style={{fontFamily: 'Roboto'}}>Outline Error Input</h2>
-      <InputDemo name="Thrid" variant="Outline" label="Label" placeholder="Placeholder" error="This field is required"/>
-      <InputDemo name="Fourth" variant="Outline" placeholder="Placeholder" error="This field is required"/>
-      <h2 style={{fontFamily: 'Roboto'}}>Outline Success Input</h2>
-      <InputDemo name="Fifth" variant="Outline" label="Label" placeholder="Placeholder" success/>
-      <InputDemo name="Sixth" variant="Outline" placeholder="Placeholder" success/>
-      <h2 style={{fontFamily: 'Roboto'}}>Outline Disabled Input</h2>
-      <InputDemo name="Seventh" variant="Outline" label="Label" placeholder="Placeholder" disabled/>
-      <InputDemo name="Eighth" variant="Outline" placeholder="Placeholder" disabled/>
-
-      <div style={{ width: "435px" }}>
+    <div>
+      <section>
+        <h1>Buttons!</h1>
+        <ButtonDemo name="Primary" />
+        <ButtonDemo name="Outline" label="Outline Primary"/>
+        <ButtonDemo name="Cta" />
+        <ButtonDemo name="Text" />
+      </section>
+      <section>
+        <h1>Checkbox!</h1>
+        <Checkbox />
+        <Checkbox checked readOnly/>
+        <Checkbox disabled/>
+        <List of="checkbox">
+          <Checkbox label="Labeled checkbox" />
+          <Checkbox label="Controlled checkbox" checked readOnly/>
+          <Checkbox label="Disabled checkbox" disabled/>
+        </List>
+      </section>
+      <section>
+        <h1>Radio!</h1>
+        <RadioButton />
+        <RadioButton checked readOnly/>
+        <RadioButton disabled/>
+        <List of="radio">
+          <RadioButton name="list" label="Labeled radio" />
+          <RadioButton name="list" label="Controlled radio" checked readOnly/>
+          <RadioButton name="list" label="Disabled radio" disabled/>
+        </List>
+      </section>
+      <section>
+        <h1>Toggle!</h1>
+        <Toggle />
+        <Toggle checked readOnly/>
+        <Toggle disabled/>
+        <List of="toggle">
+          <Toggle label="Labeled toggle" />
+          <Toggle label="Controlled toggle" checked readOnly/>
+          <Toggle label="Disabled toggle" disabled/>
+        </List>
+      </section>
+      <section>
+        <h1>Inputs!</h1>
+        <h2>Outline Normal Input</h2>
+        <InputDemo name="First" variant="Outline" label="Label" placeholder="Placeholder" />
+        <InputDemo name="Second" variant="Outline" placeholder="Placeholder" />
+        <h2 style={{fontFamily: 'Roboto'}}>Outline Error Input</h2>
+        <InputDemo name="Thrid" variant="Outline" label="Label" placeholder="Placeholder" error="This field is required"/>
+        <InputDemo name="Fourth" variant="Outline" placeholder="Placeholder" error="This field is required"/>
+        <h2 style={{fontFamily: 'Roboto'}}>Outline Success Input</h2>
+        <InputDemo name="Fifth" variant="Outline" label="Label" placeholder="Placeholder" success/>
+        <InputDemo name="Sixth" variant="Outline" placeholder="Placeholder" success/>
+        <h2 style={{fontFamily: 'Roboto'}}>Outline Disabled Input</h2>
+        <InputDemo name="Seventh" variant="Outline" label="Label" placeholder="Placeholder" disabled/>
+        <InputDemo name="Eighth" variant="Outline" placeholder="Placeholder" disabled/>
+      </section>
+      <section>
         <h1>Select!</h1>
-        <Padded>  
-          <div style={{ width: "200px" , display: "inline-block"}}>
-            <SelectDemo />
-          </div>
-          <div style={{ width: "200px" , display: "inline-block"}}>
-            <SelectDemo />
-          </div>
-        </Padded>
-        <Padded>
-          <SelectDemo innerDisabled placeholder="Disabled from select"/>
-        </Padded>
-        <Padded>
-          <SelectDemo disabled placeholder="Disabled from container"/>
-        </Padded>
-      </div>
+        <div style={{ width: "435px" }}>
+          <Padded>  
+            <div style={{ width: "200px" , display: "inline-block"}}>
+              <SelectDemo />
+            </div>
+            <div style={{ width: "200px" , display: "inline-block"}}>
+              <SelectDemo />
+            </div>
+          </Padded>
+          <Padded>
+            <SelectDemo innerDisabled placeholder="Disabled from select"/>
+          </Padded>
+          <Padded>
+            <SelectDemo disabled placeholder="Disabled from container"/>
+          </Padded>
+        </div>
+      </section>
+      <section>
+        <h1>Typography</h1>
+        <h1 className="eds-typography__h1">
+          Title h1
+          <p>
+            Subtitle text
+          </p>
+        </h1>
+        <h2 className="eds-typography__h2">
+          Title h2
+        </h2>
+        <h3 className="eds-typography__h3">
+          Title h3
+        </h3>
+        <h4 className="eds-typography__h4">
+          Title h4
+        </h4>
+      </section>
     </div>
   );
 }
