@@ -16,7 +16,7 @@
     )
 };
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 
 $font-name: Roboto;
@@ -35,30 +35,30 @@ $px-label: 12px;
 $px-button: 16px;
 $px-placeholder: 16px;
 $px-paragraph: 16px;
-$px-subtitle: 16px;
 $px-h4: 20px;
 $px-h3: 24px;
 $px-h2: 26px;
+$px-subtitle: 16px;
 $px-h1: 29px;
 
 $relative-label: 0.75em;
 $relative-button: 1em;
 $relative-placeholder: 1em;
 $relative-paragraph: 1em;
-$relative-subtitle: 1em;
 $relative-h4: 1.25em;
 $relative-h3: 1.5em;
 $relative-h2: 1.625em;
+$relative-subtitle: 1em;
 $relative-h1: 1.813em;
 
 $lh-label: 13px;
 $lh-button: 15px;
 $lh-placeholder: 16px;
 $lh-paragraph: 18px;
-$lh-subtitle: 19px;
 $lh-h4: 30px;
 $lh-h3: 36px;
 $lh-h2: 39px;
+$lh-subtitle: 24px;
 $lh-h1: 48px;
 
 // Semantic sizes
@@ -84,11 +84,6 @@ $sizes: (
         $relative-paragraph,
         $lh-paragraph
     ),
-    "subtitle": create-size(
-        $px-subtitle, 
-        $relative-subtitle,
-        $lh-subtitle
-    ),
     "h4": create-size(
         $px-h4, 
         $relative-h4,
@@ -103,6 +98,11 @@ $sizes: (
         $px-h2, 
         $relative-h2,
         $lh-h2
+    ),
+    "subtitle": create-size(
+        $px-subtitle, 
+        $relative-subtitle,
+        $lh-subtitle
     ),
     "h1": create-size(
         $px-h1, 

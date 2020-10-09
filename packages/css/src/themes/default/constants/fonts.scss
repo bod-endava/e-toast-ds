@@ -60,6 +60,10 @@ $h1-weight : global_fonts.$medium;
 $h1-size : global_fonts.get-size("h1", $sizing);
 $h1-line-height : global_fonts.get-size("h1", "line-height");
 
+$subtitle-weight : global_fonts.$medium;
+$subtitle-size : global_fonts.get-size("subtitle", $sizing);
+$subtitle-line-height : global_fonts.get-size("subtitle", "line-height");
+
 $h2-font : global_fonts.$font-condensed;
 $h2-weight : global_fonts.$medium;
 $h2-size : global_fonts.get-size("h2", $sizing);
