@@ -45,6 +45,9 @@ $input-line-height: global_fonts.get-size("button", "line-height");
 $input-spacing: 0.16px;
 $label-size: 12px;
 
+$timestamp-label-size: 14px;
+$timestamp-line-height: 12px;
+
 // Select
 
 $select-font : global_fonts.$font-name;
