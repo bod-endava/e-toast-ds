@@ -1,0 +1,34 @@
+@use '../constants/colors.scss' as theme_colors;
+@use '../constants/fonts.scss' as theme_fonts;
+@use "../constants/shape.scss" as theme_shape;
+
+// Shapes
+
+$border-radius  : theme_shape.$input-radius;
+$border-width   : 1px;
+$height         : 40px;
+$padding-bottom : 11px;
+$padding-left   : 16px;
+$padding-right  : 16px;
+$padding-top    : 11px;
+
+// Colors
+
+$idle-font-color       : theme_colors.$secondary-dark;
+$idle-background-color : theme_colors.$background;
+$idle-border-color     : theme_colors.$secondary-dark;
+
+$focus-background-color: theme_colors.$secondary-light;
+
+// Fonts
+
+$font-name      : theme_fonts.$input-font;
+$font-weight    : theme_fonts.$input-weight;
+$font-size      : theme_fonts.$input-size;
+$line-height    : theme_fonts.$timestamp-line-height;
+$letter-spacing : theme_fonts.$input-spacing;
+
+$label-font-size    : theme_fonts.$timestamp-label-size;
+$label-font-name    : theme_fonts.$input-font;
+$label-distance-left : 17px;
+$label-distance-top : -21px;

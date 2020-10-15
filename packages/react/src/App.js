@@ -111,6 +111,23 @@ const SelectDemo = ({ disabled, innerDisabled, placeholder="Choose one" }) => {
   </div>
 }
 
+const TimepickerDemo = ({ disabled, label="From" }) => {
+  const root = getClassName({
+    base: "eds-timepicker",
+  });
+
+  return <div className={root}>
+    <label className={`${root}__label`}>{label}</label>
+    <input name="hours"   placeholder="00" type="number" min="01" max="12" step="1" className={`${root}__hour`}/>
+    <span>:</span>
+    <input name="minutes" placeholder="00" type="number" min="00" max="59" step="1" className={`${root}__minute`}/>
+    <select name="ampm" className={`${root}__ampm`}>
+      <option value="am" selected>AM</option>
+      <option value="pm">PM</option>
+    </select>
+  </div>;
+}
+
 function App() {
   return (
     <div>
@@ -186,6 +203,12 @@ function App() {
           <Padded>
             <SelectDemo disabled placeholder="Disabled from container"/>
           </Padded>
+        </div>
+      </section>
+      <section>
+        <h1>Timepicker</h1>
+        <div style={{ width: "200px" , display: "inline-block"}}>
+          <TimepickerDemo />
         </div>
       </section>
       <section>

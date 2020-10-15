@@ -1,0 +1,104 @@
+@use "../../themes/%timepicker%/timepicker/" as theme_tokens;
+@use "../../utility/index" as utils;
+
+.eds-timepicker {
+  background-color: theme_tokens.$idle-background-color;
+  border: #{theme_tokens.$border-width} solid #{theme_tokens.$idle-border-color};
+  border-radius: theme_tokens.$border-radius;
+  box-sizing: border-box;
+  color: theme_tokens.$idle-font-color;
+  display: inline-flex;
+  font-family: theme_tokens.$font-name;
+  font-size: theme_tokens.$font-size;
+  font-weight: theme_tokens.$font-weight;
+  height: theme_tokens.$height;
+  letter-spacing: theme_tokens.$letter-spacing;
+  line-height: theme_tokens.$line-height;
+  margin-top: #{-1 * theme_tokens.$label-distance-top};
+  min-width: 170px;
+  padding-bottom: theme_tokens.$padding-bottom;
+  padding-left: theme_tokens.$padding-left;
+  padding-right: theme_tokens.$padding-right;
+  padding-top: theme_tokens.$padding-top;
+  position: relative;
+
+
+  &__label {
+    font-size: theme_tokens.$label-font-size;
+    font-family: theme_tokens.$label-font-name;
+    position: absolute;
+    top: theme_tokens.$label-distance-top;
+    left: theme_tokens.$label-distance-left;
+  }
+
+  &__hour,
+  &__minute {
+    color: theme_tokens.$idle-font-color;
+    font-family: theme_tokens.$font-name;
+    font-size: theme_tokens.$font-size;
+    font-weight: theme_tokens.$font-weight;
+    line-height: theme_tokens.$line-height;
+
+    appearance: none;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    padding: 0;
+    text-align: center;
+    width: 40px;
+
+    &:focus {
+      background-color: theme_tokens.$focus-background-color;
+    }
+    
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &__ampm {
+    color: theme_tokens.$idle-font-color;
+    font-family: theme_tokens.$font-name;
+    font-size: theme_tokens.$font-size;
+    font-weight: theme_tokens.$font-weight;
+    line-height: theme_tokens.$line-height;
+
+    appearance: none;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    padding: 0;
+    text-align: center;
+    width: 40px;
+
+    &:focus {
+      background-color: theme_tokens.$focus-background-color;
+    }
+
+    option {
+      color: theme_tokens.$idle-font-color;
+      font-family: theme_tokens.$font-name;
+      font-size: theme_tokens.$font-size;
+      font-weight: theme_tokens.$font-weight;
+      text-align: center;
+    }
+  }
+  input,
+  span,
+  select {
+    flex-grow: 1;
+    text-align: center;
+    text-align-last: center;
+  }
+
+  &::after {
+    color: theme_tokens.$idle-font-color;
+    content: "clock";
+    font-family: Toast;
+    font-size: theme_tokens.$font-size;
+    position: relative;
+    top: 2px;
+  }
+}
