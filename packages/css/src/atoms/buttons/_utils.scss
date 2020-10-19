@@ -1,4 +1,5 @@
 @use "../../utility/index" as utils;
+@use "../icon/icons" as icons;
 
 @mixin button-mixin($name,
     $idle,
@@ -27,6 +28,18 @@
             @content("disabled");
             @include utils.status($disabled);
             cursor: not-allowed;
+        }
+
+        &[class*=icon-]:before {
+            font-family: 'Toast' !important;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        @each $name, $glyph in icons.$icons {
+            &.icon-#{$name}:before {
+                content: $glyph;
+            }
         }
     }
 }

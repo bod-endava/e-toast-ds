@@ -1,3 +1,5 @@
+# Buttons
+
 ## Overview
  
  Outline buttons are buttons without fill color but with border color
@@ -16,6 +18,12 @@
 Disabled button
 
 `<button class="eds-outline-button" disabled>Button</button>`
+
+Button with icon
+
+`<button class="eds-outline-button icon-add">Button</button>`
+
+To see the diferent icon variants, see the Icons documentation
 
 ## Local Tokens
 

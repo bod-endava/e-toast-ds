@@ -1,3 +1,5 @@
+# Buttons
+
 ## Overview
 
 The button is an interactive element that is usually to send events or messages to other components.
@@ -17,6 +19,12 @@ A button can have text elements inside of it to describe its action or effect on
 Disabled button
 
 `<button class="eds-primary-button" disabled>Button</button>`
+
+Button with icon
+
+`<button class="eds-primary-button icon-add">Button</button>`
+
+To see the diferent icon variants, see the Icons documentation
 
 ## Local Tokens
 

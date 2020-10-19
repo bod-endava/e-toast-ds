@@ -1,3 +1,5 @@
+# Buttons
+
 ## Overview
  Text button do not have fill or borders, only the text is displayed
 
@@ -15,6 +17,12 @@
 Disabled button
 
 `<button class="eds-text-button" disabled>Button</button>`
+
+Button with icon
+
+`<button class="eds-text-button icon-add">Button</button>`
+
+To see the diferent icon variants, see the Icons documentation
 
 ## Local Tokens
 

@@ -1,0 +1,52 @@
+@use '../../themes/%button%/buttons/icon' as tokens;
+@use '../../utility/index' as utils;
+@use './utils' as button-utils;
+
+$idle-group: utils.create-group(
+    $text: tokens.$idle-font-color, 
+    $background: tokens.$idle-fill-color, 
+    $border: tokens.$idle-fill-color
+);
+
+$hover-group: utils.create-group(
+    $text: tokens.$hover-font-color, 
+    $background: tokens.$hover-fill-color, 
+    $border: tokens.$hover-fill-color
+);
+
+$focus-group: utils.create-group(
+    $text: tokens.$focus-font-color, 
+    $background: tokens.$focus-fill-color, 
+    $border: tokens.$focus-fill-color
+);
+
+$disabled-group: utils.create-group(
+    $text: tokens.$disabled-font-color, 
+    $background: tokens.$disabled-fill-color, 
+    $border: tokens.$disabled-fill-color
+);
+
+@include button-utils.button-mixin(
+    "icon",
+    $idle-group,
+    $hover-group,
+    $focus-group,
+    $disabled-group
+) using ($type){
+  @if $type == "idle" {
+      border-style: solid;
+      box-sizing: border-box;
+      text-transform: uppercase;
+      height: tokens.$height;
+      width: tokens.$height;
+      border-width: tokens.$border-width;
+      border-radius: tokens.$border-radius;
+      font-size: tokens.$font-size;
+      padding: tokens.$padding;
+
+      &[class*=icon-]:before {
+        font-size: tokens.$icon-size;
+        margin-right: 0!important;
+      }
+  }    
+}

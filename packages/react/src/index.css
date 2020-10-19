@@ -13,8 +13,20 @@ code {
     monospace;
 }
 
+section {
+  padding-left: 15px;
+}
+
 section h1:first-child {
   text-align: center;
   border-bottom: 1px solid slategray;
   border-top: 1px solid slategray;
+}
+
+.icon-demo {
+  display: inline-block;
+  color: var(--black);
+  text-align: center;
+  padding: 5px 10px;
+  width: 125px;
 }
