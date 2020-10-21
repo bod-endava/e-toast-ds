@@ -5,13 +5,21 @@ const Padded = ({ children }) => <div style={{margin: "16px"}}>
   {children}
 </div>
 
-const ButtonDemo = ({ name, label }) => {
-  const cl = `eds-${name.toLowerCase()}-button`
+const ButtonDemo = ({ name, label, icon }) => {
+  const ic = icon ? `icon-${icon}` : '';
+  const cl = `eds-${name.toLowerCase()}-button ${ic}`;
   return <section>
     <h2>{label || name} Button</h2>
-    <Padded><button className={cl} >Button</button></Padded>
+    <Padded><button className={cl}>Button</button></Padded>
     <Padded><button className={cl} disabled>Button</button></Padded>
   </section>
+}
+
+const Icon = ({ icon }) => {
+  return <div className="icon-demo">
+    <span className={`eds-icon ${icon}`} />
+    <p>{icon}</p>
+  </div>;
 }
 
 const Checkbox = ({ label, ...extra }) => {
@@ -102,7 +110,7 @@ const SelectDemo = ({ disabled, innerDisabled, placeholder="Choose one" }) => {
   // const item = root.extend("&__option");
 
   return <div className={root} disabled={disabled} >
-    <select disabled={innerDisabled}>
+    <select defaultValue="1" disabled={innerDisabled}>
       <option hidden>{placeholder}</option>
       <option value={1}>One</option>
       <option hidden>you dont see me</option>
@@ -121,14 +129,15 @@ const TimepickerDemo = ({ disabled, label="From" }) => {
     <input name="hours"   placeholder="00" type="number" min="01" max="12" step="1" className={`${root}__hour`}/>
     <span>:</span>
     <input name="minutes" placeholder="00" type="number" min="00" max="59" step="1" className={`${root}__minute`}/>
-    <select name="ampm" className={`${root}__ampm`}>
-      <option value="am" selected>AM</option>
+    <select defaultValue="am" name="ampm" className={`${root}__ampm`}>
+      <option value="am">AM</option>
       <option value="pm">PM</option>
     </select>
   </div>;
 }
 
 function App() {
+  const icons = ["warning-circle", "warning-circle-fill", "information", "clock", "warning", "notification", "upload", "new-folder", "cloud", "copy", "document", "folder", "new-file", "arrow-down", "arrow-left", "arrow-right", "arrow-up", "back", "caret-down", "caret-left", "caret-right", "caret-up", "down", "full-screen", "menu", "more", "next", "search", "settings", "up", "label", "image", "home", "filter", "expand", "edit", "download", "compress", "close", "chat", "calendar", "bookmark", "announcement", "add", "alert-message", "lock", "mail", "share", "trash", "circle-check", "check", "circle-x", "money"];
   return (
     <div>
       <section>
@@ -137,6 +146,14 @@ function App() {
         <ButtonDemo name="Outline" label="Outline Primary"/>
         <ButtonDemo name="Cta" />
         <ButtonDemo name="Text" />
+        <ButtonDemo name="Primary" icon="announcement" label="Icon + Label" />
+        <ButtonDemo name="Icon" icon="add" />
+      </section>
+      <section>
+        <h1>Icons!</h1>
+        {
+          icons.map( i => <Icon icon={i} key={i} />)
+        }
       </section>
       <section>
         <h1>Checkbox!</h1>
