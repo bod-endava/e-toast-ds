@@ -7,6 +7,7 @@ import Home from './views/home';
 import GettingStarted from './views/gettingStarted';
 import DesignGuidelines from './views/designGuidelines';
 import ShapeGuidelines from './views/shapeGuidelines';
+import IconGuidelines from './views/iconGuidelines';
 import TokenPrinciples from './views/tokenPrinciples';
 import ComponentOverview from './views/componentOverview';
 import ColorGuidelines from './views/colorGuidelines';
@@ -35,6 +36,10 @@ const routes = [
   {
     path: '/ShapeGuidelines',
     component: ShapeGuidelines
+  },
+  {
+    path: '/IconGuidelines',
+    component: IconGuidelines
   },
   {
     path: '/TokenPrinciples',
