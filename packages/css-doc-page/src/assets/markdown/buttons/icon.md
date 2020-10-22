@@ -1,25 +1,22 @@
-# Buttons
+## Basic Usage - Icon Button
 
-## Overview
+Icon Buttons are used for...
 
- Icon buttons are round buttons without a label, but with an icon
-
-## Usage
-```
+```interactive
 <button class="eds-icon-button icon-add">Button</button>
 ```
 
-## Example
-![Buttons Example](../images/button-icon.png "Buttons Example")
-
-
 ## Variants
 
-Disabled button
+### Disabled button
 
-`<button class="eds-icon-button icon-add" disabled>Button</button>`
+```interactive
+<button class="eds-icon-button icon-add" disabled>Button</button>
+```
 
-To see the diferent icon variants, see the Icons documentation
+## Icons
+
+To change the button's icon, simply change the **icon-<name>** class, where **<name>** is the icon name. For a list of icons, go to the [Icon Guidelines](/IconGuidelines) page.
 
 ## Local Tokens
 
@@ -36,18 +33,19 @@ To see the diferent icon variants, see the Icons documentation
 | $border-radius     | 50%                               | Smooth corners radius                        |
 | $border-width      | 1px                               | Border line width                            |
 | $height            | 37px                              | Button height                                |
-| $padding           | 10px                              | Separation between border and icon           |
+| $padding           | 10px                              | Separation between top border and text       |
 | $font-size         | 0                                 | Text font size                               |
-| $icon-size         | 16px                              | Icon size                                    |
+| $icon-size         | 16px                              | Icon Size                                    |
 
 
 ## Theme Tokens
 | token                 | default value                      | description            |
 | --------------------- | ---------------------------------- | ---------------------- |
 | $background           | global.colors.$white               | Base color             |
-| $primary              | global.colors.$orange              | Primary color          |
-| $primary-dark         | global.colors.$orange-dark         | Dark contrast color    |
+| $primary-color        | global.colors.$orange              | CTA color              |
+| $primary-dark         | global.colors.$orange-dark         | Dark contrast CTA color|
 | $disabled             | global.colors.$disable             | Disabled contrast color|
+
 
 ## Global Tokens
 | token         | default value | description             |

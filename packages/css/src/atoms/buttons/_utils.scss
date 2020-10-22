@@ -33,7 +33,7 @@
         &[class*=icon-]:before {
             font-family: 'Toast' !important;
             margin-right: 6px;
-            vertical-align: middle;
+            vertical-align: bottom;
         }
 
         @each $name, $glyph in icons.$icons {
