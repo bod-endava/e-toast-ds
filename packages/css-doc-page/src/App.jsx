@@ -1,8 +1,8 @@
 import React from 'react';
 import ButtonDocs from './views/buttonDocs';
-import AccessibilitySpecifications from './views/accessibilitySpecifications';
-import Sidebar from './containers/sidebar'
+import Sidebar from './containers/sidebar';
 import Footer from './components/footer';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './views/home';
 import GettingStarted from './views/gettingStarted';
 import DesignGuidelines from './views/designGuidelines';
@@ -12,6 +12,7 @@ import TokenPrinciples from './views/tokenPrinciples';
 import ComponentOverview from './views/componentOverview';
 import ColorGuidelines from './views/colorGuidelines';
 import TypographyGuidelines from './views/typhographyGuidelines'
+import AccessibilitySpecifications from './views/accessibilitySpecifications';
 import {
   BrowserRouter as Router,
   Route,
@@ -83,6 +84,7 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop />
         {/* All views have a sidebar*/}
         <Sidebar />
         <div className="Content">
