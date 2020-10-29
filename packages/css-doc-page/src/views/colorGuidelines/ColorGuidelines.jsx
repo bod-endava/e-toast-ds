@@ -70,7 +70,7 @@ function ColorGuidelines() {
           </div>
         </div>
         <h2>
-          Case Study:
+          CASE STUDY:
         </h2>
         <p>
           The client provided a base color:
@@ -149,7 +149,7 @@ function ColorGuidelines() {
               it has to pass minimum Accessibility standards. Use the variants function as a color
               option to convey transition between states a provided interaction.
             </p>
-            <Link to={"/Accessibility"}>SEE ACCESSIBILITY STANDARDS</Link>
+            <Link to="/AccessibilitySpecifications">SEE ACCESSIBILITY STANDARDS</Link>
           </div>
           <div className={styles.SchemeColumnWide}>
             <figure className={styles.StudyBlue}>
@@ -170,7 +170,7 @@ function ColorGuidelines() {
               function as a color option to convey transition between states a provided
               interaction.
             </p>
-            <Link to={"/Accessibility"}>SEE ACCESSIBILITY STANDARDS</Link>
+            <Link to="/AccessibilitySpecifications">SEE ACCESSIBILITY STANDARDS</Link>
           </div>
           <div className={styles.SchemeColumnWide}>
             <figure className={styles.Secondary}>
@@ -190,7 +190,7 @@ function ColorGuidelines() {
               function as a color option to convey transition between states a provided
               interaction.
             </p>
-            <Link to={"/Accessibility"}>SEE ACCESSIBILITY STANDARDS</Link>
+            <Link to="/AccessibilitySpecifications">SEE ACCESSIBILITY STANDARDS</Link>
           </div>
         </div>
         <div className={styles.Schemes}>
@@ -297,6 +297,7 @@ function ColorGuidelines() {
                 provided interaction. Disabled buttons do not need to pass color contrast
                 guidelines.
               </p>
+              <Link to="/AccessibilitySpecifications">SEE ACCESSIBILITY STANDARDS</Link>
             </div>
           </div>
       </section>
