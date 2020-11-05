@@ -17,6 +17,10 @@ section {
   padding-left: 15px;
 }
 
+section:last-child {
+  margin-bottom: 50px;
+}
+
 section h1:first-child {
   text-align: center;
   border-bottom: 1px solid slategray;
