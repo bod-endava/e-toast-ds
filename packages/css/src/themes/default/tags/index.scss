@@ -1,0 +1,42 @@
+@use "../constants/colors.scss" as theme_colors;
+@use "../constants/fonts.scss" as theme_fonts;
+@use "../constants/shape.scss" as theme_shape;
+
+// Color tokens
+
+// idle
+$idle-font-color: theme_colors.$content;
+$idle-fill-color: theme_colors.$secondary-light;
+$idle-border-color: theme_colors.$secondary-light;
+
+// hover
+$hover-font-color: theme_colors.$background;
+$hover-fill-color: theme_colors.$secondary-dark;
+$hover-border-color: theme_colors.$secondary-dark;
+
+// focus
+$focus-font-color: theme_colors.$content;
+$focus-fill-color: theme_colors.$secondary-light;
+$focus-border-color: theme_colors.$primary;
+
+// disable
+$disabled-font-color: theme_colors.$disabled-dark;
+$disabled-fill-color: theme_colors.$disabled;
+$disabled-border-color: theme_colors.$disabled;
+
+// theme_shape tokens
+
+$border-radius: theme_shape.$tag-radius;
+$border-width: 1px;
+$height: 30px;
+$margin-right: 6px;
+$padding: 6px;
+$close-margin: 10px;
+
+// Font tokens
+
+$font-name: theme_fonts.$tag-font;
+$font-weight: theme_fonts.$tag-weight;
+$font-size: theme_fonts.$tag-size;
+$line-height: theme_fonts.$tag-line-height;
+$spacing: theme_fonts.$tag-spacing;

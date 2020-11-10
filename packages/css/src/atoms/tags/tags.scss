@@ -1,0 +1,51 @@
+@use "../../themes/%tags%/tags/" as tokens;
+@use "../../utility/index" as utils;
+
+.eds-tags {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  &__tag {
+    background-color: tokens.$idle-fill-color;
+    border: tokens.$border-width solid tokens.$idle-border-color;
+    border-radius: tokens.$border-radius;
+    box-sizing: border-box;
+    color: tokens.$idle-font-color;
+    flex-grow: 0;
+    height: tokens.$height;
+    margin-right: tokens.$margin-right;
+    padding: tokens.$padding;
+    transition: 0.4s;
+    
+    > span {
+      cursor: pointer;
+      margin-left: tokens.$close-margin;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: tokens.$hover-fill-color;
+      border-color: tokens.$hover-border-color;
+      color: tokens.$hover-font-color;
+    }
+    &:focus {
+      background-color: tokens.$focus-fill-color;
+      border-color: tokens.$focus-border-color;
+      color: tokens.$focus-font-color;
+      outline: none;
+    }
+    &[disabled] {
+      background-color: tokens.$disabled-fill-color;
+      border-color: tokens.$disabled-border-color;
+      color: tokens.$disabled-font-color;
+      
+      > span {
+        cursor: auto;
+      }
+    }
+  }
+}

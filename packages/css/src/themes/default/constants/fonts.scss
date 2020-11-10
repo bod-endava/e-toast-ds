@@ -56,6 +56,14 @@ $select-size : global_fonts.get-size("button", $sizing);
 $select-line-height : global_fonts.get-size("button", "line-height");
 $select-spacing : 0.16px;
 
+// Tags
+
+$tag-font: global_fonts.$font-name;
+$tag-weight: global_fonts.$regular;
+$tag-size: global_fonts.get-size("tag", $sizing);
+$tag-line-height: global_fonts.get-size("tag", "line-height");
+$tag-spacing: 0.16px;
+
 // Typography
 
 $h1-font : global_fonts.$font-condensed;

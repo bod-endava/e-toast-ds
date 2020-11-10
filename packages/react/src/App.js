@@ -119,6 +119,29 @@ const SelectDemo = ({ disabled, innerDisabled, placeholder="Choose one" }) => {
   </div>
 }
 
+const TagsDemo = ({ closeAction }) => {
+  const root = getClassName({
+    base: "eds-tags",
+  })
+  const tag = root.extend("&__tag");
+
+  return (
+    <div className={root}>
+      <div className={tag} tabIndex="0">
+        Tag one
+        <span tabIndex="0" className="eds-icon close" onClick={closeAction} />
+      </div>
+      <div className={tag} tabIndex="0">
+        Tag with no close icon
+      </div>
+      <div className={tag} tabIndex="0" disabled>
+        Disabled Tag
+        <span tabIndex="0" className="eds-icon close" />
+      </div>
+    </div>
+  );
+}
+
 const TimepickerDemo = ({ disabled, label="From" }) => {
   const root = getClassName({
     base: "eds-timepicker",
@@ -245,6 +268,10 @@ function App() {
         <h4 className="eds-typography__h4">
           Title h4
         </h4>
+      </section>
+      <section>
+        <h1>Tags</h1>
+        <TagsDemo closeAction={console.log} />
       </section>
     </div>
   );
