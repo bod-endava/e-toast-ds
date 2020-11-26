@@ -30,7 +30,7 @@ function SidebarItem(props) {
     );
 
     return (
-        <div className={`${styles.SidebarItem} ${className}`}>
+        <div className={`${className} ${styles.SidebarItem} ${expanded ? styles.Expanded : ''}`}>
             <p>{itemName}</p> {childrenList.length > 0 && <ChevronComponent />}
             {expanded && (
                 <ul className={styles.Subtabs}>
