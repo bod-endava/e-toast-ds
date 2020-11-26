@@ -58,6 +58,7 @@ function DesignGuidelines() {
             actionHeading="ICONS"
             actionPhrase="Design tokens are central and tiny pieces of UI information."
             actionButtonText="READ MORE"
+            buttonRedirectUrl="/IconGuidelines"
           />
           <ActionCard
             height='377px'
