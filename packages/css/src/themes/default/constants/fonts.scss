@@ -89,3 +89,12 @@ $h4-font : global_fonts.$font-condensed;
 $h4-weight : global_fonts.$medium;
 $h4-size : global_fonts.get-size("h4", $sizing);
 $h4-line-height : global_fonts.get-size("h4", "line-height");
+
+// Breadcrumbs
+
+$breadcrumb-font: global_fonts.$font-name;
+$breadcrumb-weight: global_fonts.$regular;
+$breadcrumb-weight-active: global_fonts.$bold;
+$breadcrumb-size: global_fonts.get-size("paragraph", $sizing);
+$breadcrumb-line-height: global_fonts.get-size("paragraph", "line-height");
+$breadcrumb-spacing: 0.16px;
