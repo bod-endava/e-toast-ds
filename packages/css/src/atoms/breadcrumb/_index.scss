@@ -1,0 +1,65 @@
+@use "../../themes/%breadcrumb%/breadcrumb/" as theme_tokens;
+@use "../../utility/index" as utils;
+
+.eds-breadcrumb {
+  display: inline-flex;
+  &__list {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    &__item {
+      font-style: normal;
+      position: relative;
+      > * {
+        margin-right: 10px;
+        text-decoration: none;
+        font-family: theme_tokens.$font-family;
+        color: theme_tokens.$main-color;
+        font-size: theme_tokens.$font-size;
+        letter-spacing: theme_tokens.$letter-spacing;
+        font-weight: theme_tokens.$font-weight;
+        line-height: theme_tokens.$line-height;
+        &:hover {
+          cursor: pointer;
+          color: theme_tokens.$active-font-color;
+          text-decoration: underline;
+        }
+        &::after {
+          display: inline-block;
+          content: "chevron right";
+          font-family: Toast;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+
+      [aria-current="page"] {
+        color: theme_tokens.$active-font-color;
+        font-weight: theme_tokens.$active-font-weight;
+      }
+    }
+  }
+
+  &[disabled] {
+    color: theme_tokens.$disabled;
+    cursor: not-allowed;
+
+    .eds-breadcrumb__list__item {
+      > * {
+        color: theme_tokens.$disabled;
+      }
+      > *:hover {
+        cursor: not-allowed;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      [aria-current="page"] {
+        color: theme_tokens.$disabled;
+        font-weight: theme_tokens.$font-weight;
+      }
+    }
+  }
+}

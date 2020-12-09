@@ -1,0 +1,19 @@
+@use "../constants/colors.scss" as theme_colors;
+@use "../constants/fonts.scss" as theme_fonts;
+
+// Color tokens
+
+// basic
+$main-color: theme_colors.$primary-darkest;
+$font-size: theme_fonts.$breadcrumb_size;
+$font-weight: theme_fonts.$breadcrumb-weight;
+$letter-spacing: theme_fonts.$breadcrumb-spacing;
+$line-height: theme_fonts.$breadcrumb-line-height;
+$font-family: theme_fonts.$breadcrumb-font;
+$disabled: theme_colors.$disabled;
+// hover
+$active-font-color: theme_colors.$primary-dark;
+
+// disable
+$disabled-font-color: theme_colors.$disabled;
+$active-font-weight: theme_fonts.$breadcrumb-weight-active;

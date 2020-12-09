@@ -10,6 +10,7 @@
 @use "./atoms/tags/index" as tags;
 @use "./atoms/icon/index" as icon;
 @use "./atoms/typography/index" as typography;
+@use "./atoms/breadcrumb/index" as breadcrumb;
 
 $colors-as-css-variables: true;
 

@@ -159,6 +159,32 @@ const TimepickerDemo = ({ disabled, label="From" }) => {
   </div>;
 }
 
+const Breadcrumb = ({ disabled }) => {
+  const root = getClassName({
+    base: "eds-breadcrumb",
+  });
+
+  return (
+    <nav className={`${root}`} disabled={disabled}>
+      <ul className={`${root}__list`}>
+        <li className={`${root}__list__item`}>
+          <a href="/#">
+            <span className={`eds-icon home`} />
+          </a>
+        </li>
+        <li className={`${root}__list__item`}>
+          <a href="/#">Page 1</a>
+        </li>
+        <li className={`${root}__list__item`}>
+          <a href="#" aria-current="page">
+            Page 2
+          </a>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
 function App() {
   const icons = ["warning-circle", "warning-circle-fill", "information", "clock", "warning", "notification", "upload", "new-folder", "cloud", "copy", "document", "folder", "new-file", "arrow-down", "arrow-left", "arrow-right", "arrow-up", "back", "caret-down", "caret-left", "caret-right", "caret-up", "down", "full-screen", "menu", "more", "next", "search", "settings", "up", "label", "image", "home", "filter", "expand", "edit", "download", "compress", "close", "chat", "calendar", "bookmark", "announcement", "add", "alert-message", "lock", "mail", "share", "trash", "circle-check", "check", "circle-x", "money"];
   return (
@@ -272,6 +298,13 @@ function App() {
       <section>
         <h1>Tags</h1>
         <TagsDemo closeAction={console.log} />
+      </section>
+      <section>
+        <h1>Breadcrumbs</h1>
+        <h2>Default</h2>
+        <Breadcrumb />
+        <h2>Disabled</h2>
+        <Breadcrumb disabled />
       </section>
     </div>
   );
