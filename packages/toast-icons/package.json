@@ -10,5 +10,8 @@
     "toasticons.css",
     "polyfill.js"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+    "deploy": "yarn publish --access public"
+  }
 }
