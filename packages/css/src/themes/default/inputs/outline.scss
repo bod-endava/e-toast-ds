@@ -52,3 +52,9 @@ $spacing     : theme_fonts.$input-spacing;
 /* Label */
 $label-font-size : theme_fonts.$label-size;
 $label-font-name : theme_fonts.$input-font;
+
+//icon color tokens 
+$error-icon-color     : theme_colors.$danger;
+$success-icon-color   : theme_colors.$success;
+$idle-icon-color      : theme_colors.$secondary-light;
+$active-icon-color    : theme_colors.$danger;

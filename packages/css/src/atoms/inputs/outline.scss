@@ -48,6 +48,13 @@ $labelError-group: utils.create-group(
     $text: tokens.$label-error-font-color
 );
 
+$colors: (
+    'error': tokens.$error-icon-color,
+    'success': tokens.$success-icon-color,
+    'idle': tokens.$idle-icon-color,
+    'active': tokens.$active-icon-color
+);
+
 @include input-utils.input-mixin(
     "outline",
     $idle-group,
@@ -58,7 +65,8 @@ $labelError-group: utils.create-group(
     $error-group,
     $success-group,
     $label-group,
-    $labelError-group
+    $labelError-group,
+    $colors
 ) using ($type){
     
     @if $type == "idle" {
