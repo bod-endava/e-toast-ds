@@ -1,4 +1,21 @@
 @use "../../utility/index" as utils;
+@use "../../themes/%input%/constants/colors.scss" as theme_colors;
+
+@function getIdleColor($colors){
+    @return map-get($colors, "idle" );
+}
+
+@function getErrorColor($colors){
+  @return map-get($colors, "error" );
+}
+
+@function getSuccessColor($colors){
+  @return map-get($colors, "success" );
+}
+
+@function getActiveColor($colors){
+  @return map-get($colors, "active")
+}
 
 @mixin input-mixin($name,
   $idle,
@@ -9,7 +26,8 @@
   $error,
   $success,
   $label,
-  $labelError
+  $labelError,
+  $colors
 ) {
   .eds-#{$name}-input {
     transition: 0.4s;
@@ -19,6 +37,10 @@
     &:active {
         @content("active");
         @include utils.status($active);
+    }
+
+    &:focus + &__icon{
+      color: getActiveColor($colors);
     }
 
     &:focus {
@@ -59,6 +81,21 @@
       position: relative;
     }
 
+    &__icon{
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      &--success{
+        color:getSuccessColor($colors);
+      }
+      &--error{
+        color: getErrorColor($colors);
+      }
+      &--disabled{
+        color: getIdleColor($colors);
+      }
+    }
+
     &__label {
       display: flex;
       flex-direction: row;
@@ -93,8 +130,9 @@
         margin-bottom: 6px;
         display: none;
         &::before{
-          content: "⚠";
+          content: "circle x";
           margin-right: 4px;
+          font-family: Toast;
         }
       }
     }

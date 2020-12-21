@@ -83,6 +83,13 @@ const InputDemo = ({ name, label, success, error='', ...extra }) => {
     "&--disabled": extra.disabled
   })
   const labelRight = labelRoot.extend("&__error-alert");
+  const icon = extra.icon;
+  const iconClass= root.extend("&__icon").get({
+    "&--error": Boolean(error),
+    "&--disabled": extra.disabled,
+    "&--success": success,
+  })
+
 
   return <section>
     <Padded>
@@ -95,7 +102,9 @@ const InputDemo = ({ name, label, success, error='', ...extra }) => {
             {error}
           </div>}
         </div>
-        <input className={root} {...extra} />
+        <div>
+          <input className={root} {...extra} /> <span className={ `eds-icon ${icon} ${iconClass}`}></span> 
+        </div>
       </div>
     </Padded>
   </section>
@@ -242,15 +251,22 @@ function App() {
         <h2>Outline Normal Input</h2>
         <InputDemo name="First" variant="Outline" label="Label" placeholder="Placeholder" />
         <InputDemo name="Second" variant="Outline" placeholder="Placeholder" />
+        <InputDemo name="Third" variant="Outline" icon="calendar"  placeholder="Placeholder" />
         <h2 style={{fontFamily: 'Roboto'}}>Outline Error Input</h2>
-        <InputDemo name="Thrid" variant="Outline" label="Label" placeholder="Placeholder" error="This field is required"/>
-        <InputDemo name="Fourth" variant="Outline" placeholder="Placeholder" error="This field is required"/>
+        <InputDemo name="Fourth" variant="Outline" label="Label" placeholder="Placeholder" error="This field is required"/>
+        <InputDemo name="Fifth" variant="Outline" placeholder="Placeholder" error="This field is required"/>
+        <InputDemo name="Sixth" variant="Outline" icon="circle-x" placeholder="Placeholder" error="This field is required"/>
         <h2 style={{fontFamily: 'Roboto'}}>Outline Success Input</h2>
-        <InputDemo name="Fifth" variant="Outline" label="Label" placeholder="Placeholder" success/>
-        <InputDemo name="Sixth" variant="Outline" placeholder="Placeholder" success/>
+        <InputDemo name="Seventh" variant="Outline" label="Label" placeholder="Placeholder" success/>
+        <InputDemo name="Eighth" variant="Outline" placeholder="Placeholder" success/>
+        <InputDemo name="Ninth" variant="Outline" icon="circle-check" placeholder="Placeholder" success />
+
         <h2 style={{fontFamily: 'Roboto'}}>Outline Disabled Input</h2>
-        <InputDemo name="Seventh" variant="Outline" label="Label" placeholder="Placeholder" disabled/>
-        <InputDemo name="Eighth" variant="Outline" placeholder="Placeholder" disabled/>
+        <InputDemo name="Tenth" variant="Outline" label="Label" placeholder="Placeholder" disabled/>
+        <InputDemo name="Eleventh" variant="Outline" placeholder="Placeholder" disabled/>
+        <InputDemo name="twelfth" variant="Outline" icon="calendar" placeholder="Placeholder" disabled/>
+
+
       </section>
       <section>
         <h1>Select!</h1>
