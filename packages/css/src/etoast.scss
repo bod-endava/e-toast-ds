@@ -11,6 +11,7 @@
 @use "./atoms/icon/index" as icon;
 @use "./atoms/typography/index" as typography;
 @use "./atoms/breadcrumb/index" as breadcrumb;
+@use "./atoms/textarea/index" as textarea;
 
 $colors-as-css-variables: true;
 
