@@ -194,6 +194,27 @@ const Breadcrumb = ({ disabled }) => {
   );
 };
 
+const TextArea = ({ name, label, ...extra }) => {
+  const hasIcon = Boolean(extra.icon)
+  const root = getClassName({
+    base: "eds-outline-textarea",
+    "&--has-icon": hasIcon
+  });
+  const icon = extra.icon;
+
+  const iconClass= root.extend("&__icon").get({
+    "&--disabled": extra.disabled,
+  })
+
+  return <section>
+    <Padded>
+      <div className={`${root}__container`}>
+        <textarea className={root} {...extra} /> <span className={ `eds-icon ${icon} ${iconClass}`}></span> 
+      </div>
+    </Padded>
+  </section>
+}
+
 function App() {
   const icons = ["warning-circle", "warning-circle-fill", "information", "clock", "warning", "notification", "upload", "new-folder", "cloud", "copy", "document", "folder", "new-file", "arrow-down", "arrow-left", "arrow-right", "arrow-up", "back", "caret-down", "caret-left", "caret-right", "caret-up", "down", "full-screen", "menu", "more", "next", "search", "settings", "up", "label", "image", "home", "filter", "expand", "edit", "download", "compress", "close", "chat", "calendar", "bookmark", "announcement", "add", "alert-message", "lock", "mail", "share", "trash", "circle-check", "check", "circle-x", "money"];
   return (
@@ -265,8 +286,6 @@ function App() {
         <InputDemo name="Tenth" variant="Outline" label="Label" placeholder="Placeholder" disabled/>
         <InputDemo name="Eleventh" variant="Outline" placeholder="Placeholder" disabled/>
         <InputDemo name="twelfth" variant="Outline" icon="calendar" placeholder="Placeholder" disabled/>
-
-
       </section>
       <section>
         <h1>Select!</h1>
@@ -321,6 +340,16 @@ function App() {
         <Breadcrumb />
         <h2>Disabled</h2>
         <Breadcrumb disabled />
+      </section>
+      <section>
+        <h1>TextArea!</h1>
+        <h2>Outline Normal TextArea</h2>
+        <TextArea name="normal" variant="Outline" placeholder="Placeholder" />
+        <TextArea name="icon" variant="Outline" icon="calendar"  placeholder="Placeholder" />
+
+        <h2 style={{fontFamily: 'Roboto'}}>Outline Disabled TextArea</h2>
+        <TextArea name="dissabled" variant="Outline" placeholder="Placeholder" disabled/>
+        <TextArea name="dissabled-icon" variant="Outline" icon="calendar" placeholder="Placeholder" disabled/>
       </section>
     </div>
   );

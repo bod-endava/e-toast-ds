@@ -1,0 +1,91 @@
+@use "../../utility/index" as utils;
+@use "../../themes/%textarea%/constants/colors.scss" as theme_colors;
+
+@function getIdleColor($colors) {
+  @return map-get($colors, "idle");
+}
+
+@function getErrorColor($colors) {
+  @return map-get($colors, "error");
+}
+
+@function getSuccessColor($colors) {
+  @return map-get($colors, "success");
+}
+
+@function getActiveColor($colors) {
+  @return map-get($colors, "active");
+}
+
+@mixin textarea-mixin(
+  $name,
+  $idle,
+  $active,
+  $focus,
+  $disabled,
+  $placeholder,
+  $colors
+) {
+  .eds-#{$name}-textarea {
+    transition: 0.4s;
+    padding-left: 0;
+    @content ("idle");
+    @include utils.status($idle);
+
+    &:active {
+      @content ("active");
+      @include utils.status($active);
+    }
+
+    &:focus + &__icon {
+      color: getActiveColor($colors);
+    }
+
+    &:focus {
+      outline: none;
+      @content ("focus");
+      @include utils.status($focus);
+    }
+
+    &:disabled {
+      @content ("disabled");
+      @include utils.status($disabled);
+      cursor: not-allowed;
+      &::placeholder {
+        color: map-get($disabled, "text");
+      }
+      resize: none;
+    }
+
+    &::placeholder {
+      @content ("placeholder");
+      @include utils.status($placeholder);
+    }
+
+    @include utils.add-flex-container-subclass($dir: column, $align: default) {
+      width: fit-content;
+      position: relative;
+    }
+
+    &__icon {
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      &--success {
+        color: getSuccessColor($colors);
+      }
+      &--error {
+        color: getErrorColor($colors);
+      }
+      &--disabled {
+        color: getIdleColor($colors);
+      }
+    }
+
+    &--has-icon {
+      textarea {
+        padding-left: 26px;
+      }
+    }
+  }
+}

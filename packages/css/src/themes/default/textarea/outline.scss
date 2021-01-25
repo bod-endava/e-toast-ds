@@ -1,0 +1,60 @@
+@use "../constants/colors.scss" as theme_colors;
+@use "../constants/fonts.scss" as theme_fonts;
+@use "../constants/shape.scss" as theme_shape;
+
+// Color tokens
+
+// idle
+$idle-font-color       : theme_colors.$secondary-dark;
+$idle-background-color : theme_colors.$background;
+$idle-border-color     : theme_colors.$secondary-dark;
+
+// hover
+$active-font-color       : theme_colors.$secondary-dark;
+$active-background-color : theme_colors.$background;
+$active-border-color     : theme_colors.$primary;
+
+// focus
+$focus-font-color       : theme_colors.$secondary-dark;
+$focus-background-color : theme_colors.$background;
+$focus-border-color     : theme_colors.$primary;
+
+// disable
+$disabled-font-color       : theme_colors.$disabled;
+$disabled-background-color : theme_colors.$background;
+$disabled-border-color     : theme_colors.$disabled;
+
+//Extra colors
+$label-font-color       : theme_colors.$content;
+$label-error-font-color : theme_colors.$danger;
+$placeholder-font-color : theme_colors.$secondary-dark;
+$error-border-color     : theme_colors.$danger;
+$success-border-color   : theme_colors.$success;
+
+// Shape tokens
+
+$border-radius  : theme_shape.$input-radius;
+$border-width   : 1px;
+$height         : 30px;
+$padding-top    : 6px;
+$padding-right  : 10px;
+$padding-bottom : 6px;
+$padding-left   : 10px;
+
+// Font tokens
+
+$font-name   : theme_fonts.$input-font;
+$font-weight : theme_fonts.$input-weight;
+$font-size   : theme_fonts.$input-size;
+$line-height : theme_fonts.$input-line-height;
+$spacing     : theme_fonts.$input-spacing;
+
+/* Label */
+$label-font-size : theme_fonts.$label-size;
+$label-font-name : theme_fonts.$input-font;
+
+//icon color tokens 
+$error-icon-color     : theme_colors.$danger;
+$success-icon-color   : theme_colors.$success;
+$idle-icon-color      : theme_colors.$secondary-light;
+$active-icon-color    : theme_colors.$danger;
