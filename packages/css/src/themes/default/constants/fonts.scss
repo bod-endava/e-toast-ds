@@ -46,7 +46,7 @@ $input-spacing: 0.16px;
 $label-size: 12px;
 
 $timestamp-label-size: 14px;
-$timestamp-line-height: 12px;
+$timestamp-line-height: global_fonts.get-size("paragraph", "line-height");;
 
 // Select
 
