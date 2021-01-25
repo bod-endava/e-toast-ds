@@ -8,6 +8,7 @@
   box-sizing: border-box;
   color: theme_tokens.$idle-font-color;
   display: inline-flex;
+  align-items: center;
   font-family: theme_tokens.$font-name;
   font-size: theme_tokens.$font-size;
   font-weight: theme_tokens.$font-weight;
@@ -15,7 +16,7 @@
   letter-spacing: theme_tokens.$letter-spacing;
   line-height: theme_tokens.$line-height;
   margin-top: #{-1 * theme_tokens.$label-distance-top};
-  min-width: 170px;
+  min-width: 168px;
   padding-bottom: theme_tokens.$padding-bottom;
   padding-left: theme_tokens.$padding-left;
   padding-right: theme_tokens.$padding-right;
@@ -99,6 +100,5 @@
     font-family: Toast;
     font-size: theme_tokens.$font-size;
     position: relative;
-    top: 2px;
   }
 }
