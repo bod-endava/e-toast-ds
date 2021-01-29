@@ -217,9 +217,9 @@ const TextArea = ({ name, label, ...extra }) => {
   );
 };
 
-const Pagination = ({ isActive, ...extra}) => {
+const Pagination = ({ isActive, isDisabled, ...extra}) => {
   const root = getClassName({
-    base: "eds-paginator",
+    base: "eds-pagination",
   });
 
   return (
