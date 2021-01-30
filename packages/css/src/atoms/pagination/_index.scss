@@ -8,7 +8,28 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    &:first-child {
+      &::before {
+        display: inline-block;
+        content: "chevron left";
+        font-family: Toast;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: inline-block;
+        content: "chevron right";
+        font-family: Toast;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
   }
+
 
   a {
     display: inline-block;
