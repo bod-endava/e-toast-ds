@@ -98,3 +98,12 @@ $breadcrumb-weight-active: global_fonts.$bold;
 $breadcrumb-size: global_fonts.get-size("paragraph", $sizing);
 $breadcrumb-line-height: global_fonts.get-size("paragraph", "line-height");
 $breadcrumb-spacing: 0.16px;
+
+// Pagination
+
+$pagination-font: global_fonts.$font-name;
+$pagination-weight: global_fonts.$regular;
+$pagination-weight-active: global_fonts.$bold;
+$pagination-size: global_fonts.get-size("paragraph", $sizing);
+$pagination-line-height: global_fonts.get-size("paragraph", "line-height");
+$pagination-spacing: 0.16px;

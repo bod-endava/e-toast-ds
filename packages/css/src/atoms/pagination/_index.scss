@@ -2,37 +2,62 @@
 @use "../../utility/index" as utils;
 
 .eds-pagination {
-  padding: 30px 0;
+  color: theme_tokens.$main-color;
+  font-family: theme_tokens.$font-family;
+  font-size: theme_tokens.$font-size;
+  font-weight: theme_tokens.$font-weight;
+  letter-spacing: theme_tokens.$letter-spacing;
+  line-height: theme_tokens.$line-height;
+  padding: 25px 0;
 
   ul {
-    margin: 0;
-    padding: 0;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 
     &:first-child {
       &::before {
-        display: inline-block;
         content: "chevron left";
+        display: inline-block;
         font-family: Toast;
         font-size: 12px;
-        margin-left: 10px;
       }
     }
 
     &:last-child {
       &::after {
-        display: inline-block;
         content: "chevron right";
+        display: inline-block;
         font-family: Toast;
         font-size: 12px;
-        margin-left: 10px;
+        padding: 4px 2px;
       }
     }
   }
 
+  a:first-child, a:last-child {
+    padding: 0;
+    margin: 0;
+  }
 
   a {
+    color: theme_tokens.$main-color;
     display: inline-block;
-    padding: 10px 18px;
+    margin: 0 8px;
+    padding: 4px 8px;
+    text-decoration: none;
+    text-transform: lowercase;
+
+    &:hover {
+      color: theme_tokens.$active-font-color;
+      text-decoration: underline;
+    }
+  }
+
+  &--is-active {
+    background-color: theme_tokens.$active-background-color;
+    border-radius: 4px;
+    color: theme_tokens.$active-font-color;
+    font-weight: bold;
   }
 }
