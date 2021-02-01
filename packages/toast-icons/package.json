@@ -1,7 +1,7 @@
 {
   "name": "@e-toast/toast-icons",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Toast icons font for etoast",
   "main": "./toasticons.css",
   "style": "./toasticons.css",

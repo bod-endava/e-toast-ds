@@ -25,6 +25,7 @@
     var icons;
     if (!supportsProperty('fontFeatureSettings')) {
         icons = {
+            'double chevron right': '&#xe936;',
             'money': '&#xe92d;',
             'coin': '&#xe92d;',
             'circle close': '&#xe92e;',
