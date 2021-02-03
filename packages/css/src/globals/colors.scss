@@ -1,7 +1,7 @@
 @use "../utility" as utils;
 
 @function lightness($color,$l) {
-    @return change-color($color, $lightness: $l);
+    @return change-color($color, $lightness: $l * 1%);
 }
 
 @function createColor($color) {

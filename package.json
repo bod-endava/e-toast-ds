@@ -2,10 +2,11 @@
   "name": "root",
   "private": false,
   "devDependencies": {
-    "lerna": "^3.20.2"
+    "lerna": "^3.22.1"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap --ignore-prepublish --force-local",
+    "clean": "lerna clean",
     "start": "lerna run start --stream --no-bail",
     "build:css": "lerna run build --stream --scope @e-toast/css --no-bail",
     "start:css": "lerna run start --stream --scope @e-toast/css --no-bail",
