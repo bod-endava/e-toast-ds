@@ -185,7 +185,7 @@ const Breadcrumb = ({ disabled }) => {
           <a href="/#">Page 1</a>
         </li>
         <li className={`${root}__list__item`}>
-          <a href="#" aria-current="page">
+          <a href="/#" aria-current="page">
             Page 2
           </a>
         </li>

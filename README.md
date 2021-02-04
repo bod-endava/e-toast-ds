@@ -5,32 +5,32 @@
 1. Install dependencies
 
 ```zsh
-yarn install
+npm install
 ```
 
 2. Install all dependencies on the packages and symlink packages
 
 ```zsh
-yarn bootstrap
+npm run bootstrap
 ```
 
 3. Run all packages in dev mode
 
 ```zsh
-yarn start
+npm start
 ```
 
 4. Alternatively, move to each package and run
 
 ```zsh
-yarn start
+npm start
 ```
 
 5. Also, you have scripts for running individual packages
 
 ```zsh
-// yarn start:<package_name>
-yarn start:react
+// npm start:<package_name>
+npm run start:react
 ```
 
 ## If you want to Toast your application
@@ -38,28 +38,28 @@ yarn start:react
 If you want to work using E-toast as your design system, you'll need to follow these steps:
 
 1. Clone this repository on a subfolder of your application.
-2. Install Toast dependencies running `yarn install` inside the subfolder.
-3. Compile the CSS running `yarn build:css`.
-4. Add Toast to the dependencies with `yarn add file:/path/to/toast`.
+2. Install Toast dependencies running `npm install` inside the subfolder.
+3. Compile the CSS running `npm run build:css`.
+4. Add Toast to the dependencies with `npm install file:/path/to/toast`.
 5. Import the compiled CSS on your application: 
 ```javascript
   import "@e-toast/css";
+  import "@e-toast/css/behaviors.js";
 
   or
 
   <link href="/toast-path/etoast.css" rel="stylesheet">
+  <script src="/toast-path/behaviors.js"></script>
 ```
 6. You're ready to go!
 
 ## Things to keep in mind
 
-- React package is not ready. It is currently only used for development of the css package. 
-- react-scripts version 3.4.0 needs to be used. The 3.4.1 version introduced a bug that makes it unusable with lerna
-- Local symlink is suggested due to the fact that the packages are not published yet
+- React package is not ready. It is currently only used for development of the css package.
+- Local symlink is suggested for development
 - Prefer the use of root scripts instead of package scripts
 
-
-## On boarding
+## On boarding for devs
 
 ### Technologies
 
@@ -68,16 +68,18 @@ lerna for managing React and CSS code bases
 #### CSS
 
 sass as CSS preprocessor
-node-sass for NodeJs bindings for sass
+dart-sass for sass compilation
+node for some pre compilation scripts
 
 #### React
 
 Jest for unit testing
 
-
 ### Setting up
 
 #### Prerequisites
+
+##### Package manager
 
 mac: if you do not have homebrew, it is adviced to install it since it makes the installation process a lot easier 
 https://brew.sh/
@@ -85,27 +87,33 @@ https://brew.sh/
 win: if you do not have chocolatey, it is adviced to install it since it makes the installation process a lot easier 
 https://chocolatey.org/docs/installation
 
-##### NodeJs And Npm
+##### NodeJS And npm
 
 mac: https://changelog.com/posts/install-node-js-with-homebrew-on-os-x
 
 win: https://chocolatey.org/packages/nodejs
 
-##### Yarn
-
-mac: https://classic.yarnpkg.com/en/docs/install/#mac-stable
-
-win: https://classic.yarnpkg.com/en/docs/install/#windows-stable
+this project is built using node v12.17.0 and npm v7.5.2. To manage node version [nvm](https://github.com/nvm-sh/nvm) is suggested
 
 ### Launching Project
 
-Run command `yarn` to install dependencies
+1. run `npm install` on the root of the repo to install root dependencies
+2. run `npm run bootstrap` to install dependencies of packages
+3. run `npm run start` to start all projects*
+4. for development `npm run start:react-sandbox` or similar commands that only run some packages, is suggested*
 
-Run command `yarn bootstrap` to install all dependencies on the packages and symlink packages
+*Note: you may need to refresh the browser page on the first launch because React finishes compiling before Sass
 
-Run command `yarn start` every time you want to launch proyect on your default browser
+### Dev Troubleshooting
 
-    Note you may need to refresh the browser page on the first launch because React finishes compiling before Sass
+- If `npm run bootstrap` fails when attempting to install `@e-toast/css` or changes in `packages/css` are not reflected on react sandbox: 
+
+  1. go to each folder in the packages folder and run `npm install`
+  2. go to `packages/css` and run `npm install && npm run build && npm link`
+  3. go to all other packages that have `@e-toast/css` as depency and run `npm link @e-toast/css`. 
+  4. skip `npm run bootstrap` and run `npm run start` 
+
+-  If you get an error regarding `node-gyp`: make sure you have Python v2.7 as `python2` available on your console. If not, install it and add it to your path. If it persists, try updating node and npm versions (you can do so running `npm i -g node && npm i -g npm`). Older versions of node-gyp use Python v2.7 but the versions used inside of the package should be newer and not require it.
 
 ### Architecture/Philosophy
 
