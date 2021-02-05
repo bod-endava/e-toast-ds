@@ -217,20 +217,20 @@ const TextArea = ({ name, label, ...extra }) => {
   );
 };
 
-const Pagination = ({ isActive, isDisabled, ...extra}) => {
+const Pagination = ({ disabled }) => {
   const root = getClassName({
     base: "eds-pagination",
   });
 
   return (
-    <nav className={`${root}`}>
+    <nav className={`${root}`} disabled={disabled}>
       <ul>
         <a href="#"><li>Prev</li></a>
         <a href="#"><li>1</li></a>
         <a href="#"><li>2</li></a>
         <a href="#" className={`${root}--is-active`}><li>3</li></a>
         <a href="#"><li>4</li></a>
-        <a href="#"><li>5</li></a>
+        <a href="#" className={`${root}--is-disabled`}><li>5</li></a>
         <a href="#"><li>Next</li></a>
       </ul>
     </nav>
@@ -378,6 +378,8 @@ function App() {
         <h1>Pagination</h1>
         <h2>Default</h2>
         <Pagination/>
+        <h2>Disabled</h2>
+        <Pagination disabled />
       </section>
     </div>
   );

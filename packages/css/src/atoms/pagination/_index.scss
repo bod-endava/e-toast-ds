@@ -60,4 +60,23 @@
     color: theme_tokens.$active-font-color;
     font-weight: bold;
   }
+
+  &[disabled] {
+    .eds-pagination {
+      &--is-disabled {
+        color: theme_tokens.$disabled;
+      }
+      &--is-disabled:hover {
+        color: theme_tokens.$disabled;
+        cursor: not-allowed;
+        text-decoration: none;
+      }
+
+      [aria-current="page"] {
+        color: theme_tokens.$disabled;
+        font-weight: theme_tokens.$font-weight;
+      }
+    }
+  }
 }
+
