@@ -1,5 +1,5 @@
 import React from 'react';
-import getClassName from './getClassName'
+import getClassName from './getClassName';
 
 const Padded = ({ children }) => <div style={{margin: "16px"}}>
   {children}
@@ -195,7 +195,7 @@ const Breadcrumb = ({ disabled }) => {
 };
 
 const TextArea = ({ name, label, ...extra }) => {
-  const hasIcon = Boolean(extra.icon)
+  const hasIcon = Boolean(extra.icon);
   const root = getClassName({
     base: "eds-outline-textarea",
     "&--has-icon": hasIcon
@@ -204,16 +204,38 @@ const TextArea = ({ name, label, ...extra }) => {
 
   const iconClass= root.extend("&__icon").get({
     "&--disabled": extra.disabled,
-  })
+  });
 
-  return <section>
-    <Padded>
-      <div className={`${root}__container`}>
-        <textarea className={root} {...extra} /> <span className={ `eds-icon ${icon} ${iconClass}`}></span> 
-      </div>
-    </Padded>
-  </section>
-}
+  return (
+    <section>
+      <Padded>
+        <div className={`${root}__container`}>
+          <textarea className={root} {...extra} /> <span className={ `eds-icon ${icon} ${iconClass}`}></span> 
+        </div>
+      </Padded>
+    </section>
+  );
+};
+
+const Pagination = ({ isActive, ...extra}) => {
+  const root = getClassName({
+    base: "eds-paginator",
+  });
+
+  return (
+    <nav className={`${root}`}>
+      <ul>
+        <a href="#"><li>Prev</li></a>
+        <a href="#"><li>1</li></a>
+        <a href="#"><li>2</li></a>
+        <a href="#" className={`${root}--is-active`}><li>3</li></a>
+        <a href="#"><li>4</li></a>
+        <a href="#"><li>5</li></a>
+        <a href="#"><li>Next</li></a>
+      </ul>
+    </nav>
+  );
+};
 
 function App() {
   const icons = ["warning-circle", "warning-circle-fill", "information", "clock", "warning", "notification", "upload", "new-folder", "cloud", "copy", "document", "folder", "new-file", "arrow-down", "arrow-left", "arrow-right", "arrow-up", "back", "caret-down", "caret-left", "caret-right", "caret-up", "down", "full-screen", "menu", "more", "next", "search", "settings", "up", "label", "image", "home", "filter", "expand", "edit", "download", "compress", "close", "chat", "calendar", "bookmark", "announcement", "add", "alert-message", "lock", "mail", "share", "trash", "circle-check", "check", "circle-x", "money"];
@@ -290,7 +312,7 @@ function App() {
       <section>
         <h1>Select!</h1>
         <div style={{ width: "435px" }}>
-          <Padded>  
+          <Padded>
             <div style={{ width: "200px" , display: "inline-block"}}>
               <SelectDemo />
             </div>
@@ -350,6 +372,12 @@ function App() {
         <h2 style={{fontFamily: 'Roboto'}}>Outline Disabled TextArea</h2>
         <TextArea name="dissabled" variant="Outline" placeholder="Placeholder" disabled/>
         <TextArea name="dissabled-icon" variant="Outline" icon="calendar" placeholder="Placeholder" disabled/>
+      </section>
+
+      <section>
+        <h1>Pagination</h1>
+        <h2>Default</h2>
+        <Pagination/>
       </section>
     </div>
   );
