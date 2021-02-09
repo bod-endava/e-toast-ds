@@ -1,0 +1,82 @@
+@use "../../themes/%pagination%/pagination" as theme_tokens;
+@use "../../utility/index" as utils;
+
+.eds-pagination {
+  color: theme_tokens.$main-color;
+  font-family: theme_tokens.$font-family;
+  font-size: theme_tokens.$font-size;
+  font-weight: theme_tokens.$font-weight;
+  letter-spacing: theme_tokens.$letter-spacing;
+  line-height: theme_tokens.$line-height;
+  padding: 25px 0;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    &:first-child {
+      &::before {
+        content: "chevron left";
+        display: inline-block;
+        font-family: Toast;
+        font-size: 12px;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        content: "chevron right";
+        display: inline-block;
+        font-family: Toast;
+        font-size: 12px;
+        padding: 4px 2px;
+      }
+    }
+  }
+
+  a:first-child, a:last-child {
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    color: theme_tokens.$main-color;
+    display: inline-block;
+    margin: 0 8px;
+    padding: 4px 8px;
+    text-decoration: none;
+    text-transform: lowercase;
+
+    &:hover {
+      color: theme_tokens.$active-font-color;
+      text-decoration: underline;
+    }
+  }
+
+  &--is-active {
+    background-color: theme_tokens.$active-background-color;
+    border-radius: 4px;
+    color: theme_tokens.$active-font-color;
+    font-weight: bold;
+  }
+
+  &[disabled] {
+    .eds-pagination {
+      &--is-disabled {
+        color: theme_tokens.$disabled;
+      }
+      &--is-disabled:hover {
+        color: theme_tokens.$disabled;
+        cursor: not-allowed;
+        text-decoration: none;
+      }
+
+      [aria-current="page"] {
+        color: theme_tokens.$disabled;
+        font-weight: theme_tokens.$font-weight;
+      }
+    }
+  }
+}
+

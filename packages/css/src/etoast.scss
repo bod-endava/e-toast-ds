@@ -12,6 +12,7 @@
 @use "./atoms/typography/index" as typography;
 @use "./atoms/breadcrumb/index" as breadcrumb;
 @use "./atoms/textarea/index" as textarea;
+@use "./atoms/pagination/index" as pagination;
 
 $colors-as-css-variables: true;
 
