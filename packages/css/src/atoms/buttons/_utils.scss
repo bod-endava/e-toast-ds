@@ -42,4 +42,15 @@
             }
         }
     }
+
+    .eds-button-small {
+      font-size: 12px;
+      height: 29px;
+      width: 80px;
+      padding: 0;
+
+      &:focus {
+        padding: 0;
+      }
+    }
 }
