@@ -107,3 +107,11 @@ $pagination-weight-active: global_fonts.$bold;
 $pagination-size: global_fonts.get-size("paragraph", $sizing);
 $pagination-line-height: global_fonts.get-size("paragraph", "line-height");
 $pagination-spacing: 0.16px;
+
+// Datepicker
+
+$datepicker-font: global_fonts.$font-name;
+$datepicker-weight: global_fonts.$regular;
+$datepicker-size: global_fonts.get-size("paragraph", $sizing);
+$datepicker-line-height: global_fonts.get-size("paragraph", "line-height");
+$datepicker-spacing: 0.16px;

@@ -13,6 +13,7 @@
 @use "./atoms/breadcrumb/index" as breadcrumb;
 @use "./atoms/textarea/index" as textarea;
 @use "./atoms/pagination/index" as pagination;
+@use "./atoms/datepicker/index" as datepicker;
 
 $colors-as-css-variables: true;
 

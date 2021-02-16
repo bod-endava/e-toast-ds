@@ -119,7 +119,7 @@ const SelectDemo = ({ disabled, innerDisabled, placeholder="Choose one" }) => {
   // const item = root.extend("&__option");
 
   return <div className={root} disabled={disabled} >
-    <select defaultValue="1" disabled={innerDisabled}>
+    <select defaultValue="1" disabled={innerDisabled} onChange={() => alert("aaaaa")}>
       <option hidden>{placeholder}</option>
       <option value={1}>One</option>
       <option hidden>you dont see me</option>
@@ -221,21 +221,48 @@ const Pagination = ({ disabled }) => {
   const root = getClassName({
     base: "eds-pagination",
   });
-
   return (
     <nav className={`${root}`} disabled={disabled}>
       <ul>
+        {/* eslint-disable-next-line */}
         <a href="#"><li>Prev</li></a>
+        {/* eslint-disable-next-line */}
         <a href="#"><li>1</li></a>
+        {/* eslint-disable-next-line */}
         <a href="#"><li>2</li></a>
+        {/* eslint-disable-next-line */}
         <a href="#" className={`${root}--is-active`}><li>3</li></a>
+        {/* eslint-disable-next-line */}
         <a href="#"><li>4</li></a>
+        {/* eslint-disable-next-line */}
         <a href="#" className={`${root}--is-disabled`}><li>5</li></a>
+        {/* eslint-disable-next-line */}
         <a href="#"><li>Next</li></a>
       </ul>
     </nav>
   );
 };
+
+const Datepicker = ({ disabled, native, innerDisabled, label }) => {
+  const root = getClassName({
+    base: `eds-datepicker`,
+  })
+
+  const labelCl = root.extend("&__label");
+  const contCl = root.extend("&__container");
+
+  if( native ){
+    return <Padded><input className="eds-datepicker-native" type="date"/></Padded>
+  }
+  return <Padded>
+    <div className={root} disabled={disabled}>
+      {label && <label className={labelCl} htmlFor={label} >{label}</label>}
+      <div className={contCl}>
+        <input id={label} placeholder="DD/MM/YY" disabled={innerDisabled} type="text" onChange={() => alert("change")}/>
+      </div>
+    </div>
+  </Padded>
+}
 
 function App() {
   const icons = ["warning-circle", "warning-circle-fill", "information", "clock", "warning", "notification", "upload", "new-folder", "cloud", "copy", "document", "folder", "new-file", "arrow-down", "arrow-left", "arrow-right", "arrow-up", "back", "caret-down", "caret-left", "caret-right", "caret-up", "down", "full-screen", "menu", "more", "next", "search", "settings", "up", "label", "image", "home", "filter", "expand", "edit", "download", "compress", "close", "chat", "calendar", "bookmark", "announcement", "add", "alert-message", "lock", "mail", "share", "trash", "circle-check", "check", "circle-x", "money"];
@@ -380,6 +407,20 @@ function App() {
         <Pagination/>
         <h2>Disabled</h2>
         <Pagination disabled />
+      </section>
+
+      <section>
+        <h1>Datepicker</h1>
+        <h2>Default</h2>
+        <Datepicker />
+        <Datepicker label="With Label" />
+        <h2>Disabled</h2>
+        <Datepicker disabled/>
+        <Datepicker innerDisabled/>
+        <Datepicker disabled label="With Label"/>
+        <Datepicker innerDisabled label="With Label (by input)"/>
+        <h2>Native</h2>
+        <Datepicker native />
       </section>
     </div>
   );
