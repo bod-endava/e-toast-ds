@@ -1,0 +1,154 @@
+@use "../../themes/%datepicker%/datepicker/single.scss" as tokens;
+@use "../../utility/index" as utils;
+
+.eds-datepicker-native, 
+.eds-datepicker > .eds-datepicker__container > input {
+    border-radius: tokens.$border-radius;
+    font-family: tokens.$font;
+    font-weight: tokens.$weight;
+    font-size: tokens.$size;
+    line-height: tokens.$line-height;
+    letter-spacing: tokens.$spacing;
+    color : tokens.$active-color;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    border-color: tokens.$active-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width : tokens.$width;
+    height : tokens.$height;
+    padding: {
+        top: tokens.$padding-top;
+        bottom: tokens.$padding-bottom;
+        left: tokens.$padding-left;
+        right: tokens.$padding-right;
+    };
+    
+    &::placeholder {
+        color : tokens.$active-color;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.eds-datepicker-native:disabled,
+.eds-datepicker > .eds-datepicker__container > input:disabled,
+.eds-datepicker[disabled] > .eds-datepicker__container > input
+{
+    color: tokens.$disabled-color;
+    border-color: tokens.$disabled-color;
+    cursor: not-allowed;
+    background-color: transparent;
+    &::placeholder{
+        color: tokens.$disabled-color;
+    }
+}
+
+.eds-datepicker {
+    position: relative;
+    width : tokens.$width;
+    height : fit-content;
+    @include utils.make-flex(column);
+
+    &__container {
+        position: relative;
+    }
+
+    & > &__container > &__icon {
+        position: absolute;
+        right: 8px;
+        top: 0px;
+        height: 100%;
+        font-family: Toast;
+        font-size: 16px;
+        color: tokens.$active-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &[disabled] > &__container > &__icon,
+    & > &__container > input:disabled + &__icon {
+        color: tokens.$disabled-color;
+        cursor: not-allowed;
+    }
+
+    &[disabled] > &__label
+    {
+        color: tokens.$disabled-color;
+        cursor: not-allowed;
+        user-select: none;
+    }
+
+    &__label {
+        font-family: tokens.$label-font;
+        font-weight: tokens.$label-weight;
+        line-height: tokens.$label-line-height;
+        font-size: tokens.$label-size;
+        margin-left: tokens.$label-margin-left;
+        margin-bottom: tokens.$label-margin-bottom;
+    }
+
+    &__calendar {
+        @include utils.make-flex(column,center,center);
+        z-index: 2;
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        left: 0;
+        top: calc(100% + #{tokens.$calendar-separation});
+        border: 1px solid tokens.$calendar-border;
+        padding: tokens.$calendar-padding;
+        border-radius: tokens.$calendar-radius;
+        
+        background-color: tokens.$background;
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(7,16px);
+            row-gap: 9px;
+            column-gap: 13px;
+        }
+
+        &--off {
+            display: none;
+        }
+
+        &__cell {
+            @include utils.make-flex(row,center,center);
+            cursor: pointer;
+
+            &--grayed-out {
+                color: tokens.$calendar-outside-month-color;
+            }
+
+            &--weekday {
+                cursor: default;
+            }
+        }
+
+        &__header {
+            @include utils.make-flex(row,space-between,center);
+            width: 100%;
+            padding: 0px 3px;
+            margin-bottom: 8px;
+            &__button {
+                @include utils.make-flex(row,center,center);
+                cursor: pointer;
+                user-select: none;
+                border-radius: 50%;
+                background-color: tokens.$calendar-button-color;
+                color: tokens.$calendar-button-text;
+                font-family: Toast;
+                font-size: 8px;
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}

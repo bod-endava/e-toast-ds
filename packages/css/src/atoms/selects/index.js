@@ -1,37 +1,19 @@
-const selectClass = "eds-select"
-const listClass = "eds-select__list"
-const listOpenClass = "eds-select__list--open"
-const selectedClass = "eds-select__selected"
-const selectedContentClass = `${selectedClass}__content`
-const arrowClass = `${selectedClass}__arrow`
-const arrowIconClass = `${arrowClass}__icon`
-const arrowOpenClass = `${arrowIconClass}--open`
-const optionClass = "eds-select__option"
-const optionHiddenClass = `${optionClass}--hidden`
+import { findByClass, findByTag, hasClass, fireEvent, span, div, BEM } from '../../utility'
 
-const findByClass = (cl,node=document) => Array.from(node.getElementsByClassName(cl))
-const findByTag = (tag,node=document) => Array.from(node.getElementsByTagName(tag))
-const hasClass = (cl) => node => node.classList.contains(cl);
+const selectClass = "eds-select"
+const listClass = BEM(selectClass).element("list");
+const listOpenClass = BEM(listClass).modifier("open");
+const selectedClass = BEM(selectClass).element("selected");
+const selectedContentClass = BEM(selectedClass).element("content");
+const arrowClass = BEM(selectedClass).element("arrow");
+const arrowIconClass = BEM(arrowClass).element("icon");
+const arrowOpenClass = BEM(arrowIconClass).modifier("open")
+const optionClass = BEM(selectClass).element("option");
+const optionHiddenClass = BEM(optionClass).modifier("hidden");
+
 const isSelect = hasClass(selectClass)
 const isPartOfSelect = node => Array.from(node.classList).some(cl => cl.includes("eds-select"))
 const findDefaultValue = ($opts) => $opts.find(o => o.selected) || $opts[0]
-
-const create = (element,attrs) => {
-    const el = document.createElement(element);
-    Object.entries(attrs).forEach(([ att, val ]) => {
-        el.setAttribute(att,val)
-    })
-    return el
-}
-const span = (className) => create("span",{ class: className })
-const div = (className) => create("div",{ class: className })
-
-const fireEvent = (element,event) => {
-    const evt = new Event(event,{
-        bubbles: true,
-    });
-    element.dispatchEvent(evt)
-}
 
 const List = (arrow) => {
     const list = div(listClass)
@@ -46,14 +28,14 @@ const List = (arrow) => {
     }
     list.open = function(){
         if( !this.isOpen() ){
-            this.classList.toggle(listOpenClass);
-            this.arrow.classList.toggle(arrowOpenClass)
+            this.classList.toggle(listOpenClass.toString());
+            this.arrow.classList.toggle(arrowOpenClass.toString());
         }
     }
     list.close = function(){
         if( this.isOpen() ){
-            this.classList.toggle(listOpenClass);
-            this.arrow.classList.toggle(arrowOpenClass)
+            this.classList.toggle(listOpenClass.toString());
+            this.arrow.classList.toggle(arrowOpenClass.toString());
         }
     }
     list.toggle = function(){
@@ -81,7 +63,7 @@ const attachSelectBehavior = ($node) => {
     const createOption = ($optionRef,idx) => {
         const opt = div(optionClass)
         if( $optionRef.hidden ){
-            opt.classList.toggle(optionHiddenClass)
+            opt.classList.toggle(optionHiddenClass.toString())
         }
         opt.innerHTML = $optionRef.innerHTML;
         opt.addEventListener("click",() => {

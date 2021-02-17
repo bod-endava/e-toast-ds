@@ -1,0 +1,37 @@
+@use "../constants/colors.scss" as theme_color;
+@use "../constants/fonts.scss" as theme_font;
+@use "../constants/shape.scss" as theme_shape;
+
+$border-radius : theme_shape.$datepicker-radius;
+$font        : theme_font.$datepicker-font;
+$weight      : theme_font.$datepicker-weight;
+$size        : theme_font.$datepicker-size;
+$line-height : theme_font.$datepicker-line-height;
+$spacing     : theme_font.$datepicker-spacing;
+$active-color : theme_color.$secondary-dark;
+$disabled-color : theme_color.$disabled;
+$background : theme_color.$background;
+
+$width : 168px;
+$height : 40px;
+
+$padding-top : 11px;
+$padding-bottom : 11px;
+$padding-left : 16px;
+$padding-right : 18px;
+
+$label-font: theme_font.$datepicker-font;
+$label-size: 14px;
+$label-line-height: 13px;
+$label-weight: 400;
+$label-margin-left: 17px;
+$label-margin-bottom: 8px;
+
+$calendar-active : theme_color.$secondary-dark;
+$calendar-button-color : theme_color.$primary;
+$calendar-button-text : theme_color.$background;
+$calendar-outside-month-color : theme_color.$disabled;
+$calendar-padding : 10px 10px 6px 10px;
+$calendar-border : theme_color.$secondary-light;
+$calendar-radius : theme_shape.$datepicker-calendar-radius;
+$calendar-separation : 6px;
