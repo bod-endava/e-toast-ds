@@ -11,6 +11,10 @@
     }
 }
 
+@mixin centered-flex($dir:row) {
+    @include make-flex($dir, center, center);
+}
+
 @mixin add-flex-list-subclass($dir:column, $justify:flex-start, $align:flex-start) {
     &__list {
         @include make-flex($dir, $justify, $align);

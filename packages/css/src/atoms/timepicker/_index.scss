@@ -16,7 +16,7 @@
   letter-spacing: theme_tokens.$letter-spacing;
   line-height: theme_tokens.$line-height;
   margin-top: #{-1 * theme_tokens.$label-distance-top};
-  min-width: 168px;
+  min-width: 170px;
   padding-bottom: theme_tokens.$padding-bottom;
   padding-left: theme_tokens.$padding-left;
   padding-right: theme_tokens.$padding-right;
@@ -46,7 +46,7 @@
     outline: none;
     padding: 0;
     text-align: center;
-    width: 40px;
+    width: 18px;
 
     &:focus {
       background-color: theme_tokens.$focus-background-color;
@@ -72,7 +72,7 @@
     outline: none;
     padding: 0;
     text-align: center;
-    width: 40px;
+    width: 25px;
 
     &:focus {
       background-color: theme_tokens.$focus-background-color;
@@ -86,19 +86,24 @@
       text-align: center;
     }
   }
-  input,
-  span,
+
+  span {
+    width: 4px;
+    margin: 0px 4px;
+  }
   select {
     flex-grow: 1;
-    text-align: center;
-    text-align-last: center;
+    margin: 0px 43.67px 0px 4px;
   }
 
   &::after {
     color: theme_tokens.$idle-font-color;
     content: "clock";
     font-family: Toast;
-    font-size: theme_tokens.$font-size;
+    font-size: theme_tokens.$icon-font-size;
+    width: theme_tokens.$icon-size;
+    height: theme_tokens.$icon-size;
     position: relative;
+    @include utils.centered-flex();
   }
 }
