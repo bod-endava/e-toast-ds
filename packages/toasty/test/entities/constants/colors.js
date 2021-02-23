@@ -1,0 +1,85 @@
+const endavaColors = {
+    orange: '#DE411B',
+    orange_darkest: '#120502',
+    orange_dark: '#401308',
+    orange_mid: '#f1a18d',
+    orange_light: '#f9d9d2',
+    blue: '#379BD7',
+    blue_darkest: '#030c11',
+    blue_dark: '#0c2a3c',
+    blue_mid: '#95caea',
+    blue_light: '#d5eaf7',
+    lightgray: '#9BB4BE',
+    lightgray_darkest: '#080b0c',
+    lightgray_dark: '#1c272b',
+    lightgray_mid: '#b2c5cd',
+    lightgray_light: '#e0e8eb',
+    green: '#1D781D',
+    green_darkest: '#041004',
+    green_dark: '#0e3a0e',
+    green_mid: '#98e698',
+    green_light: '#d6f5d6',
+    red: '#F22613',
+    red_darkest: '#130301',
+    red_dark: '#440904',
+    red_mid: '#f89086',
+    red_light: '#fcd3cf',
+    yellow: '#FFA600',
+    yellow_darkest: '#140d00',
+    yellow_dark: '#472e00',
+    yellow_mid: '#ffd380',
+    yellow_light: '#ffedcc',
+    disable: '#D9D9D9',
+    disable_darkest: '#0a0a0a',
+    disable_dark: '#262626',
+    disable_mid: '#bfbfbf',
+    disable_light: '#e6e6e6'
+}
+
+const colors = {
+    primary: endavaColors.orange,
+    primary_light: endavaColors.orange_light,
+    primary_mid: endavaColors.orange_mid,
+    primary_dark: endavaColors.orange_dark,
+    primary_darkest: endavaColors.orange_darkest,
+
+    cta: endavaColors.blue,
+    cta_light: endavaColors.blue_light,
+    cta_mid: endavaColors.blue_mid,
+    cta_dark: endavaColors.blue_dark,
+    cta_darkest: endavaColors.blue_darkest,
+
+    secondary: endavaColors.lightgray,
+    secondary_light: endavaColors.lightgray_light,
+    secondary_mid: endavaColors.lightgray_mid,
+    secondary_dark: endavaColors.lightgray_dark,
+    secondary_darkest: endavaColors.lightgray_darkest,
+
+    danger: endavaColors.red,
+    danger_light: endavaColors.red_light,
+    danger_mid: endavaColors.red_mid,
+    danger_dark: endavaColors.red_dark,
+    danger_darkest: endavaColors.red_darkest,
+
+    warning: endavaColors.yellow,
+    warning_light: endavaColors.yellow_light,
+    warning_mid: endavaColors.yellow_mid,
+    warning_dark: endavaColors.yellow_dark,
+    warning_darkest: endavaColors.yellow_darkest,
+
+    success: endavaColors.green,
+    success_light: endavaColors.green_light,
+    success_mid: endavaColors.green_mid,
+    success_dark: endavaColors.green_dark,
+    success_darkest: endavaColors.green_darkest,
+
+    disabled: endavaColors.disable,
+    disabled_light: endavaColors.disable_light,
+    disabled_mid: endavaColors.disable_mid,
+    disabled_dark: endavaColors.disable_dark,
+    disabled_darkest: endavaColors.disable_darkest,
+}
+
+export {
+    colors
+}
