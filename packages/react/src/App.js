@@ -7,7 +7,7 @@ const Padded = ({ children }) => <div style={{margin: "16px"}}>
 
 const ButtonDemo = ({ name, label, icon, size}) => {
   const ic = icon ? `icon-${icon}` : '';
-  const sz = size ? `${size}` : '';
+  const sz = size ? `${size}` : 'no-size';
   const cl = `eds-${name.toLowerCase()}-button eds-button-${sz} ${ic}`;
 
   return <section>
@@ -249,7 +249,7 @@ function App() {
         <ButtonDemo name="Primary" label="Primary Small" size="small" />
         <ButtonDemo name="Outline" label="Outline Primary Small" size="small"/>
         <ButtonDemo name="Cta" label="CTA Small" size="small"/>
-        <ButtonDemo name="Text" label="Text Small" />
+        <ButtonDemo name="Text" label="Text Small" size="small" />
         <ButtonDemo name="Primary" icon="announcement" label="Primary Icon + Label Small" size="small"/>
         <ButtonDemo name="Icon" icon="add" label="Icon Small" />
 

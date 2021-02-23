@@ -49,6 +49,11 @@
       width: 80px;
       padding: 0;
 
+      &.eds-text-button {
+        height: auto;
+        width: auto;
+      }
+
       &:focus {
         padding: 0;
       }
