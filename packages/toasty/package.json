@@ -7,7 +7,7 @@
     "allure-report": "allure generate allure-results/ --clean && allure open",
     "test-with-report": "wdio run wdio.conf.js && allure open || allure open",
     "test": "wdio run wdio.conf.js",
-    "start" : "npm run test"
+    "start": "npm run test"
   },
   "keywords": [],
   "author": "",
