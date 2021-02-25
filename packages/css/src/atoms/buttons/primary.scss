@@ -33,7 +33,7 @@ $disabled-group: utils.create-group(
     $focus-group,
     $disabled-group
 ) using ($type){
-    
+
     @if $type == "idle" {
         border-style: solid;
         box-sizing: border-box;
@@ -41,7 +41,7 @@ $disabled-group: utils.create-group(
         height: tokens.$height;
         border-width: tokens.$border-width;
         border-radius: tokens.$border-radius;
-        padding: 
+        padding:
             tokens.$padding-top
             tokens.$padding-right
             tokens.$padding-bottom
@@ -63,5 +63,4 @@ $disabled-group: utils.create-group(
             tokens.$padding-left
         )
     }
-    
 }
