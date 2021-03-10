@@ -67,6 +67,28 @@ const ctaButtonHover = {
     borderColor: colors.cta_dark.toLocaleLowerCase(),
 }
 
+const iconButtonEnabled = {
+    background: colors.primary.toLocaleLowerCase(),
+    height: '36px',
+    width: '36px',
+    fontSize: '0px',
+    borderWidth: '0px',
+    padding: '8px',
+    color: '#ffffff',
+    borderColor: colors.primary.toLocaleLowerCase()
+}
+
+const iconButtonDisabled = {
+    ...iconButtonEnabled,
+    background: colors.disabled.toLocaleLowerCase(),
+    borderColor: colors.disabled.toLocaleLowerCase()
+}
+
+const iconButtonEnabledHover = {
+    ...iconButtonEnabled,
+    background: colors.primary_dark.toLocaleLowerCase(),
+    borderColor: colors.primary_dark.toLocaleLowerCase()
+}
 
 export {
     primaryButtonEnabled,
@@ -77,5 +99,8 @@ export {
     outlinePrimaryButtonHover, 
     ctaButtonEnabled,
     ctaButtonDisabled,
-    ctaButtonHover
+    ctaButtonHover,
+    iconButtonEnabled,
+    iconButtonDisabled,
+    iconButtonEnabledHover
 }
