@@ -1,0 +1,23 @@
+import React from 'react';
+
+{{#with (properCase name) as | Name |}}
+export interface {{Name}}Props {
+  required: any;
+  optional?: any;
+  {{../element}}Props?: React.ComponentPropsWithoutRef<"{{../element}}">
+}
+
+export type {{Name}}Ref = HTML{{properCase ../element}}Element
+
+const {{Name}} = React.forwardRef<{{Name}}Ref, {{Name}}Props>((props: {{Name}}Props) => {
+  const {
+    required,
+    optional="defaultValue",
+    {{../element}}Props={},
+  } = props;
+
+  return <{{../element}}>{{Name}}</{{../element}}>
+})
+
+export default {{Name}}
+{{/with}}
