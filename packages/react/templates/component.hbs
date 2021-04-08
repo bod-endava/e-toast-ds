@@ -6,11 +6,7 @@ export interface {{Name}}Props {
   optional?: any;
 }
 
-const {{Name}} = (props: {{Name}}Props) => {
-  const {
-    required,
-    optional="defaultValue",
-  } = props;
+const {{Name}} = ({ required, optional="defaultValue" }: {{Name}}Props) => {
 
   return <div>{{Name}}</div>
 }

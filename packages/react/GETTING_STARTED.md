@@ -16,5 +16,5 @@
   - Shared types should go into the sharedTypes folder and exposed in the index.ts file
   - Export your types! this is so the consumer can use them
   - Use the generated file as an example on how to write your component! that should answer how you should write required/optional props, forward refs, and how to export the component
-  - Let the component be implicitly typed. This seems to cause less issues in the long run
+  - To enable storybook auto docgen, destructuring the prop paramenter and typing the component with React.FC is necessary (Lookup the button component)
   - Please create a README.md for the component. Look at the Button component for an example.
