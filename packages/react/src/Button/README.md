@@ -39,7 +39,7 @@ import Button from '@e-toast/react/lib/Button';
 | ------------ | ---------- | ---------- | ------------------------- |
 | `onClick`    | `function` | `() => {}` | Callback to run on clicking the button |
 | `disabled`   | `boolean`  | `false`    | whether the button is disabled or not |
-| `variant`    | ButtonVariants (`"primary" \| "outline" \| "cta" \| "text" \| "icon"`) | `primary`   | Style variant to use. More info on types |
+| `variant`    | ButtonVariants (`"primary" \| "outline" \| "cta" \| "text" \| "icon"`) | `"primary"`   | Style variant to use. More info on types |
 | `icon`    | Icons | `undefined` | Icon to use. For more info head to shared types. Too many icons to put on this page |
 | `size`    | Sizes (`"small"`) | `undefined` | Size of the button. Currently only one available: "small" |
 | `ref`    | `React.ForwardedRef<HTMLButtonElement>` | `undefined` | ref to be forwarded to the underlying `button` element |
