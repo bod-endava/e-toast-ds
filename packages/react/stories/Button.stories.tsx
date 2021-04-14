@@ -13,7 +13,7 @@ import {
 } from './shared/utils'
 
 export default {
-  title: 'Example/Button',
+  title: '@e-toast/Button',
   component: Button,
   argTypes: {
     label: textControl(),
