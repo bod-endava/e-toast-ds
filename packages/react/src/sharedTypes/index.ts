@@ -55,3 +55,27 @@ export type Icons =
 | "share"
 | "mail"
 | "lock"
+
+export type AlignItems =
+    | 'stretch'
+    | 'center'
+    | 'flex-start'
+    | 'flex-end'
+    | 'baseline'
+    | 'initial'
+    | 'inherit';
+
+export type JustifyContent =
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'space-between'
+    | 'space-around'
+    | 'initial'
+    | 'inherit';
+export type flexDirection = 
+'row' |'row-reverse' | 'column' |'column-reverse'
+
+
+export type FlexWrap =
+    'wrap' | 'nowrap' | 'wrap-reverse';
