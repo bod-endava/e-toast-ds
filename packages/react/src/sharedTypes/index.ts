@@ -73,8 +73,9 @@ export type JustifyContent =
     | 'space-around'
     | 'initial'
     | 'inherit';
-export type flexDirection = 
-'row' |'row-reverse' | 'column' |'column-reverse'
+
+export type FlexDirection = 
+'row' |'row-reverse' | 'column' |'column-reverse';
 
 
 export type FlexWrap =
