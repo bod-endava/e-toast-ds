@@ -1,9 +1,11 @@
 import React from 'react';
 import { ReactNode } from 'react';
 
-import {FlexDirection, JustifyContent, FlexWrap, AlignItems} from "../sharedTypes"
+import { FlexDirection, JustifyContent, FlexWrap, AlignItems } from "../sharedTypes"
 
-export interface FlexLayoutProps {
+export type FlexLayoutProps {
+   /** The children property sets the container for the flex item
+    */
     children?: ReactNode;
     /** Container props
      ----------------------*/
@@ -82,7 +84,6 @@ const FlexLayout: React.FC<FlexLayoutProps> = ((
         </div>
     )
 })
-
 
 export default FlexLayout;
 

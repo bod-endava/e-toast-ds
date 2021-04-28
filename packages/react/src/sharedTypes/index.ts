@@ -74,7 +74,7 @@ export type JustifyContent =
     | 'initial'
     | 'inherit';
 
-export type FlexDirection = 
+export type FlexDirection =
 'row' |'row-reverse' | 'column' |'column-reverse';
 
 

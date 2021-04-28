@@ -5,6 +5,15 @@ export const booleanControl = simpleControl("boolean")
 export const objectControl = simpleControl("object")
 export const noControl = simpleControl(null)
 
+export const selectControl = (options: any) => {
+  return {
+    control: {
+      type: "select",
+    },
+    options: [...options],
+  }
+}
+
 export const selectWithOptional = (options: any) => {
   return {
     control: {
