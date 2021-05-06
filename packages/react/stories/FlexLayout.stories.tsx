@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import FlexLayout, { FlexLayoutProps } from '../src/FlexLayout';
-import {  AlignItems, FlexDirection, FlexWrap, JustifyContent } form './shared/FlexLayoutOptions.tsx'
+import {  AlignItems, FlexDirection, FlexWrap, JustifyContent } from './shared/FlexLayoutOptions.tsx'
 
 import {
   noControl,
@@ -12,12 +12,15 @@ import {
 
 const blockStyle: React.CSSProperties = {
   padding: '1em',
+  margin: '10px',
   color: 'white',
   backgroundColor: 'tomato',
   textAlign: 'center',
   fontFamily: 'Roboto',
   fontSize: '14px',
   fontWeight: 'bold',
+  height: '54px',
+  width: '200px',
 };
 
 export default {
@@ -25,10 +28,10 @@ export default {
     component: FlexLayout,
     argsTypes: {
         children: noControl(),
-        flexDirection: radioControl(FlexDirection),
+        flexDirection: radioWithOptional(FlexDirection),
         justifyContent: selectControl(JustifyContent),
-        flexWrap: radioControl(FlexDirection),
-        alignItems: selectContro(AlignItem),
+        flexWrap: radioWithOptional(FlexWrap),
+        alignItems: selectControl(AlignItems),
         flexGrow: textControl(),
         flexShrink: textControl(),
         flexBasis: textControl(),
@@ -40,5 +43,9 @@ const Template: Story<FlexLayoutProps> = (args) => <FlexLayout {...args} />
 
 export const DefaultLayout= Template.bind({});
 DefaultLayout.args ={
-    children: `<div style=${blockStyle}></div>`,
+  children: [
+    <div style={blockStyle}></div>,
+    <div style={blockStyle}></div>,
+    <div style={blockStyle}></div>,
+  ]
 }

@@ -19,9 +19,9 @@ export const JustifyContent = [
 ]
 
 export const FlexDirection = [
-  'row', 'row-reverse' , 'column', 'column-reverse';
+  'row', 'row-reverse' , 'column', 'column-reverse'
 ]
 
 export const FlexWrap = [
-  'wrap', 'nowrap', 'wrap-reverse';
+  'wrap', 'nowrap', 'wrap-reverse'
 ]

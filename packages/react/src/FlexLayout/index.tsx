@@ -3,25 +3,29 @@ import { ReactNode } from 'react';
 
 import { FlexDirection, JustifyContent, FlexWrap, AlignItems } from "../sharedTypes"
 
-export type FlexLayoutProps {
-   /** The children property sets the container for the flex item
+export type FlexLayoutProps = {
+   /**
+    * The children property sets the container for the flex item
     */
     children?: ReactNode;
     /** Container props
      ----------------------*/
 
-    /** The flexDirection property sets how flex items are placed in the
+    /**
+     * The flexDirection property sets how flex items are placed in the
      * flex container defining the main axis and the direction. value 'row'
      * as default
      */
     flexDirection?: FlexDirection;
 
-    /** The justifyContent property defines how the browser distributes space
+    /**
+     * The justifyContent property defines how the browser distributes space
      * between and around content items along the flex container
      */
     justifyContent?: JustifyContent;
 
-    /** The flexWrap property sets whether flex items are forced onto one line
+    /**
+     * The flexWrap property sets whether flex items are forced onto one line
      * or can warp onto multiple lines.
      */
     flexWrap?: FlexWrap;
@@ -80,7 +84,7 @@ const FlexLayout: React.FC<FlexLayoutProps> = ((
                 alignItems: alignItems
             }}
         >
-            children = {children}
+            {children}
         </div>
     )
 })
