@@ -1,7 +1,7 @@
 export const Sizes = [ "small"]
-export const Icons = [ 
- "chevron"  
-, "arrow" 
+export const Icons = [
+ "chevron"
+, "arrow"
 , "warning-circle"
 , "warning-circle-fill"
 , "information"
