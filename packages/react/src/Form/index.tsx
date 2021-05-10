@@ -65,6 +65,10 @@ interface FormPropsWithoutRef {
    * Props of the form to be applied
    */
   formProps: React.ComponentPropsWithoutRef<"form">;
+  /**
+   * React content. Required if label is not present
+   */
+  children?: React.ReactNode;
 }
 
 export type FormProps = FormPropsWithoutRef & {
@@ -91,7 +95,8 @@ const Form = React.forwardRef<FormInnerElement, FormPropsWithoutRef>(({
   submitProps={},
   inputProps={},
   spanProps={},
-  formProps={}
+  formProps={},
+  children
 }, ref) => {
 
   return <form ref={ref} onSubmit={onSubmit} autoComplete={autocompleteEnabled} {...formProps}>
@@ -107,7 +112,7 @@ const Form = React.forwardRef<FormInnerElement, FormPropsWithoutRef>(({
       <span {...spanProps}>{emailLabel}</span>
       <input type="email" name="email" id={email} placeholder={emailPlaceholder} {...inputProps}/>
     </label>
-    <button type="submit" value={submitLabel} {...submitProps} />
+    <button type="submit" {...submitProps} >{submitLabel || children}</button>
   </form>
 })
 
