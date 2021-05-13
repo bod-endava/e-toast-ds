@@ -1,7 +1,7 @@
 {
   "name": "@e-toast/css",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "e-toast css layer",
   "main": "./etoast.css",
   "style": "./etoast.css",
