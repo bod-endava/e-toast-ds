@@ -1,6 +1,12 @@
 @use "../../themes/%datepicker%/datepicker/single.scss" as tokens;
 @use "../../utility/index" as utils;
 
+.eds-datepicker {
+    font-family: tokens.$font;
+    font-weight: tokens.$weight;
+    font-size: tokens.$size;
+}
+
 .eds-datepicker-native, 
 .eds-datepicker > .eds-datepicker__container > input {
     border-radius: tokens.$border-radius;
