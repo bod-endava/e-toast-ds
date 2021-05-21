@@ -14,7 +14,7 @@
 }
 
 @function getActiveColor($colors){
-  @return map-get($colors, "active")
+  @return map-get($colors, "active");
 }
 
 @mixin input-mixin($name,
@@ -86,13 +86,14 @@
       right: 8px;
       bottom: 8px;
       &--success{
-        color:getSuccessColor($colors);
+        color: getSuccessColor($colors);
       }
       &--error{
         color: getErrorColor($colors);
       }
       &--disabled{
-        color: getIdleColor($colors);
+        color: map-get($disabled,"text");
+        cursor: not-allowed;
       }
     }
 
