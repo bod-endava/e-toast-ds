@@ -22,9 +22,9 @@ then
       git branch $BRANCH_NAME
       git checkout $BRANCH_NAME
       echo "Cleaning packages..."
-      npm run clean
+      npm run clean || exit 2
       echo "Moving css package..."
-      cp -r ./packages/css ./css
+      cp -r ./packages/css ./css 
       echo "Cleaning up root..."
       echo "Deleting demo..."
       rm -rf ./demo
