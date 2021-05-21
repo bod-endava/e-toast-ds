@@ -41,7 +41,7 @@ If you want to work using E-toast as your design system, you'll need to follow t
    1. download a release from github [releases page](https://github.com/Jkierem/e-toast-ds/releases)
    2. download it from the [npm package](https://www.npmjs.com/package/@e-toast/css). Install it and move it from the node_modules folder
 2. Install e-toast dependencies running `npm install` inside the subfolder.
-3. Compile the CSS running `npm run build` (or `npm run build:dev` for a watch mode)
+3. Compile the CSS running `npm run build` (or `npm run watch` for a watch mode)
 4. If you are using e-toast in a npm project, add Toast to the dependencies with `npm install /path/to/toast/folder`.
 5. Import the compiled CSS on your application: 
 ```javascript
