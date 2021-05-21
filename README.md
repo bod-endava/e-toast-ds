@@ -37,16 +37,18 @@ npm run start:react
 
 If you want to work using E-toast as your design system, you'll need to follow these steps:
 
-1. Clone this repository on a subfolder of your application.
-2. Install Toast dependencies running `npm install` inside the subfolder.
-3. Compile the CSS running `npm run build:css`.
-4. Add Toast to the dependencies with `npm install file:/path/to/toast`.
+1. Get a copy of etoast on a subfolder of your application. You can get it by doing one of the following:
+   1. download a release from github [releases page](https://github.com/Jkierem/e-toast-ds/releases)
+   2. download it from the [npm package](https://www.npmjs.com/package/@e-toast/css). Install it and move it from the node_modules folder
+2. Install e-toast dependencies running `npm install` inside the subfolder.
+3. Compile the CSS running `npm run build` (or `npm run build:dev` for a watch mode)
+4. If you are using e-toast in a npm project, add Toast to the dependencies with `npm install /path/to/toast/folder`.
 5. Import the compiled CSS on your application: 
 ```javascript
   import "@e-toast/css";
   import "@e-toast/css/behaviors.js";
 
-  or
+  // or in vanilla projects
 
   <link href="/toast-path/etoast.css" rel="stylesheet">
   <script src="/toast-path/behaviors.js"></script>
@@ -55,9 +57,8 @@ If you want to work using E-toast as your design system, you'll need to follow t
 
 ## Things to keep in mind
 
-- React package is not ready. It is currently only used for development of the css package.
+- React package was moved to a different [repo](https://github.com/Jkierem/e-toast-react)
 - Local symlink is suggested for development
-- Prefer the use of root scripts instead of package scripts
 
 ## On boarding for devs
 
