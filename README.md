@@ -1,124 +1,24 @@
-# E-Toast Design System
+# @e-toast/css
 
-## Steps to have a fun development experience
+## Getting started
 
-1. Install dependencies
+First run `yarn install` to install dependencies. Then `yarn start` will watch for changes in the source code and build in development mode.
 
-```zsh
-npm install
-```
+Run `yarn build` to make a production build
 
-2. Install all dependencies on the packages and symlink packages
+## Architecture
 
-```zsh
-npm run bootstrap
-```
+The toast architecture is made with customization in mind. It allows for different levels of customization. Each level differs from the other based on two characteristics: scale and semantic value. Scale is defined by how many components are affected by the level. Semantic value is defined by the meaning given to values from that level. The following table describes the three levels of abstraction:
 
-3. Run all packages in dev mode
+| level | scale | semantic value | where it is located |
+| ----- | ----- | -------------- | ------------------- |
+| global | Values altered in this level will change the design system as a whole | Values are raw values with no semantic value (e.g. orange) | src/globals |
+| theme  | Values altered in this level will change groups of components in the system | Values now have a semantic value that ties them to the components (e.g. orange becomes primary). Some values may be tied to a group of components | src/themes |
+| component | Values altered at this level only have an effect on a single component in the system | Values are completely tied to a single component (e.g. primary becomes idle-fill-color for the primary button). The values stored here are the tokens used in the definition of a component. | src/themes/\[atom-name]. Definitions that consumes the layer is in src/atoms/\[atom-name] |
+| utility | Definitions in this layer may affect the system as a whole | All definitions in this layer are not values but rather functionalities that are not tied to a single component and can be reused system-wide | src/utils |
 
-```zsh
-npm start
-```
+As a design decision, each layer may only refer to definitions and values from either the utils layer or the layer previuos to it in terms of scale and semantic value. This means component layer may only use theme values and theme may only use global values and any layer may use utility definitions.
 
-4. Alternatively, move to each package and run
+Additionaly, the global layer is unique but the theme and component layer contain various themes and components. Components are connected to a theme through a file that acts as a bridge: src/theme.config. The theme layer is connected to the global layer through imports. The following diagram shows how this works:
 
-```zsh
-npm start
-```
-
-5. Also, you have scripts for running individual packages
-
-```zsh
-// npm start:<package_name>
-npm run start:react
-```
-
-## If you want to Toast your application
-
-If you want to work using E-toast as your design system, you'll need to follow these steps:
-
-1. Clone this repository on a subfolder of your application.
-2. Install Toast dependencies running `npm install` inside the subfolder.
-3. Compile the CSS running `npm run build:css`.
-4. Add Toast to the dependencies with `npm install file:/path/to/toast`.
-5. Import the compiled CSS on your application: 
-```javascript
-  import "@e-toast/css";
-  import "@e-toast/css/behaviors.js";
-
-  or
-
-  <link href="/toast-path/etoast.css" rel="stylesheet">
-  <script src="/toast-path/behaviors.js"></script>
-```
-6. You're ready to go!
-
-## Things to keep in mind
-
-- React package is not ready. It is currently only used for development of the css package.
-- Local symlink is suggested for development
-- Prefer the use of root scripts instead of package scripts
-
-## On boarding for devs
-
-### Technologies
-
-lerna for managing React and CSS code bases
-
-#### CSS
-
-sass as CSS preprocessor
-dart-sass for sass compilation
-node for some pre compilation scripts
-
-#### React
-
-Jest for unit testing
-
-### Setting up
-
-#### Prerequisites
-
-##### Package manager
-
-mac: if you do not have homebrew, it is adviced to install it since it makes the installation process a lot easier 
-https://brew.sh/
-
-win: if you do not have chocolatey, it is adviced to install it since it makes the installation process a lot easier 
-https://chocolatey.org/docs/installation
-
-##### NodeJS And npm
-
-mac: https://changelog.com/posts/install-node-js-with-homebrew-on-os-x
-
-win: https://chocolatey.org/packages/nodejs
-
-this project is built using node v12.17.0 and npm v7.5.2. To manage node version [nvm](https://github.com/nvm-sh/nvm) is suggested
-
-### Launching Project
-
-1. run `npm install` on the root of the repo to install root dependencies
-2. run `npm run bootstrap` to install dependencies of packages
-3. run `npm run start` to start all projects*
-4. for development `npm run start:react-sandbox` or similar commands that only run some packages, is suggested*
-
-*Note: you may need to refresh the browser page on the first launch because React finishes compiling before Sass
-
-### Dev Troubleshooting
-
-- If `npm run bootstrap` fails when attempting to install `@e-toast/css` or changes in `packages/css` are not reflected on react sandbox: 
-
-  1. go to each folder in the packages folder and run `npm install`
-  2. go to `packages/css` and run `npm install && npm run build && npm link`
-  3. go to all other packages that have `@e-toast/css` as depency and run `npm link @e-toast/css`. 
-  4. skip `npm run bootstrap` and run `npm run start` 
-
--  If you get an error regarding `node-gyp`: make sure you have Python v2.7 as `python2` available on your console. If not, install it and add it to your path. If it persists, try updating node and npm versions (you can do so running `npm i -g node && npm i -g npm`). Older versions of node-gyp use Python v2.7 but the versions used inside of the package should be newer and not require it.
-
-### Architecture/Philosophy
-
-Etoast architecture is based around a 3 layer architecture with the purpose to provide different abstraction levels for customization. The first layer is global which provides raw values for the theme layer. The theme layer adds a semantic value to the global values, and provides the tokens for the component layer. Finally, the component layer uses those token to create the components. For a more in-depth look at the architecture go to the css package README.md
-
-### Browser coverage
-
-Chrome, Firefox, Edge, Safari.
+![Architecture](./docs/images/architecture.png "Architecture")
