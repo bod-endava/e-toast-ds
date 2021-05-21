@@ -49,7 +49,23 @@ then
       git add -A
       git commit -m "$VERSION_NAME"
       git tag -a $VERSION_NAME -m "$VERSION_NAME"
-      echo "Ready to push!"
+      echo "Ready to push tag!"
+      read -p "Would you like to run cleanup automatically?[y/n] " auto
+      if [[ $auto =~ ^[Yy]$ ]]
+      then
+        git push origin $VERSION_NAME
+        git checkout develop
+        git branch -D $BRANCH_NAME
+      else 
+        echo "To finish release, push tag to remote and delete release branch. You can do so running:"
+        echo
+        echo "      git push origin $VERSION_NAME"
+        echo "      git checkout develop"
+        echo "      git branch -D $BRANCH_NAME"
+        echo
+      fi
+      echo "Now go ahead and create a release on github https://github.com/Jkierem/e-toast-ds/releases/new"
+      echo "Remeber to name it the same as the tag: $VERSION_NAME"
     fi
   fi
 else 
