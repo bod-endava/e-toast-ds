@@ -47,7 +47,7 @@ then
       rm -rf ./css
       echo "Tagging branch..."
       git add -A
-      git commit -m "$VERSIO_NAME"
+      git commit -m "$VERSION_NAME"
       git tag -a $VERSION_NAME -m "$VERSION_NAME"
       echo "Ready to push!"
     fi
