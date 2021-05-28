@@ -1,8 +1,9 @@
 @use '../../../globals/shape.scss' as global_shape;
 
-$button-radius: global_shape.$pill-radius;
-$checkbox-radius: global_shape.$round-radius;
-$input-radius: global_shape.$pill-radius;
-$tag-radius: global_shape.$round-radius;
-$datepicker-radius: global_shape.$pill-radius;
-$datepicker-calendar-radius: 8px;
+$avatar-radius              : global_shape.$pill-radius;
+$button-radius              : global_shape.$pill-radius;
+$checkbox-radius            : global_shape.$round-radius;
+$input-radius               : global_shape.$pill-radius;
+$tag-radius                 : global_shape.$round-radius;
+$datepicker-radius          : global_shape.$pill-radius;
+$datepicker-calendar-radius : 8px;

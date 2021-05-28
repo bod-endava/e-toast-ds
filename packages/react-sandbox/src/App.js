@@ -266,6 +266,12 @@ const Datepicker = ({ disabled, native, innerDisabled, label }) => {
   </Padded>
 }
 
+const AvatarDemo = ({ content }) => {
+  return <div className="eds-avatar">
+    {content}
+  </div>
+}
+
 function App() {
   const icons = ["warning-circle", "warning-circle-fill", "information", "clock", "warning", "notification", "upload", "new-folder", "cloud", "copy", "document", "folder", "new-file", "arrow-down", "arrow-left", "arrow-right", "arrow-up", "back", "caret-down", "caret-left", "caret-right", "caret-up", "down", "full-screen", "menu", "more", "next", "search", "settings", "up", "label", "image", "home", "filter", "expand", "edit", "download", "compress", "close", "chat", "calendar", "bookmark", "announcement", "add", "alert-message", "lock", "mail", "share", "trash", "circle-check", "check", "circle-x", "money"];
   return (
@@ -431,6 +437,11 @@ function App() {
         <Datepicker innerDisabled label="With Label (by input)"/>
         <h2>Native</h2>
         <Datepicker native />
+      </section>
+
+      <section>
+        <h1>Avatar</h1>
+        <AvatarDemo content="Aa"/>
       </section>
     </div>
   );
