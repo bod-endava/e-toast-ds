@@ -1,5 +1,6 @@
 @use "utility" as utils;
 @use "./globals/colors" as colors;
+@use "./atoms/avatar/index" as avatar;
 @use "./atoms/buttons/index" as button;
 @use "./atoms/checkbox/index" as checkbox;
 @use "./atoms/radio/index" as radio;

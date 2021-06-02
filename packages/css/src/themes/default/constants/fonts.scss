@@ -115,3 +115,11 @@ $datepicker-weight: global_fonts.$regular;
 $datepicker-size: global_fonts.get-size("paragraph", $sizing);
 $datepicker-line-height: global_fonts.get-size("paragraph", "line-height");
 $datepicker-spacing: 0.16px;
+
+// Avatar
+
+$avatar-font: global_fonts.$font-name;
+$avatar-weight: global_fonts.$medium;
+$avatar-size: global_fonts.get-size("h4", $sizing);
+$avatar-line-height: global_fonts.get-size("h4", "line-height");
+$avatar-spacing: 0.16px;

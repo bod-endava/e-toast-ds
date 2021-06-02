@@ -1,0 +1,18 @@
+@use "../../themes/%avatar%/avatar" as tokens;
+@use "../../utility/index" as utils;
+
+.eds-avatar {
+  @include utils.centered-flex();
+  width: tokens.$width;
+  height: tokens.$height;
+  border-radius: tokens.$border-radius;
+  background-color: tokens.$fill;
+  color: tokens.$font-color;
+  font-family: tokens.$font-name;
+  font-weight: tokens.$font-weight;
+  font-size: tokens.$font-size;
+  line-height: tokens.$line-height;
+  letter-spacing: tokens.$spacing;
+  user-select: none;
+  cursor: pointer;
+}

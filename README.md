@@ -105,6 +105,10 @@ this project is built using node v12.17.0 and npm v7.5.2. To manage node version
 
 *Note: you may need to refresh the browser page on the first launch because React finishes compiling before Sass
 
+### Creating CSS Releases
+
+To do a release run `npm run release:css`. Keep in mind this process will create a release branch and build the release artifact on your local repo. **Save your progress before running this command**. After finishing your release simply `git stash` and move to the development branch (`git checkout develop`), deleting any remaining release files afterwards.
+
 ### Dev Troubleshooting
 
 - If `npm run bootstrap` fails when attempting to install `@e-toast/css` or changes in `packages/css` are not reflected on react sandbox: 
