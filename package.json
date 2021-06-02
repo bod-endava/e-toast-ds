@@ -1,27 +1,34 @@
 {
-  "name": "root",
+  "name": "@e-toast/css",
   "private": false,
-  "devDependencies": {
-    "lerna": "^3.22.1"
-  },
+  "version": "1.0.2",
+  "description": "e-toast css layer",
+  "main": "./etoast.css",
+  "style": "./etoast.css",
+  "license": "MIT",
+  "files": [
+    "behaviors.js",
+    "etoast.css",
+    "sass"
+  ],
   "scripts": {
-    "bootstrap": "lerna bootstrap --ignore-prepublish --force-local",
-    "clean": "lerna clean",
-    "start": "lerna run start --stream --no-bail",
-    "build": "lerna run build --stream",
-    "build:css": "lerna run build --stream --scope @e-toast/css --no-bail",
-    "build:react-css": "lerna run build --scope @e-toast/css --scope @e-toast/react-sandbox",
-    "release:css": "sh ./scripts/createCSSRelease.sh",
-    "serve:react": "lerna run serve --stream --scope @e-toast/react-sandbox",
-    "serve:stop-react": "lerna run serve:stop --stream --scope @e-toast/react-sandbox",
-    "start:css": "lerna run start --stream --scope @e-toast/css --no-bail",
-    "start:react": "lerna run start --stream --scope @e-toast/react-sandbox --no-bail",
-    "start:css-docs": "lerna run start --stream --scope @e-toast/{css,css-doc-page} --no-bail",
-    "start:css-doc-page": "lerna run start --stream --scope @e-toast/css-doc-page --no-bail",
-    "start:react-sandbox": "lerna run start --stream --scope @e-toast/react-sandbox --scope @e-toast/css --no-bail",
-    "lerna": "lerna",
-    "toasty": "lerna run start --stream --scope @e-toast/toasty",
-    "test": "npm run build:react-css && npm run serve:react && npm run toasty",
-    "report": "lerna run allure-report --stream --scope @e-toast/toasty"
+    "build": "gulp build",
+    "build:dev": "gulp dev",
+    "clean": "gulp clean",
+    "prepublish": "npm run build",
+    "tasks": "gulp --tasks",
+    "template": "node ./scripts/runTemplate ./theme.config ./sass ./temp",
+    "start": "gulp watch",
+    "start:debug": "gulp debug",
+    "watch": "gulp watch",
+    "watch:debug": "gulp watch_debug"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "gulp": "^4.0.2",
+    "sass": "^1.32.6",
+    "webpack": "^5.20.1"
   }
 }
