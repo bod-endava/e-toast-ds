@@ -7,9 +7,7 @@
     color: tokens.$font-color;
     letter-spacing: tokens.$spacing;
     line-height: tokens.$line-height;
-    min-width: tokens.$width;
-    position: relative;
-    display: block;
+    overflow: hidden;
     cursor: pointer;
     user-select: none;
 
@@ -18,7 +16,7 @@
     }
 
     &__selected {
-        width: 100%;
+        width: min(100%, #{tokens.$width});
         height: tokens.$height;
         box-sizing: border-box;
         border: {
@@ -34,11 +32,23 @@
         justify-content: flex-start;
         align-items: center;
 
+        &__disabled{
+            cursor: not-allowed;
+            border: {
+                color: tokens.$disabled-border-color;
+            }
+        }
+
         &__content {
             display: block;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            width:129px;
+
+            &__disabled {
+                color: tokens.$disabled-border-color;
+            }
         }
 
         &__arrow {
@@ -46,7 +56,7 @@
             margin-left: auto;
             &__icon {
                 transition: transform 0.2s ease-out 0s;
-                margin-left: 16px;
+                margin-left: 17px;
                 &::before {
                     font-family: Toast;
                     content: "chevron down";
@@ -54,35 +64,18 @@
                 &--open {
                     transform: rotate(180deg);
                 }
+                &__disabled{
+                    color: tokens.$disabled-border-color;
+                }
             }
-
         }
     }
-    
-    & > select:disabled ~ &__selected,
-    &[disabled] > &__selected {
-        cursor: not-allowed;
-        border: {
-            color: tokens.$disabled-border-color;
-        }
-    }
-
-    & > select:disabled ~ &__selected,
-    &[disabled] > &__selected,
-    & > select:disabled ~ &__selected > &__selected__arrow,
-    &[disabled] > &__selected > &__selected__arrow {
-        color: tokens.$disabled-text-color
-    }
-
+   
     &__list {
-        display: none;
-        min-width: tokens.$width;
-        width: 100%;
-        position: absolute;
+        display: none;        
+        width: min(100%, #{tokens.$width});
         overflow: hidden;
-        z-index: 2;
-        top: calc(100% + #{tokens.$list-margin-top});
-        left: 0px;
+        margin-top: #{tokens.$list-margin-top};
         border: {
             width: 1px;
             style: solid;
@@ -92,6 +85,7 @@
         
         &--open {
             display: block;
+            cursor: pointer;
         }
     }
     
