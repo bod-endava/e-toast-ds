@@ -7,9 +7,7 @@
     color: tokens.$font-color;
     letter-spacing: tokens.$spacing;
     line-height: tokens.$line-height;
-    min-width: tokens.$width;
-    position: relative;
-    display: block;
+    overflow: hidden;
     cursor: pointer;
     user-select: none;
 
@@ -18,7 +16,7 @@
     }
 
     &__selected {
-        width: 100%;
+        width: Min(100%, tokens.$width);
         height: tokens.$height;
         box-sizing: border-box;
         border: {
@@ -75,14 +73,10 @@
     }
 
     &__list {
-        display: none;
-        min-width: tokens.$width;
-        width: 100%;
-        position: absolute;
-        overflow: hidden;
-        z-index: 2;
-        top: calc(100% + #{tokens.$list-margin-top});
-        left: 0px;
+        display: none;        
+        width: Min(100%, tokens.$width);       
+        overflow: hidden;      
+        margin-top: #{tokens.$list-margin-top};        
         border: {
             width: 1px;
             style: solid;
@@ -92,6 +86,7 @@
         
         &--open {
             display: block;
+            cursor: pointer;
         }
     }
     
