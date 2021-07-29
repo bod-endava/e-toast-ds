@@ -37,14 +37,15 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+            width:129px;
         }
 
         &__arrow {
             display: inline-flex;
-            margin-left: auto;
+            margin-left: auto;                
             &__icon {
                 transition: transform 0.2s ease-out 0s;
-                margin-left: 16px;
+                margin-left: 17px;
                 &::before {
                     font-family: Toast;
                     content: "chevron down";
