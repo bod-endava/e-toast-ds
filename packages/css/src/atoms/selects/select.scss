@@ -32,12 +32,23 @@
         justify-content: flex-start;
         align-items: center;
 
+        &__disabled{
+            cursor: not-allowed;
+            border: {
+                color: tokens.$disabled-border-color;
+            }
+        }
+
         &__content {
             display: block;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
             width:129px;
+
+            &__disabled {
+                color: tokens.$disabled-border-color;
+            }
         }
 
         &__arrow {
@@ -53,26 +64,14 @@
                 &--open {
                     transform: rotate(180deg);
                 }
+                &__disabled{
+                    color: tokens.$disabled-border-color;
+                }
             }
 
         }
     }
-    
-    & > select:disabled ~ &__selected,
-    &[disabled] > &__selected {
-        cursor: not-allowed;
-        border: {
-            color: tokens.$disabled-border-color;
-        }
-    }
-
-    & > select:disabled ~ &__selected,
-    &[disabled] > &__selected,
-    & > select:disabled ~ &__selected > &__selected__arrow,
-    &[disabled] > &__selected > &__selected__arrow {
-        color: tokens.$disabled-text-color
-    }
-
+   
     &__list {
         display: none;        
         width: Min(100%, tokens.$width);       
