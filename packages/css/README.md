@@ -1,7 +1,7 @@
 # 💅 @e-toast/css
 Starting using e-toast is straight forward. We provide resources such as best practices, component documentation, sketch and Figma files, and more.
 
-# 🚀 Launch
+# 🏗️ Build
 
 1. Install dependencies for the css project
 
