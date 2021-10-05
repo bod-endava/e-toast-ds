@@ -1,6 +1,13 @@
-# E-Toast Design System
+# 🍞 E-Toast Design System
 Starting using e-toast is straight forward. We provide resources such as best practices, component documentation, Sketch and Figma files, and more.
 
+# 🚦 Requisites
+
+mac: https://changelog.com/posts/install-node-js-with-homebrew-on-os-x
+
+win: https://chocolatey.org/packages/nodejs
+
+this project is built using node v12.17.0 and npm v7.5.2. To manage node version [nvm](https://github.com/nvm-sh/nvm) is suggested
 # 📁 Folder Structure
 This repository use [lerna](https://github.com/lerna/lerna) a tool for manage JavaScript projects with multiple packages. In that case the recommendation is follow the resources in the `/packages` folder that have the next contents:
 
@@ -82,14 +89,14 @@ If you want to work using e-toast as your design system, you'll need to follow t
 
   // or in vanilla projects
 
-  <link href="/toast-path/etoast.css" rel="stylesheet">
+  <link href="/toast-path/e-toast.css" rel="stylesheet">
   <script src="/toast-path/behaviors.js"></script>
 ```
 6. You're ready to go!
 
-# 👨‍💻 On Boarding
+# 👨‍⚕️ On Boarding
 
-> TODO
+> TODO: Add on boarding steps
 
 - Local symlink is suggested for development
 
@@ -105,15 +112,7 @@ https://brew.sh/
 win: if you do not have chocolatey, it is advised to install it since it makes the installation process a lot easier 
 https://chocolatey.org/docs/installation
 
-##### NodeJS And npm
-
-mac: https://changelog.com/posts/install-node-js-with-homebrew-on-os-x
-
-win: https://chocolatey.org/packages/nodejs
-
-this project is built using node v12.17.0 and npm v7.5.2. To manage node version [nvm](https://github.com/nvm-sh/nvm) is suggested
-
-# Dev Troubleshooting
+# 🤔 Dev Troubleshooting
 
 - If `npm run bootstrap` fails when attempting to install `@e-toast/css` or changes in `packages/css` are not reflected on react sandbox: 
 
@@ -124,14 +123,9 @@ this project is built using node v12.17.0 and npm v7.5.2. To manage node version
 
 -  If you get an error regarding `node-gyp`: make sure you have Python v2.7 as `python2` available on your console. If not, install it and add it to your path. If it persists, try updating node and npm versions (you can do so running `npm i -g node && npm i -g npm`). Older versions of node-gyp use Python v2.7 but the versions used inside of the package should be newer and not require it.
 
-# Architecture/Philosophy
+# 📐 Architecture
 
-TODO: Mix this information
-
-e-toast architecture is based around a 3 layer architecture with the purpose to provide different abstraction levels for customization. The first layer is global which provides raw values for the theme layer. The theme layer adds a semantic value to the global values, and provides the tokens for the component layer. Finally, the component layer uses those token to create the components. For a more in-depth look at the architecture go to the css package README.md
-## Architecture
-
-The toast architecture is made with customization in mind. It allows for different levels of customization. Each level differs from the other based on two characteristics: scale and semantic value. Scale is defined by how many components are affected by the level. Semantic value is defined by the meaning given to values from that level. The following table describes the three levels of abstraction:
+The e-toast architecture is made with customization in mind. It allows for different levels of customization. Each level differs from the other based on two characteristics: scale and semantic value. Scale is defined by how many components are affected by the level. Semantic value is defined by the meaning given to values from that level. The following table describes the three levels of abstraction:
 
 | level | scale | semantic value | where it is located |
 | ----- | ----- | -------------- | ------------------- |
@@ -140,9 +134,9 @@ The toast architecture is made with customization in mind. It allows for differe
 | component | Values altered at this level only have an effect on a single component in the system | Values are completely tied to a single component (e.g. primary becomes idle-fill-color for the primary button). The values stored here are the tokens used in the definition of a component. | src/themes/\[atom-name]. Definitions that consumes the layer is in src/atoms/\[atom-name] |
 | utility | Definitions in this layer may affect the system as a whole | All definitions in this layer are not values but rather functionalities that are not tied to a single component and can be reused system-wide | src/utils |
 
-As a design decision, each layer may only refer to definitions and values from either the utils layer or the layer previuos to it in terms of scale and semantic value. This means component layer may only use theme values and theme may only use global values and any layer may use utility definitions.
+As a design decision, each layer may only refer to definitions and values from either the utils layer or the layer previous to it in terms of scale and semantic value. This means component layer may only use theme values and theme may only use global values and any layer may use utility definitions.
 
-Additionaly, the global layer is unique but the theme and component layer contain various themes and components. Components are connected to a theme through a file that acts as a bridge: src/theme.config. The theme layer is connected to the global layer through imports. The following diagram shows how this works:
+Additionally, the global layer is unique but the theme and component layer contain various themes and components. Components are connected to a theme through a file that acts as a bridge: src/theme.config. The theme layer is connected to the global layer through imports. The following diagram shows how this works:
 
 ![Architecture](./docs/images/architecture.png "Architecture")
 
