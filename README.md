@@ -77,12 +77,13 @@ npm run start:react
 If you want to work using e-toast as your design system, you'll need to follow these steps:
 
 1. Get a copy of e-toast on a subfolder of your application. You can get it by doing one of the following:
-   1. download a release from github [releases page](https://github.com/Jkierem/e-toast-ds/releases)
-   2. download it from the [npm package](https://www.npmjs.com/package/@e-toast/css). Install it and move it from the node_modules folder
+   1. Download a release from github [releases page](https://github.com/Jkierem/e-toast-ds/releases)
+   2. Download it from the [npm package](https://www.npmjs.com/package/@e-toast/css). Install it and move it from the node_modules folder
 2. Install e-toast dependencies running `npm install` inside the subfolder.
 3. Compile the CSS running `npm run build` (or `npm run watch` for a watch mode)
 4. If you are using e-toast in a npm project, add Toast to the dependencies with `npm install /path/to/toast/folder`.
-5. Import the compiled CSS on your application: 
+5. Import the compiled CSS on your application:
+
 ```javascript
   import "@e-toast/css";
   import "@e-toast/css/behaviors.js";
@@ -138,7 +139,7 @@ As a design decision, each layer may only refer to definitions and values from e
 
 Additionally, the global layer is unique but the theme and component layer contain various themes and components. Components are connected to a theme through a file that acts as a bridge: src/theme.config. The theme layer is connected to the global layer through imports. The following diagram shows how this works:
 
-![Architecture](./docs/images/architecture.png "Architecture")
+![Architecture](./packages/css/docs/images/architecture.png "Architecture")
 
 # 🌐 Browser coverage
 - Chrome
