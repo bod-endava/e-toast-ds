@@ -1,6 +1,6 @@
-# 📃 css/css-doc-page
+## 🧸 css/sandbox
 
-React project to document the contents of `e-toast/css`. This project is hosted on [tostaditas](https://tostaditas.web.app/)
+React project to get a quick visualization of the `e-toast/css` core.
 
 # 🧰 Tech Stack
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -8,7 +8,7 @@ React project to document the contents of `e-toast/css`. This project is hosted 
 
 # 🚀 Launch
 
-1. Install dependencies for the css project
+1. Install dependencies for the sandbox project
 
 ```zsh
 npm install
@@ -32,12 +32,4 @@ npm run start
 
 Your localhost should looks like:
 
-![Tostaditas Landpage](./src/assets/misc/tostaditas-landpage.png "Tostaditas landpage")
-
-## Usage
-
-```
-const cssDocPage = require('css-doc-page');
-
-// TODO: DEMONSTRATE API
-```
+![Sandbox Landpage](./src/assets/sandbox-landpage.png "Sandbox landpage")

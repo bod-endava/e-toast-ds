@@ -1,5 +1,5 @@
 {
-  "name": "@e-toast/react-sandbox",
+  "name": "@e-toast/sandbox",
   "version": "0.1.0",
   "dependencies": {
     "@e-toast/css": "latest",
