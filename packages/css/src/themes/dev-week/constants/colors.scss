@@ -1,0 +1,49 @@
+@use "../../../globals/colors" as colors;
+
+// Colors
+$background : colors.get-color("white");
+
+$primary         : colors.get-color("orange");
+$primary-light   : colors.get-color("orange","light");
+$primary-mid     : colors.get-color("orange","mid");
+$primary-dark    : colors.get-color("orange","dark");
+$primary-darkest : colors.get-color("orange","darkest");
+
+$cta         : colors.get-color("blue");
+$cta-light   : colors.get-color("blue","light");
+$cta-mid     : colors.get-color("blue","mid");
+$cta-dark    : colors.get-color("blue","dark");
+$cta-darkest : colors.get-color("blue","darkest");
+
+$secondary         : colors.get-color("lightgray");
+$secondary-light   : colors.get-color("lightgray","light");
+$secondary-mid     : colors.get-color("lightgray","mid");
+$secondary-dark    : colors.get-color("lightgray","dark");
+$secondary-darkest : colors.get-color("lightgray","darkest");
+
+$secondary-background : $secondary-light;
+$content : $primary-darkest; 
+
+$danger         : colors.get-color("red");
+$danger-light   : colors.get-color("red","light");
+$danger-mid     : colors.get-color("red","mid");
+$danger-dark    : colors.get-color("red","dark");
+$danger-darkest : colors.get-color("red","darkest");
+
+$warning         : colors.get-color("yellow");
+$warning-light   : colors.get-color("yellow","light");
+$warning-mid     : colors.get-color("yellow","mid");
+$warning-dark    : colors.get-color("yellow","dark");
+$warning-darkest : colors.get-color("yellow","darkest");
+
+$success         : colors.get-color("green");
+$success-light   : colors.get-color("green","light");
+$success-mid     : colors.get-color("green","mid");
+$success-dark    : colors.get-color("green","dark");
+$success-darkest : colors.get-color("green","darkest");
+
+$disabled         : colors.get-color("disable");
+$disabled-light   : colors.get-color("disable","light");
+$disabled-mid     : colors.get-color("disable","mid");
+$disabled-dark    : colors.get-color("disable","dark");
+$disabled-darkest : colors.get-color("disable","darkest");
