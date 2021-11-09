@@ -23,7 +23,7 @@ This repository use [lerna](https://github.com/lerna/lerna) a tool for manage Ja
 - `/scripts`: folder with the script to consume themes for e-toast
 - `/src`: main folder
 - `/src/atoms`: folder with the e-toast atoms
-- `/src/globals`: folder with the e-toast globals 
+- `/src/globals`: folder with the e-toast globals
 - `/src/themes`: folder with the customizable themes for e-toast
 - `/src/utility`: folder for the elements that complement e-toast
 

@@ -50,7 +50,7 @@ const ButtonDocs = () => {
 
     return (
       <div className={styles.ButtonDocs}>
-        <Hero 
+        <Hero
           title="Buttons"
           text="Express what action will occur on a page when the user interacts with them"
           image={ButtonsIcon}

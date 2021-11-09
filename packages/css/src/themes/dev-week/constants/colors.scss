@@ -3,11 +3,11 @@
 // Colors
 $background : colors.get-color("white");
 
-$primary         : colors.get-color("orange");
-$primary-light   : colors.get-color("orange","light");
-$primary-mid     : colors.get-color("orange","mid");
-$primary-dark    : colors.get-color("orange","dark");
-$primary-darkest : colors.get-color("orange","darkest");
+$primary         : colors.get-color("yellow");
+$primary-light   : colors.get-color("yellow","light");
+$primary-mid     : colors.get-color("yellow","mid");
+$primary-dark    : colors.get-color("yellow","dark");
+$primary-darkest : colors.get-color("yellow","darkest");
 
 $cta         : colors.get-color("blue");
 $cta-light   : colors.get-color("blue","light");
@@ -22,7 +22,7 @@ $secondary-dark    : colors.get-color("lightgray","dark");
 $secondary-darkest : colors.get-color("lightgray","darkest");
 
 $secondary-background : $secondary-light;
-$content : $primary-darkest; 
+$content : $primary-darkest;
 
 $danger         : colors.get-color("red");
 $danger-light   : colors.get-color("red","light");

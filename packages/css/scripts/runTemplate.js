@@ -1,4 +1,4 @@
-const creatreTemplate = require("./template")
+const createTemplate = require("./template")
 
 const [ symbolsFile, inputFolder , outputFolder ] = process.argv.slice(2);
 
@@ -18,8 +18,8 @@ const validateDefined = (values) => {
     const validation = Object.entries(values).map(
         ([ key , value ]) => [ key , value !== undefined ]
     )
-    return validation.every(([, valid]) => valid) ? 
-        Ok(values) : 
+    return validation.every(([, valid]) => valid) ?
+        Ok(values) :
         Err(validation.filter(([, valid]) => !valid).map(head))
 }
 
@@ -28,7 +28,7 @@ validateDefined({
     input: inputFolder,
     output: outputFolder
 })
-.map(creatreTemplate)
+.map(createTemplate)
 .map(temp => temp.run())
 .onErr(invalid => {
     console.error(`Some arguments missing: ${invalid}. \nUsage:\n\ttemplate <symbolFile> <inputFolder> <outputFolder>`)
