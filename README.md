@@ -53,23 +53,48 @@ Again, the recommendation is check the `README.md` file for each project, there 
 npm install
 ```
 
+or
+
+```zsh
+yarn install
+```
+
+
 2. Install all dependencies on the packages and symlink packages
 
 ```zsh
 npm run bootstrap
 ```
 
+or
+
+```zsh
+yarn bootstrap
+```
+
 3. Run all packages in dev mode
 
 ```zsh
-npm start
+npm run start
+```
+
+or 
+
+```zsh
+yarn start
 ```
 
 5. Also, you have scripts for running individual packages
 
 ```zsh
 // npm start:<package_name>
-npm run start:react
+npm run start:css
+```
+
+or
+
+```zsh
+yarn start:sandbox-css
 ```
 
 # ✨ Using E-Toast
