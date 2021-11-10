@@ -15,7 +15,7 @@
         content: "";
         transition: .4s;
     }
-    
+ 
     &:after {
         display: block;
         position: absolute;
@@ -34,7 +34,7 @@
         opacity: 0.14;
         cursor: not-allowed;
     }
-      
+
     &:checked:after {
         left: calc(100% - #{theme_tokens.$circle-size} - 2px);
     }
@@ -84,7 +84,7 @@
         cursor: pointer;
         display: flex;
         align-items: center;
-        
+
         &--disabled {
             color: theme_tokens.$disabled-color;
             cursor: not-allowed;

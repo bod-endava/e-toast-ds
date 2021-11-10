@@ -13,7 +13,7 @@ This repository use [lerna](https://github.com/lerna/lerna) a tool for manage Ja
 
 - `/css`: project with the core css layer of e-toast
 - `/css-doc-page`: project to document the contents of the css layer of e-toast
-- `/react-sandbox`: project to visualize the use of the css layer with React
+- `/sandbox`: project to visualize the use of the css layer with React
 - `/toast-icons`: project with the e-toast icons (candidate to move for his own repo)
 - `/toasty`: project for apply automation toast for e-toast
 
