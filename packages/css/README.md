@@ -57,3 +57,20 @@ To create your own theme, please follow the next steps
 > TODO: Complete release guide
 
 To do a release run `npm run release:css`. Keep in mind this process will create a release branch and build the release artifact on your local repo. **Save your progress before running this command**. After finishing your release simply `git stash` and move to the development branch (`git checkout develop`), deleting any remaining release files afterwards.
+
+# 📐 Architecture
+
+The e-toast architecture is made with customization in mind. It allows for different levels of customization. Each level differs from the other based on two characteristics: _scale_ and _semantic_ value. Scale is defined by how many components are affected by the level. Semantic value is defined by the meaning given to values from that level. The following table describes the three levels of abstraction:
+
+| level | scale | semantic value | where it is located |
+| ----- | ----- | -------------- | ------------------- |
+| global | Values altered in this level will change the design system as a whole | Values are raw values with no semantic value (e.g. orange) | src/globals |
+| theme  | Values altered in this level will change groups of components in the system | Values now have a semantic value that ties them to the components (e.g. orange becomes primary). Some values may be tied to a group of components | src/themes |
+| component | Values altered at this level only have an effect on a single component in the system | Values are completely tied to a single component (e.g. primary becomes idle-fill-color for the primary button). The values stored here are the tokens used in the definition of a component. | src/themes/\[atom-name]. Definitions that consumes the layer is in src/atoms/\[atom-name] |
+| utility | Definitions in this layer may affect the system as a whole | All definitions in this layer are not values but rather functionalities that are not tied to a single component and can be reused system-wide | src/utils |
+
+As a design decision, each layer may only refer to definitions and values from either the utils layer or the layer previous to it in terms of scale and semantic value. This means component layer may only use theme values and theme may only use global values and any layer may use utility definitions.
+
+Additionally, the global layer is unique but the theme and component layer contain various themes and components. Components are connected to a theme through a file that acts as a bridge: src/theme.config. The theme layer is connected to the global layer through imports. The following diagram shows how this works:
+
+![Architecture](./packages/css/docs/images/architecture.png "Architecture")
