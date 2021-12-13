@@ -1,0 +1,125 @@
+@use "../../../globals/fonts" as global_fonts;
+
+// Shared tokens
+
+$sizing: "px"; // or em
+
+// Buttons
+
+$button-font: global_fonts.$font-name;
+$button-weight: global_fonts.$regular;
+$button-size: global_fonts.get-size("button", $sizing);
+$button-line-height: global_fonts.get-size("button", "line-height");
+$button-spacing: 0.16px;
+
+// Checkbox
+
+$checkbox-font: global_fonts.$font-name;
+$checkbox-weight: global_fonts.$regular;
+$checkbox-size: global_fonts.get-size("button", $sizing);
+$checkbox-line-height: global_fonts.get-size("button", "line-height");
+$checkbox-spacing: 0.16px;
+
+// Radio
+
+$radio-font: global_fonts.$font-name;
+$radio-weight: global_fonts.$regular;
+$radio-size: global_fonts.get-size("button", $sizing);
+$radio-line-height: global_fonts.get-size("button", "line-height");
+$radio-spacing: 0.16px;
+
+// Toggle
+
+$toggle-font: global_fonts.$font-name;
+$toggle-font-weight: global_fonts.$regular;
+$toggle-font-size: global_fonts.get-size("button", $sizing);
+$toggle-line-height: global_fonts.get-size("button", "line-height");
+$toggle-letter-spacing: 0.16px;
+
+// Input
+
+$input-font: global_fonts.$font-name;
+$input-weight: global_fonts.$regular;
+$input-size: global_fonts.get-size("button", $sizing);
+$input-line-height: global_fonts.get-size("button", "line-height");
+$input-spacing: 0.16px;
+$label-size: 12px;
+
+$timestamp-label-size: 14px;
+$timestamp-line-height: global_fonts.get-size("paragraph", "line-height");;
+
+// Select
+
+$select-font : global_fonts.$font-name;
+$select-weight : global_fonts.$regular;
+$select-size : global_fonts.get-size("button", $sizing);
+$select-line-height : global_fonts.get-size("button", "line-height");
+$select-spacing : 0.16px;
+
+// Tags
+
+$tag-font: global_fonts.$font-name;
+$tag-weight: global_fonts.$regular;
+$tag-size: global_fonts.get-size("tag", $sizing);
+$tag-line-height: global_fonts.get-size("tag", "line-height");
+$tag-spacing: 0.16px;
+
+// Typography
+
+$h1-font : global_fonts.$font-condensed;
+$h1-weight : global_fonts.$medium;
+$h1-size : global_fonts.get-size("h1", $sizing);
+$h1-line-height : global_fonts.get-size("h1", "line-height");
+
+$subtitle-weight : global_fonts.$medium;
+$subtitle-size : global_fonts.get-size("subtitle", $sizing);
+$subtitle-line-height : global_fonts.get-size("subtitle", "line-height");
+
+$h2-font : global_fonts.$font-condensed;
+$h2-weight : global_fonts.$medium;
+$h2-size : global_fonts.get-size("h2", $sizing);
+$h2-line-height : global_fonts.get-size("h2", "line-height");
+
+$h3-font : global_fonts.$font-condensed;
+$h3-weight : global_fonts.$medium;
+$h3-size : global_fonts.get-size("h3", $sizing);
+$h3-line-height : global_fonts.get-size("h3", "line-height");
+
+$h4-font : global_fonts.$font-condensed;
+$h4-weight : global_fonts.$medium;
+$h4-size : global_fonts.get-size("h4", $sizing);
+$h4-line-height : global_fonts.get-size("h4", "line-height");
+
+// Breadcrumbs
+
+$breadcrumb-font: global_fonts.$font-name;
+$breadcrumb-weight: global_fonts.$regular;
+$breadcrumb-weight-active: global_fonts.$bold;
+$breadcrumb-size: global_fonts.get-size("paragraph", $sizing);
+$breadcrumb-line-height: global_fonts.get-size("paragraph", "line-height");
+$breadcrumb-spacing: 0.16px;
+
+// Pagination
+
+$pagination-font: global_fonts.$font-name;
+$pagination-weight: global_fonts.$regular;
+$pagination-weight-active: global_fonts.$bold;
+$pagination-size: global_fonts.get-size("paragraph", $sizing);
+$pagination-line-height: global_fonts.get-size("paragraph", "line-height");
+$pagination-spacing: 0.16px;
+
+// Datepicker
+
+$datepicker-font: global_fonts.$font-name;
+$datepicker-weight: global_fonts.$regular;
+$datepicker-size: global_fonts.get-size("paragraph", $sizing);
+$datepicker-line-height: global_fonts.get-size("paragraph", "line-height");
+$datepicker-spacing: 0.16px;
+
+// Avatar
+
+$avatar-font: global_fonts.$font-name;
+$avatar-weight: global_fonts.$medium;
+$avatar-size: global_fonts.get-size("h4", $sizing);
+$avatar-line-height: global_fonts.get-size("h4", "line-height");
+$avatar-spacing: 0.16px;

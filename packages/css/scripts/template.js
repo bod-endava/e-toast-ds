@@ -63,7 +63,7 @@ const template = ({
               if( debug ){
                 const folder = last(srcPath.split("/"));
                 const relativeFile = folder + last(file.split(folder))
-                console.log("Porcessing: ", relativeFile)
+                console.log("Processing: ", relativeFile)
               }
               const rawData = await readFile(file)
               const data = interpolate(rawData.toString())

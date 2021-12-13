@@ -25,7 +25,7 @@ This repository use [lerna](https://github.com/lerna/lerna) a tool for manage Ja
 
 - `/css`: project with the core css layer of e-toast
 - `/css-doc-page`: project to document the contents of the css layer of e-toast
-- `/react-sandbox`: project to visualize the use of the css layer with React
+- `/sandbox`: project to visualize the use of the css layer with React
 - `/toast-icons`: project with the e-toast icons (candidate to move for his own repo)
 - `/toasty`: project for apply automation toast for e-toast
 
@@ -65,23 +65,48 @@ Again, the recommendation is check the `README.md` file for each project, there 
 npm install
 ```
 
+or
+
+```zsh
+yarn install
+```
+
+
 2. Install all dependencies on the packages and symlink packages
 
 ```zsh
 npm run bootstrap
 ```
 
+or
+
+```zsh
+yarn bootstrap
+```
+
 3. Run all packages in dev mode
 
 ```zsh
-npm start
+npm run start
+```
+
+or 
+
+```zsh
+yarn start
 ```
 
 5. Also, you have scripts for running individual packages
 
 ```zsh
 // npm start:<package_name>
-npm run start:react
+npm run start:css
+```
+
+or
+
+```zsh
+yarn start:sandbox-css
 ```
 
 # ✨ Using E-Toast
@@ -136,22 +161,6 @@ https://chocolatey.org/docs/installation
 
 -  If you get an error regarding `node-gyp`: make sure you have Python v2.7 as `python2` available on your console. If not, install it and add it to your path. If it persists, try updating node and npm versions (you can do so running `npm i -g node && npm i -g npm`). Older versions of node-gyp use Python v2.7 but the versions used inside of the package should be newer and not require it.
 
-# 📐 Architecture
-
-The e-toast architecture is made with customization in mind. It allows for different levels of customization. Each level differs from the other based on two characteristics: scale and semantic value. Scale is defined by how many components are affected by the level. Semantic value is defined by the meaning given to values from that level. The following table describes the three levels of abstraction:
-
-| level | scale | semantic value | where it is located |
-| ----- | ----- | -------------- | ------------------- |
-| global | Values altered in this level will change the design system as a whole | Values are raw values with no semantic value (e.g. orange) | src/globals |
-| theme  | Values altered in this level will change groups of components in the system | Values now have a semantic value that ties them to the components (e.g. orange becomes primary). Some values may be tied to a group of components | src/themes |
-| component | Values altered at this level only have an effect on a single component in the system | Values are completely tied to a single component (e.g. primary becomes idle-fill-color for the primary button). The values stored here are the tokens used in the definition of a component. | src/themes/\[atom-name]. Definitions that consumes the layer is in src/atoms/\[atom-name] |
-| utility | Definitions in this layer may affect the system as a whole | All definitions in this layer are not values but rather functionalities that are not tied to a single component and can be reused system-wide | src/utils |
-
-As a design decision, each layer may only refer to definitions and values from either the utils layer or the layer previous to it in terms of scale and semantic value. This means component layer may only use theme values and theme may only use global values and any layer may use utility definitions.
-
-Additionally, the global layer is unique but the theme and component layer contain various themes and components. Components are connected to a theme through a file that acts as a bridge: src/theme.config. The theme layer is connected to the global layer through imports. The following diagram shows how this works:
-
-![Architecture](./packages/css/docs/images/architecture.png "Architecture")
 
 # 🌐 Browser coverage
 - Chrome

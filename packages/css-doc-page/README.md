@@ -34,7 +34,25 @@ Your localhost should looks like:
 
 ![Tostaditas Landpage](./src/assets/misc/tostaditas-landpage.png "Tostaditas landpage")
 
-## Usage
+## 📖 Usage
+
+The documentation of each component has the next structure:
+
+1. `<Hero>`
+2. `<Markdown>`
+
+Both are React components with illustrated in the next image:
+
+![Tostaditas Component Doc Structure](./src/assets/misc/css-docs-structure.png "Tostaditas Component Doc Structure")
+
+To create the documentation of a new component follow the next steps:
+
+1. Create a Markdown file for your component in `packages/css-doc-page/src/assets/markdown/{component}/file.md`.
+2. Add a view in a new folder called `packages/css-doc-page/src/views/{componentDoc}` with the next files: `componentDoc.jsx`, `componentDoc.scss` and `index.js`.
+3. In the `componentDoc.jsx` follow the `<Hero/> + <Markdown/>` structure.
+4. Import the markdown files of step one, and use them as a prop of the `<Markdown/>` component.
+5. Associate the view path in the `packages/css-doc-page/src/containers/sidebar/Sidebar.jsx`
+6. Test your changes.
 
 ```
 const cssDocPage = require('css-doc-page');

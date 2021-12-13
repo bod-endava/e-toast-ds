@@ -1,0 +1,38 @@
+@use "../constants/colors.scss" as theme_colors;
+@use "../constants/fonts.scss" as theme_fonts;
+@use "../constants/shape.scss" as theme_shape;
+
+// Color tokens
+
+// idle
+$idle-font-color: theme_colors.$primary;
+$idle-fill-color: theme_colors.$background;
+
+// hover
+$hover-font-color: theme_colors.$background;
+$hover-fill-color: theme_colors.$primary-dark;
+
+// focus
+$focus-font-color: theme_colors.$background;
+$focus-fill-color: theme_colors.$primary;
+
+// disabled
+$disabled-font-color: theme_colors.$background;
+$disabled-fill-color: theme_colors.$disabled;
+
+// Shape tokens
+$border-radius: theme_shape.$button-radius;
+$border-width: 1px;
+$height: 37px;
+$padding-top: 11px;
+$padding-right: 28px;
+$padding-bottom: 11px;
+$padding-left: 28px;
+
+// Font tokens
+
+$font-name: theme_fonts.$button-font;
+$font-weight: theme_fonts.$button-weight;
+$font-size: theme_fonts.$button-size;
+$line-height: theme_fonts.$button-line-height;
+$spacing: theme_fonts.$button-spacing;
