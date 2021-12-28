@@ -4,6 +4,8 @@ import React , { useState } from 'react';
 import Markdown from '../../components/markdown';
 import Hero from '../../components/hero';
 import styles from './CheckboxDocs.module.scss';
+import CheckboxIcon from '../../assets/img/checkbox-icon.svg';
+import textMark from '../../assets/markdown/checkbox/default.md';
 
 const Sources = {
 };
@@ -13,11 +15,11 @@ const CheckboxDocs = () => {
       <div className={styles.CheckboxDocs}>
         <Hero
           title="Checkbox"
-          text=""
-          image={""}
+          text="este es el checkbox"
+          image={CheckboxIcon}
         />
         <main className={styles.Main}>
-          <Markdown src={""} />
+          <Markdown src={textMark} />
         </main>
       </div>
     );
