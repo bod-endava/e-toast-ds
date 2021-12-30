@@ -1,19 +1,4 @@
-# TODO
-
-- [ ] Use semantic tags in the README.md files
-- [ ] Explain the git branching
-- [ ] Add a change log
-- [ ] Add release steps
-- [ ] Explain the repo with the use cases
-- [ ] Highligth the Node setup
-- [ ] Add the main goal of e-toast (internal projects, accounts project)
-- [ ] Consolidate tostaditas as main documentation
-- [ ] Offer a documentation without technical knowledge
-
-- [ ] Define ESLint properties
-- [ ] CD/CI setup (Github Actions and Circle CI)
-
-## 🍞 E-Toast Design System
+# 🍞 E-Toast Design System
 Starting using e-toast is straight forward. We provide resources such as best practices, component documentation, Sketch and Figma files, and more.
 
 ## 🚦 Requisites
