@@ -1,26 +1,15 @@
-# TODO
-
-- [ ] Use semantic tags in the README.md files
-- [ ] Explain the git branching
-- [ ] Add a change log
-- [ ] Add release steps
-- [ ] Explain the repo with the use cases
-- [ ] Highligth the Node setup
-- [ ] Add the main goal of e-toast (internal projects, accounts project)
-- [ ] Consolidate tostaditas as main documentation
-- [ ] Offer a documentation without technical knowledge
-
 # 🍞 E-Toast Design System
 Starting using e-toast is straight forward. We provide resources such as best practices, component documentation, Sketch and Figma files, and more.
 
-# 🚦 Requisites
+## 🚦 Requisites
 
 mac: https://changelog.com/posts/install-node-js-with-homebrew-on-os-x
 
 win: https://chocolatey.org/packages/nodejs
 
 this project is built using node v12.17.0 and npm v7.5.2. To manage node version [nvm](https://github.com/nvm-sh/nvm) is suggested
-# 📁 Folder Structure
+
+## 📁 Folder Structure
 This repository use [lerna](https://github.com/lerna/lerna) a tool for manage JavaScript projects with multiple packages. In that case the recommendation is follow the resources in the `/packages` folder that have the next contents:
 
 - `/css`: project with the core css layer of e-toast
@@ -31,11 +20,11 @@ This repository use [lerna](https://github.com/lerna/lerna) a tool for manage Ja
 
 For more information, please read the respective `README.md` files for each project.
 
-# 🗂️️ External projects
+## 🗂️️ External projects
 - [e-toast-react](https://github.com/bod-endava/e-toast-react): A react layer with react components that consume the css layer
 - [e-toast-scheduler](https://github.com/bod-endava/e-toast-scheduler): A use case for e-toast
 
-# 🏗️ Set Up by Project (Recommended)
+## 🏗️ Set Up by Project (Recommended)
 
 1. Go to the package path (e.g) `/e-toast-ds/packages/css`
 
@@ -57,7 +46,7 @@ npm run build
 
 Again, the recommendation is check the `README.md` file for each project, there you will find the specific steps to start each package.
 
-# 🏗️ Global Set Up (Unstable)
+## 🏗️ Global Set Up (Unstable)
 
 1. Install dependencies from `/e-toast-ds`
 
@@ -109,7 +98,7 @@ or
 yarn start:sandbox-css
 ```
 
-# ✨ Using E-Toast
+## ✨ Using E-Toast
 
 If you want to work using e-toast as your design system, you'll need to follow these steps:
 
@@ -132,17 +121,17 @@ If you want to work using e-toast as your design system, you'll need to follow t
 ```
 6. You're ready to go!
 
-# 👨‍⚕️ On Boarding
+## 👨‍⚕️ On Boarding
 
 > TODO: Add on boarding steps
 
 - Local symlink is suggested for development
 
-# 🧰 Tech Stack
+## 🧰 Tech Stack
 
 - Lerna for managing React and CSS code bases
 
-# 📦 Package Manager
+## 📦 Package Manager
 
 mac: if you do not have homebrew, it is advised to install it since it makes the installation process a lot easier 
 https://brew.sh/
@@ -150,7 +139,7 @@ https://brew.sh/
 win: if you do not have chocolatey, it is advised to install it since it makes the installation process a lot easier 
 https://chocolatey.org/docs/installation
 
-# 🤔 Dev Troubleshooting
+## 🤔 Dev Troubleshooting
 
 - If `npm run bootstrap` fails when attempting to install `@e-toast/css` or changes in `packages/css` are not reflected on react sandbox: 
 
@@ -162,5 +151,5 @@ https://chocolatey.org/docs/installation
 -  If you get an error regarding `node-gyp`: make sure you have Python v2.7 as `python2` available on your console. If not, install it and add it to your path. If it persists, try updating node and npm versions (you can do so running `npm i -g node && npm i -g npm`). Older versions of node-gyp use Python v2.7 but the versions used inside of the package should be newer and not require it.
 
 
-# 🌐 Browser coverage
+## 🌐 Browser coverage
 - Chrome
