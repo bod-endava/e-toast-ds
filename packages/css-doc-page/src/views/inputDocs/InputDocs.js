@@ -19,7 +19,7 @@ import inputLabelIcon from '../../assets/markdown/inputs/inputLabel-icon.md';
 
 const Sources = {
 
-  Input:input,
+  
   InputMark:inputMark,
   InputLabel:inputLabel,
 
@@ -34,7 +34,6 @@ const InputTypes = (props) => {
   return (
     <div className="eds-select">
       <select onChange={onChange}>
-        <option value="Input">Input</option>
         <option value="InputMark">Input-general</option>
         <option value="InputLabel">Input-label</option>
       </select>
@@ -43,7 +42,7 @@ const InputTypes = (props) => {
 }
 
 const InputDocs = () => {
-    const [iconType, setIconType] = useState("Input");
+    const [iconType, setIconType] = useState("InputMark");
     const [withIcon, setWithIcon] = useState("");
 
     const handleChange = (e) => setIconType(e.target.value);
