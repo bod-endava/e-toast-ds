@@ -13,6 +13,9 @@ import ComponentOverview from './views/componentOverview';
 import ColorGuidelines from './views/colorGuidelines';
 import TypographyGuidelines from './views/typhographyGuidelines'
 import AccessibilitySpecifications from './views/accessibilitySpecifications';
+import InputDocs from './views/inputDocs';
+
+
 import {
   BrowserRouter as Router,
   Route,
@@ -77,7 +80,14 @@ const routes = [
   {
     path: '/AccessibilitySpecifications',
     component: AccessibilitySpecifications
+  },
+  {
+    path: '/Inputs',
+    component: InputDocs
   }
+
+
+
 ];
 
 function App() {

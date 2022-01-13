@@ -7,7 +7,7 @@ Free trial sign-up buttons
 Download buttons
 
 ```interactive
-<button class="eds-cta-button icon-add">Button</button>
+<button class="eds-cta-button icon-add" >Button</button>
 ```
 
 ## Variants
