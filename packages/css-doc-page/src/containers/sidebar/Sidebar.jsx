@@ -65,7 +65,7 @@ function Sidebar() {
                         childrenList={[
                             { label: 'Overview', url: '/ComponentOverview' },
                             { label: 'Buttons', url: '/Buttons' },
-                            { label: 'Checkbox', url: '' },
+                            { label: 'Checkbox', url: '/Checkbox' },
                             { label: 'Text Field', url: '' },
                             { label: 'Toggle', url: '' }
                         ]}

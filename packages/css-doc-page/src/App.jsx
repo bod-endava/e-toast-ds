@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonDocs from './views/buttonDocs';
+import CheckboxDocs from './views/checkboxDocs';
 import Sidebar from './containers/sidebar';
 import Footer from './components/footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -61,6 +62,10 @@ const routes = [
   {
     path: '/Buttons',
     component: ButtonDocs
+  },
+  {
+    path: '/Checkbox',
+    component: CheckboxDocs
   },
   {
     path: '/ShapeGuidelines',

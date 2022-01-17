@@ -60,7 +60,7 @@ const ButtonDocs = () => {
           <header className={styles.MainHeader}>
             <h1 className={styles.MainTitle}>Button</h1>
             <p className={styles.MainHeaderContent}>
-              The button is an interactive element that is usually to send events or messages to other components. 
+              The button is an interactive element that is usually to send events or messages to other components.
               A button can have text elements inside of it to describe its action or effect on the rest of the page
             </p>
           </header>
