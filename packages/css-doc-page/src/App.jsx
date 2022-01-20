@@ -15,15 +15,15 @@ import ColorGuidelines from './views/colorGuidelines';
 import TypographyGuidelines from './views/typhographyGuidelines'
 import AccessibilitySpecifications from './views/accessibilitySpecifications';
 import InputDocs from './views/inputDocs';
-
-
+import SelectDocs from './views/components/selectDocs';
+import './App.scss';
 import {
   BrowserRouter as Router,
   Route,
   Redirect,
   Switch
 } from 'react-router-dom';
-import './App.scss';
+
 
 const routes = [
   {
@@ -89,6 +89,10 @@ const routes = [
   {
     path: '/Inputs',
     component: InputDocs
+  },
+  {
+    path: '/Selects',
+    component: SelectDocs
   }
 
 

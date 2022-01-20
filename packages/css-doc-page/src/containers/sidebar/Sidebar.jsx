@@ -68,7 +68,8 @@ function Sidebar() {
                             { label: 'Checkbox', url: '/Checkbox' },
                             { label: 'Text Field', url: '' },
                             { label: 'Toggle', url: '' },
-                            { label: 'Inputs', url: '/Inputs' }
+                            { label: 'Inputs', url: '/Inputs' },
+                            { label: 'Selects', url: '/Selects' }
                         ]}
                     />
                 </div>

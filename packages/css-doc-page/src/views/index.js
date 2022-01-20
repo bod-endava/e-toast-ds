@@ -10,4 +10,4 @@ export { default as ShapeGuidelines } from './ShapeGuidelines'
 export { default as TokenPrinciples } from './TokenPrinciples'
 export { default as TyphographyGuidelines } from './TyphographyGuidelines'
 export { default as InputDocs } from './InputDocs'
-
+export { default as SelectDocs } from './SelectDocs'
