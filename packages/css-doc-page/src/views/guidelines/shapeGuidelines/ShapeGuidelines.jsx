@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './ShapeGuidelines.module.scss';
-import Hero from '../../tostaditas-components/hero';
-import pen from '../../assets/img/pen-thin.svg';
-import outlinePill from '../../assets/img/outline-pill.svg';
-import outlineRounded from '../../assets/img/outline-rounded.svg';
-import outlineSquare from '../../assets/img/outline-square.svg';
-import fillPill from '../../assets/img/fill-pill.svg';
-import fillRounded from '../../assets/img/fill-rounded.svg';
-import fillSquare from '../../assets/img/fill-square.svg';
+import Hero from '../../../tostaditas-components/hero';
+import pen from '../../../assets/img/pen-thin.svg';
+import outlinePill from '../../../assets/img/outline-pill.svg';
+import outlineRounded from '../../../assets/img/outline-rounded.svg';
+import outlineSquare from '../../../assets/img/outline-square.svg';
+import fillPill from '../../../assets/img/fill-pill.svg';
+import fillRounded from '../../../assets/img/fill-rounded.svg';
+import fillSquare from '../../../assets/img/fill-square.svg';
 
 function ShapeGuidelines() {
   return (

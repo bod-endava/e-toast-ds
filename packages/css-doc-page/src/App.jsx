@@ -10,11 +10,11 @@ import ComponentOverview from './views/componentOverview';
 import TokenPrinciples from './views/tokenPrinciples';
 import AccessibilitySpecifications from './views/accessibilitySpecifications';
 // Guidelines
-import ColorGuidelines from './views/colorGuidelines';
-import TypographyGuidelines from './views/typhographyGuidelines'
-import DesignGuidelines from './views/designGuidelines';
-import ShapeGuidelines from './views/shapeGuidelines';
-import IconGuidelines from './views/iconGuidelines';
+import ColorGuidelines from './views/guidelines/colorGuidelines';
+import TypographyGuidelines from './views/guidelines/typhographyGuidelines'
+import DesignGuidelines from './views/guidelines/designGuidelines';
+import ShapeGuidelines from './views/guidelines/shapeGuidelines';
+import IconGuidelines from './views/guidelines/iconGuidelines';
 // Component Docs
 import ButtonDocs from './views/docs/buttonDocs';
 import CheckboxDocs from './views/docs/checkboxDocs';

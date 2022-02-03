@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from './DesignGuidelines.module.scss';
-import ActionCard from '../../tostaditas-components/actionCard';
-import Hero from '../../tostaditas-components/hero';
-import pencil from '../../assets/img/pencil-thin.svg';
-import tokens from '../../assets/img/tokens.svg';
-import typography from '../../assets/img/typography.svg';
-import shapes from '../../assets/img/shapes.svg';
-import icons from '../../assets/img/icons.svg';
-import color from '../../assets/img/color.svg';
-import accessibility from '../../assets/img/accessibility.svg';
+import ActionCard from '../../../tostaditas-components/actionCard';
+import Hero from '../../../tostaditas-components/hero';
+import pencil from '../../../assets/img/pencil-thin.svg';
+import tokens from '../../../assets/img/tokens.svg';
+import typography from '../../../assets/img/typography.svg';
+import shapes from '../../../assets/img/shapes.svg';
+import icons from '../../../assets/img/icons.svg';
+import color from '../../../assets/img/color.svg';
+import accessibility from '../../../assets/img/accessibility.svg';
 
 function DesignGuidelines() {
   return (
