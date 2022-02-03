@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './TypographyGuidelines.module.scss';
-import Hero from '../../components/hero';
+import Hero from '../../tostaditas-components/hero';
 import typography from '../../assets/img/type-thin.svg';
 
 function TypographyGuidelines() {

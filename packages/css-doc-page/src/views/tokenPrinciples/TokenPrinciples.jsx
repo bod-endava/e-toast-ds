@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './TokenPrinciples.module.scss';
-import Hero from '../../components/hero';
+import Hero from '../../tostaditas-components/hero';
 import tokens from '../../assets/img/token-principles.svg';
 
 function TokenPrinciples() {

@@ -1,8 +1,8 @@
 import React from "react";
 import textDefault from "../../../assets/markdown/selects/default.md";
 import ButtonsIcon from "../../../assets/img/button-docs.svg";
-import Markdown from "../../../components/markdown";
-import Hero from "../../../components/hero";
+import Markdown from "../../../tostaditas-components/markdown";
+import Hero from "../../../tostaditas-components/hero";
 import styles from "./selectDocs.module.scss";
 
 const SelectDocs = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './IconGuidelines.module.scss';
-import Hero from '../../components/hero';
+import Hero from '../../tostaditas-components/hero';
 import iconsImage from '../../assets/img/icons.svg';
 
 function IconGuidelines() {

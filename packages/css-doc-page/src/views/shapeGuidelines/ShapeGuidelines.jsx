@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ShapeGuidelines.module.scss';
-import Hero from '../../components/hero';
+import Hero from '../../tostaditas-components/hero';
 import pen from '../../assets/img/pen-thin.svg';
 import outlinePill from '../../assets/img/outline-pill.svg';
 import outlineRounded from '../../assets/img/outline-rounded.svg';

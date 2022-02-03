@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import ActionCard from '../../components/actionCard'
+import ActionCard from '../../tostaditas-components/actionCard'
 import styles from './Home.module.scss';
 import rocket from '../../assets/img/rocket.svg'
 import pencil from '../../assets/img/pencil.svg'
