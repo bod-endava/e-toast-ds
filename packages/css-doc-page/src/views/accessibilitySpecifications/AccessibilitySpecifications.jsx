@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../../components/hero';
+import Hero from '../../tostaditas-components/hero';
 import Eye from '../../assets/img/eye.svg';
 import styles from './AccessibilitySpecifications.module.scss';
 import proximity from '../../assets/img/proximity-illustration.svg';

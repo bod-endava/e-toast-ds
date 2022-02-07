@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './IconGuidelines.module.scss';
-import Hero from '../../components/hero';
-import iconsImage from '../../assets/img/icons.svg';
+import Hero from '../../../tostaditas-components/hero';
+import iconsImage from '../../../assets/img/icons.svg';
 
 function IconGuidelines() {
   const icons = ["add", "alert-message", "announcement", "arrow-down", "arrow-left", "arrow-right", "arrow-up", "back", "bookmark", "calendar", "caret-down", "caret-left", "caret-right", "caret-up", "chat", "check", "circle-check", "circle-x", "clock", "close", "cloud", "compress", "copy", "document", "down", "download", "edit", "expand", "filter", "folder", "full-screen", "home", "image", "information", "label", "lock", "mail", "menu", "money", "more", "new-file", "new-folder", "next", "notification", "search", "settings", "share", "trash", "up", "upload", "warning-circle-fill", "warning-circle", "warning"];

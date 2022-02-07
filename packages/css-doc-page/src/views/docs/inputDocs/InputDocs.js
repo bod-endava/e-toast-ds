@@ -1,17 +1,17 @@
 import React , { useState } from 'react';
 
 
-import input from '../../assets/markdown/inputs/inputs.md';
-import inputMark from '../../assets/markdown/inputs/input-mark.md';
-import inputLabel from '../../assets/markdown/inputs/input-label.md';
-import inputIcon from '../../assets/img/input-icon.svg';
-import Markdown from '../../components/markdown';
-import Hero from '../../components/hero';
+// #CLEAN NotUsed: import input from '../../assets/markdown/inputs/inputs.md';
+import inputMark from '../../../assets/markdown/inputs/input-mark.md';
+import inputLabel from '../../../assets/markdown/inputs/input-label.md';
+import inputIcon from '../../../assets/img/input-icon.svg';
+import Markdown from '../../../tostaditas-components/markdown';
+import Hero from '../../../tostaditas-components/hero';
 import styles from './InputDocs.module.scss';
 
 
-import inputMarkIcon from '../../assets/markdown/inputs/inputMark-icon.md';
-import inputLabelIcon from '../../assets/markdown/inputs/inputLabel-icon.md';
+import inputMarkIcon from '../../../assets/markdown/inputs/inputMark-icon.md';
+import inputLabelIcon from '../../../assets/markdown/inputs/inputLabel-icon.md';
 
 
 

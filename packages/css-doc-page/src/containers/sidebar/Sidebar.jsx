@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Sidebar.module.scss';
 import logo from '../../assets/img/logosymbol.svg';
 import { useHistory, useLocation } from "react-router-dom";
-import { SidebarItem } from '../../components';
+import { SidebarItem } from '../../tostaditas-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSidebarState } from '../../store/actions';
 

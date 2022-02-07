@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './ComponentOverview.module.scss';
-import Hero from '../../components/hero';
+import Hero from '../../tostaditas-components/hero';
 import atom from '../../assets/img/atom-thin.svg';
 import buttonIcon from '../../assets/img/button-icon.svg';
 import checkboxIcon from '../../assets/img/checkbox-icon.svg';
 import textFieldIcon from '../../assets/img/text-field-icon.svg';
 import toggleIcon from '../../assets/img/toggle-icon.svg';
-import ActionCard from '../../components/actionCard';
+import ActionCard from '../../tostaditas-components/actionCard';
 
 function ComponentOverview() {
   return (
