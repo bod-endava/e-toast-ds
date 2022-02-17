@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './ColorGuidelines.module.scss';
-import Hero from '../../components/hero';
-import palette from '../../assets/img/palette-thin.svg';
-import singleArrow from '../../assets/img/arrow1.svg';
-import multipleArrows from '../../assets/img/arrows2.svg';
-import ColorTheme from '../../components/colorTheme';
+import Hero from '../../../tostaditas-components/hero';
+import palette from '../../../assets/img/palette-thin.svg';
+import singleArrow from '../../../assets/img/arrow1.svg';
+import multipleArrows from '../../../assets/img/arrows2.svg';
+import ColorTheme from '../../../tostaditas-components/colorTheme';
 import { Link } from 'react-router-dom';
 
 function ColorGuidelines() {

@@ -1,11 +1,11 @@
 import React , { useState } from 'react';
 // import docs
 
-import Markdown from '../../components/markdown';
-import Hero from '../../components/hero';
+import Markdown from '../../../tostaditas-components/markdown';
+import Hero from '../../../tostaditas-components/hero';
 import styles from './CheckboxDocs.module.scss';
-import CheckboxIcon from '../../assets/img/checkbox-icon.svg';
-import textMark from '../../assets/markdown/checkbox/default.md';
+import CheckboxIcon from '../../../assets/img/checkbox-icon.svg';
+import textMark from '../../../assets/markdown/checkbox/default.md';
 
 const Sources = {
 };

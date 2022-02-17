@@ -1,21 +1,26 @@
 import React from 'react';
-import ButtonDocs from './views/buttonDocs';
-import CheckboxDocs from './views/checkboxDocs';
-import Sidebar from './containers/sidebar';
-import Footer from './components/footer';
-import ScrollToTop from './components/ScrollToTop';
+// Base structure
 import Home from './views/home';
+import Footer from './tostaditas-components/footer';
+import Sidebar from './containers/sidebar';
+import ScrollToTop from './tostaditas-components/ScrollToTop';
+
 import GettingStarted from './views/gettingStarted';
-import DesignGuidelines from './views/designGuidelines';
-import ShapeGuidelines from './views/shapeGuidelines';
-import IconGuidelines from './views/iconGuidelines';
-import TokenPrinciples from './views/tokenPrinciples';
 import ComponentOverview from './views/componentOverview';
-import ColorGuidelines from './views/colorGuidelines';
-import TypographyGuidelines from './views/typhographyGuidelines'
+import TokenPrinciples from './views/tokenPrinciples';
 import AccessibilitySpecifications from './views/accessibilitySpecifications';
-import InputDocs from './views/inputDocs';
-import SelectDocs from './views/components/selectDocs';
+// Guidelines
+import ColorGuidelines from './views/guidelines/colorGuidelines';
+import TypographyGuidelines from './views/guidelines/typhographyGuidelines'
+import DesignGuidelines from './views/guidelines/designGuidelines';
+import ShapeGuidelines from './views/guidelines/shapeGuidelines';
+import IconGuidelines from './views/guidelines/iconGuidelines';
+// Component Docs
+import ButtonDocs from './views/docs/buttonDocs';
+import CheckboxDocs from './views/docs/checkboxDocs';
+import InputDocs from './views/docs/inputDocs';
+import SelectDocs from './views/docs/selectDocs';
+
 import './App.scss';
 import {
   BrowserRouter as Router,
