@@ -49,7 +49,7 @@ npm run test-with-report
 
 Your allure report should looks like:
 
-![Allure Report](./src/assets/allure-report.png "Allure Report")
+![Allure Report](./assets/allure-report.png "Allure Report")
 
 ## 🤏 Manual Testing
 
