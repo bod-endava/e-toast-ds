@@ -49,7 +49,7 @@ npm run test-with-report
 
 Your allure report should looks like:
 
-![Sandbox Landpage](./src/assets/sandbox-landpage.png "Sandbox landpage")
+![Allure Report](./src/assets/allure-report.png "Allure Report")
 
 ## 🤏 Manual Testing
 
