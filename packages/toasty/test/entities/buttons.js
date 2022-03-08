@@ -96,7 +96,7 @@ export {
     primaryButtonHover,
     outlinePrimaryButtonEnabled,
     outlinePrimaryButtonDisabled,
-    outlinePrimaryButtonHover, 
+    outlinePrimaryButtonHover,
     ctaButtonEnabled,
     ctaButtonDisabled,
     ctaButtonHover,

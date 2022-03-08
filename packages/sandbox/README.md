@@ -1,12 +1,12 @@
-## 🧸 css/sandbox
+# 🧸 css/sandbox
 
 React project to get a quick visualization of the `e-toast/css` core.
 
-# 🧰 Tech Stack
+## 🧰 Tech Stack
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-# 🚀 Launch
+## 🚀 Launch
 
 1. Install dependencies for the sandbox project
 

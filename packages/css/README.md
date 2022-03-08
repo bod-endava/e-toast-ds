@@ -73,4 +73,4 @@ As a design decision, each layer may only refer to definitions and values from e
 
 Additionally, the global layer is unique but the theme and component layer contain various themes and components. Components are connected to a theme through a file that acts as a bridge: src/theme.config. The theme layer is connected to the global layer through imports. The following diagram shows how this works:
 
-![Architecture](./packages/css/docs/images/architecture.png "Architecture")
+![Architecture](./docs/images/architecture.png "Architecture")
