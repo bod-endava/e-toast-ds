@@ -1,8 +1,8 @@
-# 🧸 Toasty
+# 🤖 Toasty
 
-React project to get a quick visualization of the `e-toast/css` core.
+Project to add automation test to the components defined in `e-toast/packages/sandbox` core.
 
-# 📁 Folder Structure
+## 📁 Folder Structure
 
 - `/allure-results`: folder to store the allure resports
 - `/assets`: folder to store static content
@@ -10,7 +10,6 @@ React project to get a quick visualization of the `e-toast/css` core.
 - `/test/entities`: folder to store the global setups
 - `/test/pageobjects`: folder with the page object of the e-toast atoms
 - `/test/specs`: folder with the e-toast atoms unit test
-
 
 ## 🧰 Tech Stack
 - [Google Chrome](https://www.google.com/chrome/)
@@ -41,6 +40,8 @@ npm run test
 
 3. Run test with report
 
+Be sure that the sandbox application is running and then run:
+
 ```zsh
 npm run test-with-report
 ```
@@ -58,3 +59,18 @@ First testing approach, mainly visual testing. The goal is ensure that element h
 ## 🤖 Automation Testing
 
 Automated testing vie WebDriveIO.
+
+## 🤔 Dev Troubleshooting
+
+When you try to run
+
+```zsh
+npm run allure-report
+```
+
+It is probably that you get
+
+```
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+```
