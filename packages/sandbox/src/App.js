@@ -112,16 +112,14 @@ const InputDemo = ({ name, label, success, error='', ...extra }) => {
   </section>
 }
 
-const SelectDemo = ({ disabled, innerDisabled, placeholder="Choose one" }) => {
+const SelectDemo = ({ disabled, innerDisabled, disabledClass, placeholder="Choose one" }) => {
   const root = getClassName({
     base: "eds-select",
+    "&--disabled": disabledClass
   })
-
-  // const list = root.extend("&__list");
-  // const item = root.extend("&__option");
-
+  
   return <div className={root} disabled={disabled} >
-    <select defaultValue="1" disabled={innerDisabled} onChange={() => alert("aaaaa")}>
+    <select defaultValue="1" disabled={innerDisabled}>
       <option hidden>{placeholder}</option>
       <option value={1}>One</option>
       <option hidden>you dont see me</option>
@@ -368,6 +366,9 @@ function App() {
           </Padded>
           <Padded>
             <SelectDemo disabled placeholder="Disabled from container"/>
+          </Padded>
+          <Padded>
+            <SelectDemo disabledClass placeholder="Disabled using eds-list--disabled"/>
           </Padded>
         </div>
       </section>
