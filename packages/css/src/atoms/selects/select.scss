@@ -7,9 +7,9 @@
     color: tokens.$font-color;
     letter-spacing: tokens.$spacing;
     line-height: tokens.$line-height;
-    overflow: hidden;
     cursor: pointer;
     user-select: none;
+    position: relative;
 
     & select {
         display: none;
@@ -32,23 +32,12 @@
         justify-content: flex-start;
         align-items: center;
 
-        &__disabled{
-            cursor: not-allowed;
-            border: {
-                color: tokens.$disabled-border-color;
-            }
-        }
-
         &__content {
             display: block;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
             width:129px;
-
-            &__disabled {
-                color: tokens.$disabled-border-color;
-            }
         }
 
         &__arrow {
@@ -64,18 +53,17 @@
                 &--open {
                     transform: rotate(180deg);
                 }
-                &__disabled{
-                    color: tokens.$disabled-border-color;
-                }
             }
         }
     }
    
     &__list {
+        z-index: 2;
         display: none;        
         width: min(100%, #{tokens.$width});
         overflow: hidden;
-        margin-top: #{tokens.$list-margin-top};
+        position: absolute;
+        top: calc(100% + #{tokens.$list-margin-top});
         border: {
             width: 1px;
             style: solid;
@@ -102,5 +90,26 @@
             color: tokens.$item-hover-text-color;
             background-color: tokens.$item-hover-background;
         }
+    }
+
+    & > select:disabled ~ &__selected,
+    &[disabled] > &__selected,
+    & > select.eds-select--disabled ~ &__selected,
+    &--disabled > &__selected {
+        cursor: not-allowed;
+        border: {
+            color: tokens.$disabled-border-color;
+        }
+    }
+
+    & > select:disabled ~ &__selected,
+    &[disabled] > &__selected,
+    & > select:disabled ~ &__selected > &__selected__arrow,
+    &[disabled] > &__selected > &__selected__arrow,
+    & > select.eds-select--disabled ~ &__selected,
+    &--disabled > &__selected,
+    & > select.eds-select--disabled ~ &__selected > &__selected__arrow,
+    &--disabled > &__selected > &__selected__arrow {
+        color: tokens.$disabled-text-color
     }
 }
