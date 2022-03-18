@@ -1,17 +1,17 @@
 const pm2 = require("pm2");
 
-const handleErr = (err,pre="") => {
+const handleErr = (err,pre=""): void => {
   if(err){
     console.error(pre,err);
     process.exit(2)
   }
 }
 
-const startSandbox = (cb=()=>{}) => {
+const startSandbox = (cb=()=>{}):void => {
   console.log("Starting sandbox...")
 
   pm2.start({
-    script: "server.js",
+    script: "server.ts",
     name: "sandbox"
   }, (err) => {
     handleErr(err, "Create error:")
@@ -21,7 +21,7 @@ const startSandbox = (cb=()=>{}) => {
   
 }
 
-pm2.connect((err) => {
+pm2.connect((err):void => {
   handleErr(err)
 
   pm2.list((err, list) => {
