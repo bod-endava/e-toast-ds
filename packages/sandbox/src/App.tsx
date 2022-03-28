@@ -401,8 +401,20 @@ function App() {
   return (
     <div>
       <section>
-        <h1>Buttons!</h1>
+        <h1>Avatar</h1>
+        <AvatarDemo content="Aa"/>
+      </section>
 
+      <section>
+        <h1>Breadcrumbs</h1>
+        <h2>Default</h2>
+        <Breadcrumb />
+        <h2>Disabled</h2>
+        <Breadcrumb disabled />
+      </section>
+
+      <section>
+        <h1>Buttons</h1>
         <ButtonDemo name="Primary" label="Primary Small" size="small" />
         <ButtonDemo name="Outline" label="Outline Primary Small" size="small"/>
         <ButtonDemo name="Cta" label="CTA Small" size="small"/>
@@ -419,14 +431,7 @@ function App() {
       </section>
 
       <section>
-        <h1>Icons!</h1>
-        {
-          icons.map( i => <Icon icon={i} key={i} />)
-        }
-      </section>
-
-      <section>
-        <h1>Checkbox!</h1>
+        <h1>Checkbox</h1>
         <Checkbox />
         <Checkbox checked readOnly/>
         <Checkbox disabled/>
@@ -438,31 +443,28 @@ function App() {
       </section>
 
       <section>
-        <h1>Radio!</h1>
-        <RadioButton />
-        <RadioButton checked readOnly/>
-        <RadioButton disabled/>
-        <List of="radio">
-          <RadioButton name="list" label="Labeled radio" />
-          <RadioButton name="list" label="Controlled radio" checked readOnly/>
-          <RadioButton name="list" label="Disabled radio" disabled/>
-        </List>
+        <h1>Datepicker</h1>
+        <h2>Default</h2>
+        <Datepicker />
+        <Datepicker label="With Label" />
+        <h2>Disabled</h2>
+        <Datepicker disabled/>
+        <Datepicker innerDisabled/>
+        <Datepicker disabled label="With Label"/>
+        <Datepicker innerDisabled label="With Label (by input)"/>
+        <h2>Native</h2>
+        <Datepicker native />
       </section>
 
       <section>
-        <h1>Toggle!</h1>
-        <Toggle />
-        <Toggle checked readOnly/>
-        <Toggle disabled/>
-        <List of="toggle">
-          <Toggle label="Labeled toggle" />
-          <Toggle label="Controlled toggle" checked readOnly/>
-          <Toggle label="Disabled toggle" disabled/>
-        </List>
+        <h1>Icons</h1>
+        {
+          icons.map( i => <Icon icon={i} key={i} />)
+        }
       </section>
 
       <section>
-        <h1>Inputs!</h1>
+        <h1>Inputs</h1>
         <h2>Outline Normal Input</h2>
         <InputDemo name="First" variant="Outline" label="Label" placeholder="Placeholder" />
         <InputDemo name="Second" variant="Outline" placeholder="Placeholder" />
@@ -483,7 +485,27 @@ function App() {
       </section>
 
       <section>
-        <h1>Select!</h1>
+        <h1>Pagination</h1>
+        <h2>Default</h2>
+        <Pagination/>
+        <h2>Disabled</h2>
+        <Pagination disabled />
+      </section>
+
+      <section>
+        <h1>Radio</h1>
+        <RadioButton />
+        <RadioButton checked readOnly/>
+        <RadioButton disabled/>
+        <List of="radio">
+          <RadioButton name="list" label="Labeled radio" />
+          <RadioButton name="list" label="Controlled radio" checked readOnly/>
+          <RadioButton name="list" label="Disabled radio" disabled/>
+        </List>
+      </section>
+
+      <section>
+        <h1>Select</h1>
         <div style={{ width: "435px" }}>
           <Padded>
             <div style={{ width: "200px" , display: "inline-block"}}>
@@ -506,10 +528,38 @@ function App() {
       </section>
 
       <section>
+        <h1>Tags</h1>
+        <TagsDemo closeAction={console.log} />
+      </section>
+
+      <section>
+        <h1>TextArea!</h1>
+        <h2>Outline Normal TextArea</h2>
+        <TextArea name="normal" variant="Outline" placeholder="Placeholder" />
+        <TextArea name="icon" variant="Outline" icon="calendar"  placeholder="Placeholder" />
+
+        <h2 style={{fontFamily: 'Roboto'}}>Outline Disabled TextArea</h2>
+        <TextArea name="dissabled" variant="Outline" placeholder="Placeholder" disabled/>
+        <TextArea name="dissabled-icon" variant="Outline" icon="calendar" placeholder="Placeholder" disabled/>
+      </section>
+
+      <section>
         <h1>Timepicker</h1>
         <div style={{ width: "200px" , display: "inline-block"}}>
           <TimepickerDemo />
         </div>
+      </section>
+
+      <section>
+        <h1>Toggle</h1>
+        <Toggle />
+        <Toggle checked readOnly/>
+        <Toggle disabled/>
+        <List of="toggle">
+          <Toggle label="Labeled toggle" />
+          <Toggle label="Controlled toggle" checked readOnly/>
+          <Toggle label="Disabled toggle" disabled/>
+        </List>
       </section>
 
       <section>
@@ -531,56 +581,6 @@ function App() {
         </h4>
       </section>
 
-      <section>
-        <h1>Tags</h1>
-        <TagsDemo closeAction={console.log} />
-      </section>
-
-      <section>
-        <h1>Breadcrumbs</h1>
-        <h2>Default</h2>
-        <Breadcrumb />
-        <h2>Disabled</h2>
-        <Breadcrumb disabled />
-      </section>
-
-      <section>
-        <h1>TextArea!</h1>
-        <h2>Outline Normal TextArea</h2>
-        <TextArea name="normal" variant="Outline" placeholder="Placeholder" />
-        <TextArea name="icon" variant="Outline" icon="calendar"  placeholder="Placeholder" />
-
-        <h2 style={{fontFamily: 'Roboto'}}>Outline Disabled TextArea</h2>
-        <TextArea name="dissabled" variant="Outline" placeholder="Placeholder" disabled/>
-        <TextArea name="dissabled-icon" variant="Outline" icon="calendar" placeholder="Placeholder" disabled/>
-      </section>
-
-      <section>
-        <h1>Pagination</h1>
-        <h2>Default</h2>
-        <Pagination/>
-        <h2>Disabled</h2>
-        <Pagination disabled />
-      </section>
-
-      <section>
-        <h1>Datepicker</h1>
-        <h2>Default</h2>
-        <Datepicker />
-        <Datepicker label="With Label" />
-        <h2>Disabled</h2>
-        <Datepicker disabled/>
-        <Datepicker innerDisabled/>
-        <Datepicker disabled label="With Label"/>
-        <Datepicker innerDisabled label="With Label (by input)"/>
-        <h2>Native</h2>
-        <Datepicker native />
-      </section>
-
-      <section>
-        <h1>Avatar</h1>
-        <AvatarDemo content="Aa"/>
-      </section>
     </div>
   );
 }
