@@ -1,0 +1,60 @@
+@use '../../themes/%navbar%/navbar' as theme_tokens;
+
+.eds-navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10%;
+}
+
+.eds-navbar-brand {
+    color: orange;
+
+    &:hover, &:focus {
+        color: orangered;
+    }
+}
+
+.eds-navbar-links {
+    list-style: none;
+
+    li {
+        display: inline-block;
+        padding: 0 20px;
+    }
+
+    li a {
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            color: brown;
+            text-decoration: underline;
+        }
+
+        &:active {
+            color: orangered;
+            text-decoration: underline;
+        }
+
+        &:focus {
+            border-color: orangered;
+        }
+
+        &:disabled {
+            color: gray;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.eds-navbar-toggle {
+        &:hover {
+            color: brown;
+            text-decoration: underline;
+        }
+
+        &:active {
+            color: orangered;
+            text-decoration: underline;
+        }
+}
