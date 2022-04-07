@@ -1,0 +1,69 @@
+@use "../../globals/colors.scss";
+
+.wrapper {
+  // display: flex;
+  // height: 100vh;
+  // width: 100vw;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
+}
+
+.accordion {
+  width: 378px;
+}
+
+.item {
+  background: #f8f8f8;
+  margin-bottom: 1px;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 13px;
+
+  &:hover {
+    background: colors.$orange-light;
+    border-radius: 10px;
+  }
+}
+.item.show {
+  background: white;
+  border: none;
+  padding: 0px 0px 16px;
+}
+.item[disabled] {
+  background: #e6e6e6;
+  pointer-events: none;
+  color: #b8b8b8;
+  border: none;
+}
+.title {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.title.show {
+  margin-top: 10px;
+  padding: 0px 8px;
+  color: colors.$orange;
+  font-weight: bold;
+  &:hover {
+    background: none;
+  }
+}
+.title[disabled] {
+  color: #b8b8b8;
+}
+.content {
+  color: #000;
+  max-height: 0;
+  overflow: hidden;
+}
+.content.show {
+  height: auto;
+  max-height: 9999px;
+  padding: 0px 10px;
+  margin: 10px 0;
+  cursor: pointer;
+}
