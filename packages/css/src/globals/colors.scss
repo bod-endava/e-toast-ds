@@ -30,7 +30,6 @@ $etoast-colors: (
     "lightred": createColor(#C31900),
     "cinnabar": createColor(#EC6861),
     "darkred": createColor(#690505),
-    
 );
 
 @function get-color($color, $variant: "base"){
