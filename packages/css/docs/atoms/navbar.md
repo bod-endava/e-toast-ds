@@ -16,9 +16,9 @@ Download buttons
     <nav class="eds-navbar" role="navigation">
         <a class="eds-navbar-brand" href="#">Brand</a>
         <ul class="eds-navbar-links">
-            <li class="eds-navbar-link-active><a href="#">Home</a><li>
-            <li><a href="#">Projects</a><li>
-            <li><a href="#">About</a><li>
+            <li class="eds-navbar-link--active><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">About</a></li>
         </ul>
     </nav>
 </header>
@@ -32,11 +32,11 @@ Download buttons
 Default Navbar
 
 ```
-<nav class="eds-nav">
+<nav class="eds-navbar">
     <ul class="eds-navbar-links">
-        <li><a href="#">Home</a><li>
-        <li><a href="#">Projects</a><li>
-        <li><a href="#">About</a><li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
     </ul>
 </nav>
 ```
@@ -44,11 +44,11 @@ Default Navbar
 Small Navbar
 
 ```
-<nav class="eds-nav eds-nav-small">
-    <ul class="eds-nav-links">
-        <li><a href="#">Home</a><li>
-        <li><a href="#">Projects</a><li>
-        <li><a href="#">About</a><li>
+<nav class="eds-navbar eds-navbar-small">
+    <ul class="eds-navbar-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
     </ul>
 </nav>
 ```

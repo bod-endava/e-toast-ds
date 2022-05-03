@@ -204,6 +204,28 @@ interface IRadioButton {
   [key: string]: string | boolean;
 }
 
+
+interface INavBar {
+  disabled?: boolean
+}
+
+const NavBar: FC<INavBar> = ({ disabled }): JSX.Element => {
+  const root = getClassName({
+    base: "eds-navbar",
+    token: undefined
+  });
+  return (
+    <nav className={`${root}`}>
+      {/*TODO: refactor the disabled attribute on nav */}
+      <ul className="eds-navbar-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  );
+};
+
 interface IPagination {
   disabled?: boolean
 }
@@ -482,6 +504,11 @@ function App() {
         <InputDemo name="Tenth" variant="Outline" label="Label" placeholder="Placeholder" disabled/>
         <InputDemo name="Eleventh" variant="Outline" placeholder="Placeholder" disabled/>
         <InputDemo name="twelfth" variant="Outline" icon="calendar" placeholder="Placeholder" disabled/>
+      </section>
+
+      <section>
+        <h1>Navbar</h1>
+        <NavBar />
       </section>
 
       <section>
