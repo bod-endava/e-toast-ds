@@ -70,7 +70,8 @@ function Sidebar() {
                             { label: 'Toggle', url: '' },
                             { label: 'Inputs', url: '/Inputs' },
                             { label: 'Selects', url: '/Selects' },
-                            { label: 'Accordions', url: '/Acorddion' }
+                            { label: 'Accordions', url: '/Acorddion' },
+                            { label: 'Loader', url: '/Loader' }
                         ]}
                     />
                 </div>

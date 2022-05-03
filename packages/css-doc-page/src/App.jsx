@@ -21,6 +21,8 @@ import CheckboxDocs from './views/docs/checkboxDocs';
 import InputDocs from './views/docs/inputDocs';
 import SelectDocs from './views/docs/selectDocs';
 import AccordionDocs from './views/docs/accordionDocs';
+import LoaderDocs from './views/docs/loaderDocs';
+
 
 import './App.scss';
 import {
@@ -29,6 +31,7 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom';
+
 
 
 const routes = [
@@ -103,6 +106,10 @@ const routes = [
   {
     path: '/Acorddion',
     component: AccordionDocs
+  },
+  {
+    path: '/Loader',
+    component: LoaderDocs
   }
 
 

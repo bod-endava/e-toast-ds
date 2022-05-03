@@ -769,7 +769,10 @@ function App() {
           disabled
         />
       </section>
-
+          <section>
+            <h1>Loader</h1>
+            <div className="loader"></div>
+          </section>
       <section>
         <h1>Pagination</h1>
         <h2>Default</h2>
