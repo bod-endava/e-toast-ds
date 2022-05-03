@@ -20,6 +20,7 @@ import ButtonDocs from './views/docs/buttonDocs';
 import CheckboxDocs from './views/docs/checkboxDocs';
 import InputDocs from './views/docs/inputDocs';
 import SelectDocs from './views/docs/selectDocs';
+import AccordionDocs from './views/docs/accordionDocs';
 
 import './App.scss';
 import {
@@ -98,6 +99,10 @@ const routes = [
   {
     path: '/Selects',
     component: SelectDocs
+  },
+  {
+    path: '/Acorddion',
+    component: AccordionDocs
   }
 
 
