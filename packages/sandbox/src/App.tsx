@@ -20,14 +20,15 @@ const Disclosure: FC<IDisclosure> = ({
 }): JSX.Element => {
   const [open, setOpen] = useState(false);
   return (
-    
     <div
       className={open ? "item show" : "item"}
       onClick={() => setOpen((open) => !open)}
-      disabled={disabled}
+      // TODO: refactor the disabled attribute on div */
+      // disabled={disabled}
     >
-      <div className={open ? "title show" : "title"} 
-      disabled={disabled}
+      <div className={open ? "title show" : "title"}
+      // TODO: refactor the disabled attribute on div */
+      // disabled={disabled}
       >
         {title}
         <span
