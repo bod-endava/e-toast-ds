@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "suppressImplicitAnyIndexErrors": true,
     "target": "es2016",
     "module": "esnext",
     "allowJs": true,
