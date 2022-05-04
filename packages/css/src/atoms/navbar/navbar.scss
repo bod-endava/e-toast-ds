@@ -1,66 +1,81 @@
-
 // @use '../../themes/%navbar%/navbar' as tokens;
-@use "../../themes/%navbar%/navbar/navbar_tokens" as tokens;
-@use "../../utility/index" as utils;
+@use "../../themes/%navbar%/navbar/navbar_tokens"as tokens;
+@use "../../utility/index"as utils;
 
 .eds-navbar {
-    align-items: center;
     display: flex;
     justify-content: space-between;
     padding: 30px 10%;
+    font-family: tokens.$font-name;
     background-color: antiquewhite;
 }
 
 .eds-navbar-brand {
-    color: tokens.$main-color;
+    color: tokens.$default-font-color;
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    text-decoration: none;
 
-    &:hover, &:focus {
-        color: orangered;
+    &:hover,
+    &:focus {
+        color: tokens.$hover-font-color;
     }
 }
 
 .eds-navbar-links {
+    float: right;
+    text-transform: uppercase;
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+}
 
-    li {
-        display: inline-block;
-        padding: 0 20px;
+.eds-navbar-item {
+    display: inline-block;
+}
+
+.eds-navbar-link {
+    margin: 0 20px;
+    color: tokens.$default-font-color;
+    text-decoration: none;
+
+    &:disabled {
+        color: tokens.$default-font-color;
     }
 
-    li > a {
-        transition: all 0.3s ease 0s;
+    &:hover {
+        color: tokens.$hover-font-color;
+        text-decoration: underline;
+    }
 
-        &:hover {
-            color: brown;
-            text-decoration: underline;
-        }
+    &:active {
+        color: tokens.$active-font-color;
+        text-decoration: underline;
+    }
 
-        &:active {
-            color: orangered;
-            text-decoration: underline;
-        }
 
-        &:focus {
-            border-color: orangered;
-        }
+    &:focus {
+        border: 1px tokens.$focus-border-color;
+        color: tokens.$focus-font-color;
+    }
 
-        &:disabled {
-            color: gray;
-            cursor: not-allowed;
-        }
+    &:disabled {
+        color: tokens.$disabled-font-color;
     }
 }
 
 .eds-navbar-toggle {
-        &:hover {
-            color: brown;
-            text-decoration: underline;
-        }
+    &:hover {
+        color: brown;
+        text-decoration: underline;
+    }
 
-        &:active {
-            color: orangered;
-            text-decoration: underline;
-        }
+
+    &:active {
+        color: orangered;
+        text-decoration: underline;
+    }
 }

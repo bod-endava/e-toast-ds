@@ -6,14 +6,18 @@
 // Colors
 // --------
 
-$main-color: theme_colors.$primary-darkest;
+// default
+$default-font-color: theme_colors.$secondary-darkest;
 
 // hover
-$active-font-color: theme_colors.$primary-dark;
+$hover-font-color: theme_colors.$danger-dark;
 
 // active
-$active-font-color: theme_colors.$primary-dark;
-$active-background-color: theme_colors.$disabled-light;
+$active-font-color: theme_colors.$primary;
+
+// focus
+$focus-font-color: theme_colors.$danger-dark;
+$focus-border-color: theme_colors.$primary;
 
 // disable
 $disabled-font-color: theme_colors.$disabled;
