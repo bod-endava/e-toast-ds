@@ -285,10 +285,10 @@ const NavBar: FC<INavBar> = ({ disabled }): JSX.Element => {
   return (
     <nav className={`${root}`}>
       {/*TODO: refactor the disabled attribute on nav */}
-      <ul className="eds-navbar-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
+      <ul className="eds-navbar-links eds-navbar--hidden">
+        <li className="eds-navbar-link eds-navbar-link--active"><a href="#">Home</a></li>
+        <li className="eds-navbar-link"><a href="#">Projects</a></li>
+        <li className="eds-navbar-link"><a href="#">About</a></li>
       </ul>
     </nav>
   );
@@ -598,14 +598,13 @@ function App() {
   ];
   return (
     <div>
-      <section>
+      <section id="eds-accordion">
         <h1>Accordion</h1>
         <h2>Default</h2>
         <div className="accordion">
           <Disclosure
             title="Label 1"
             description="Lorem Ipsum is simply dummy text of the printing  a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
-            
           ></Disclosure>
           <Disclosure
             title="Label 2"
@@ -614,7 +613,6 @@ function App() {
           <Disclosure
             title="Label 3"
             description="Lorem Ipsum is simply dummy text of the printing  a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
-            
           ></Disclosure>
           <Disclosure
             title="Label 4"
@@ -643,7 +641,8 @@ function App() {
           ></Disclosure>
         </div>
       </section>
-      <section>
+
+      <section id="eds-avatar">
         <h1>Avatar</h1>
         <AvatarDemo content="Aa" />
       </section>
@@ -656,7 +655,7 @@ function App() {
         <Breadcrumb disabled />
       </section>
 
-      <section>
+      <section id="eds-buttons">
         <h1>Buttons</h1>
         <ButtonDemo name="Primary" label="Primary Small" size="small" />
         <ButtonDemo name="Outline" label="Outline Primary Small" size="small" />
@@ -678,7 +677,7 @@ function App() {
         <ButtonDemo name="Icon" icon="add" />
       </section>
 
-      <section>
+      <section id="eds-checkbox">
         <h1>Checkbox</h1>
         <Checkbox />
         <Checkbox checked readOnly />
@@ -690,7 +689,7 @@ function App() {
         </List>
       </section>
 
-      <section>
+      <section id="eds-datepicker">
         <h1>Datepicker</h1>
         <h2>Default</h2>
         <Datepicker />
@@ -704,14 +703,14 @@ function App() {
         <Datepicker native />
       </section>
 
-      <section>
+      <section id="eds-icons">
         <h1>Icons</h1>
         {icons.map((i) => (
           <Icon icon={i} key={i} />
         ))}
       </section>
 
-      <section>
+      <section id="eds-inputs">
         <h1>Inputs</h1>
         <h2>Outline Normal Input</h2>
         <InputDemo
@@ -793,12 +792,12 @@ function App() {
         />
       </section>
 
-      <section>
+      <section id="eds-navbar">
         <h1>Navbar</h1>
         <NavBar />
       </section>
 
-      <section>
+      <section id="eds-pagination">
         <h1>Pagination</h1>
         <h2>Default</h2>
         <Pagination />
@@ -806,7 +805,7 @@ function App() {
         <Pagination disabled />
       </section>
 
-      <section>
+      <section id="eds-radiobuttons">
         <h1>Radio</h1>
         <RadioButton />
         <RadioButton checked readOnly />
@@ -818,7 +817,7 @@ function App() {
         </List>
       </section>
 
-      <section>
+      <section id="eds-select">
         <h1>Select</h1>
         <div style={{ width: "435px" }}>
           <Padded>
@@ -844,12 +843,12 @@ function App() {
         </div>
       </section>
 
-      <section>
+      <section id="eds-tags">
         <h1>Tags</h1>
         <TagsDemo closeAction={console.log} />
       </section>
 
-      <section>
+      <section id="eds-textarea">
         <h1>TextArea!</h1>
         <h2>Outline Normal TextArea</h2>
         <TextArea name="normal" variant="Outline" placeholder="Placeholder" />
@@ -876,14 +875,14 @@ function App() {
         />
       </section>
 
-      <section>
+      <section id="eds-timepicker">
         <h1>Timepicker</h1>
         <div style={{ width: "200px", display: "inline-block" }}>
           <TimepickerDemo />
         </div>
       </section>
 
-      <section>
+      <section id="eds-toggle">
         <h1>Toggle</h1>
         <Toggle />
         <Toggle checked readOnly />
@@ -895,7 +894,7 @@ function App() {
         </List>
       </section>
 
-      <section>
+      <section id="eds-typography">
         <h1>Typography</h1>
         <h1 className="eds-typography__h1">
           Title h1

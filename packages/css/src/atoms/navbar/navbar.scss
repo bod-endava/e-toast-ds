@@ -1,14 +1,18 @@
-@use '../../themes/%navbar%/navbar' as theme_tokens;
+
+// @use '../../themes/%navbar%/navbar' as tokens;
+@use "../../themes/%navbar%/navbar/navbar_tokens" as tokens;
+@use "../../utility/index" as utils;
 
 .eds-navbar {
     align-items: center;
     display: flex;
     justify-content: space-between;
     padding: 30px 10%;
+    background-color: antiquewhite;
 }
 
 .eds-navbar-brand {
-    color: orange;
+    color: tokens.$main-color;
 
     &:hover, &:focus {
         color: orangered;
@@ -16,14 +20,16 @@
 }
 
 .eds-navbar-links {
-    list-style: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 
     li {
         display: inline-block;
         padding: 0 20px;
     }
 
-    li a {
+    li > a {
         transition: all 0.3s ease 0s;
 
         &:hover {

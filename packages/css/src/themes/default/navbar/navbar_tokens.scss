@@ -1,0 +1,28 @@
+
+@use "../constants/colors.scss" as theme_colors;
+@use "../constants/fonts.scss" as theme_fonts;
+@use "../constants/shape.scss" as theme_shape;
+
+// Colors
+// --------
+
+$main-color: theme_colors.$primary-darkest;
+
+// hover
+$active-font-color: theme_colors.$primary-dark;
+
+// active
+$active-font-color: theme_colors.$primary-dark;
+$active-background-color: theme_colors.$disabled-light;
+
+// disable
+$disabled-font-color: theme_colors.$disabled;
+
+
+// Font
+$font-name: theme_fonts.$navbar-font;
+$font-weight: theme_fonts.$navbar-weight;
+$font-size: theme_fonts.$navbar-size;
+$line-height: theme_fonts.$navbar-line-height;
+$spacing: theme_fonts.$navbar-spacing;
+
