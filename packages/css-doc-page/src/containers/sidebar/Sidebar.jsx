@@ -69,7 +69,8 @@ function Sidebar() {
                             { label: 'Text Field', url: '' },
                             { label: 'Toggle', url: '' },
                             { label: 'Inputs', url: '/Inputs' },
-                            { label: 'Selects', url: '/Selects' }
+                            { label: 'Selects', url: '/Selects' },
+                            { label: 'Accordions', url: '/Acorddion' }
                         ]}
                     />
                 </div>
