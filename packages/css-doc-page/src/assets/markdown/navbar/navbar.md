@@ -9,7 +9,7 @@ Nav is an element in HTML created to represent navigation links. You could say, 
 
 ## Usage
 
-```
+```interactive
 <header>
     <nav class="eds-navbar" role="navigation">
         <span class="eds-navbar-toggle" id="js-navbar-toggle">
@@ -38,7 +38,7 @@ Nav is an element in HTML created to represent navigation links. You could say, 
 
 Default Navbar
 
-```
+```interactive
 <header>
     <nav class="eds-navbar" role="navigation">
         <span class="eds-navbar-toggle" id="js-navbar-toggle">
@@ -62,7 +62,7 @@ Default Navbar
 
 Small Navbar
 
-```
+```interactive
 <nav class="eds-navbar eds-navbar-small">
     <ul class="eds-navbar-links">
         <li><a href="#">Home</a></li>

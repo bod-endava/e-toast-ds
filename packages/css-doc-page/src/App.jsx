@@ -20,6 +20,7 @@ import ButtonDocs from './views/docs/buttonDocs';
 import CheckboxDocs from './views/docs/checkboxDocs';
 import InputDocs from './views/docs/inputDocs';
 import SelectDocs from './views/docs/selectDocs';
+import NavbarDocs from './views/docs/navbarDocs';
 
 import './App.scss';
 import {
@@ -98,10 +99,11 @@ const routes = [
   {
     path: '/Selects',
     component: SelectDocs
+  },
+  {
+    path: '/Navbar',
+    component: NavbarDocs
   }
-
-
-
 ];
 
 function App() {
