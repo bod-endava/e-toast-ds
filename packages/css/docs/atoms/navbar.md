@@ -2,12 +2,10 @@
 # Navbar
 
 ## Overview
+Nav is an element in HTML created to represent navigation links. You could say, nav is a container of links that will direct us to other pages. But the link that is in the element <nav>is usually a major link that refers to other pages on our website.
 
-Call To Action buttons are the used to guide users towards goal conversion. It's the part of the landing page that the user needs to click in order to take the action you want them to take. Some common examples of call-to-action buttons are:
-
-Add to cart buttons
-Free trial sign-up buttons
-Download buttons
+- Headers
+- Gallery
 
 ## Usage
 

@@ -229,6 +229,9 @@ const NavBar: FC<INavBar> = ({ disabled }): JSX.Element => {
           <li className="eds-navbar-item">
             <a className="eds-navbar-link" href="#">About</a>
           </li>
+          <li className="eds-navbar-item eds-navbar-item--disabled">
+            <a className="eds-navbar-link" href="#">Disabled</a>
+          </li>
         </ul>
       </nav>
   );

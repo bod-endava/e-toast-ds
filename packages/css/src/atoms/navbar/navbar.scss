@@ -5,9 +5,8 @@
 .eds-navbar {
     display: flex;
     justify-content: space-between;
-    padding: 30px 10%;
+    padding: 10px 10%;
     font-family: tokens.$font-name;
-    background-color: antiquewhite;
 }
 
 .eds-navbar-brand {
@@ -35,35 +34,43 @@
 
 .eds-navbar-item {
     display: inline-block;
+    padding: 10px 20px;
+
+    a {
+    text-decoration: none;
+        color: tokens.$default-font-color;
+
+        &:hover {
+            color: tokens.$hover-font-color;
+        }
+
+        &:target {
+            border: 1px solid tokens.$focus-border-color;
+            color: tokens.$focus-font-color;
+        }
+
+    }
+
+
 }
 
-.eds-navbar-link {
-    margin: 0 20px;
-    color: tokens.$default-font-color;
-    text-decoration: none;
+.eds-navbar-item--active {
+    color: tokens.$active-font-color;
+    border-bottom: solid;
 
-    &:disabled {
-        color: tokens.$default-font-color;
-    }
-
-    &:hover {
-        color: tokens.$hover-font-color;
-        text-decoration: underline;
-    }
-
-    &:active {
+    a {
         color: tokens.$active-font-color;
-        text-decoration: underline;
     }
+}
 
-
-    &:focus {
-        border: 1px tokens.$focus-border-color;
-        color: tokens.$focus-font-color;
-    }
-
-    &:disabled {
+.eds-navbar-item--disabled {
+    a {
         color: tokens.$disabled-font-color;
+        cursor: not-allowed;
+
+        &:hover {
+            color: tokens.$disabled-font-color;
+        }
     }
 }
 
@@ -72,7 +79,6 @@
         color: brown;
         text-decoration: underline;
     }
-
 
     &:active {
         color: orangered;
