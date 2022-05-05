@@ -12,11 +12,20 @@ Nav is an element in HTML created to represent navigation links. You could say, 
 ```
 <header>
     <nav class="eds-navbar" role="navigation">
+        <span class="eds-navbar-toggle" id="js-navbar-toggle">
+            <i class="fa-bars"></i>
+        </span>
         <a class="eds-navbar-brand" href="#">Brand</a>
         <ul class="eds-navbar-links">
-            <li class="eds-navbar-link--active><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">About</a></li>
+            <li class="eds-navbar-item eds-navbar-item--active>
+                <a href="#">Home</a>
+            </li>
+            <li class="eds-navbar-item>
+                <a class="eds-navbar-link" href="#">Projects</a>
+            </li>
+            <li class="eds-navbar-item>
+                <a class="eds-navbar-link" href="#">About</a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -30,13 +39,26 @@ Nav is an element in HTML created to represent navigation links. You could say, 
 Default Navbar
 
 ```
-<nav class="eds-navbar">
-    <ul class="eds-navbar-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-    </ul>
-</nav>
+<header>
+    <nav class="eds-navbar" role="navigation">
+        <span class="eds-navbar-toggle" id="js-navbar-toggle">
+            <i class="fa-bars"></i>
+        </span>
+        <a class="eds-navbar-brand" href="#">Brand</a>
+        <ul class="eds-navbar-links">
+            <li class="eds-navbar-item eds-navbar-item--active>
+                <a href="#">Home</a>
+            </li>
+            <li class="eds-navbar-item>
+                <a class="eds-navbar-link" href="#">Projects</a>
+            </li>
+            <li class="eds-navbar-item>
+                <a class="eds-navbar-link" href="#">About</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+```
 ```
 
 Small Navbar
@@ -53,49 +75,46 @@ Small Navbar
 
 ## Local Tokens
 
-| token              | default value                     | description                                  |
-| ------------------ | --------------------------------- | -------------------------------------------- |
-| $idle-font-color   | theme.colors.$white               | Text color                                   |
-| $idle-fill-color   | theme.colors.$cta                 | Fill color                                   |
-| $hover-font-color  | theme.colors.$white               | Text color on hover                          |
-| $hover-fill-color  | theme.colors.$dark-contrast-cta   | Fill color on hover                          |
-| $focus-font-color  | theme.colors.$white               | Text color on focus                          |
-| $focus-fill-color  | theme.colors.$cta                 | Fill color on focus                          |
-| $disable-font-color| theme.colors.$white               | Text color while disabled                    |
-| $disable-fill-color| theme.colors.$disable             | Fill color while disabled                    |
-| $border-radius     | theme.shape.$button-radius        | Smooth corners radius                        |
-| $border-width      | 1px                               | Border line width                            |
-| $height            | 37px                              | Button height                                |
-| $padding-top       | 11px                              | Separation between top border and text       |
-| $padding-right     | 28px                              | Separation between right border and text     |
-| $padding-bottom    | 11px                              | Separation between bottom border and text    |
-| $padding-left      | 28px                              | Separation between left border and text      |
-| $font-name         | theme.fonts.$button-font          | Text font family                             |
-| $font-weight       | theme.fonts.$button-weight        | Text font weight                             |
-| $font-size         | theme.fonts.$button-size          | Text font size                               |
-| $line-height       | theme.fonts.$button-line-height   | Text line height                             |
-| $spacing           | theme.fonts.$button-spacing       | Text letter spacing                          |
+| token                              | default value                   | description                                      |
+| ---------------------------------- | ------------------------------- | ------------------------------------------------ |
+| $default-font-color                | theme.colors.$secondary-darkest | Text color                                       |
+| $hover-font-color                  | theme.colors.$danger-dark       | Text color on hover                              |
+| $focus-font-color                  | theme.colors.$danger-dark       | Text color on focus                              |
+| $focus-border-color                | theme.colors.$primary           | Border color on focus                            |
+| $disabled-font-color               | theme.colors.$disabled          | Text color while disabled                        |
+| $navbar-container-vertical-padding | 10px                            | Navbar container padding for vertical measures   |
+| $navbar-container-vertical-padding | 10%                             | Navbar container padding for horizontal measures |
+| $navbar-brand-padding-top          | 6px                             | Top padding on logo/brand location               |
+| $navbar-brand-padding-left         | 20px                            | Left padding on logo/brand location              |
+| $navbar-item-border-width          | 1px                             | Border width for navbar item                     |
+| $navbar-item-vertical-padding      | 10px                            | Navbar item padding for vertical measures        |
+| $navbar-item-horizontal-padding    | 20px                            | Navbar item padding for horizontal measures      |
+| $font-name                         | theme.fonts.$navbar-font        | Text font family                                 |
+| $font-weight                       | theme.fonts.$navbar-weight      | Text font weight                                 |
+| $font-size                         | theme.fonts.$navbar-size        | Text font size                                   |
+| $line-height                       | theme.fonts.$navbar-line-height | Text line height                                 |
+| $spacing                           | theme.fonts.$navbar-spacing     | Text letter spacing                              |
 
 
 ## Theme Tokens
-| token                 | default value                      | description            |
-| --------------------- | ---------------------------------- | ---------------------- |
-| $white                | global.colors.$white               | White color            |
-| $cta                  | global.colors.$blue                | CTA color              |
-| $dark-contrast-cta    | global.colors.$cta-dark            | Dark contrast CTA color|
-| $disable              | global.colors.$disable             | Disabled contrast color|
+| token              | default value           | description             |
+| ------------------ | ----------------------- | ----------------------- |
+| $white             | global.colors.$white    | White color             |
+| $cta               | global.colors.$blue     | CTA color               |
+| $dark-contrast-cta | global.colors.$cta-dark | Dark contrast CTA color |
+| $disable           | global.colors.$disable  | Disabled contrast color |
 
 
 ## Global Tokens
-| token         | default value | description             |
-| ------------- | ------------- | ----------------------- |
-| $white        | #fff          | White color             |
-| $blue         | #379BD7       | White color             |
-| $cta-dark     | #0C2A3C       | Dark Blue color       |
-| $disable      | #D9D9D9       | Disabled color          |
-| $pill-radius  | 24px          | Border radius           |
-| $font-name    | Roboto        | Font family             |
-| $regular      | 400           | Font weight             |
-| $px-button    | 16px          | Button font size        |
-| $lh-button    | 15px          | Button text line height |
+| token        | default value | description             |
+| ------------ | ------------- | ----------------------- |
+| $white       | #fff          | White color             |
+| $blue        | #379BD7       | White color             |
+| $cta-dark    | #0C2A3C       | Dark Blue color         |
+| $disable     | #D9D9D9       | Disabled color          |
+| $pill-radius | 24px          | Border radius           |
+| $font-name   | Roboto        | Font family             |
+| $regular     | 400           | Font weight             |
+| $px-button   | 16px          | Button font size        |
+| $lh-button   | 15px          | Button text line height |
 

@@ -215,10 +215,9 @@ const NavBar: FC<INavBar> = ({ disabled }): JSX.Element => {
     token: undefined
   });
   return (
-      <nav className={`${root}`}>
+      <nav className={`${root}`} role="navigation">
         <span className="eds-navbar-toggle" id="js-navbar-toggle"><i className="fa-bars"></i></span>
         <a className="eds-navbar-brand" href="#">Brand</a>
-        {/*TODO: refactor the disabled attribute on nav */}
         <ul className="eds-navbar-links eds-navbar--hidden" id="js-navbar-links">
           <li className="eds-navbar-item eds-navbar-item--active">
             <a className="eds-navbar-link" href="#">Home</a>

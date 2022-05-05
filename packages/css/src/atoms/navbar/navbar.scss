@@ -5,17 +5,17 @@
 .eds-navbar {
     display: flex;
     justify-content: space-between;
-    padding: 10px 10%;
+    padding: tokens.$navbar-container-vertical-padding tokens.$navbar-container-horizontal-padding;
     font-family: tokens.$font-name;
 }
 
 .eds-navbar-brand {
     color: tokens.$default-font-color;
     position: absolute;
-    padding-left: 20px;
+    padding: tokens.$navbar-brand-padding-top 0 0 tokens.$navbar-brand-padding-left;
     float: left;
     text-transform: uppercase;
-    font-size: 1.4em;
+    font-size: tokens.$font-size*1.4;
     text-decoration: none;
 
     &:hover,
@@ -34,7 +34,7 @@
 
 .eds-navbar-item {
     display: inline-block;
-    padding: 10px 20px;
+    padding: tokens.$navbar-item-vertical-padding tokens.$navbar-item-horizontal-padding;
 
     a {
     text-decoration: none;
@@ -45,13 +45,10 @@
         }
 
         &:target {
-            border: 1px solid tokens.$focus-border-color;
+            border: tokens.$navbar-item-border-width solid tokens.$focus-border-color;
             color: tokens.$focus-font-color;
         }
-
     }
-
-
 }
 
 .eds-navbar-item--active {
@@ -71,17 +68,5 @@
         &:hover {
             color: tokens.$disabled-font-color;
         }
-    }
-}
-
-.eds-navbar-toggle {
-    &:hover {
-        color: brown;
-        text-decoration: underline;
-    }
-
-    &:active {
-        color: orangered;
-        text-decoration: underline;
     }
 }

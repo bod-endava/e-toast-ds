@@ -5,7 +5,6 @@
 
 // Colors
 // --------
-
 // default
 $default-font-color: theme_colors.$secondary-darkest;
 
@@ -30,3 +29,13 @@ $font-size: theme_fonts.$navbar-size;
 $line-height: theme_fonts.$navbar-line-height;
 $spacing: theme_fonts.$navbar-spacing;
 
+
+// Shape
+// --------
+$navbar-container-vertical-padding: 10px;
+$navbar-container-horizontal-padding: 10%;
+$navbar-brand-padding-top: 6px;
+$navbar-brand-padding-left: 20px;
+$navbar-item-border-width: 1px;
+$navbar-item-vertical-padding: 10px;
+$navbar-item-horizontal-padding: 20px;
