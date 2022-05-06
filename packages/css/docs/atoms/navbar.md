@@ -9,11 +9,11 @@ Nav is an element in HTML created to represent navigation links. You could say, 
 
 ## Usage
 
-```
+```interactive
 <header>
     <nav class="eds-navbar" role="navigation">
         <span class="eds-navbar-toggle" id="js-navbar-toggle">
-            <i class="fa-bars"></i>
+            <i class="eds-icons menu"></i>
         </span>
         <a class="eds-navbar-brand" href="#">Brand</a>
         <ul class="eds-navbar-links">
@@ -36,13 +36,13 @@ Nav is an element in HTML created to represent navigation links. You could say, 
 
 ## Variants
 
-Default Navbar
+Small Navbar
 
-```
+```interactive
 <header>
-    <nav class="eds-navbar" role="navigation">
+    <nav class="eds-navbar eds-navbar-small" role="navigation">
         <span class="eds-navbar-toggle" id="js-navbar-toggle">
-            <i class="fa-bars"></i>
+            <i class="eds-icons menu"></i>
         </span>
         <a class="eds-navbar-brand" href="#">Brand</a>
         <ul class="eds-navbar-links">
@@ -60,22 +60,11 @@ Default Navbar
 </header>
 ```
 
-Small Navbar
-
-```
-<nav class="eds-navbar eds-navbar-small">
-    <ul class="eds-navbar-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">About</a></li>
-    </ul>
-</nav>
-```
-
 ## Local Tokens
 
 | token                              | default value                   | description                                      |
 | ---------------------------------- | ------------------------------- | ------------------------------------------------ |
+| $navbar-menu-icon-color            | theme.colors.$primary           | Icon color                                       |
 | $default-font-color                | theme.colors.$secondary-darkest | Text color                                       |
 | $hover-font-color                  | theme.colors.$danger-dark       | Text color on hover                              |
 | $focus-font-color                  | theme.colors.$danger-dark       | Text color on focus                              |
@@ -88,6 +77,7 @@ Small Navbar
 | $navbar-item-border-width          | 1px                             | Border width for navbar item                     |
 | $navbar-item-vertical-padding      | 10px                            | Navbar item padding for vertical measures        |
 | $navbar-item-horizontal-padding    | 20px                            | Navbar item padding for horizontal measures      |
+| $navbar-item-small-width           | 144px                           | Navbar width on small screens                    |
 | $font-name                         | theme.fonts.$navbar-font        | Text font family                                 |
 | $font-weight                       | theme.fonts.$navbar-weight      | Text font weight                                 |
 | $font-size                         | theme.fonts.$navbar-size        | Text font size                                   |

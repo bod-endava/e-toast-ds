@@ -5,6 +5,8 @@
 
 // Colors
 // --------
+$navbar-menu-icon-color: theme_colors.$primary;
+
 // default
 $default-font-color: theme_colors.$secondary-darkest;
 
@@ -39,3 +41,4 @@ $navbar-brand-padding-left: 20px;
 $navbar-item-border-width: 1px;
 $navbar-item-vertical-padding: 10px;
 $navbar-item-horizontal-padding: 20px;
+$navbar-item-small-width: 144px;

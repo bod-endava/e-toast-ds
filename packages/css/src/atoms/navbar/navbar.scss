@@ -11,7 +11,7 @@
 
 .eds-navbar-brand {
   color: tokens.$default-font-color;
-  position: absolute;
+  // position: absolute;
   padding: tokens.$navbar-brand-padding-top 0 0 tokens.$navbar-brand-padding-left;
   float: left;
   text-transform: uppercase;
@@ -73,18 +73,36 @@
 
 .eds-navbar-toggle {
   cursor: pointer;
+  color: tokens.$navbar-menu-icon-color;
   border: none;
+  display: none;
   background-color: transparent;
   width: 40px;
   height: 40px;
 }
 
 @media (max-width: 785px) {
-  .eds-navbar-links {
-    inset: 0 0 0 10%;
-    // background: steelblue;
+
+  .eds-navbar {
+    width: 144px;
     flex-direction: column;
-    padding: 10rem;
+  }
+
+  .eds-navbar-brand {
+    display: none;
+  }
+
+  .eds-navbar-toggle {
+    display: block;
+  }
+
+  .eds-navbar-links {
+    inset: 0 0 0 30%;
+  }
+
+  .eds-navbar-item {
+    width: tokens.$navbar-item-small-width;
+    padding-left: 0;
   }
 
   .eds-navbar-item--active {

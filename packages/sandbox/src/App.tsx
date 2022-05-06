@@ -216,7 +216,7 @@ const NavBar: FC<INavBar> = ({ disabled }): JSX.Element => {
   });
   return (
       <nav className={`${root}`} role="navigation">
-        <span className="eds-navbar-toggle" id="js-navbar-toggle"><i className="fa-bars"></i></span>
+        <span className="eds-navbar-toggle" id="js-navbar-toggle"><i className="eds-icon menu"></i></span>
         <a className="eds-navbar-brand" href="#">Brand</a>
         <ul className="eds-navbar-links eds-navbar--hidden" id="js-navbar-links">
           <li className="eds-navbar-item eds-navbar-item--active">

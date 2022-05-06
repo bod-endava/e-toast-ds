@@ -20,8 +20,8 @@ const NavbarDocs = () => {
             </p>
         </header>
           <nav class="eds-navbar" role="navigation">
-            <span class="eds-navbar-toggle eds-navbar-toggle" id="js-navbar-toggle">
-              <i class="fa-bars"></i>
+            <span class="eds-navbar-toggle" id="js-navbar-toggle">
+              <i class="eds-icon menu"></i>
             </span>
             <a class="eds-navbar-brand" href="#">Brand</a>
             <ul class="eds-navbar-links">
