@@ -9,18 +9,18 @@ const NavbarDocs = () => {
     <div className={styles.NavbarDocs}>
       <Hero
         title="Navbar"
-        text="Express what action will occur on a page when the user interacts with them"
+        text="Navbar is an element in HTML created to represent navigation links"
         secondary
       />
       <main className={styles.Main}>
         <header className={styles.MainHeader}>
           <h1 className={styles.MainTitle}>Navbar</h1>
             <p className={styles.MainHeaderContent}>
-              Nav is an element in HTML created to represent navigation links. You could say, nav is a container of links that will direct us to other pages. But the link that is in the element
+              Navbar is an element in HTML created to represent navigation links. You could say, nav is a container of links that will direct us to other pages. But the link that is in the element
             </p>
         </header>
           <nav class="eds-navbar" role="navigation">
-            <span class="eds-navbar-toggle" id="js-navbar-toggle">
+            <span class="eds-navbar-toggle eds-navbar-toggle" id="js-navbar-toggle">
               <i class="fa-bars"></i>
             </span>
             <a class="eds-navbar-brand" href="#">Brand</a>

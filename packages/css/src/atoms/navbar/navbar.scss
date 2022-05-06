@@ -1,72 +1,99 @@
 // @use '../../themes/%navbar%/navbar' as tokens;
-@use "../../themes/%navbar%/navbar/navbar_tokens"as tokens;
-@use "../../utility/index"as utils;
+@use "../../themes/%navbar%/navbar/navbar_tokens" as tokens;
+@use "../../utility/index" as utils;
 
 .eds-navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: tokens.$navbar-container-vertical-padding tokens.$navbar-container-horizontal-padding;
-    font-family: tokens.$font-name;
+  display: flex;
+  justify-content: space-between;
+  padding: tokens.$navbar-container-vertical-padding tokens.$navbar-container-horizontal-padding;
+  font-family: tokens.$font-name;
 }
 
 .eds-navbar-brand {
-    color: tokens.$default-font-color;
-    position: absolute;
-    padding: tokens.$navbar-brand-padding-top 0 0 tokens.$navbar-brand-padding-left;
-    float: left;
-    text-transform: uppercase;
-    font-size: tokens.$font-size*1.4;
-    text-decoration: none;
+  color: tokens.$default-font-color;
+  position: absolute;
+  padding: tokens.$navbar-brand-padding-top 0 0 tokens.$navbar-brand-padding-left;
+  float: left;
+  text-transform: uppercase;
+  font-size: tokens.$font-size*1.4;
+  text-decoration: none;
 
-    &:hover,
-    &:focus {
-        color: tokens.$hover-font-color;
-    }
+  &:hover,
+  &:focus {
+    color: tokens.$hover-font-color;
+  }
 }
 
 .eds-navbar-links {
-    float: right;
-    text-transform: uppercase;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  float: right;
+  text-transform: uppercase;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .eds-navbar-item {
-    display: inline-block;
-    padding: tokens.$navbar-item-vertical-padding tokens.$navbar-item-horizontal-padding;
+  display: inline-block;
+  padding: tokens.$navbar-item-vertical-padding tokens.$navbar-item-horizontal-padding;
 
-    a {
+  a {
     text-decoration: none;
-        color: tokens.$default-font-color;
+    color: tokens.$default-font-color;
 
-        &:hover {
-            color: tokens.$hover-font-color;
-        }
-
-        &:target {
-            border: tokens.$navbar-item-border-width solid tokens.$focus-border-color;
-            color: tokens.$focus-font-color;
-        }
+    &:hover {
+      color: tokens.$hover-font-color;
     }
+
+    &:target {
+      border: tokens.$navbar-item-border-width solid tokens.$focus-border-color;
+      color: tokens.$focus-font-color;
+    }
+  }
 }
 
 .eds-navbar-item--active {
-    color: tokens.$active-font-color;
-    border-bottom: solid;
+  color: tokens.$active-font-color;
+  border-bottom: solid;
 
-    a {
-        color: tokens.$active-font-color;
-    }
+  a {
+    color: tokens.$active-font-color;
+  }
 }
 
 .eds-navbar-item--disabled {
-    a {
-        color: tokens.$disabled-font-color;
-        cursor: not-allowed;
+  a {
+    color: tokens.$disabled-font-color;
+    cursor: not-allowed;
 
-        &:hover {
-            color: tokens.$disabled-font-color;
-        }
+    &:hover {
+      color: tokens.$disabled-font-color;
     }
+  }
+}
+
+.eds-navbar-toggle {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+}
+
+@media (max-width: 785px) {
+  .eds-navbar-links {
+    inset: 0 0 0 10%;
+    // background: steelblue;
+    flex-direction: column;
+    padding: 10rem;
+  }
+
+  .eds-navbar-item--active {
+    color: tokens.$active-font-color;
+    border-bottom: none;
+    border-right: solid;
+
+    a {
+      color: tokens.$active-font-color;
+    }
+  }
 }
