@@ -1,8 +1,6 @@
 import Page from './page';
 import { primaryButtonHover, ctaButtonHover, iconButtonEnabledHover } from '../entities/buttons';
 
-
-
 class ButtonsSection extends Page {
 
     get primaryButtonEnabled() { return $('//*[@class="eds-primary-button eds-button-no-size " and not(@disabled)]') }

@@ -1,5 +1,5 @@
-import ButtonsSection from '../pageobjects/buttons.section';
-import { ctaButtonEnabled, ctaButtonDisabled, ctaButtonHover } from '../entities/buttons';
+import ButtonsSection from '../../pageobjects/buttons.section';
+import { ctaButtonEnabled, ctaButtonDisabled, ctaButtonHover } from '../../entities/buttons';
 import { expect as expectChai } from 'chai';
 
 
