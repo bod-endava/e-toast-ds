@@ -1,5 +1,5 @@
 import React from "react";
-import textDefault from "../../../assets/markdown/selects/default.md";
+import textDefault from "../../../assets/markdown/components/selects/default.md";
 import ButtonsIcon from "../../../assets/img/button-docs.svg";
 import Markdown from "../../../tostaditas-components/markdown";
 import Hero from "../../../tostaditas-components/hero";

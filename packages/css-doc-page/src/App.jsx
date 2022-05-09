@@ -21,6 +21,8 @@ import CheckboxDocs from './views/docs/checkboxDocs';
 import InputDocs from './views/docs/inputDocs';
 import SelectDocs from './views/docs/selectDocs';
 import NavbarDocs from './views/docs/navbarDocs';
+// Tutorial Docs
+import CssTutorial from './views/tutorials/cssTutorial';
 
 import './App.scss';
 import {
@@ -69,14 +71,6 @@ const routes = [
     component: TypographyGuidelines,
   },
   {
-    path: '/Buttons',
-    component: ButtonDocs
-  },
-  {
-    path: '/Checkbox',
-    component: CheckboxDocs
-  },
-  {
     path: '/ShapeGuidelines',
     component: ShapeGuidelines
   },
@@ -92,6 +86,17 @@ const routes = [
     path: '/AccessibilitySpecifications',
     component: AccessibilitySpecifications
   },
+
+  // Components
+  //---------------------------
+  {
+    path: '/Buttons',
+    component: ButtonDocs
+  },
+  {
+    path: '/Checkbox',
+    component: CheckboxDocs
+  },
   {
     path: '/Inputs',
     component: InputDocs
@@ -103,6 +108,13 @@ const routes = [
   {
     path: '/Navbar',
     component: NavbarDocs
+  },
+
+  // Tutorials
+  //---------------------------
+  {
+    path: '/Css',
+    component: CssTutorial
   }
 ];
 

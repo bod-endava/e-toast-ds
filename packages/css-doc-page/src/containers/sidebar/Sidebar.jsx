@@ -69,8 +69,18 @@ function Sidebar() {
                             { label: 'Text Field', url: '' },
                             { label: 'Toggle', url: '' },
                             { label: 'Inputs', url: '/Inputs' },
+                            { label: 'Pagination', url: '/Pagination' },
                             { label: 'Selects', url: '/Selects' },
                             { label: 'Navbar', url: '/Navbar' }
+                        ]}
+                    />
+                </div>
+                <div id="tutorials" onClick={ToggleExpand}>
+                    <SidebarItem
+                        itemName='TUTORIALS'
+                        expanded={expandedTabs.includes("tutorials")}
+                        childrenList={[
+                            { label: 'CssTutorial', url: '/CssTutorial' },
                         ]}
                     />
                 </div>

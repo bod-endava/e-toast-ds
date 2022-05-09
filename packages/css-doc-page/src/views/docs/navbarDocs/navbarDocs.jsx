@@ -1,5 +1,5 @@
 import React from "react";
-import textDefault from "../../../assets/markdown/navbar/navbar.md";
+import textDefault from "../../../assets/markdown/components/navbar/navbar.md";
 import Markdown from "../../../tostaditas-components/markdown";
 import Hero from "../../../tostaditas-components/hero";
 import styles from "./navbarDocs.module.scss";
