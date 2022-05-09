@@ -204,6 +204,38 @@ interface IRadioButton {
   [key: string]: string | boolean;
 }
 
+
+interface INavBar {
+  disabled?: boolean
+}
+
+const NavBar: FC<INavBar> = ({ disabled }): JSX.Element => {
+  const root = getClassName({
+    base: "eds-navbar",
+    token: undefined
+  });
+  return (
+      <nav className={`${root}`} role="navigation">
+        <span className="eds-navbar-toggle" id="js-navbar-toggle"><i className="eds-icon menu"></i></span>
+        <a className="eds-navbar-brand" href="#">Brand</a>
+        <ul className="eds-navbar-links eds-navbar--hidden" id="js-navbar-links">
+          <li className="eds-navbar-item eds-navbar-item--active">
+            <a className="eds-navbar-link" href="#">Home</a>
+          </li>
+          <li className="eds-navbar-item">
+            <a className="eds-navbar-link" href="#">Projects</a>
+          </li>
+          <li className="eds-navbar-item">
+            <a className="eds-navbar-link" href="#">About</a>
+          </li>
+          <li className="eds-navbar-item eds-navbar-item--disabled">
+            <a className="eds-navbar-link" href="#">Disabled</a>
+          </li>
+        </ul>
+      </nav>
+  );
+};
+
 interface IPagination {
   disabled?: boolean
 }
@@ -400,12 +432,12 @@ function App() {
   const icons = ["warning-circle", "warning-circle-fill", "information", "clock", "warning", "notification", "upload", "new-folder", "cloud", "copy", "document", "folder", "new-file", "arrow-down", "arrow-left", "arrow-right", "arrow-up", "back", "caret-down", "caret-left", "caret-right", "caret-up", "down", "full-screen", "menu", "more", "next", "search", "settings", "up", "label", "image", "home", "filter", "expand", "edit", "download", "compress", "close", "chat", "calendar", "bookmark", "announcement", "add", "alert-message", "lock", "mail", "share", "trash", "circle-check", "check", "circle-x", "money"];
   return (
     <div>
-      <section>
+      <section id="eds-avatar">
         <h1>Avatar</h1>
         <AvatarDemo content="Aa"/>
       </section>
 
-      <section>
+      <section id="eds-breadcrumbs">
         <h1>Breadcrumbs</h1>
         <h2>Default</h2>
         <Breadcrumb />
@@ -413,7 +445,7 @@ function App() {
         <Breadcrumb disabled />
       </section>
 
-      <section>
+      <section id="eds-buttons">
         <h1>Buttons</h1>
         <ButtonDemo name="Primary" label="Primary Small" size="small" />
         <ButtonDemo name="Outline" label="Outline Primary Small" size="small"/>
@@ -430,7 +462,7 @@ function App() {
         <ButtonDemo name="Icon" icon="add" />
       </section>
 
-      <section>
+      <section id="eds-checkbox">
         <h1>Checkbox</h1>
         <Checkbox />
         <Checkbox checked readOnly/>
@@ -442,7 +474,7 @@ function App() {
         </List>
       </section>
 
-      <section>
+      <section id="eds-datepicker">
         <h1>Datepicker</h1>
         <h2>Default</h2>
         <Datepicker />
@@ -456,14 +488,14 @@ function App() {
         <Datepicker native />
       </section>
 
-      <section>
+      <section id="eds-icons">
         <h1>Icons</h1>
         {
           icons.map( i => <Icon icon={i} key={i} />)
         }
       </section>
 
-      <section>
+      <section id="eds-inputs">
         <h1>Inputs</h1>
         <h2>Outline Normal Input</h2>
         <InputDemo name="First" variant="Outline" label="Label" placeholder="Placeholder" />
@@ -484,7 +516,12 @@ function App() {
         <InputDemo name="twelfth" variant="Outline" icon="calendar" placeholder="Placeholder" disabled/>
       </section>
 
-      <section>
+      <section id="eds-navbar">
+        <h1>Navbar</h1>
+        <NavBar />
+      </section>
+
+      <section id="eds-pagination">
         <h1>Pagination</h1>
         <h2>Default</h2>
         <Pagination/>
@@ -492,7 +529,7 @@ function App() {
         <Pagination disabled />
       </section>
 
-      <section>
+      <section id="eds-radiobuttons">
         <h1>Radio</h1>
         <RadioButton />
         <RadioButton checked readOnly/>
@@ -504,7 +541,7 @@ function App() {
         </List>
       </section>
 
-      <section>
+      <section id="eds-select">
         <h1>Select</h1>
         <div style={{ width: "435px" }}>
           <Padded>
@@ -527,12 +564,12 @@ function App() {
         </div>
       </section>
 
-      <section>
+      <section id="eds-tags">
         <h1>Tags</h1>
         <TagsDemo closeAction={console.log} />
       </section>
 
-      <section>
+      <section id="eds-textarea">
         <h1>TextArea!</h1>
         <h2>Outline Normal TextArea</h2>
         <TextArea name="normal" variant="Outline" placeholder="Placeholder" />
@@ -543,14 +580,14 @@ function App() {
         <TextArea name="dissabled-icon" variant="Outline" icon="calendar" placeholder="Placeholder" disabled/>
       </section>
 
-      <section>
+      <section id="eds-timepicker">
         <h1>Timepicker</h1>
         <div style={{ width: "200px" , display: "inline-block"}}>
           <TimepickerDemo />
         </div>
       </section>
 
-      <section>
+      <section id="eds-toggle">
         <h1>Toggle</h1>
         <Toggle />
         <Toggle checked readOnly/>
@@ -562,7 +599,7 @@ function App() {
         </List>
       </section>
 
-      <section>
+      <section id="eds-typography">
         <h1>Typography</h1>
         <h1 className="eds-typography__h1">
           Title h1
