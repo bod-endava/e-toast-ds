@@ -1,18 +1,18 @@
 
 import React from 'react';
 
-import cssMarkdown from "../../../assets/markdown/tutorials/css.md";
+import cssMarkdown from "../../../assets/markdown/tutorials/sandbox.md";
 
 import Hero from '../../../tostaditas-components/hero';
 import Markdown from '../../../tostaditas-components/markdown';
 
-import styles from './CssTutorial.module.scss';
+import styles from './SandboxTutorial.module.scss';
 
-function CssTutorial() {
+function SandboxTutorial() {
     return (
-        <div className={styles.CssTutorial}>
+        <div className={styles.SandboxTutorial}>
             <Hero
-                title="Css"
+                title="Sandbox"
                 text=""
                 secondary
             />
@@ -25,4 +25,4 @@ function CssTutorial() {
     );
 }
 
-export default CssTutorial;
+export default SandboxTutorial;

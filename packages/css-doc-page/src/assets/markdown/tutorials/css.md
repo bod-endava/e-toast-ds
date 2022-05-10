@@ -9,6 +9,17 @@ Before start with the implementation of the an e-toast component, keep in mind t
 - Fonts/Typography
 - Shapes
 
+So, the first step is identify if the component requires tokens in the different categories. To achieve that the development team and de desing team should arrive to a consensus that will be recorded in the markdowmn document requested for the setp 8 of this guide:
+
+For the implementation of a component, e-toast follow the _Rule of Least Power_ sugested by Tim Berners-Lee that goes like this:
+
+> When designing computer systems, one is often faced with a choice between using a more or less powerful language for publishing information, for expressing constraints, or for solving some problem. […] The “Rule of Least Power” suggests choosing the least powerful language suitable for a given purpose.
+
+For more detail, and practical examples please check the [Embrace the Platform](https://css-tricks.com/embrace-the-platform/) article posted by Bramus.
+
+
+Below, you find the steps to add a component for e-toast in the css layer:
+
 1 - Add the tokens (colors, fonts, and shapes) of your component in the default theme inside the `packages/css/src/themes/default/{yourcomponent}/index.scss` file. The next snippet is a reference of the tokens you can definer for the component
 
 ```scss
@@ -84,6 +95,6 @@ yourcomponent   : default
 
 8 - Consolidate all the information relevant to the component in a markdown file with the next paht `packages/css/docs/atoms/{yourcomponent}.md`. This documentation will be used for the tostaditas project.
 
-7 - Compile your changes running the command `npm run build:css` in a terminal located in the `e-toast-ds` path
+7 - Compile your changes running the command `yarn build:css` in a terminal located in the `e-toast-ds` path
 
 Check this [PR#53](https://github.com/bod-endava/e-toast-ds/pull/53) as reference.

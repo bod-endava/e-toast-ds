@@ -80,7 +80,8 @@ function Sidebar() {
                         itemName='TUTORIALS'
                         expanded={expandedTabs.includes("tutorials")}
                         childrenList={[
-                            { label: 'CssTutorial', url: '/CssTutorial' },
+                            { label: 'Css', url: '/Css' },
+                            { label: 'Sandbox', url: '/Sandbox' },
                         ]}
                     />
                 </div>

@@ -6,7 +6,7 @@ import Hero from "../../../tostaditas-components/hero";
 import textDefault from "../../../assets/markdown/components/pagination/pagination.md";
 import styles from "./paginationDocs.module.scss";
 
-const NavbarDocs = () => {
+const PaginationDocs = () => {
   return (
     <div className={styles.PaginationDocs}>
       <Hero
@@ -21,26 +21,19 @@ const NavbarDocs = () => {
             Pagination is an element in HTML created to represent navigation links. You could say, nav is a container of links that will direct us to other pages. But the link that is in the element
           </p>
         </header>
-        <nav class="eds-Pagination" role="navigation">
-          <span class="eds-Pagination-toggle" id="js-Pagination-toggle">
-            <i class="eds-icon menu"></i>
-          </span>
-          <a class="eds-Pagination-brand" href="#">Brand</a>
-          <ul class="eds-Pagination-links">
-            <li class="eds-Pagination-item eds-Pagination-item--active">
-              <a href="#">Home</a>
-            </li>
-            <li class="eds-Pagination-item">
-              <a class="eds-Pagination-link" href="#">Projects</a>
-            </li>
-            <li class="eds-Pagination-item">
-              <a class="eds-Pagination-link" href="#">About</a>
-            </li>
-            <li class="eds-Pagination-item eds-Pagination-item--disabled">
-              <a href="#">Disabled</a>
-            </li>
-          </ul>
-        </nav>
+        <div>
+          <nav className="eds-pagination" role="navigation">
+            <ul>
+              <a href="#"><li>Prev</li></a>
+              <a href="#"><li>1</li></a>
+              <a href="#"><li>2</li></a>
+              <a href="#" className="eds-pagination--is-active"><li>3</li></a>
+              <a href="#"><li>4</li></a>
+              <a href="#" className="eds-pagination--is-disabled"><li>5</li></a>
+              <a href="#"><li>Next</li></a>
+            </ul>
+          </nav>
+        </div>
         <Markdown src={textDefault} />
       </main>
     </div>
