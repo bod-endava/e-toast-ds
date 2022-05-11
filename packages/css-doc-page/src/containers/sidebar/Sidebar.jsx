@@ -82,6 +82,7 @@ function Sidebar() {
                         childrenList={[
                             { label: 'Css', url: '/Css' },
                             { label: 'Sandbox', url: '/Sandbox' },
+                            { label: 'Tostaditas', url: '/Tostaditas' },
                         ]}
                     />
                 </div>

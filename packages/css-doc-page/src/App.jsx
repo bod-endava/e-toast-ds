@@ -29,6 +29,7 @@ import SelectDocs from './views/docs/selectDocs';
 // Tutorial Docs
 import CssTutorial from './views/tutorials/cssTutorial';
 import SandboxTutorial from './views/tutorials/sandboxTutorial';
+import TostaditasTutorial from './views/tutorials/tostaditasTutorial';
 
 import './App.scss';
 import {
@@ -129,6 +130,10 @@ const routes = [
   {
     path: '/Sandbox',
     component: SandboxTutorial
+  },
+  {
+    path: '/Tostaditas',
+    component: TostaditasTutorial
   }
 ];
 
