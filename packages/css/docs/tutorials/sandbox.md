@@ -1,4 +1,4 @@
-# Testing Quickly Your CSS Component
+# Visualize Your Component Quickly
 
 It is mandatory have the component's styles in the `packages/css` project to reflect the changes in the sandbox
 
