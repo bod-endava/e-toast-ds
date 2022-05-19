@@ -3,7 +3,7 @@ import { shapes } from './constants/shape';
 
 const primaryButtonEnabled = {
     background: colors.primary.toLocaleLowerCase(),
-    height: '40px',
+    height: '37px',
     borderRadius: shapes.pill_radius,
     fontSize: '16px',
     fontWeight: 400,
