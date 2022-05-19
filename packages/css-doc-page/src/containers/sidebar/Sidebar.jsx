@@ -83,6 +83,7 @@ function Sidebar() {
                             { label: 'Css', url: '/Css' },
                             { label: 'Sandbox', url: '/Sandbox' },
                             { label: 'Tostaditas', url: '/Tostaditas' },
+                            { label: 'Toasty', url: '/Toasty' },
                         ]}
                     />
                 </div>

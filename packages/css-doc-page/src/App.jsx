@@ -30,6 +30,7 @@ import SelectDocs from './views/docs/selectDocs';
 import CssTutorial from './views/tutorials/cssTutorial';
 import SandboxTutorial from './views/tutorials/sandboxTutorial';
 import TostaditasTutorial from './views/tutorials/tostaditasTutorial';
+import ToastyTutorial from './views/tutorials/toastyTutorial';
 
 import './App.scss';
 import {
@@ -134,6 +135,10 @@ const routes = [
   {
     path: '/Tostaditas',
     component: TostaditasTutorial
+  },
+  {
+    path: '/Toasty',
+    component: ToastyTutorial
   }
 ];
 
