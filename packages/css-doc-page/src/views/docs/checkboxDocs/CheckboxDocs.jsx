@@ -5,7 +5,7 @@ import Markdown from '../../../tostaditas-components/markdown';
 import Hero from '../../../tostaditas-components/hero';
 import styles from './CheckboxDocs.module.scss';
 import CheckboxIcon from '../../../assets/img/checkbox-icon.svg';
-import textMark from '../../../assets/markdown/checkbox/default.md';
+import textMark from '../../../assets/markdown/components/checkbox/default.md';
 
 const Sources = {
 };

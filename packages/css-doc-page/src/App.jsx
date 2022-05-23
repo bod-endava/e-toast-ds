@@ -1,4 +1,5 @@
 import React from 'react';
+
 // Base structure
 import Home from './views/home';
 import Footer from './tostaditas-components/footer';
@@ -9,20 +10,29 @@ import GettingStarted from './views/gettingStarted';
 import ComponentOverview from './views/componentOverview';
 import TokenPrinciples from './views/tokenPrinciples';
 import AccessibilitySpecifications from './views/accessibilitySpecifications';
+
 // Guidelines
 import ColorGuidelines from './views/guidelines/colorGuidelines';
 import TypographyGuidelines from './views/guidelines/typhographyGuidelines'
 import DesignGuidelines from './views/guidelines/designGuidelines';
 import ShapeGuidelines from './views/guidelines/shapeGuidelines';
 import IconGuidelines from './views/guidelines/iconGuidelines';
+
 // Component Docs
 import ButtonDocs from './views/docs/buttonDocs';
 import CheckboxDocs from './views/docs/checkboxDocs';
 import InputDocs from './views/docs/inputDocs';
+import NavbarDocs from './views/docs/navbarDocs';
+import PaginationDocs from './views/docs/paginationDocs';
 import SelectDocs from './views/docs/selectDocs';
-import AccordionDocs from './views/docs/accordionDocs';
 import LoaderDocs from './views/docs/loaderDocs';
 
+
+// Tutorial Docs
+import CssTutorial from './views/tutorials/cssTutorial';
+import SandboxTutorial from './views/tutorials/sandboxTutorial';
+import TostaditasTutorial from './views/tutorials/tostaditasTutorial';
+import ToastyTutorial from './views/tutorials/toastyTutorial';
 
 import './App.scss';
 import {
@@ -72,14 +82,6 @@ const routes = [
     component: TypographyGuidelines,
   },
   {
-    path: '/Buttons',
-    component: ButtonDocs
-  },
-  {
-    path: '/Checkbox',
-    component: CheckboxDocs
-  },
-  {
     path: '/ShapeGuidelines',
     component: ShapeGuidelines
   },
@@ -95,25 +97,61 @@ const routes = [
     path: '/AccessibilitySpecifications',
     component: AccessibilitySpecifications
   },
+
+  // Components
+  //---------------------------
+  {
+    path: '/Buttons',
+    component: ButtonDocs
+  },
+  {
+    path: '/Checkbox',
+    component: CheckboxDocs
+  },
   {
     path: '/Inputs',
     component: InputDocs
   },
   {
+    path: '/Navbar',
+    component: NavbarDocs
+  },
+  {
+    path: '/Pagination',
+    component: PaginationDocs
+  },
+  {
     path: '/Selects',
     component: SelectDocs
   },
+
+  // Tutorials
+  //---------------------------
   {
+<<<<<<< HEAD
     path: '/Acorddion',
     component: AccordionDocs
   },
   {
     path: '/Loader',
     component: LoaderDocs
+=======
+    path: '/Css',
+    component: CssTutorial
+  },
+  {
+    path: '/Sandbox',
+    component: SandboxTutorial
+  },
+  {
+    path: '/Tostaditas',
+    component: TostaditasTutorial
+  },
+  {
+    path: '/Toasty',
+    component: ToastyTutorial
+>>>>>>> develop
   }
-
-
-
 ];
 
 function App() {

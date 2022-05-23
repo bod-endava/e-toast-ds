@@ -69,9 +69,22 @@ function Sidebar() {
                             { label: 'Text Field', url: '' },
                             { label: 'Toggle', url: '' },
                             { label: 'Inputs', url: '/Inputs' },
+                            { label: 'Pagination', url: '/Pagination' },
                             { label: 'Selects', url: '/Selects' },
-                            { label: 'Accordions', url: '/Acorddion' },
+                            { label: 'Navbar', url: '/Navbar' },
                             { label: 'Loader', url: '/Loader' }
+                        ]}
+                    />
+                </div>
+                <div id="tutorials" onClick={ToggleExpand}>
+                    <SidebarItem
+                        itemName='TUTORIALS'
+                        expanded={expandedTabs.includes("tutorials")}
+                        childrenList={[
+                            { label: 'Css', url: '/Css' },
+                            { label: 'Sandbox', url: '/Sandbox' },
+                            { label: 'Tostaditas', url: '/Tostaditas' },
+                            { label: 'Toasty', url: '/Toasty' },
                         ]}
                     />
                 </div>

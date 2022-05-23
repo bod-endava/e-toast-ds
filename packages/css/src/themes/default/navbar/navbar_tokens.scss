@@ -1,0 +1,44 @@
+
+@use "../constants/colors.scss" as theme_colors;
+@use "../constants/fonts.scss" as theme_fonts;
+@use "../constants/shape.scss" as theme_shape;
+
+// Colors
+// --------
+$navbar-menu-icon-color: theme_colors.$primary;
+
+// default
+$default-font-color: theme_colors.$secondary-darkest;
+
+// hover
+$hover-font-color: theme_colors.$danger-dark;
+
+// active
+$active-font-color: theme_colors.$primary;
+
+// focus
+$focus-font-color: theme_colors.$danger-dark;
+$focus-border-color: theme_colors.$primary;
+
+// disable
+$disabled-font-color: theme_colors.$disabled;
+
+// Typography
+// --------
+$font-name: theme_fonts.$navbar-font;
+$font-weight: theme_fonts.$navbar-weight;
+$font-size: theme_fonts.$navbar-size;
+$line-height: theme_fonts.$navbar-line-height;
+$spacing: theme_fonts.$navbar-spacing;
+
+
+// Shape
+// --------
+$navbar-container-vertical-padding: 10px;
+$navbar-container-horizontal-padding: 10%;
+$navbar-brand-padding-top: 6px;
+$navbar-brand-padding-left: 20px;
+$navbar-item-border-width: 1px;
+$navbar-item-vertical-padding: 10px;
+$navbar-item-horizontal-padding: 20px;
+$navbar-item-small-width: 144px;

@@ -19,31 +19,39 @@ Project to add automation test to the components defined in `e-toast/packages/sa
 
 ## 🚀 Launch
 
-1. Install dependencies for the sandbox project
+1. Install dependencies for the toasty project
 
 ```zsh
-npm install
+yarn install
 ```
 
-2. Run tests with wdio
+2. Open another terminal
+
+3. Run the sandbox to enable the testing page
 
 ```zsh
-npm run start
+yarn start
 ```
 
-or
+3. Run all tests with wdio
 
 ```zsh
-npm run test
+yarn test
+```
+
+or run an specific test
+
+```zsh
+yarn test -- --spec ./test/specs/{component}/{component}.spec.js
 ```
 
 
-3. Run test with report
+4. Run test with report
 
 Be sure that the sandbox application is running and then run:
 
 ```zsh
-npm run test-with-report
+yarn test-with-report
 ```
 
 > Note: to use allure, you need to install the framework for macOS you can installed via [Homebrew](https://brew.sh), and for Windows use [Scoop](http://scoop.sh)
@@ -74,3 +82,7 @@ It is probably that you get
 The operation couldn’t be completed. Unable to locate a Java Runtime.
 Please visit http://www.java.com for information on installing Java.
 ```
+
+## References
+
+- [WebDriverIO Mocha JavaScript Crash Course](https://www.youtube.com/watch?v=4ciODewPFpU) (Integration Test)

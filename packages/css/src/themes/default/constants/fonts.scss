@@ -123,3 +123,11 @@ $avatar-weight: global_fonts.$medium;
 $avatar-size: global_fonts.get-size("h4", $sizing);
 $avatar-line-height: global_fonts.get-size("h4", "line-height");
 $avatar-spacing: 0.16px;
+
+// Nabvar
+
+$navbar-font: global_fonts.$font-name;
+$navbar-weight: global_fonts.$regular;
+$navbar-size: global_fonts.get-size("paragraph", $sizing);
+$navbar-line-height: global_fonts.get-size("paragraph", "line-height");
+$navbar-spacing: 0.16px;

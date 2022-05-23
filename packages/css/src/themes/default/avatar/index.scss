@@ -3,21 +3,17 @@
 @use "../constants/shape.scss" as theme_shape;
 
 // Size
-
 $width: 40px;
 $height: 40px;
 
 // Shape
-
 $border-radius: theme_shape.$avatar-radius;
 
 // Color
-
 $fill: theme_colors.$primary-mid;
 $font-color: theme_colors.$content;
 
 // Font
-
 $font-name: theme_fonts.$avatar-font;
 $font-weight: theme_fonts.$avatar-weight;
 $font-size: theme_fonts.$avatar-size;
