@@ -1,8 +1,8 @@
-import React, {Component, FC} from 'react';
+import React, { Component, FC } from 'react';
 import getClassName from './getClassName';
 
 const Padded: FC = ({ children }): JSX.Element => (
-  <div style={{margin: "16px"}}>
+  <div style={{ margin: "16px" }}>
     {children}
   </div>
 );
@@ -56,7 +56,7 @@ interface IButtonDemo {
   size?: string;
 }
 
-const ButtonDemo: FC<IButtonDemo> = ({ name, label, icon, size}):JSX.Element => {
+const ButtonDemo: FC<IButtonDemo> = ({ name, label, icon, size }): JSX.Element => {
   const ic = icon ? `icon-${icon}` : '';
   const sz = size ? `${size}` : 'no-size';
   const cl = `eds-${name.toLowerCase()}-button eds-button-${sz} ${ic}`;
@@ -75,8 +75,8 @@ interface ICheckbox {
 }
 
 const Checkbox: FC<ICheckbox> = ({ label, ...extra }): JSX.Element => {
-  if( label && typeof label === "string"){
-    const id = label.replace(" ","_");
+  if (label && typeof label === "string") {
+    const id = label.replace(" ", "_");
     const labelClass = `eds-checkbox__label ${extra.disabled ? "eds-checkbox__label--disabled" : ""}`;
     return (
       <div className="eds-checkbox__container">
@@ -104,8 +104,8 @@ const Datepicker: FC<IDatepicker> = ({ disabled, native, innerDisabled, label })
   const labelCl = root.extend("&__label");
   const contCl = root.extend("&__container");
 
-  if( native ){
-    return <Padded><input className="eds-datepicker-native" type="date"/></Padded>
+  if (native) {
+    return <Padded><input className="eds-datepicker-native" type="date" /></Padded>
   }
 
   return (
@@ -114,7 +114,7 @@ const Datepicker: FC<IDatepicker> = ({ disabled, native, innerDisabled, label })
         {/*TODO: refactor the disabled attribute on div */}
         {label && <label className={labelCl.toString()} htmlFor={label} >{label}</label>}
         <div className={contCl.toString()}>
-          <input id={label} placeholder="DD/MM/YY" disabled={innerDisabled} type="text" onChange={() => alert("change")}/>
+          <input id={label} placeholder="DD/MM/YY" disabled={innerDisabled} type="text" onChange={() => alert("change")} />
         </div>
       </div>
     </Padded>
@@ -139,7 +139,7 @@ interface IInput {
   [key: string]: string | boolean
 }
 
-const InputDemo: FC<IInput> = ({ name, label, success, error='', ...extra }):JSX.Element => {
+const InputDemo: FC<IInput> = ({ name, label, success, error = '', ...extra }): JSX.Element => {
   const root = getClassName({
     base: "eds-outline-input",
     token: undefined,
@@ -160,7 +160,7 @@ const InputDemo: FC<IInput> = ({ name, label, success, error='', ...extra }):JSX
   })
   const labelRight = labelRoot.extend("&__error-alert");
   const icon = extra.icon;
-  const iconClass= root.extend("&__icon").get({
+  const iconClass = root.extend("&__icon").get({
     base: "",
     token: undefined,
     "&--error": Boolean(error),
@@ -182,7 +182,7 @@ const InputDemo: FC<IInput> = ({ name, label, success, error='', ...extra }):JSX
           </div>
           <div>
             <input className={root.toString()} {...extra} />
-            <span className={ `eds-icon ${icon} ${iconClass}`}/>
+            <span className={`eds-icon ${icon} ${iconClass}`} />
           </div>
         </div>
       </Padded>
@@ -215,24 +215,24 @@ const NavBar: FC<INavBar> = ({ disabled }): JSX.Element => {
     token: undefined
   });
   return (
-      <nav className={`${root}`} role="navigation">
-        <span className="eds-navbar-toggle" id="js-navbar-toggle"><i className="eds-icon menu"></i></span>
-        <a className="eds-navbar-brand" href="#">Brand</a>
-        <ul className="eds-navbar-links eds-navbar--hidden" id="js-navbar-links">
-          <li className="eds-navbar-item eds-navbar-item--active">
-            <a className="eds-navbar-link" href="#">Home</a>
-          </li>
-          <li className="eds-navbar-item">
-            <a className="eds-navbar-link" href="#">Projects</a>
-          </li>
-          <li className="eds-navbar-item">
-            <a className="eds-navbar-link" href="#">About</a>
-          </li>
-          <li className="eds-navbar-item eds-navbar-item--disabled">
-            <a className="eds-navbar-link" href="#">Disabled</a>
-          </li>
-        </ul>
-      </nav>
+    <nav className={`${root}`} role="navigation">
+      <span className="eds-navbar-toggle" id="js-navbar-toggle"><i className="eds-icon menu"></i></span>
+      <a className="eds-navbar-brand" href="#">Brand</a>
+      <ul className="eds-navbar-links eds-navbar--hidden" id="js-navbar-links">
+        <li className="eds-navbar-item eds-navbar-item--active">
+          <a className="eds-navbar-link" href="#">Home</a>
+        </li>
+        <li className="eds-navbar-item">
+          <a className="eds-navbar-link" href="#">Projects</a>
+        </li>
+        <li className="eds-navbar-item">
+          <a className="eds-navbar-link" href="#">About</a>
+        </li>
+        <li className="eds-navbar-item eds-navbar-item--disabled">
+          <a className="eds-navbar-link" href="#">Disabled</a>
+        </li>
+      </ul>
+    </nav>
   );
 };
 
@@ -268,9 +268,9 @@ const Pagination: FC<IPagination> = ({ disabled }): JSX.Element => {
   );
 };
 
-const RadioButton: FC<IRadioButton> = ({ label, ...extra }):JSX.Element => {
-  if( label && typeof label === "string") {
-    const id = label.replace(" ","_");
+const RadioButton: FC<IRadioButton> = ({ label, ...extra }): JSX.Element => {
+  if (label && typeof label === "string") {
+    const id = label.replace(" ", "_");
     const labelClass = `eds-radio__label ${extra.disabled ? "eds-radio__label--disabled" : ""}`;
     return (
       <div className="eds-radio__container">
@@ -283,15 +283,15 @@ const RadioButton: FC<IRadioButton> = ({ label, ...extra }):JSX.Element => {
 }
 
 interface ISelect {
-  disabled?:boolean
+  disabled?: boolean
   innerDisabled?: boolean;
   disabledClass?: boolean;
   placeholder?: string;
 }
 
-const SelectDemo: FC<ISelect> = ({ innerDisabled, disabledClass, placeholder="Choose one" }): JSX.Element => {
+const SelectDemo: FC<ISelect> = ({ innerDisabled, disabledClass, placeholder = "Choose one" }): JSX.Element => {
   const root = getClassName({
-    token:undefined,
+    token: undefined,
     base: "eds-select",
     "&--disabled": disabledClass
   })
@@ -309,8 +309,8 @@ const SelectDemo: FC<ISelect> = ({ innerDisabled, disabledClass, placeholder="Ch
   )
 }
 
-interface ITags{
-  closeAction: (params:any) => void
+interface ITags {
+  closeAction: (params: any) => void
 }
 
 const TagsDemo: FC<ITags> = ({ closeAction }): JSX.Element => {
@@ -355,10 +355,10 @@ const TextArea: FC<ITextArea> = ({ name, label, icon, disabled, variant, placeho
     token: undefined
   });
 
-  const iconClass= root.extend("&__icon").get({
+  const iconClass = root.extend("&__icon").get({
     "&--disabled": disabled,
-    token:undefined,
-    base:""
+    token: undefined,
+    base: ""
   });
 
   return (
@@ -371,7 +371,7 @@ const TextArea: FC<ITextArea> = ({ name, label, icon, disabled, variant, placeho
             disabled={disabled}
             placeholder={placeholder}
           />
-          <span className={ `eds-icon ${icon} ${iconClass}`}/>
+          <span className={`eds-icon ${icon} ${iconClass}`} />
         </div>
       </Padded>
     </section>
@@ -383,7 +383,7 @@ interface ITimepicker {
   label?: string;
 }
 
-const TimepickerDemo: FC<ITimepicker> = ({ label="From" }): JSX.Element => {
+const TimepickerDemo: FC<ITimepicker> = ({ label = "From" }): JSX.Element => {
   const root = getClassName({
     base: "eds-timepicker",
     token: undefined
@@ -393,9 +393,9 @@ const TimepickerDemo: FC<ITimepicker> = ({ label="From" }): JSX.Element => {
     <div className={root.toString()}>
       {/*TODO: refactor the disabled attribute on div */}
       <label className={`${root}__label`}>{label}</label>
-      <input name="hours"   placeholder="00" type="number" min="01" max="12" step="1" className={`${root}__hour`}/>
+      <input name="hours" placeholder="00" type="number" min="01" max="12" step="1" className={`${root}__hour`} />
       <span>:</span>
-      <input name="minutes" placeholder="00" type="number" min="00" max="59" step="1" className={`${root}__minute`}/>
+      <input name="minutes" placeholder="00" type="number" min="00" max="59" step="1" className={`${root}__minute`} />
       <select defaultValue="am" name="ampm" className={`${root}__ampm`}>
         <option value="am">AM</option>
         <option value="pm">PM</option>
@@ -409,12 +409,12 @@ interface IToggle {
 }
 
 const Toggle: FC<IToggle> = ({ label, ...extra }): JSX.Element => {
-  if( label && typeof label === "string") {
-    const id = label.replace(" ","_");
+  if (label && typeof label === "string") {
+    const id = label.replace(" ", "_");
     const toggle = getClassName({ base: "eds-toggle", token: undefined });
     const container = toggle.extend("&__container");
     const labelClass = toggle.extend("&__label").get({
-      base:"",
+      base: "",
       token: undefined,
       "&--disabled": extra.disabled
     });
@@ -434,7 +434,7 @@ function App() {
     <div>
       <section id="eds-avatar">
         <h1>Avatar</h1>
-        <AvatarDemo content="Aa"/>
+        <AvatarDemo content="Aa" />
       </section>
 
       <section id="eds-breadcrumbs">
@@ -448,14 +448,14 @@ function App() {
       <section id="eds-buttons">
         <h1>Buttons</h1>
         <ButtonDemo name="Primary" label="Primary Small" size="small" />
-        <ButtonDemo name="Outline" label="Outline Primary Small" size="small"/>
-        <ButtonDemo name="Cta" label="CTA Small" size="small"/>
+        <ButtonDemo name="Outline" label="Outline Primary Small" size="small" />
+        <ButtonDemo name="Cta" label="CTA Small" size="small" />
         <ButtonDemo name="Text" label="Text Small" size="small" />
-        <ButtonDemo name="Primary" icon="announcement" label="Primary Icon + Label Small" size="small"/>
+        <ButtonDemo name="Primary" icon="announcement" label="Primary Icon + Label Small" size="small" />
         <ButtonDemo name="Icon" icon="add" label="Icon Small" />
 
         <ButtonDemo name="Primary" />
-        <ButtonDemo name="Outline" label="Outline Primary"/>
+        <ButtonDemo name="Outline" label="Outline Primary" />
         <ButtonDemo name="Cta" />
         <ButtonDemo name="Text" />
         <ButtonDemo name="Primary" icon="announcement" label="Icon + Label" />
@@ -465,12 +465,12 @@ function App() {
       <section id="eds-checkbox">
         <h1>Checkbox</h1>
         <Checkbox />
-        <Checkbox checked readOnly/>
-        <Checkbox disabled/>
+        <Checkbox checked readOnly />
+        <Checkbox disabled />
         <List of="checkbox">
           <Checkbox label="Labeled checkbox" />
-          <Checkbox label="Controlled checkbox" checked readOnly/>
-          <Checkbox label="Disabled checkbox" disabled/>
+          <Checkbox label="Controlled checkbox" checked readOnly />
+          <Checkbox label="Disabled checkbox" disabled />
         </List>
       </section>
 
@@ -480,10 +480,10 @@ function App() {
         <Datepicker />
         <Datepicker label="With Label" />
         <h2>Disabled</h2>
-        <Datepicker disabled/>
-        <Datepicker innerDisabled/>
-        <Datepicker disabled label="With Label"/>
-        <Datepicker innerDisabled label="With Label (by input)"/>
+        <Datepicker disabled />
+        <Datepicker innerDisabled />
+        <Datepicker disabled label="With Label" />
+        <Datepicker innerDisabled label="With Label (by input)" />
         <h2>Native</h2>
         <Datepicker native />
       </section>
@@ -491,7 +491,7 @@ function App() {
       <section id="eds-icons">
         <h1>Icons</h1>
         {
-          icons.map( i => <Icon icon={i} key={i} />)
+          icons.map(i => <Icon icon={i} key={i} />)
         }
       </section>
 
@@ -500,20 +500,20 @@ function App() {
         <h2>Outline Normal Input</h2>
         <InputDemo name="First" variant="Outline" label="Label" placeholder="Placeholder" />
         <InputDemo name="Second" variant="Outline" placeholder="Placeholder" />
-        <InputDemo name="Third" variant="Outline" icon="calendar"  placeholder="Placeholder" />
-        <h2 style={{fontFamily: 'Roboto'}}>Outline Error Input</h2>
-        <InputDemo name="Fourth" variant="Outline" label="Label" placeholder="Placeholder" error="This field is required"/>
-        <InputDemo name="Fifth" variant="Outline" placeholder="Placeholder" error="This field is required"/>
-        <InputDemo name="Sixth" variant="Outline" icon="circle-x" placeholder="Placeholder" error="This field is required"/>
-        <h2 style={{fontFamily: 'Roboto'}}>Outline Success Input</h2>
-        <InputDemo name="Seventh" variant="Outline" label="Label" placeholder="Placeholder" success/>
-        <InputDemo name="Eighth" variant="Outline" placeholder="Placeholder" success/>
+        <InputDemo name="Third" variant="Outline" icon="calendar" placeholder="Placeholder" />
+        <h2 style={{ fontFamily: 'Roboto' }}>Outline Error Input</h2>
+        <InputDemo name="Fourth" variant="Outline" label="Label" placeholder="Placeholder" error="This field is required" />
+        <InputDemo name="Fifth" variant="Outline" placeholder="Placeholder" error="This field is required" />
+        <InputDemo name="Sixth" variant="Outline" icon="circle-x" placeholder="Placeholder" error="This field is required" />
+        <h2 style={{ fontFamily: 'Roboto' }}>Outline Success Input</h2>
+        <InputDemo name="Seventh" variant="Outline" label="Label" placeholder="Placeholder" success />
+        <InputDemo name="Eighth" variant="Outline" placeholder="Placeholder" success />
         <InputDemo name="Ninth" variant="Outline" icon="circle-check" placeholder="Placeholder" success />
 
-        <h2 style={{fontFamily: 'Roboto'}}>Outline Disabled Input</h2>
-        <InputDemo name="Tenth" variant="Outline" label="Label" placeholder="Placeholder" disabled/>
-        <InputDemo name="Eleventh" variant="Outline" placeholder="Placeholder" disabled/>
-        <InputDemo name="twelfth" variant="Outline" icon="calendar" placeholder="Placeholder" disabled/>
+        <h2 style={{ fontFamily: 'Roboto' }}>Outline Disabled Input</h2>
+        <InputDemo name="Tenth" variant="Outline" label="Label" placeholder="Placeholder" disabled />
+        <InputDemo name="Eleventh" variant="Outline" placeholder="Placeholder" disabled />
+        <InputDemo name="twelfth" variant="Outline" icon="calendar" placeholder="Placeholder" disabled />
       </section>
 
       <section id="eds-navbar">
@@ -521,10 +521,15 @@ function App() {
         <NavBar />
       </section>
 
+      <section id="eds-loader">
+          <h1>Loader</h1>
+          <div className="eds-loader"></div>
+      </section>
+
       <section id="eds-pagination">
         <h1>Pagination</h1>
         <h2>Default</h2>
-        <Pagination/>
+        <Pagination />
         <h2>Disabled</h2>
         <Pagination disabled />
       </section>
@@ -532,12 +537,12 @@ function App() {
       <section id="eds-radiobuttons">
         <h1>Radio</h1>
         <RadioButton />
-        <RadioButton checked readOnly/>
-        <RadioButton disabled/>
+        <RadioButton checked readOnly />
+        <RadioButton disabled />
         <List of="radio">
           <RadioButton name="list" label="Labeled radio" />
-          <RadioButton name="list" label="Controlled radio" checked readOnly/>
-          <RadioButton name="list" label="Disabled radio" disabled/>
+          <RadioButton name="list" label="Controlled radio" checked readOnly />
+          <RadioButton name="list" label="Disabled radio" disabled />
         </List>
       </section>
 
@@ -545,21 +550,21 @@ function App() {
         <h1>Select</h1>
         <div style={{ width: "435px" }}>
           <Padded>
-            <div style={{ width: "200px" , display: "inline-block"}}>
+            <div style={{ width: "200px", display: "inline-block" }}>
               <SelectDemo />
             </div>
-            <div style={{ width: "200px" , display: "inline-block"}}>
+            <div style={{ width: "200px", display: "inline-block" }}>
               <SelectDemo />
             </div>
           </Padded>
           <Padded>
-            <SelectDemo innerDisabled placeholder="Disabled from select"/>
+            <SelectDemo innerDisabled placeholder="Disabled from select" />
           </Padded>
           <Padded>
-            <SelectDemo disabled placeholder="Disabled from container"/>
+            <SelectDemo disabled placeholder="Disabled from container" />
           </Padded>
           <Padded>
-            <SelectDemo disabledClass placeholder="Disabled using eds-list--disabled"/>
+            <SelectDemo disabledClass placeholder="Disabled using eds-list--disabled" />
           </Padded>
         </div>
       </section>
@@ -573,16 +578,16 @@ function App() {
         <h1>TextArea!</h1>
         <h2>Outline Normal TextArea</h2>
         <TextArea name="normal" variant="Outline" placeholder="Placeholder" />
-        <TextArea name="icon" variant="Outline" icon="calendar"  placeholder="Placeholder" />
+        <TextArea name="icon" variant="Outline" icon="calendar" placeholder="Placeholder" />
 
-        <h2 style={{fontFamily: 'Roboto'}}>Outline Disabled TextArea</h2>
-        <TextArea name="dissabled" variant="Outline" placeholder="Placeholder" disabled/>
-        <TextArea name="dissabled-icon" variant="Outline" icon="calendar" placeholder="Placeholder" disabled/>
+        <h2 style={{ fontFamily: 'Roboto' }}>Outline Disabled TextArea</h2>
+        <TextArea name="dissabled" variant="Outline" placeholder="Placeholder" disabled />
+        <TextArea name="dissabled-icon" variant="Outline" icon="calendar" placeholder="Placeholder" disabled />
       </section>
 
       <section id="eds-timepicker">
         <h1>Timepicker</h1>
-        <div style={{ width: "200px" , display: "inline-block"}}>
+        <div style={{ width: "200px", display: "inline-block" }}>
           <TimepickerDemo />
         </div>
       </section>
@@ -590,12 +595,12 @@ function App() {
       <section id="eds-toggle">
         <h1>Toggle</h1>
         <Toggle />
-        <Toggle checked readOnly/>
-        <Toggle disabled/>
+        <Toggle checked readOnly />
+        <Toggle disabled />
         <List of="toggle">
           <Toggle label="Labeled toggle" />
-          <Toggle label="Controlled toggle" checked readOnly/>
-          <Toggle label="Disabled toggle" disabled/>
+          <Toggle label="Controlled toggle" checked readOnly />
+          <Toggle label="Disabled toggle" disabled />
         </List>
       </section>
 

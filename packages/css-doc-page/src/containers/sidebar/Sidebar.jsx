@@ -71,7 +71,8 @@ function Sidebar() {
                             { label: 'Inputs', url: '/Inputs' },
                             { label: 'Pagination', url: '/Pagination' },
                             { label: 'Selects', url: '/Selects' },
-                            { label: 'Navbar', url: '/Navbar' }
+                            { label: 'Navbar', url: '/Navbar' },
+                            { label: 'Loader', url: '/Loader' }
                         ]}
                     />
                 </div>

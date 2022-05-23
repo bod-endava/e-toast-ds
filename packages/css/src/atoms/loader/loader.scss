@@ -1,0 +1,22 @@
+@use "../../themes/%loader%/loader/loader_tokens" as tokens;
+@use "../../utility/index" as utils;
+
+.eds-loader {
+    border-left-color: tokens.$loader-border-left-color;
+    border: 6px solid rgba(0, 0, 0, .1);
+    width: tokens.$loader-height;
+    height: tokens.$loader-width;
+    border-radius: tokens.$loader-border-radius;
+
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

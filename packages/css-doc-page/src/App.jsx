@@ -25,6 +25,8 @@ import InputDocs from './views/docs/inputDocs';
 import NavbarDocs from './views/docs/navbarDocs';
 import PaginationDocs from './views/docs/paginationDocs';
 import SelectDocs from './views/docs/selectDocs';
+import LoaderDocs from './views/docs/loaderDocs';
+
 
 // Tutorial Docs
 import CssTutorial from './views/tutorials/cssTutorial';
@@ -39,6 +41,7 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom';
+
 
 
 const routes = [
@@ -108,6 +111,10 @@ const routes = [
   {
     path: '/Inputs',
     component: InputDocs
+  },
+  {
+    path: '/Loader',
+    component: LoaderDocs
   },
   {
     path: '/Navbar',
