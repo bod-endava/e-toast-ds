@@ -1,7 +1,6 @@
 
 import NavbarSection from '../../pageobjects/navbar.section';
-import { navbar } from '../../entities/navbar';
-import { expect as expectChai } from 'chai';
+import { navbar } from '../../entities/navbar.entity';
 
 
 describe('Navbar', () => {

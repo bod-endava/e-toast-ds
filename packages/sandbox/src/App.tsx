@@ -522,10 +522,8 @@ function App() {
       </section>
 
       <section id="eds-loader">
-        <section>
           <h1>Loader</h1>
           <div className="eds-loader"></div>
-        </section>
       </section>
 
       <section id="eds-pagination">

@@ -1,5 +1,5 @@
 import ButtonsSection from '../../pageobjects/buttons.section';
-import { outlinePrimaryButtonEnabled, outlinePrimaryButtonDisabled, outlinePrimaryButtonHover } from '../../entities/buttons';
+import { outlinePrimaryButtonEnabled, outlinePrimaryButtonDisabled, outlinePrimaryButtonHover } from '../../entities/buttons.entity';
 import { expect as expectChai } from 'chai';
 
 

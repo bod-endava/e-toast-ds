@@ -1,0 +1,12 @@
+@use "../constants/colors.scss" as theme_colors;
+@use "../constants/shape.scss" as theme_shape;
+
+// Colors
+// --------
+$loader-border-left-color: theme_colors.$primary;
+
+// Shape
+// --------
+$loader-height: 46px;
+$loader-width: 46px;
+$loader-border-radius: 50%;

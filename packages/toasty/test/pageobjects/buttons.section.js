@@ -1,5 +1,5 @@
 import Page from './page';
-import { primaryButtonHover, ctaButtonHover, iconButtonEnabledHover } from '../entities/buttons';
+import { primaryButtonHover, ctaButtonHover, iconButtonEnabledHover } from '../entities/buttons.entity';
 
 class ButtonsSection extends Page {
 

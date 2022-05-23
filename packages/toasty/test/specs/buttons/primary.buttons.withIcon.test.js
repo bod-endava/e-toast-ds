@@ -1,5 +1,5 @@
 import ButtonsSection from '../../pageobjects/buttons.section';
-import { primaryButtonEnabled, primaryButtonDisabled, primaryButtonHover } from '../../entities/buttons';
+import { primaryButtonEnabled, primaryButtonDisabled, primaryButtonHover } from '../../entities/buttons.entity';
 import { expect as expectChai } from 'chai';
 
 describe('Primary Buttons with Icon', () => {

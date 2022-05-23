@@ -113,6 +113,10 @@ const routes = [
     component: InputDocs
   },
   {
+    path: '/Loader',
+    component: LoaderDocs
+  },
+  {
     path: '/Navbar',
     component: NavbarDocs
   },
@@ -128,14 +132,6 @@ const routes = [
   // Tutorials
   //---------------------------
   {
-<<<<<<< HEAD
-    path: '/Acorddion',
-    component: AccordionDocs
-  },
-  {
-    path: '/Loader',
-    component: LoaderDocs
-=======
     path: '/Css',
     component: CssTutorial
   },
@@ -150,7 +146,6 @@ const routes = [
   {
     path: '/Toasty',
     component: ToastyTutorial
->>>>>>> develop
   }
 ];
 
