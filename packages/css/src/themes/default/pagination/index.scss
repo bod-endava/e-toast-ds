@@ -2,18 +2,11 @@
 @use "../constants/fonts.scss" as theme_fonts;
 
 // Color tokens
+// ------
 
 // basic
 $disabled: theme_colors.$disabled;
-$font-family: theme_fonts.$pagination-font;
-$font-size: theme_fonts.$pagination_size;
-$font-weight: theme_fonts.$pagination-weight;
-$letter-spacing: theme_fonts.$pagination-spacing;
-$line-height: theme_fonts.$pagination-line-height;
 $main-color: theme_colors.$primary-darkest;
-
-// hover
-$active-font-color: theme_colors.$primary-dark;
 
 // active
 $active-font-color: theme_colors.$primary-dark;
@@ -21,3 +14,12 @@ $active-background-color: theme_colors.$disabled-light;
 
 // disable
 $disabled-font-color: theme_colors.$disabled;
+
+// Typography tokens
+// ------
+
+$font-family: theme_fonts.$pagination-font;
+$font-size: theme_fonts.$pagination_size;
+$font-weight: theme_fonts.$pagination-weight;
+$letter-spacing: theme_fonts.$pagination-spacing;
+$line-height: theme_fonts.$pagination-line-height;

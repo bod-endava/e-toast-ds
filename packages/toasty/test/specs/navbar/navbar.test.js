@@ -5,12 +5,12 @@ import { expect as expectChai } from 'chai';
 
 
 describe('Navbar', () => {
-    it('navbar should has the expected CSS values', () => {
+    it('should has the expected CSS values', () => {
 
         NavbarSection.open();
         let expectedValues = navbar;
-        let actualValues = NavbarSection.getCTAButtonEnabledAttributes();
-        expect(actualValues).toStrictEqual(expectedValues);
+        let actualValues = NavbarSection.getInitialNavbarAttributes();
 
+        expect(actualValues).toStrictEqual(expectedValues);
     });
 });
